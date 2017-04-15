@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA2ABD341EA2B49E0099A091 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD331EA2B49E0099A091 /* Service.swift */; };
+		EA2ABD361EA2B5DC0099A091 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD351EA2B5DC0099A091 /* Provider.swift */; };
+		EA2ABD381EA2B6980099A091 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD371EA2B6980099A091 /* Feathers.swift */; };
 		EA452A711EA2B14300427CEF /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA452A671EA2B14300427CEF /* Feathers.framework */; };
 		EA452A761EA2B14300427CEF /* FeathersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA452A751EA2B14300427CEF /* FeathersTests.swift */; };
 		EA452A781EA2B14300427CEF /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA2ABD331EA2B49E0099A091 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		EA2ABD351EA2B5DC0099A091 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		EA2ABD371EA2B6980099A091 /* Feathers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feathers.swift; sourceTree = "<group>"; };
 		EA452A671EA2B14300427CEF /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA452A6A1EA2B14300427CEF /* Feathers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feathers.h; sourceTree = "<group>"; };
 		EA452A6B1EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 			children = (
 				EA452A6A1EA2B14300427CEF /* Feathers.h */,
 				EA452A6B1EA2B14300427CEF /* Info.plist */,
+				EA2ABD331EA2B49E0099A091 /* Service.swift */,
+				EA2ABD351EA2B5DC0099A091 /* Provider.swift */,
+				EA2ABD371EA2B6980099A091 /* Feathers.swift */,
 			);
 			path = Feathers;
 			sourceTree = "<group>";
@@ -149,6 +158,7 @@
 					EA452A661EA2B14300427CEF = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 8959XVXX2J;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					EA452A6F1EA2B14300427CEF = {
@@ -198,6 +208,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2ABD341EA2B49E0099A091 /* Service.swift in Sources */,
+				EA2ABD381EA2B6980099A091 /* Feathers.swift in Sources */,
+				EA2ABD361EA2B5DC0099A091 /* Provider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +337,7 @@
 		EA452A7C1EA2B14300427CEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8959XVXX2J;
@@ -336,6 +350,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +358,7 @@
 		EA452A7D1EA2B14300427CEF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8959XVXX2J;
@@ -362,6 +378,7 @@
 		EA452A7F1EA2B14300427CEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8959XVXX2J;
 				INFOPLIST_FILE = FeathersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +391,7 @@
 		EA452A801EA2B14300427CEF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8959XVXX2J;
 				INFOPLIST_FILE = FeathersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -402,6 +420,7 @@
 				EA452A7D1EA2B14300427CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA452A7E1EA2B14300427CEF /* Build configuration list for PBXNativeTarget "FeathersTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +429,7 @@
 				EA452A801EA2B14300427CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
