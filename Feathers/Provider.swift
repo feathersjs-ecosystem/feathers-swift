@@ -7,21 +7,22 @@
 //
 
 import Foundation
+import PromiseKit
 
 public protocol Provider {
 
     init()
 
-    func find(parameters: [AnyHashable: Any])
+    func find(parameters: [AnyHashable: Any]) -> Promise<Any>
 
-    func get(id: String, parameters: [AnyHashable: Any])
+    func get(id: String, parameters: [AnyHashable: Any]) -> Promise<Any>
 
-    func create(data: [AnyHashable: Any], parameters: [AnyHashable: Any])
+    func create(data: [AnyHashable: Any], parameters: [AnyHashable: Any]) -> Promise<Any>
 
-    func update(id: String, data: [AnyHashable: Any], parameters: [AnyHashable: Any])
+    func update(id: String, data: [AnyHashable: Any], parameters: [AnyHashable: Any]) -> Promise<Any>
 
-    func patch(id: String, data: [AnyHashable: Any], parameters: [AnyHashable: Any])
+    func patch(id: String, data: [AnyHashable: Any], parameters: [AnyHashable: Any]) -> Promise<Any>
 
-    func remove(id: String, parameters: [AnyHashable: Any])
+    func remove(id: String, parameters: [AnyHashable: Any]) -> Promise<Any>
 
 }
