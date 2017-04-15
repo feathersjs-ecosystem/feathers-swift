@@ -6,7 +6,8 @@
 //  Copyright © 2017 Swoopy Studios. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import PromiseKit
 
 final public class Service {
 
