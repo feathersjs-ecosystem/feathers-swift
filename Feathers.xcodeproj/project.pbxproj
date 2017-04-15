@@ -10,6 +10,18 @@
 		EA2ABD341EA2B49E0099A091 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD331EA2B49E0099A091 /* Service.swift */; };
 		EA2ABD361EA2B5DC0099A091 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD351EA2B5DC0099A091 /* Provider.swift */; };
 		EA2ABD381EA2B6980099A091 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD371EA2B6980099A091 /* Feathers.swift */; };
+		EA2ABD3B1EA2BA6F0099A091 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD331EA2B49E0099A091 /* Service.swift */; };
+		EA2ABD3C1EA2BA6F0099A091 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD371EA2B6980099A091 /* Feathers.swift */; };
+		EA2ABD3D1EA2BA6F0099A091 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD351EA2B5DC0099A091 /* Provider.swift */; };
+		EA2ABD401EA2BA6F0099A091 /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA2ABD491EA2BA890099A091 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD331EA2B49E0099A091 /* Service.swift */; };
+		EA2ABD4A1EA2BA890099A091 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD371EA2B6980099A091 /* Feathers.swift */; };
+		EA2ABD4B1EA2BA890099A091 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD351EA2B5DC0099A091 /* Provider.swift */; };
+		EA2ABD4E1EA2BA890099A091 /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA2ABD571EA2BA8A0099A091 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD331EA2B49E0099A091 /* Service.swift */; };
+		EA2ABD581EA2BA8A0099A091 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD371EA2B6980099A091 /* Feathers.swift */; };
+		EA2ABD591EA2BA8A0099A091 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD351EA2B5DC0099A091 /* Provider.swift */; };
+		EA2ABD5C1EA2BA8A0099A091 /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA452A711EA2B14300427CEF /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA452A671EA2B14300427CEF /* Feathers.framework */; };
 		EA452A761EA2B14300427CEF /* FeathersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA452A751EA2B14300427CEF /* FeathersTests.swift */; };
 		EA452A781EA2B14300427CEF /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +41,13 @@
 		EA2ABD331EA2B49E0099A091 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		EA2ABD351EA2B5DC0099A091 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		EA2ABD371EA2B6980099A091 /* Feathers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feathers.swift; sourceTree = "<group>"; };
+		EA2ABD451EA2BA6F0099A091 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA2ABD531EA2BA890099A091 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA2ABD611EA2BA8A0099A091 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA2ABD641EA2BB490099A091 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		EA2ABD661EA2BB540099A091 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/Mac/PromiseKit.framework; sourceTree = "<group>"; };
+		EA2ABD681EA2BB5B0099A091 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/watchOS/PromiseKit.framework; sourceTree = "<group>"; };
+		EA2ABD6A1EA2BB630099A091 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/tvOS/PromiseKit.framework; sourceTree = "<group>"; };
 		EA452A671EA2B14300427CEF /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA452A6A1EA2B14300427CEF /* Feathers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feathers.h; sourceTree = "<group>"; };
 		EA452A6B1EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +57,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA2ABD3E1EA2BA6F0099A091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2ABD4C1EA2BA890099A091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2ABD5A1EA2BA8A0099A091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA452A631EA2B14300427CEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,12 +96,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA2ABD631EA2BB490099A091 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA2ABD6A1EA2BB630099A091 /* PromiseKit.framework */,
+				EA2ABD681EA2BB5B0099A091 /* PromiseKit.framework */,
+				EA2ABD661EA2BB540099A091 /* PromiseKit.framework */,
+				EA2ABD641EA2BB490099A091 /* PromiseKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA452A5D1EA2B14300427CEF = {
 			isa = PBXGroup;
 			children = (
 				EA452A691EA2B14300427CEF /* Feathers */,
 				EA452A741EA2B14300427CEF /* FeathersTests */,
 				EA452A681EA2B14300427CEF /* Products */,
+				EA2ABD631EA2BB490099A091 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +122,9 @@
 			children = (
 				EA452A671EA2B14300427CEF /* Feathers.framework */,
 				EA452A701EA2B14300427CEF /* FeathersTests.xctest */,
+				EA2ABD451EA2BA6F0099A091 /* Feathers.framework */,
+				EA2ABD531EA2BA890099A091 /* Feathers.framework */,
+				EA2ABD611EA2BA8A0099A091 /* Feathers.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +153,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		EA2ABD3F1EA2BA6F0099A091 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2ABD401EA2BA6F0099A091 /* Feathers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2ABD4D1EA2BA890099A091 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2ABD4E1EA2BA890099A091 /* Feathers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2ABD5B1EA2BA8A0099A091 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2ABD5C1EA2BA8A0099A091 /* Feathers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA452A641EA2B14300427CEF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -109,9 +188,63 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		EA452A661EA2B14300427CEF /* Feathers */ = {
+		EA2ABD391EA2BA6F0099A091 /* Feathers-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA452A7B1EA2B14300427CEF /* Build configuration list for PBXNativeTarget "Feathers" */;
+			buildConfigurationList = EA2ABD421EA2BA6F0099A091 /* Build configuration list for PBXNativeTarget "Feathers-macOS" */;
+			buildPhases = (
+				EA2ABD3A1EA2BA6F0099A091 /* Sources */,
+				EA2ABD3E1EA2BA6F0099A091 /* Frameworks */,
+				EA2ABD3F1EA2BA6F0099A091 /* Headers */,
+				EA2ABD411EA2BA6F0099A091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Feathers-macOS";
+			productName = Feathers;
+			productReference = EA2ABD451EA2BA6F0099A091 /* Feathers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EA2ABD471EA2BA890099A091 /* Feathers-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA2ABD501EA2BA890099A091 /* Build configuration list for PBXNativeTarget "Feathers-watchOS" */;
+			buildPhases = (
+				EA2ABD481EA2BA890099A091 /* Sources */,
+				EA2ABD4C1EA2BA890099A091 /* Frameworks */,
+				EA2ABD4D1EA2BA890099A091 /* Headers */,
+				EA2ABD4F1EA2BA890099A091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Feathers-watchOS";
+			productName = Feathers;
+			productReference = EA2ABD531EA2BA890099A091 /* Feathers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EA2ABD551EA2BA8A0099A091 /* Feathers-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA2ABD5E1EA2BA8A0099A091 /* Build configuration list for PBXNativeTarget "Feathers-tvOS" */;
+			buildPhases = (
+				EA2ABD561EA2BA8A0099A091 /* Sources */,
+				EA2ABD5A1EA2BA8A0099A091 /* Frameworks */,
+				EA2ABD5B1EA2BA8A0099A091 /* Headers */,
+				EA2ABD5D1EA2BA8A0099A091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Feathers-tvOS";
+			productName = Feathers;
+			productReference = EA2ABD611EA2BA8A0099A091 /* Feathers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EA452A661EA2B14300427CEF /* Feathers-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA452A7B1EA2B14300427CEF /* Build configuration list for PBXNativeTarget "Feathers-iOS" */;
 			buildPhases = (
 				EA452A621EA2B14300427CEF /* Sources */,
 				EA452A631EA2B14300427CEF /* Frameworks */,
@@ -122,7 +255,7 @@
 			);
 			dependencies = (
 			);
-			name = Feathers;
+			name = "Feathers-iOS";
 			productName = Feathers;
 			productReference = EA452A671EA2B14300427CEF /* Feathers.framework */;
 			productType = "com.apple.product-type.framework";
@@ -155,6 +288,15 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Swoopy Studios";
 				TargetAttributes = {
+					EA2ABD391EA2BA6F0099A091 = {
+						DevelopmentTeam = 8959XVXX2J;
+					};
+					EA2ABD471EA2BA890099A091 = {
+						DevelopmentTeam = 8959XVXX2J;
+					};
+					EA2ABD551EA2BA8A0099A091 = {
+						DevelopmentTeam = 8959XVXX2J;
+					};
 					EA452A661EA2B14300427CEF = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 8959XVXX2J;
@@ -180,13 +322,37 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA452A661EA2B14300427CEF /* Feathers */,
+				EA452A661EA2B14300427CEF /* Feathers-iOS */,
 				EA452A6F1EA2B14300427CEF /* FeathersTests */,
+				EA2ABD391EA2BA6F0099A091 /* Feathers-macOS */,
+				EA2ABD471EA2BA890099A091 /* Feathers-watchOS */,
+				EA2ABD551EA2BA8A0099A091 /* Feathers-tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EA2ABD411EA2BA6F0099A091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2ABD4F1EA2BA890099A091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2ABD5D1EA2BA8A0099A091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA452A651EA2B14300427CEF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,6 +370,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA2ABD3A1EA2BA6F0099A091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2ABD3B1EA2BA6F0099A091 /* Service.swift in Sources */,
+				EA2ABD3C1EA2BA6F0099A091 /* Feathers.swift in Sources */,
+				EA2ABD3D1EA2BA6F0099A091 /* Provider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2ABD481EA2BA890099A091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2ABD491EA2BA890099A091 /* Service.swift in Sources */,
+				EA2ABD4A1EA2BA890099A091 /* Feathers.swift in Sources */,
+				EA2ABD4B1EA2BA890099A091 /* Provider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2ABD561EA2BA8A0099A091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2ABD571EA2BA8A0099A091 /* Service.swift in Sources */,
+				EA2ABD581EA2BA8A0099A091 /* Feathers.swift in Sources */,
+				EA2ABD591EA2BA8A0099A091 /* Provider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA452A621EA2B14300427CEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,12 +423,141 @@
 /* Begin PBXTargetDependency section */
 		EA452A731EA2B14300427CEF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA452A661EA2B14300427CEF /* Feathers */;
+			target = EA452A661EA2B14300427CEF /* Feathers-iOS */;
 			targetProxy = EA452A721EA2B14300427CEF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		EA2ABD431EA2BA6F0099A091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8959XVXX2J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Feathers-iOS copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
+				PRODUCT_NAME = Feathers;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EA2ABD441EA2BA6F0099A091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8959XVXX2J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Feathers-iOS copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
+				PRODUCT_NAME = Feathers;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EA2ABD511EA2BA890099A091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8959XVXX2J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Feathers-macOS copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
+				PRODUCT_NAME = Feathers;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EA2ABD521EA2BA890099A091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8959XVXX2J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Feathers-macOS copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
+				PRODUCT_NAME = Feathers;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EA2ABD5F1EA2BA8A0099A091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8959XVXX2J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Feathers-macOS copy 2-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
+				PRODUCT_NAME = Feathers;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EA2ABD601EA2BA8A0099A091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8959XVXX2J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Feathers-macOS copy 2-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
+				PRODUCT_NAME = Feathers;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		EA452A791EA2B14300427CEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -278,6 +603,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Feathers;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -325,6 +651,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Feathers;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,11 +671,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Feathers/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Feathers;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -365,11 +693,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Feathers/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Feathers;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -404,6 +733,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA2ABD421EA2BA6F0099A091 /* Build configuration list for PBXNativeTarget "Feathers-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA2ABD431EA2BA6F0099A091 /* Debug */,
+				EA2ABD441EA2BA6F0099A091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA2ABD501EA2BA890099A091 /* Build configuration list for PBXNativeTarget "Feathers-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA2ABD511EA2BA890099A091 /* Debug */,
+				EA2ABD521EA2BA890099A091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA2ABD5E1EA2BA8A0099A091 /* Build configuration list for PBXNativeTarget "Feathers-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA2ABD5F1EA2BA8A0099A091 /* Debug */,
+				EA2ABD601EA2BA8A0099A091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EA452A611EA2B14300427CEF /* Build configuration list for PBXProject "Feathers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -413,7 +769,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA452A7B1EA2B14300427CEF /* Build configuration list for PBXNativeTarget "Feathers" */ = {
+		EA452A7B1EA2B14300427CEF /* Build configuration list for PBXNativeTarget "Feathers-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA452A7C1EA2B14300427CEF /* Debug */,
