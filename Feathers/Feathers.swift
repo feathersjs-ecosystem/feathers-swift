@@ -11,9 +11,11 @@ import Foundation
 public final class Feathers {
 
     public let provider: Provider
+    public let baseURL: URL
 
-    init(provider: Provider) {
+    init(baseURL: URL, provider: Provider) {
         self.provider = provider
+        self.baseURL = baseURL
     }
 
     func service(path: String) -> Service {
