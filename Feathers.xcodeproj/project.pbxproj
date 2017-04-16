@@ -22,6 +22,18 @@
 		EA2ABD581EA2BA8A0099A091 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD371EA2B6980099A091 /* Feathers.swift */; };
 		EA2ABD591EA2BA8A0099A091 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD351EA2B5DC0099A091 /* Provider.swift */; };
 		EA2ABD5C1EA2BA8A0099A091 /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA44E1061EA3D888000879EB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1051EA3D888000879EB /* Response.swift */; };
+		EA44E1071EA3D888000879EB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1051EA3D888000879EB /* Response.swift */; };
+		EA44E1081EA3D888000879EB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1051EA3D888000879EB /* Response.swift */; };
+		EA44E1091EA3D888000879EB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1051EA3D888000879EB /* Response.swift */; };
+		EA44E10B1EA3F700000879EB /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E10A1EA3F700000879EB /* FeathersError.swift */; };
+		EA44E10C1EA3F700000879EB /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E10A1EA3F700000879EB /* FeathersError.swift */; };
+		EA44E10D1EA3F700000879EB /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E10A1EA3F700000879EB /* FeathersError.swift */; };
+		EA44E10E1EA3F700000879EB /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E10A1EA3F700000879EB /* FeathersError.swift */; };
+		EA44E1111EA41383000879EB /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1101EA41383000879EB /* NSURL+QueryParameters.swift */; };
+		EA44E1121EA41383000879EB /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1101EA41383000879EB /* NSURL+QueryParameters.swift */; };
+		EA44E1131EA41383000879EB /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1101EA41383000879EB /* NSURL+QueryParameters.swift */; };
+		EA44E1141EA41383000879EB /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1101EA41383000879EB /* NSURL+QueryParameters.swift */; };
 		EA452A711EA2B14300427CEF /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA452A671EA2B14300427CEF /* Feathers.framework */; };
 		EA452A761EA2B14300427CEF /* FeathersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA452A751EA2B14300427CEF /* FeathersTests.swift */; };
 		EA452A781EA2B14300427CEF /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +41,11 @@
 		EAE710DE1EA2CDD9002BEFE2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2ABD661EA2BB540099A091 /* PromiseKit.framework */; };
 		EAE710E01EA2CDEE002BEFE2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2ABD681EA2BB5B0099A091 /* PromiseKit.framework */; };
 		EAE710E11EA2CDF4002BEFE2 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2ABD6A1EA2BB630099A091 /* PromiseKit.framework */; };
+		EAE710E31EA2CF46002BEFE2 /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE710E21EA2CF46002BEFE2 /* RestProvider.swift */; };
+		EAE710E51EA3B879002BEFE2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE710E41EA3B879002BEFE2 /* Alamofire.framework */; };
+		EAE710E71EA3B884002BEFE2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE710E61EA3B884002BEFE2 /* Alamofire.framework */; };
+		EAE710E91EA3B88C002BEFE2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE710E81EA3B88C002BEFE2 /* Alamofire.framework */; };
+		EAE710EB1EA3B893002BEFE2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE710EA1EA3B893002BEFE2 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,13 +69,20 @@
 		EA2ABD661EA2BB540099A091 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/Mac/PromiseKit.framework; sourceTree = "<group>"; };
 		EA2ABD681EA2BB5B0099A091 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/watchOS/PromiseKit.framework; sourceTree = "<group>"; };
 		EA2ABD6A1EA2BB630099A091 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/tvOS/PromiseKit.framework; sourceTree = "<group>"; };
+		EA44E1051EA3D888000879EB /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		EA44E10A1EA3F700000879EB /* FeathersError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeathersError.swift; sourceTree = "<group>"; };
+		EA44E1101EA41383000879EB /* NSURL+QueryParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+QueryParameters.swift"; sourceTree = "<group>"; };
 		EA452A671EA2B14300427CEF /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA452A6A1EA2B14300427CEF /* Feathers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feathers.h; sourceTree = "<group>"; };
 		EA452A6B1EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA452A701EA2B14300427CEF /* FeathersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeathersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA452A751EA2B14300427CEF /* FeathersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeathersTests.swift; sourceTree = "<group>"; };
 		EA452A771EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EAE710DC1EA2CDA2002BEFE2 /* PromiseKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = PromiseKit.framework.dSYM; path = Carthage/Build/Mac/PromiseKit.framework.dSYM; sourceTree = "<group>"; };
+		EAE710E21EA2CF46002BEFE2 /* RestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestProvider.swift; sourceTree = "<group>"; };
+		EAE710E41EA3B879002BEFE2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		EAE710E61EA3B884002BEFE2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		EAE710E81EA3B88C002BEFE2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
+		EAE710EA1EA3B893002BEFE2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/watchOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE710DE1EA2CDD9002BEFE2 /* PromiseKit.framework in Frameworks */,
+				EAE710E71EA3B884002BEFE2 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE710E01EA2CDEE002BEFE2 /* PromiseKit.framework in Frameworks */,
+				EAE710EB1EA3B893002BEFE2 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE710E11EA2CDF4002BEFE2 /* PromiseKit.framework in Frameworks */,
+				EAE710E91EA3B88C002BEFE2 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE710D81EA2CC21002BEFE2 /* PromiseKit.framework in Frameworks */,
+				EAE710E51EA3B879002BEFE2 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +136,10 @@
 		EA2ABD631EA2BB490099A091 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAE710EA1EA3B893002BEFE2 /* Alamofire.framework */,
+				EAE710E81EA3B88C002BEFE2 /* Alamofire.framework */,
+				EAE710E61EA3B884002BEFE2 /* Alamofire.framework */,
+				EAE710E41EA3B879002BEFE2 /* Alamofire.framework */,
 				EA2ABD6A1EA2BB630099A091 /* PromiseKit.framework */,
 				EA2ABD681EA2BB5B0099A091 /* PromiseKit.framework */,
 				EA2ABD661EA2BB540099A091 /* PromiseKit.framework */,
@@ -116,10 +148,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EA44E10F1EA41375000879EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA44E1101EA41383000879EB /* NSURL+QueryParameters.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		EA452A5D1EA2B14300427CEF = {
 			isa = PBXGroup;
 			children = (
-				EAE710DC1EA2CDA2002BEFE2 /* PromiseKit.framework.dSYM */,
 				EA452A691EA2B14300427CEF /* Feathers */,
 				EA452A741EA2B14300427CEF /* FeathersTests */,
 				EA452A681EA2B14300427CEF /* Products */,
@@ -142,11 +181,15 @@
 		EA452A691EA2B14300427CEF /* Feathers */ = {
 			isa = PBXGroup;
 			children = (
+				EA44E10F1EA41375000879EB /* Extensions */,
 				EA452A6A1EA2B14300427CEF /* Feathers.h */,
 				EA452A6B1EA2B14300427CEF /* Info.plist */,
 				EA2ABD331EA2B49E0099A091 /* Service.swift */,
 				EA2ABD351EA2B5DC0099A091 /* Provider.swift */,
 				EA2ABD371EA2B6980099A091 /* Feathers.swift */,
+				EAE710E21EA2CF46002BEFE2 /* RestProvider.swift */,
+				EA44E1051EA3D888000879EB /* Response.swift */,
+				EA44E10A1EA3F700000879EB /* FeathersError.swift */,
 			);
 			path = Feathers;
 			sourceTree = "<group>";
@@ -206,6 +249,7 @@
 				EA2ABD3E1EA2BA6F0099A091 /* Frameworks */,
 				EA2ABD3F1EA2BA6F0099A091 /* Headers */,
 				EA2ABD411EA2BA6F0099A091 /* Resources */,
+				EAE710ED1EA3B8DA002BEFE2 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -224,6 +268,7 @@
 				EA2ABD4C1EA2BA890099A091 /* Frameworks */,
 				EA2ABD4D1EA2BA890099A091 /* Headers */,
 				EA2ABD4F1EA2BA890099A091 /* Resources */,
+				EAE710EE1EA3B902002BEFE2 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -242,6 +287,7 @@
 				EA2ABD5A1EA2BA8A0099A091 /* Frameworks */,
 				EA2ABD5B1EA2BA8A0099A091 /* Headers */,
 				EA2ABD5D1EA2BA8A0099A091 /* Resources */,
+				EAE710EC1EA3B8AE002BEFE2 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -388,6 +434,55 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		EAE710EC1EA3B8AE002BEFE2 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/Alamofire.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		EAE710ED1EA3B8DA002BEFE2 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Alamofire.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		EAE710EE1EA3B902002BEFE2 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/watchOS/PromiseKit.framework",
+				"$(SRCROOT)/Carthage/Build/watchOS/Alamofire.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -403,8 +498,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA44E1071EA3D888000879EB /* Response.swift in Sources */,
+				EA44E1121EA41383000879EB /* NSURL+QueryParameters.swift in Sources */,
 				EA2ABD3B1EA2BA6F0099A091 /* Service.swift in Sources */,
 				EA2ABD3C1EA2BA6F0099A091 /* Feathers.swift in Sources */,
+				EA44E10C1EA3F700000879EB /* FeathersError.swift in Sources */,
 				EA2ABD3D1EA2BA6F0099A091 /* Provider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,8 +511,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA44E1091EA3D888000879EB /* Response.swift in Sources */,
+				EA44E1141EA41383000879EB /* NSURL+QueryParameters.swift in Sources */,
 				EA2ABD491EA2BA890099A091 /* Service.swift in Sources */,
 				EA2ABD4A1EA2BA890099A091 /* Feathers.swift in Sources */,
+				EA44E10E1EA3F700000879EB /* FeathersError.swift in Sources */,
 				EA2ABD4B1EA2BA890099A091 /* Provider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,8 +524,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA44E1081EA3D888000879EB /* Response.swift in Sources */,
+				EA44E1131EA41383000879EB /* NSURL+QueryParameters.swift in Sources */,
 				EA2ABD571EA2BA8A0099A091 /* Service.swift in Sources */,
 				EA2ABD581EA2BA8A0099A091 /* Feathers.swift in Sources */,
+				EA44E10D1EA3F700000879EB /* FeathersError.swift in Sources */,
 				EA2ABD591EA2BA8A0099A091 /* Provider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,9 +537,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA44E1111EA41383000879EB /* NSURL+QueryParameters.swift in Sources */,
 				EA2ABD341EA2B49E0099A091 /* Service.swift in Sources */,
 				EA2ABD381EA2B6980099A091 /* Feathers.swift in Sources */,
+				EAE710E31EA2CF46002BEFE2 /* RestProvider.swift in Sources */,
 				EA2ABD361EA2B5DC0099A091 /* Provider.swift in Sources */,
+				EA44E10B1EA3F700000879EB /* FeathersError.swift in Sources */,
+				EA44E1061EA3D888000879EB /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
