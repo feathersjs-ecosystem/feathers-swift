@@ -11,18 +11,18 @@ import PromiseKit
 
 public protocol Provider {
 
-    init()
+    init(baseURL: URL)
 
-    func find(parameters: [AnyHashable: Any]) -> Promise<Any>
+    func find(_ path: String, parameters: [String: Any]) -> Promise<Response>
 
-    func get(id: String, parameters: [AnyHashable: Any]) -> Promise<Any>
+    func get(_ path: String, id: String, parameters: [String: Any]) -> Promise<Response>
 
-    func create(data: [AnyHashable: Any], parameters: [AnyHashable: Any]) -> Promise<Any>
+    func create(_ path: String, data: [String: Any], parameters: [String: Any]) -> Promise<Response>
 
-    func update(id: String, data: [AnyHashable: Any], parameters: [AnyHashable: Any]) -> Promise<Any>
+    func update(_ path: String, id: String, data: [String: Any], parameters: [String: Any]) -> Promise<Response>
 
-    func patch(id: String, data: [AnyHashable: Any], parameters: [AnyHashable: Any]) -> Promise<Any>
+    func patch(_ path: String, id: String, data: [String: Any], parameters: [String: Any]) -> Promise<Response>
 
-    func remove(id: String, parameters: [AnyHashable: Any]) -> Promise<Any>
+    func remove(_ path: String, id: String, parameters: [String: Any]) -> Promise<Response>
 
 }
