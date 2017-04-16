@@ -19,28 +19,28 @@ final public class Service {
         self.path = path
     }
 
-    public final func find(parameters: [AnyHashable: Any]) -> Promise<Any> {
-        return provider.find(parameters: parameters)
+    public final func find(parameters: [String: Any]) -> Promise<Response> {
+        return provider.find(path, parameters: parameters)
     }
 
-    public final func get(id: String, parameters: [AnyHashable: Any] = [:]) -> Promise<Any> {
-        return provider.get(id: id, parameters: parameters)
+    public final func get(id: String, parameters: [String: Any] = [:]) -> Promise<Response> {
+        return provider.get(path, id: id, parameters: parameters)
     }
 
-    public final func create(data: [AnyHashable: Any], parameters: [AnyHashable: Any] = [:]) -> Promise<Any> {
-        return provider.create(data: data, parameters: parameters)
+    public final func create(data: [String: Any], parameters: [String: Any] = [:]) -> Promise<Response> {
+        return provider.create(path, data: data, parameters: parameters)
     }
 
-    public final func update(id: String, data: [AnyHashable: Any], parameters: [AnyHashable: Any] = [:]) -> Promise<Any> {
-        return provider.update(id: id, data: data, parameters: parameters)
+    public final func update(id: String, data: [String: Any], parameters: [String: Any] = [:]) -> Promise<Response> {
+        return provider.update(path, id: id, data: data, parameters: parameters)
     }
 
-    public final func patch(id: String, data: [AnyHashable: Any], parameters: [AnyHashable: Any] = [:]) -> Promise<Any> {
-        return provider.patch(id: id, data: data, parameters: parameters)
+    public final func patch(id: String, data: [String: Any], parameters: [String: Any] = [:]) -> Promise<Response> {
+        return provider.patch(path, id: id, data: data, parameters: parameters)
     }
 
-    public final func remove(id: String, parameters: [AnyHashable: Any] = [:]) -> Promise<Any> {
-        return provider.remove(id: id, parameters: parameters)
+    public final func remove(id: String, parameters: [String: Any] = [:]) -> Promise<Response> {
+        return provider.remove(path, id: id, parameters: parameters)
     }
     
 }
