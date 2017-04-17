@@ -11,7 +11,9 @@ import PromiseKit
 
 public protocol Provider {
 
-    init(baseURL: URL)
+    func setup()
+
+    func authenticate(_ path: String, credentials: [String: Any]) -> Promise<Response>
 
     func find(_ path: String, parameters: [String: Any]) -> Promise<Response>
 

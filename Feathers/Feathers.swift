@@ -7,19 +7,39 @@
 //
 
 import Foundation
+import ReactiveSwift
+import PromiseKit
 
 public final class Feathers {
 
     public let provider: Provider
     public let baseURL: URL
 
-    init(baseURL: URL, provider: Provider) {
+    fileprivate var authOptions: AuthenticationOptions?
+
+    public init(baseURL: URL, provider: Provider) {
         self.provider = provider
         self.baseURL = baseURL
     }
 
-    func service(path: String) -> Service {
+    public func service(path: String) -> Service {
         return Service(provider: provider, path: path)
+    }
+
+    public func configure(auth options: AuthenticationOptions) {
+        authOptions = options
+    }
+
+    public func authenticate(_ credentials: [String: Any]) -> Promise<Response> {
+        return provider.authenticate(authOptions?.path ?? "/authentication", credentials: credentials)
+    }
+
+}
+
+extension Reactive where Base: Feathers {
+
+    public func authenticate(_ credentials: [String: Any]) -> SignalProducer<Response, FeathersError> {
+        return SignalProducer.from(promise: base.authenticate(credentials))
     }
 
 }

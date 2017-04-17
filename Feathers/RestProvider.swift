@@ -47,7 +47,20 @@ final public class RestProvider: Provider {
         self.baseURL = baseURL
     }
 
-    public func find(_ path: String, parameters: [String : Any]) -> Promise<Response> {
+    public final func setup() {}
+
+    public final func authenticate(_ path: String, credentials: [String: Any]) -> Promise<Response> {
+        return Promise { fulfill, reject in
+            Alamofire.request(baseURL.appendingPathComponent(path), method: .post, parameters: credentials, encoding: URLEncoding.httpBody)
+                .validate()
+                .response(responseSerializer: DataRequest.jsonResponseSerializer()) { [weak self] response in
+                    guard let vSelf = self else { return }
+                    vSelf.responseHandleClosure(response)(fulfill, reject)
+            }
+        }
+    }
+
+    public final func find(_ path: String, parameters: [String : Any]) -> Promise<Response> {
         return Promise { fulfill, reject in
             Alamofire.request(baseURL.appendingPathComponent(path), method: .get, parameters: parameters, encoding: URLEncoding.queryString)
                 .validate()
@@ -58,7 +71,7 @@ final public class RestProvider: Provider {
         }
     }
 
-    public func get(_ path: String, id: String, parameters: [String : Any]) -> Promise<Response> {
+    public final func get(_ path: String, id: String, parameters: [String : Any]) -> Promise<Response> {
         return Promise { fulfill, reject in
             Alamofire.request(baseURL.appendingPathComponent(path).appendingPathComponent(id), method: .get, parameters: parameters, encoding: URLEncoding.queryString)
                 .validate()
@@ -69,7 +82,7 @@ final public class RestProvider: Provider {
         }
     }
 
-    public func create(_ path: String, data: [String : Any], parameters: [String : Any]) -> Promise<Response> {
+    public final func create(_ path: String, data: [String : Any], parameters: [String : Any]) -> Promise<Response> {
         return Promise { fulfill, reject in
             let queryURL = baseURL.appendingPathComponent(path).URLByAppendingQueryParameters(parameters: parameters)
             var mutableRequest = URLRequest(url: queryURL!)
@@ -85,7 +98,7 @@ final public class RestProvider: Provider {
         }
     }
 
-    public func update(_ path: String, id: String, data: [String : Any], parameters: [String : Any]) -> Promise<Response> {
+    public final func update(_ path: String, id: String, data: [String : Any], parameters: [String : Any]) -> Promise<Response> {
         return Promise { fulfill, reject in
             let queryURL = baseURL
                 .appendingPathComponent(path)
@@ -103,7 +116,7 @@ final public class RestProvider: Provider {
         }
     }
 
-    public func patch(_ path: String, id: String, data: [String : Any], parameters: [String : Any]) -> Promise<Response> {
+    public final func patch(_ path: String, id: String, data: [String : Any], parameters: [String : Any]) -> Promise<Response> {
         return Promise { fulfill, reject in
             let queryURL = baseURL
                 .appendingPathComponent(path)
@@ -121,7 +134,7 @@ final public class RestProvider: Provider {
         }
     }
 
-    public func remove(_ path: String, id: String, parameters: [String : Any]) -> Promise<Response> {
+    public final func remove(_ path: String, id: String, parameters: [String : Any]) -> Promise<Response> {
         return Promise { fulfill, reject in
             Alamofire.request(baseURL.appendingPathComponent(path).appendingPathComponent(id), method: .delete, parameters: parameters, encoding: URLEncoding.queryString)
                 .validate()
