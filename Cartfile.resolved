@@ -1,3 +1,6 @@
 github "Alamofire/Alamofire" "4.4.0"
+github "ReactiveCocoa/ReactiveSwift" "1.1.1"
+github "antitypical/Result" "3.2.1"
 github "jspahrsummers/xcconfigs" "3d9d99634cae6d586e272543d527681283b33eb0"
 github "mxcl/PromiseKit" "4.1.8"
+github "socketio/socket.io-client-swift" "v8.3.3"
