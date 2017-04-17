@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum FeathersError: Error {
+public enum FeathersError: Error {
 
     case badRequest
     case notAuthenticated
@@ -29,7 +29,7 @@ enum FeathersError: Error {
     case underlying(Error)
     case unknown
 
-    init?(statusCode: Int) {
+    public init?(statusCode: Int) {
         switch statusCode {
             case 400: self = .badRequest
             case 401: self = .notAuthenticated
@@ -50,7 +50,7 @@ enum FeathersError: Error {
         }
     }
 
-    init(error: Error) {
+    public init(error: Error) {
         self = .underlying(error)
     }
     
