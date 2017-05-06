@@ -13,13 +13,11 @@ import PromiseKit
 public final class Feathers {
 
     public let provider: Provider
-    public let baseURL: URL
 
-    fileprivate var authOptions: AuthenticationOptions?
+    private var authOptions = AuthenticationOptions()
 
-    public init(baseURL: URL, provider: Provider) {
+    public init(provider: Provider) {
         self.provider = provider
-        self.baseURL = baseURL
     }
 
     public func service(path: String) -> Service {
@@ -30,16 +28,10 @@ public final class Feathers {
         authOptions = options
     }
 
-    public func authenticate(_ credentials: [String: Any]) -> Promise<Response> {
-        return provider.authenticate(authOptions?.path ?? "/authentication", credentials: credentials)
-    }
-
-}
-
-extension Reactive where Base: Feathers {
-
-    public func authenticate(_ credentials: [String: Any]) -> SignalProducer<Response, FeathersError> {
-        return SignalProducer.from(promise: base.authenticate(credentials))
+    public func authenticate(_ credentials: [String: Any], completion: @escaping (Bool, FeathersError?) -> ()) {
+        provider.authenticate(authOptions.path, credentials: credentials) { error, response in
+            completion(true, nil)
+        }
     }
 
 }
