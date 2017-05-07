@@ -9,14 +9,14 @@
 import Foundation
 import KeychainSwift
 
-public protocol AuthenticationStorage {
+public protocol AuthenticationStorage: class {
 
     init(storageKey: String)
     var accessToken: String? { get set }
 
 }
 
-public struct EncryptedAuthenticationStore: AuthenticationStorage {
+public final class EncryptedAuthenticationStore: AuthenticationStorage {
 
     private let keychain = KeychainSwift()
     private let storageKey: String
@@ -29,7 +29,7 @@ public struct EncryptedAuthenticationStore: AuthenticationStorage {
         }
     }
 
-    public init(storageKey: String) {
+    public init(storageKey: String = "feathers-jwt") {
         self.storageKey = storageKey
     }
 

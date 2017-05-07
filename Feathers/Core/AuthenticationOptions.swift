@@ -31,10 +31,6 @@ public struct AuthenticationOptions {
     // The key to store the accessToken with.
     let storageKey: String
 
-    /// Storage object that automatically stores the accessToken.
-    /// Use the default. It's encrypted. Use it.
-    let storage: AuthenticationStorage
-
     init(
         header: String = "Authorization",
         path: String = "/authentication",
@@ -42,8 +38,7 @@ public struct AuthenticationOptions {
         entity: String = "user",
         service: String = "users",
         cookie: String = "feathers-jwt",
-        storageKey: String = "feathers-jwt",
-        storage: AuthenticationStorage = EncryptedAuthenticationStore(storageKey: "feathers-jwt")) {
+        storageKey: String = "feathers-jwt") {
         self.header = header
         self.path = path
         self.jwtStrategy = jwtStrategy
@@ -51,6 +46,5 @@ public struct AuthenticationOptions {
         self.service = service
         self.cookie = cookie
         self.storageKey = storageKey
-        self.storage = storage
     }
 }

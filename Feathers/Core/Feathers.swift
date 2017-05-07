@@ -11,6 +11,7 @@ import Foundation
 public final class Feathers {
 
     public let provider: Provider
+    private(set) public var authenticationStorage: AuthenticationStorage = EncryptedAuthenticationStore()
 
     private var authOptions = AuthenticationOptions()
 
@@ -24,6 +25,7 @@ public final class Feathers {
 
     public func configure(auth options: AuthenticationOptions) {
         authOptions = options
+        authenticationStorage = EncryptedAuthenticationStore(storageKey: options.storageKey)
     }
 
     public func authenticate(_ credentials: [String: Any], completion: @escaping (Bool, FeathersError?) -> ()) {
