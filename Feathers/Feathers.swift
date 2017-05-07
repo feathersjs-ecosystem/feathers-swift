@@ -8,7 +8,6 @@
 
 import Foundation
 import ReactiveSwift
-import PromiseKit
 
 public final class Feathers {
 
