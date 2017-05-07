@@ -4,7 +4,9 @@ Pod::Spec.new do |s|
   s.version      = "0.0.3"
   s.summary      = "Swift framework for interacting with featherjs apis"
   s.description  = <<-DESC
-                   Swift library for connecting to a FeathersJS backend
+                   Swift library for connecting to a FeathersJS backend.
+
+                   ReactiveSwift and RxSwift extensions are available.
                    DESC
   s.homepage     = "https://github.com/startupthekid/feathers-ios"
   s.license      = { :type => "MIT", :file => "LICENSE.md" }
@@ -23,6 +25,7 @@ Pod::Spec.new do |s|
     ss.framework = "Foundation"
     ss.dependency 'Socket.IO-Client-Swift', '~> 8.3.3'
     ss.dependency 'KeychainSwift'
+    ss.dependency 'Result'
   end
 
   s.subspec "ReactiveSwift" do |ss|

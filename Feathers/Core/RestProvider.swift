@@ -59,7 +59,6 @@ final public class RestProvider: Provider {
         Alamofire.request(mutableRequest)
             .validate()
             .response(responseSerializer: DataRequest.jsonResponseSerializer()) { [weak self] response in
-                print(self)
                 guard let vSelf = self else { return }
                 let result = vSelf.handleResponse(response)
                 completion(result.error, result.value)

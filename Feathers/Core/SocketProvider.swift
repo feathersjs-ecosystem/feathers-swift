@@ -11,7 +11,6 @@
 #if !os(watchOS)
     import SocketIO
     import Foundation
-    import PromiseKit
 
     public final class SocketProvider: Provider {
 

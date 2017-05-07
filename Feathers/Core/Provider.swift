@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import PromiseKit
 
 public typealias FeathersCallback = (FeathersError?, Response?) -> ()
 

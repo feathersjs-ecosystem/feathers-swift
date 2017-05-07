@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ReactiveSwift
 
 public final class Feathers {
 
