@@ -9,12 +9,17 @@
 import Foundation
 import Alamofire
 
-struct Pagination {
+/// Describes a request's pagination properties.
+public struct Pagination {
     let total: Int
     let limit: Int
     let skip: Int
 }
 
+/// Encapsulation around the kinds of response data we can receive.
+///
+/// - jsonArray: Data is a JSON array (non-paginated).
+/// - jsonObject: Data is a JSON object (paginated or single entity request i.e. `get`, `update`, `patch`, or `remove`.
 public enum ResponseData: CustomDebugStringConvertible, CustomStringConvertible {
     case jsonArray([Any])
     case jsonObject(Any)
@@ -33,10 +38,14 @@ public enum ResponseData: CustomDebugStringConvertible, CustomStringConvertible 
     }
 }
 
+/// Encapsulates a successful response from the service.
 public struct Response: CustomDebugStringConvertible, CustomStringConvertible {
 
-    let pagination: Pagination?
-    let data: ResponseData
+    /// Pagination information.
+    public let pagination: Pagination?
+
+    /// The response data.
+    public let data: ResponseData
 
     public var description: String {
         guard let page = pagination else {
