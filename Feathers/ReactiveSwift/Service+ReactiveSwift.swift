@@ -12,6 +12,8 @@ import ReactiveSwift
     import Feathers
 #endif
 
+extension Service: ReactiveExtensionsProvider {}
+
 public extension Reactive where Base: Service {
 
     public func request(_ method: FeathersMethod) -> SignalProducer<Response, FeathersError> {

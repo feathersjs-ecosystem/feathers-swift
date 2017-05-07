@@ -12,6 +12,8 @@ import ReactiveSwift
     import Feathers
 #endif
 
+extension Feathers: ReactiveExtensionsProvider {}
+
 public extension Reactive where Base: Feathers {
 
     public func authenticate(_ credentials: [String: Any]) -> SignalProducer<Bool, FeathersError> {
