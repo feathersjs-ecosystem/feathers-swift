@@ -67,6 +67,9 @@
 		EABBADE31EBF953200522603 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADE11EBF953200522603 /* Quick.framework */; };
 		EABBADEB1EBF95C800522603 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABBADE91EBF95C800522603 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EABBADEC1EBF95C900522603 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABBADEA1EBF95C800522603 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EABBAE041EBFA2C300522603 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE031EBFA2C300522603 /* Service+RxSwift.swift */; };
+		EABBAE061EBFA31300522603 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBAE051EBFA31300522603 /* RxSwift.framework */; };
+		EABBAE081EBFA40300522603 /* Feathers+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE071EBFA40300522603 /* Feathers+RxSwift.swift */; };
 		EAE710E31EA2CF46002BEFE2 /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE710E21EA2CF46002BEFE2 /* RestProvider.swift */; };
 		EAEE2E441EBAD6E800E54939 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE2E431EBAD6E800E54939 /* AuthenticationStorage.swift */; };
 /* End PBXBuildFile section */
@@ -123,6 +126,9 @@
 		EABBADE91EBF95C800522603 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		EABBADEA1EBF95C800522603 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		EABBADF51EBF960C00522603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../FeathersTests/Info.plist; sourceTree = "<group>"; };
+		EABBAE031EBFA2C300522603 /* Service+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Service+RxSwift.swift"; sourceTree = "<group>"; };
+		EABBAE051EBFA31300522603 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		EABBAE071EBFA40300522603 /* Feathers+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Feathers+RxSwift.swift"; sourceTree = "<group>"; };
 		EAE710E21EA2CF46002BEFE2 /* RestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestProvider.swift; sourceTree = "<group>"; };
 		EAEE2E431EBAD6E800E54939 /* AuthenticationStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABBAE061EBFA31300522603 /* RxSwift.framework in Frameworks */,
 				EABBADCB1EBF941C00522603 /* Alamofire.framework in Frameworks */,
 				EABBADCC1EBF941C00522603 /* KeychainSwift.framework in Frameworks */,
 				EABBADCD1EBF941C00522603 /* ReactiveSwift.framework in Frameworks */,
@@ -182,13 +189,13 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		EA44E1151EA417A7000879EB /* Reactive */ = {
+		EA44E1151EA417A7000879EB /* ReactiveSwift */ = {
 			isa = PBXGroup;
 			children = (
 				EA44E1161EA417BA000879EB /* Service+ReactiveSwift.swift */,
 				EABBAD681EBD84FC00522603 /* Feathers+ReactiveSwift.swift */,
 			);
-			name = Reactive;
+			name = ReactiveSwift;
 			sourceTree = "<group>";
 		};
 		EA452A5D1EA2B14300427CEF = {
@@ -216,9 +223,10 @@
 		EA452A691EA2B14300427CEF /* Feathers */ = {
 			isa = PBXGroup;
 			children = (
+				EABBAE021EBFA2B000522603 /* RxSwift */,
 				EAEE2E421EBAD6AF00E54939 /* Authentication */,
 				EA9330681EA42F1A006DFA18 /* Providers */,
-				EA44E1151EA417A7000879EB /* Reactive */,
+				EA44E1151EA417A7000879EB /* ReactiveSwift */,
 				EA44E10F1EA41375000879EB /* Extensions */,
 				EA452A6A1EA2B14300427CEF /* Feathers.h */,
 				EA452A6B1EA2B14300427CEF /* Info.plist */,
@@ -252,6 +260,7 @@
 		EABBADC51EBF941B00522603 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EABBAE051EBFA31300522603 /* RxSwift.framework */,
 				EABBADE91EBF95C800522603 /* Nimble.framework */,
 				EABBADEA1EBF95C800522603 /* Quick.framework */,
 				EABBADE01EBF953200522603 /* Nimble.framework */,
@@ -263,6 +272,15 @@
 				EABBADCA1EBF941C00522603 /* SocketIO.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EABBAE021EBFA2B000522603 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				EABBAE031EBFA2C300522603 /* Service+RxSwift.swift */,
+				EABBAE071EBFA40300522603 /* Feathers+RxSwift.swift */,
+			);
+			name = RxSwift;
 			sourceTree = "<group>";
 		};
 		EAEE2E421EBAD6AF00E54939 /* Authentication */ = {
@@ -511,6 +529,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SocketIO.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -641,6 +660,7 @@
 			files = (
 				EA44E1111EA41383000879EB /* NSURL+QueryParameters.swift in Sources */,
 				EA2ABD341EA2B49E0099A091 /* Service.swift in Sources */,
+				EABBAE041EBFA2C300522603 /* Service+RxSwift.swift in Sources */,
 				EAEE2E441EBAD6E800E54939 /* AuthenticationStorage.swift in Sources */,
 				EA9330801EA43BC1006DFA18 /* SocketProvider.swift in Sources */,
 				EABBAD691EBD84FC00522603 /* Feathers+ReactiveSwift.swift in Sources */,
@@ -649,6 +669,7 @@
 				EAE710E31EA2CF46002BEFE2 /* RestProvider.swift in Sources */,
 				EA2ABD361EA2B5DC0099A091 /* Provider.swift in Sources */,
 				EA44E10B1EA3F700000879EB /* FeathersError.swift in Sources */,
+				EABBAE081EBFA40300522603 /* Feathers+RxSwift.swift in Sources */,
 				EA93308D1EA45A8E006DFA18 /* AuthenticationOptions.swift in Sources */,
 				EA44E1061EA3D888000879EB /* Response.swift in Sources */,
 			);

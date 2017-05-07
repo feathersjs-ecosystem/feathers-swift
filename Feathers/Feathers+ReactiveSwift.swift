@@ -9,7 +9,7 @@
 import Foundation
 import ReactiveSwift
 
-extension Reactive where Base: Feathers {
+public extension Reactive where Base: Feathers {
 
     public func authenticate(_ credentials: [String: Any]) -> SignalProducer<Bool, FeathersError> {
         return SignalProducer { [weak base = base] observer, disposable in

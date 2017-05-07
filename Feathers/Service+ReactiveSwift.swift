@@ -9,7 +9,7 @@
 import Foundation
 import ReactiveSwift
 
-extension Reactive where Base: Service {
+public extension Reactive where Base: Service {
 
     public func request(_ method: FeathersMethod) -> SignalProducer<Response, FeathersError> {
         return SignalProducer { [weak base = base] observer, disposable in
