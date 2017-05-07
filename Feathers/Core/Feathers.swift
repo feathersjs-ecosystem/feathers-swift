@@ -29,13 +29,14 @@ public final class Feathers {
     }
 
     public func authenticate(_ credentials: [String: Any], completion: @escaping (String?, FeathersError?) -> ()) {
-        provider.authenticate(authOptions.path, credentials: credentials) { error, response in
+        provider.authenticate(authOptions.path, credentials: credentials) { [weak self] error, response in
             if let error = error {
                 completion(nil, error)
             } else if let response = response,
                 case let .jsonObject(object) = response.data,
                 let json = object as? [String: Any],
                 let accessToken = json["accessToken"] as? String {
+                    self?.authenticationStorage.accessToken = accessToken
                     completion(accessToken, nil)
             } else {
                 completion(nil, .unknown)
