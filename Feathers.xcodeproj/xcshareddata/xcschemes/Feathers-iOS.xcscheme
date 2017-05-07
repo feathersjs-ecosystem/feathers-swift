@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Feathers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EABBADAE1EBE77C900522603"
+               BuildableName = "FeathersTests-iOS.xctest"
+               BlueprintName = "FeathersTests-iOS"
+               ReferencedContainer = "container:Feathers.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -32,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA452A6F1EA2B14300427CEF"
-               BuildableName = "FeathersTests.xctest"
-               BlueprintName = "FeathersTests"
+               BlueprintIdentifier = "EABBADAE1EBE77C900522603"
+               BuildableName = "FeathersTests-iOS.xctest"
+               BlueprintName = "FeathersTests-iOS"
                ReferencedContainer = "container:Feathers.xcodeproj">
             </BuildableReference>
          </TestableReference>

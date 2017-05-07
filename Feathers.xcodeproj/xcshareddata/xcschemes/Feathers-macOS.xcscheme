@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Feathers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EABBAD781EBE73F800522603"
+               BuildableName = "FeathersTests-macOS.xctest"
+               BlueprintName = "FeathersTests-macOS"
+               ReferencedContainer = "container:Feathers.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -29,6 +43,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "EA2ABD391EA2BA6F0099A091"
+            BuildableName = "Feathers.framework"
+            BlueprintName = "Feathers-macOS"
+            ReferencedContainer = "container:Feathers.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
