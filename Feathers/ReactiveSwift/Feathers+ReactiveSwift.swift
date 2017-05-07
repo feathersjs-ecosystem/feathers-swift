@@ -8,6 +8,9 @@
 
 import Foundation
 import ReactiveSwift
+#if !COCOAPODS
+    import Feathers
+#endif
 
 public extension Reactive where Base: Feathers {
 

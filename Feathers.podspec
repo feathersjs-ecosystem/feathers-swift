@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "Feathers"
   # Version goes here and will be used to access the git tag later on, once we have a first release.
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "Swift framework for interacting with featherjs apis"
   s.description  = <<-DESC
                    Swift library for connecting to a FeathersJS backend.
@@ -29,13 +29,13 @@ Pod::Spec.new do |s|
   end
 
   s.subspec "ReactiveSwift" do |ss|
-    ss.source_files = "Feathers/ReactiveSwift"
+    ss.source_files = "Feathers/ReactiveSwift/*{.swift}"
     ss.dependency "Feathers/Core"
     ss.dependency "ReactiveSwift", "~> 1.1"
   end
 
   s.subspec "RxSwift" do |ss|
-    ss.source_files = "Feathers/RxSwift"
+    ss.source_files = "Feathers/RxSwift/*{.swift}"
     ss.dependency "Feathers/Core"
     ss.dependency "RxSwift", "~> 3.0"
   end
