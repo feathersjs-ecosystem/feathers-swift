@@ -7,7 +7,15 @@
 //
 
 import Foundation
-import PromiseKit
+
+public enum FeathersMethod {
+    case find(parameters: [String: Any]?)
+    case get(id: String, parameters: [String: Any]?)
+    case create(data: [String: Any], parameters: [String: Any]?)
+    case update(id: String, data: [String: Any], parameters: [String: Any]?)
+    case patch(id: String, data: [String: Any], paramters: [String: Any]?)
+    case remove(id: String, parameters: [String: Any]?)
+}
 
 final public class Service {
 
@@ -19,28 +27,8 @@ final public class Service {
         self.path = path
     }
 
-    public final func find(parameters: [String: Any]) -> Promise<Response> {
-        return provider.find(path, parameters: parameters)
+    public func request(_ method: FeathersMethod, _ completion: @escaping FeathersCallback) {
+        provider.request(path: path, method: method, completion)
     }
 
-    public final func get(id: String, parameters: [String: Any] = [:]) -> Promise<Response> {
-        return provider.get(path, id: id, parameters: parameters)
-    }
-
-    public final func create(data: [String: Any], parameters: [String: Any] = [:]) -> Promise<Response> {
-        return provider.create(path, data: data, parameters: parameters)
-    }
-
-    public final func update(id: String, data: [String: Any], parameters: [String: Any] = [:]) -> Promise<Response> {
-        return provider.update(path, id: id, data: data, parameters: parameters)
-    }
-
-    public final func patch(id: String, data: [String: Any], parameters: [String: Any] = [:]) -> Promise<Response> {
-        return provider.patch(path, id: id, data: data, parameters: parameters)
-    }
-
-    public final func remove(id: String, parameters: [String: Any] = [:]) -> Promise<Response> {
-        return provider.remove(path, id: id, parameters: parameters)
-    }
-    
 }
