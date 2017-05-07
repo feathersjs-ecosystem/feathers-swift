@@ -16,19 +16,21 @@ extension Feathers: ReactiveExtensionsProvider {}
 
 public extension Reactive where Base: Feathers {
 
-    public func authenticate(_ credentials: [String: Any]) -> SignalProducer<Bool, FeathersError> {
+    public func authenticate(_ credentials: [String: Any]) -> SignalProducer<String, FeathersError> {
         return SignalProducer { [weak base = base] observer, disposable in
             guard let vBase = base else {
                 observer.sendInterrupted()
                 return
             }
-            vBase.authenticate(credentials) { success, error in
+            vBase.authenticate(credentials) { token, error in
                 if let error = error {
                     observer.send(error: error)
-                    return
+                } else if let token = token {
+                    observer.send(value: token)
+                    observer.sendCompleted()
+                } else {
+                    observer.send(error: .unknown)
                 }
-                observer.send(value: success)
-                observer.sendCompleted()
             }
         }
     }

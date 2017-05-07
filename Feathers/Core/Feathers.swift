@@ -28,9 +28,18 @@ public final class Feathers {
         authenticationStorage = EncryptedAuthenticationStore(storageKey: options.storageKey)
     }
 
-    public func authenticate(_ credentials: [String: Any], completion: @escaping (Bool, FeathersError?) -> ()) {
+    public func authenticate(_ credentials: [String: Any], completion: @escaping (String?, FeathersError?) -> ()) {
         provider.authenticate(authOptions.path, credentials: credentials) { error, response in
-            completion(true, nil)
+            if let error = error {
+                completion(nil, error)
+            } else if let response = response,
+                case let .jsonObject(object) = response.data,
+                let json = object as? [String: Any],
+                let accessToken = json["accessToken"] as? String {
+                    completion(accessToken, nil)
+            } else {
+                completion(nil, .unknown)
+            }
         }
     }
 

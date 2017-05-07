@@ -14,18 +14,21 @@ import RxSwift
 
 public extension Feathers {
 
-    public func authenticate(_ credentials: [String: Any]) -> Observable<Bool> {
+    public func authenticate(_ credentials: [String: Any]) -> Observable<String> {
         return Observable.create { [weak self] observer in
             guard let vSelf = self else {
                 return Disposables.create()
             }
-            vSelf.authenticate(credentials) { success, error in
+            vSelf.authenticate(credentials) { token, error in
                 if let error = error {
                     observer.onError(error)
                     return
+                } else if let token = token {
+                    observer.onNext(token)
+                    observer.onCompleted()
+                } else {
+                    observer.onError(FeathersError.unknown)
                 }
-                observer.onNext(success)
-                observer.onCompleted()
             }
             return Disposables.create()
         }

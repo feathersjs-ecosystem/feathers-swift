@@ -25,6 +25,8 @@ public extension Service {
                 } else if let response = response {
                     observer.onNext(response)
                     observer.onCompleted()
+                } else {
+                    observer.onError(FeathersError.unknown)
                 }
             }
             return Disposables.create()

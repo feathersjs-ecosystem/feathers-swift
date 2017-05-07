@@ -28,6 +28,8 @@ public extension Reactive where Base: Service {
                 } else if let response = response {
                     observer.send(value: response)
                     observer.sendCompleted()
+                } else {
+                    observer.send(error: .unknown)
                 }
             }
         }
