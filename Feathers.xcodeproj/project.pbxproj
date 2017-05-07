@@ -7,56 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA2ABD341EA2B49E0099A091 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD331EA2B49E0099A091 /* Service.swift */; };
-		EA2ABD361EA2B5DC0099A091 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD351EA2B5DC0099A091 /* Provider.swift */; };
-		EA2ABD381EA2B6980099A091 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD371EA2B6980099A091 /* Feathers.swift */; };
-		EA2ABD3B1EA2BA6F0099A091 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD331EA2B49E0099A091 /* Service.swift */; };
-		EA2ABD3C1EA2BA6F0099A091 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD371EA2B6980099A091 /* Feathers.swift */; };
-		EA2ABD3D1EA2BA6F0099A091 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD351EA2B5DC0099A091 /* Provider.swift */; };
 		EA2ABD401EA2BA6F0099A091 /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA2ABD491EA2BA890099A091 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD331EA2B49E0099A091 /* Service.swift */; };
-		EA2ABD4A1EA2BA890099A091 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD371EA2B6980099A091 /* Feathers.swift */; };
-		EA2ABD4B1EA2BA890099A091 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD351EA2B5DC0099A091 /* Provider.swift */; };
 		EA2ABD4E1EA2BA890099A091 /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA2ABD571EA2BA8A0099A091 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD331EA2B49E0099A091 /* Service.swift */; };
-		EA2ABD581EA2BA8A0099A091 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD371EA2B6980099A091 /* Feathers.swift */; };
-		EA2ABD591EA2BA8A0099A091 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2ABD351EA2B5DC0099A091 /* Provider.swift */; };
 		EA2ABD5C1EA2BA8A0099A091 /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA44E1061EA3D888000879EB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1051EA3D888000879EB /* Response.swift */; };
-		EA44E1071EA3D888000879EB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1051EA3D888000879EB /* Response.swift */; };
-		EA44E1081EA3D888000879EB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1051EA3D888000879EB /* Response.swift */; };
-		EA44E1091EA3D888000879EB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1051EA3D888000879EB /* Response.swift */; };
-		EA44E10B1EA3F700000879EB /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E10A1EA3F700000879EB /* FeathersError.swift */; };
-		EA44E10C1EA3F700000879EB /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E10A1EA3F700000879EB /* FeathersError.swift */; };
-		EA44E10D1EA3F700000879EB /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E10A1EA3F700000879EB /* FeathersError.swift */; };
-		EA44E10E1EA3F700000879EB /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E10A1EA3F700000879EB /* FeathersError.swift */; };
-		EA44E1111EA41383000879EB /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1101EA41383000879EB /* NSURL+QueryParameters.swift */; };
-		EA44E1121EA41383000879EB /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1101EA41383000879EB /* NSURL+QueryParameters.swift */; };
-		EA44E1131EA41383000879EB /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1101EA41383000879EB /* NSURL+QueryParameters.swift */; };
-		EA44E1141EA41383000879EB /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1101EA41383000879EB /* NSURL+QueryParameters.swift */; };
-		EA44E1171EA417BA000879EB /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1161EA417BA000879EB /* Service+ReactiveSwift.swift */; };
-		EA44E1181EA417BA000879EB /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1161EA417BA000879EB /* Service+ReactiveSwift.swift */; };
-		EA44E1191EA417BA000879EB /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1161EA417BA000879EB /* Service+ReactiveSwift.swift */; };
-		EA44E11A1EA417BA000879EB /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44E1161EA417BA000879EB /* Service+ReactiveSwift.swift */; };
 		EA452A781EA2B14300427CEF /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA9330801EA43BC1006DFA18 /* SocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93307F1EA43BC1006DFA18 /* SocketProvider.swift */; };
-		EA9330811EA43BC1006DFA18 /* SocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93307F1EA43BC1006DFA18 /* SocketProvider.swift */; };
-		EA9330821EA43BC1006DFA18 /* SocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93307F1EA43BC1006DFA18 /* SocketProvider.swift */; };
-		EA9330841EA45381006DFA18 /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE710E21EA2CF46002BEFE2 /* RestProvider.swift */; };
-		EA9330851EA45381006DFA18 /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE710E21EA2CF46002BEFE2 /* RestProvider.swift */; };
-		EA9330861EA45381006DFA18 /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE710E21EA2CF46002BEFE2 /* RestProvider.swift */; };
-		EA93308B1EA45979006DFA18 /* SocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93307F1EA43BC1006DFA18 /* SocketProvider.swift */; };
-		EA93308D1EA45A8E006DFA18 /* AuthenticationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93308C1EA45A8E006DFA18 /* AuthenticationOptions.swift */; };
-		EA93308F1EA45A8E006DFA18 /* AuthenticationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93308C1EA45A8E006DFA18 /* AuthenticationOptions.swift */; };
-		EA9330901EA45A8E006DFA18 /* AuthenticationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93308C1EA45A8E006DFA18 /* AuthenticationOptions.swift */; };
-		EABBAD691EBD84FC00522603 /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAD681EBD84FC00522603 /* Feathers+ReactiveSwift.swift */; };
-		EABBAD6F1EBDD08700522603 /* AuthenticationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93308C1EA45A8E006DFA18 /* AuthenticationOptions.swift */; };
-		EABBAD701EBDD08700522603 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE2E431EBAD6E800E54939 /* AuthenticationStorage.swift */; };
-		EABBAD711EBDD08800522603 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE2E431EBAD6E800E54939 /* AuthenticationStorage.swift */; };
-		EABBAD721EBDD08800522603 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE2E431EBAD6E800E54939 /* AuthenticationStorage.swift */; };
-		EABBAD731EBDD09300522603 /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAD681EBD84FC00522603 /* Feathers+ReactiveSwift.swift */; };
-		EABBAD741EBDD09300522603 /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAD681EBD84FC00522603 /* Feathers+ReactiveSwift.swift */; };
-		EABBAD751EBDD09300522603 /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAD681EBD84FC00522603 /* Feathers+ReactiveSwift.swift */; };
 		EABBADCB1EBF941C00522603 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC61EBF941C00522603 /* Alamofire.framework */; };
 		EABBADCC1EBF941C00522603 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC71EBF941C00522603 /* KeychainSwift.framework */; };
 		EABBADCD1EBF941C00522603 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC81EBF941C00522603 /* ReactiveSwift.framework */; };
@@ -67,11 +21,63 @@
 		EABBADE31EBF953200522603 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADE11EBF953200522603 /* Quick.framework */; };
 		EABBADEB1EBF95C800522603 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABBADE91EBF95C800522603 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EABBADEC1EBF95C900522603 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABBADEA1EBF95C800522603 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EABBAE041EBFA2C300522603 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE031EBFA2C300522603 /* Service+RxSwift.swift */; };
 		EABBAE061EBFA31300522603 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBAE051EBFA31300522603 /* RxSwift.framework */; };
-		EABBAE081EBFA40300522603 /* Feathers+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE071EBFA40300522603 /* Feathers+RxSwift.swift */; };
-		EAE710E31EA2CF46002BEFE2 /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE710E21EA2CF46002BEFE2 /* RestProvider.swift */; };
-		EAEE2E441EBAD6E800E54939 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEE2E431EBAD6E800E54939 /* AuthenticationStorage.swift */; };
+		EABBAE141EBFA6A400522603 /* AuthenticationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationOptions.swift */; };
+		EABBAE151EBFA6A400522603 /* AuthenticationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationOptions.swift */; };
+		EABBAE161EBFA6A400522603 /* AuthenticationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationOptions.swift */; };
+		EABBAE171EBFA6A400522603 /* AuthenticationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationOptions.swift */; };
+		EABBAE181EBFA6A400522603 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
+		EABBAE191EBFA6A400522603 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
+		EABBAE1A1EBFA6A400522603 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
+		EABBAE1B1EBFA6A400522603 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
+		EABBAE1C1EBFA6A400522603 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
+		EABBAE1D1EBFA6A400522603 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
+		EABBAE1E1EBFA6A400522603 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
+		EABBAE1F1EBFA6A400522603 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
+		EABBAE201EBFA6A400522603 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
+		EABBAE211EBFA6A400522603 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
+		EABBAE221EBFA6A400522603 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
+		EABBAE231EBFA6A400522603 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
+		EABBAE241EBFA6A400522603 /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */; };
+		EABBAE251EBFA6A400522603 /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */; };
+		EABBAE261EBFA6A400522603 /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */; };
+		EABBAE271EBFA6A400522603 /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */; };
+		EABBAE281EBFA6A400522603 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
+		EABBAE291EBFA6A400522603 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
+		EABBAE2A1EBFA6A400522603 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
+		EABBAE2B1EBFA6A400522603 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
+		EABBAE2C1EBFA6A400522603 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
+		EABBAE2D1EBFA6A400522603 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
+		EABBAE2E1EBFA6A400522603 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
+		EABBAE2F1EBFA6A400522603 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
+		EABBAE301EBFA6A400522603 /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE111EBFA6A400522603 /* RestProvider.swift */; };
+		EABBAE311EBFA6A400522603 /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE111EBFA6A400522603 /* RestProvider.swift */; };
+		EABBAE321EBFA6A400522603 /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE111EBFA6A400522603 /* RestProvider.swift */; };
+		EABBAE331EBFA6A400522603 /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE111EBFA6A400522603 /* RestProvider.swift */; };
+		EABBAE341EBFA6A400522603 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
+		EABBAE351EBFA6A400522603 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
+		EABBAE361EBFA6A400522603 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
+		EABBAE371EBFA6A400522603 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
+		EABBAE381EBFA6A400522603 /* SocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE131EBFA6A400522603 /* SocketProvider.swift */; };
+		EABBAE391EBFA6A400522603 /* SocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE131EBFA6A400522603 /* SocketProvider.swift */; };
+		EABBAE3A1EBFA6A400522603 /* SocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE131EBFA6A400522603 /* SocketProvider.swift */; };
+		EABBAE3B1EBFA6A400522603 /* SocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE131EBFA6A400522603 /* SocketProvider.swift */; };
+		EABBAE3E1EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */; };
+		EABBAE3F1EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */; };
+		EABBAE401EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */; };
+		EABBAE411EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */; };
+		EABBAE421EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
+		EABBAE431EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
+		EABBAE441EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
+		EABBAE451EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
+		EABBAE481EBFA6B800522603 /* Feathers+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */; };
+		EABBAE491EBFA6B800522603 /* Feathers+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */; };
+		EABBAE4A1EBFA6B800522603 /* Feathers+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */; };
+		EABBAE4B1EBFA6B800522603 /* Feathers+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */; };
+		EABBAE4C1EBFA6B800522603 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
+		EABBAE4D1EBFA6B800522603 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
+		EABBAE4E1EBFA6B800522603 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
+		EABBAE4F1EBFA6B800522603 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,22 +105,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EA2ABD331EA2B49E0099A091 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		EA2ABD351EA2B5DC0099A091 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
-		EA2ABD371EA2B6980099A091 /* Feathers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feathers.swift; sourceTree = "<group>"; };
 		EA2ABD451EA2BA6F0099A091 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2ABD531EA2BA890099A091 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2ABD611EA2BA8A0099A091 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA44E1051EA3D888000879EB /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		EA44E10A1EA3F700000879EB /* FeathersError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeathersError.swift; sourceTree = "<group>"; };
-		EA44E1101EA41383000879EB /* NSURL+QueryParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+QueryParameters.swift"; sourceTree = "<group>"; };
-		EA44E1161EA417BA000879EB /* Service+ReactiveSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Service+ReactiveSwift.swift"; sourceTree = "<group>"; };
 		EA452A671EA2B14300427CEF /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA452A6A1EA2B14300427CEF /* Feathers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feathers.h; sourceTree = "<group>"; };
 		EA452A6B1EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA93307F1EA43BC1006DFA18 /* SocketProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketProvider.swift; sourceTree = "<group>"; };
-		EA93308C1EA45A8E006DFA18 /* AuthenticationOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationOptions.swift; sourceTree = "<group>"; };
-		EABBAD681EBD84FC00522603 /* Feathers+ReactiveSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Feathers+ReactiveSwift.swift"; sourceTree = "<group>"; };
 		EABBADC61EBF941C00522603 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		EABBADC71EBF941C00522603 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
 		EABBADC81EBF941C00522603 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
@@ -126,11 +122,21 @@
 		EABBADE91EBF95C800522603 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		EABBADEA1EBF95C800522603 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		EABBADF51EBF960C00522603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../FeathersTests/Info.plist; sourceTree = "<group>"; };
-		EABBAE031EBFA2C300522603 /* Service+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Service+RxSwift.swift"; sourceTree = "<group>"; };
 		EABBAE051EBFA31300522603 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		EABBAE071EBFA40300522603 /* Feathers+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Feathers+RxSwift.swift"; sourceTree = "<group>"; };
-		EAE710E21EA2CF46002BEFE2 /* RestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestProvider.swift; sourceTree = "<group>"; };
-		EAEE2E431EBAD6E800E54939 /* AuthenticationStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationStorage.swift; sourceTree = "<group>"; };
+		EABBAE0A1EBFA6A400522603 /* AuthenticationOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationOptions.swift; path = Core/AuthenticationOptions.swift; sourceTree = "<group>"; };
+		EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationStorage.swift; path = Core/AuthenticationStorage.swift; sourceTree = "<group>"; };
+		EABBAE0C1EBFA6A400522603 /* Feathers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Feathers.swift; path = Core/Feathers.swift; sourceTree = "<group>"; };
+		EABBAE0D1EBFA6A400522603 /* FeathersError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeathersError.swift; path = Core/FeathersError.swift; sourceTree = "<group>"; };
+		EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSURL+QueryParameters.swift"; path = "Core/NSURL+QueryParameters.swift"; sourceTree = "<group>"; };
+		EABBAE0F1EBFA6A400522603 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Provider.swift; path = Core/Provider.swift; sourceTree = "<group>"; };
+		EABBAE101EBFA6A400522603 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Core/Response.swift; sourceTree = "<group>"; };
+		EABBAE111EBFA6A400522603 /* RestProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestProvider.swift; path = Core/RestProvider.swift; sourceTree = "<group>"; };
+		EABBAE121EBFA6A400522603 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = Core/Service.swift; sourceTree = "<group>"; };
+		EABBAE131EBFA6A400522603 /* SocketProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocketProvider.swift; path = Core/SocketProvider.swift; sourceTree = "<group>"; };
+		EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Feathers+ReactiveSwift.swift"; path = "ReactiveSwift/Feathers+ReactiveSwift.swift"; sourceTree = "<group>"; };
+		EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Service+ReactiveSwift.swift"; path = "ReactiveSwift/Service+ReactiveSwift.swift"; sourceTree = "<group>"; };
+		EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Feathers+RxSwift.swift"; path = "RxSwift/Feathers+RxSwift.swift"; sourceTree = "<group>"; };
+		EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Service+RxSwift.swift"; path = "RxSwift/Service+RxSwift.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,19 +187,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EA44E10F1EA41375000879EB /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				EA44E1101EA41383000879EB /* NSURL+QueryParameters.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
 		EA44E1151EA417A7000879EB /* ReactiveSwift */ = {
 			isa = PBXGroup;
 			children = (
-				EA44E1161EA417BA000879EB /* Service+ReactiveSwift.swift */,
-				EABBAD681EBD84FC00522603 /* Feathers+ReactiveSwift.swift */,
+				EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */,
+				EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */,
 			);
 			name = ReactiveSwift;
 			sourceTree = "<group>";
@@ -223,29 +221,13 @@
 		EA452A691EA2B14300427CEF /* Feathers */ = {
 			isa = PBXGroup;
 			children = (
+				EABBAE091EBFA69C00522603 /* Core */,
 				EABBAE021EBFA2B000522603 /* RxSwift */,
-				EAEE2E421EBAD6AF00E54939 /* Authentication */,
-				EA9330681EA42F1A006DFA18 /* Providers */,
 				EA44E1151EA417A7000879EB /* ReactiveSwift */,
-				EA44E10F1EA41375000879EB /* Extensions */,
 				EA452A6A1EA2B14300427CEF /* Feathers.h */,
 				EA452A6B1EA2B14300427CEF /* Info.plist */,
-				EA2ABD331EA2B49E0099A091 /* Service.swift */,
-				EA2ABD371EA2B6980099A091 /* Feathers.swift */,
-				EA44E1051EA3D888000879EB /* Response.swift */,
-				EA44E10A1EA3F700000879EB /* FeathersError.swift */,
 			);
 			path = Feathers;
-			sourceTree = "<group>";
-		};
-		EA9330681EA42F1A006DFA18 /* Providers */ = {
-			isa = PBXGroup;
-			children = (
-				EA2ABD351EA2B5DC0099A091 /* Provider.swift */,
-				EAE710E21EA2CF46002BEFE2 /* RestProvider.swift */,
-				EA93307F1EA43BC1006DFA18 /* SocketProvider.swift */,
-			);
-			name = Providers;
 			sourceTree = "<group>";
 		};
 		EABBADB01EBE77C900522603 /* FeathersTests */ = {
@@ -277,19 +259,27 @@
 		EABBAE021EBFA2B000522603 /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				EABBAE031EBFA2C300522603 /* Service+RxSwift.swift */,
-				EABBAE071EBFA40300522603 /* Feathers+RxSwift.swift */,
+				EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */,
+				EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */,
 			);
 			name = RxSwift;
 			sourceTree = "<group>";
 		};
-		EAEE2E421EBAD6AF00E54939 /* Authentication */ = {
+		EABBAE091EBFA69C00522603 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				EA93308C1EA45A8E006DFA18 /* AuthenticationOptions.swift */,
-				EAEE2E431EBAD6E800E54939 /* AuthenticationStorage.swift */,
+				EABBAE0A1EBFA6A400522603 /* AuthenticationOptions.swift */,
+				EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */,
+				EABBAE0C1EBFA6A400522603 /* Feathers.swift */,
+				EABBAE0D1EBFA6A400522603 /* FeathersError.swift */,
+				EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */,
+				EABBAE0F1EBFA6A400522603 /* Provider.swift */,
+				EABBAE101EBFA6A400522603 /* Response.swift */,
+				EABBAE111EBFA6A400522603 /* RestProvider.swift */,
+				EABBAE121EBFA6A400522603 /* Service.swift */,
+				EABBAE131EBFA6A400522603 /* SocketProvider.swift */,
 			);
-			name = Authentication;
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -601,18 +591,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA44E1071EA3D888000879EB /* Response.swift in Sources */,
-				EA44E1121EA41383000879EB /* NSURL+QueryParameters.swift in Sources */,
-				EABBAD701EBDD08700522603 /* AuthenticationStorage.swift in Sources */,
-				EA44E1181EA417BA000879EB /* Service+ReactiveSwift.swift in Sources */,
-				EABBAD731EBDD09300522603 /* Feathers+ReactiveSwift.swift in Sources */,
-				EA9330811EA43BC1006DFA18 /* SocketProvider.swift in Sources */,
-				EA2ABD3B1EA2BA6F0099A091 /* Service.swift in Sources */,
-				EA2ABD3C1EA2BA6F0099A091 /* Feathers.swift in Sources */,
-				EA44E10C1EA3F700000879EB /* FeathersError.swift in Sources */,
-				EA2ABD3D1EA2BA6F0099A091 /* Provider.swift in Sources */,
-				EABBAD6F1EBDD08700522603 /* AuthenticationOptions.swift in Sources */,
-				EA9330841EA45381006DFA18 /* RestProvider.swift in Sources */,
+				EABBAE491EBFA6B800522603 /* Feathers+RxSwift.swift in Sources */,
+				EABBAE391EBFA6A400522603 /* SocketProvider.swift in Sources */,
+				EABBAE211EBFA6A400522603 /* FeathersError.swift in Sources */,
+				EABBAE1D1EBFA6A400522603 /* Feathers.swift in Sources */,
+				EABBAE191EBFA6A400522603 /* AuthenticationStorage.swift in Sources */,
+				EABBAE2D1EBFA6A400522603 /* Response.swift in Sources */,
+				EABBAE3F1EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */,
+				EABBAE351EBFA6A400522603 /* Service.swift in Sources */,
+				EABBAE291EBFA6A400522603 /* Provider.swift in Sources */,
+				EABBAE151EBFA6A400522603 /* AuthenticationOptions.swift in Sources */,
+				EABBAE311EBFA6A400522603 /* RestProvider.swift in Sources */,
+				EABBAE431EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */,
+				EABBAE251EBFA6A400522603 /* NSURL+QueryParameters.swift in Sources */,
+				EABBAE4D1EBFA6B800522603 /* Service+RxSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,18 +612,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA44E1091EA3D888000879EB /* Response.swift in Sources */,
-				EA44E1141EA41383000879EB /* NSURL+QueryParameters.swift in Sources */,
-				EABBAD721EBDD08800522603 /* AuthenticationStorage.swift in Sources */,
-				EA44E11A1EA417BA000879EB /* Service+ReactiveSwift.swift in Sources */,
-				EABBAD751EBDD09300522603 /* Feathers+ReactiveSwift.swift in Sources */,
-				EA2ABD491EA2BA890099A091 /* Service.swift in Sources */,
-				EA2ABD4A1EA2BA890099A091 /* Feathers.swift in Sources */,
-				EA44E10E1EA3F700000879EB /* FeathersError.swift in Sources */,
-				EA2ABD4B1EA2BA890099A091 /* Provider.swift in Sources */,
-				EA9330861EA45381006DFA18 /* RestProvider.swift in Sources */,
-				EA93308F1EA45A8E006DFA18 /* AuthenticationOptions.swift in Sources */,
-				EA93308B1EA45979006DFA18 /* SocketProvider.swift in Sources */,
+				EABBAE4B1EBFA6B800522603 /* Feathers+RxSwift.swift in Sources */,
+				EABBAE3B1EBFA6A400522603 /* SocketProvider.swift in Sources */,
+				EABBAE231EBFA6A400522603 /* FeathersError.swift in Sources */,
+				EABBAE1F1EBFA6A400522603 /* Feathers.swift in Sources */,
+				EABBAE1B1EBFA6A400522603 /* AuthenticationStorage.swift in Sources */,
+				EABBAE2F1EBFA6A400522603 /* Response.swift in Sources */,
+				EABBAE411EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */,
+				EABBAE371EBFA6A400522603 /* Service.swift in Sources */,
+				EABBAE2B1EBFA6A400522603 /* Provider.swift in Sources */,
+				EABBAE171EBFA6A400522603 /* AuthenticationOptions.swift in Sources */,
+				EABBAE331EBFA6A400522603 /* RestProvider.swift in Sources */,
+				EABBAE451EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */,
+				EABBAE271EBFA6A400522603 /* NSURL+QueryParameters.swift in Sources */,
+				EABBAE4F1EBFA6B800522603 /* Service+RxSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,18 +633,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA44E1081EA3D888000879EB /* Response.swift in Sources */,
-				EA44E1131EA41383000879EB /* NSURL+QueryParameters.swift in Sources */,
-				EABBAD711EBDD08800522603 /* AuthenticationStorage.swift in Sources */,
-				EA44E1191EA417BA000879EB /* Service+ReactiveSwift.swift in Sources */,
-				EABBAD741EBDD09300522603 /* Feathers+ReactiveSwift.swift in Sources */,
-				EA9330821EA43BC1006DFA18 /* SocketProvider.swift in Sources */,
-				EA2ABD571EA2BA8A0099A091 /* Service.swift in Sources */,
-				EA2ABD581EA2BA8A0099A091 /* Feathers.swift in Sources */,
-				EA44E10D1EA3F700000879EB /* FeathersError.swift in Sources */,
-				EA2ABD591EA2BA8A0099A091 /* Provider.swift in Sources */,
-				EA9330901EA45A8E006DFA18 /* AuthenticationOptions.swift in Sources */,
-				EA9330851EA45381006DFA18 /* RestProvider.swift in Sources */,
+				EABBAE4A1EBFA6B800522603 /* Feathers+RxSwift.swift in Sources */,
+				EABBAE3A1EBFA6A400522603 /* SocketProvider.swift in Sources */,
+				EABBAE221EBFA6A400522603 /* FeathersError.swift in Sources */,
+				EABBAE1E1EBFA6A400522603 /* Feathers.swift in Sources */,
+				EABBAE1A1EBFA6A400522603 /* AuthenticationStorage.swift in Sources */,
+				EABBAE2E1EBFA6A400522603 /* Response.swift in Sources */,
+				EABBAE401EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */,
+				EABBAE361EBFA6A400522603 /* Service.swift in Sources */,
+				EABBAE2A1EBFA6A400522603 /* Provider.swift in Sources */,
+				EABBAE161EBFA6A400522603 /* AuthenticationOptions.swift in Sources */,
+				EABBAE321EBFA6A400522603 /* RestProvider.swift in Sources */,
+				EABBAE441EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */,
+				EABBAE261EBFA6A400522603 /* NSURL+QueryParameters.swift in Sources */,
+				EABBAE4E1EBFA6B800522603 /* Service+RxSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,20 +654,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA44E1111EA41383000879EB /* NSURL+QueryParameters.swift in Sources */,
-				EA2ABD341EA2B49E0099A091 /* Service.swift in Sources */,
-				EABBAE041EBFA2C300522603 /* Service+RxSwift.swift in Sources */,
-				EAEE2E441EBAD6E800E54939 /* AuthenticationStorage.swift in Sources */,
-				EA9330801EA43BC1006DFA18 /* SocketProvider.swift in Sources */,
-				EABBAD691EBD84FC00522603 /* Feathers+ReactiveSwift.swift in Sources */,
-				EA44E1171EA417BA000879EB /* Service+ReactiveSwift.swift in Sources */,
-				EA2ABD381EA2B6980099A091 /* Feathers.swift in Sources */,
-				EAE710E31EA2CF46002BEFE2 /* RestProvider.swift in Sources */,
-				EA2ABD361EA2B5DC0099A091 /* Provider.swift in Sources */,
-				EA44E10B1EA3F700000879EB /* FeathersError.swift in Sources */,
-				EABBAE081EBFA40300522603 /* Feathers+RxSwift.swift in Sources */,
-				EA93308D1EA45A8E006DFA18 /* AuthenticationOptions.swift in Sources */,
-				EA44E1061EA3D888000879EB /* Response.swift in Sources */,
+				EABBAE481EBFA6B800522603 /* Feathers+RxSwift.swift in Sources */,
+				EABBAE381EBFA6A400522603 /* SocketProvider.swift in Sources */,
+				EABBAE201EBFA6A400522603 /* FeathersError.swift in Sources */,
+				EABBAE1C1EBFA6A400522603 /* Feathers.swift in Sources */,
+				EABBAE181EBFA6A400522603 /* AuthenticationStorage.swift in Sources */,
+				EABBAE2C1EBFA6A400522603 /* Response.swift in Sources */,
+				EABBAE3E1EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */,
+				EABBAE341EBFA6A400522603 /* Service.swift in Sources */,
+				EABBAE281EBFA6A400522603 /* Provider.swift in Sources */,
+				EABBAE141EBFA6A400522603 /* AuthenticationOptions.swift in Sources */,
+				EABBAE301EBFA6A400522603 /* RestProvider.swift in Sources */,
+				EABBAE421EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */,
+				EABBAE241EBFA6A400522603 /* NSURL+QueryParameters.swift in Sources */,
+				EABBAE4C1EBFA6B800522603 /* Service+RxSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
