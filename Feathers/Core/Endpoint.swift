@@ -6,7 +6,7 @@
 //  Copyright © 2017 Swoopy Studios. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Alamofire
 
 public final class Endpoint {
@@ -81,7 +81,7 @@ public final class Endpoint {
 extension Endpoint {
 
     internal var urlRequest: URLRequest? {
-        guard let requestURL = Foundation.URL(string: url) else { return nil }
+        guard let requestURL = URL(string: url) else { return nil }
 
         var request = URLRequest(url: requestURL)
         request.httpMethod = method.httpMethod.rawValue
