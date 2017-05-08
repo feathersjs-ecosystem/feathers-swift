@@ -63,6 +63,7 @@
 		EABBAE4C1EBFA6B800522603 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
 		EABBAE4D1EBFA6B800522603 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
 		EABBAE4E1EBFA6B800522603 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
+		EAE05D6A1EBFDB0000DA55BF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Service+ReactiveSwift.swift"; path = "ReactiveSwift/Service+ReactiveSwift.swift"; sourceTree = "<group>"; };
 		EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Feathers+RxSwift.swift"; path = "RxSwift/Feathers+RxSwift.swift"; sourceTree = "<group>"; };
 		EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Service+RxSwift.swift"; path = "RxSwift/Service+RxSwift.swift"; sourceTree = "<group>"; };
+		EAE05D691EBFDB0000DA55BF /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Core/Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 				EABBAE111EBFA6A400522603 /* RestProvider.swift */,
 				EABBAE121EBFA6A400522603 /* Service.swift */,
 				EABBAE131EBFA6A400522603 /* SocketProvider.swift */,
+				EAE05D691EBFDB0000DA55BF /* Endpoint.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				EABBAE381EBFA6A400522603 /* SocketProvider.swift in Sources */,
 				EABBAE201EBFA6A400522603 /* FeathersError.swift in Sources */,
 				EABBAE1C1EBFA6A400522603 /* Feathers.swift in Sources */,
+				EAE05D6A1EBFDB0000DA55BF /* Endpoint.swift in Sources */,
 				EABBAE181EBFA6A400522603 /* AuthenticationStorage.swift in Sources */,
 				EABBAE2C1EBFA6A400522603 /* Response.swift in Sources */,
 				EABBAE3E1EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */,
@@ -923,6 +927,7 @@
 				EABBADDE1EBF94E800522603 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

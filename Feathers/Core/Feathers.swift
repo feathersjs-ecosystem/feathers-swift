@@ -20,7 +20,7 @@ public final class Feathers {
     }
 
     public func service(path: String) -> Service {
-        return Service(provider: provider, path: path)
+        return Service(provider: provider, path: path, storage: authenticationStorage, authOptions: authOptions)
     }
 
     public func configure(auth options: AuthenticationOptions) {

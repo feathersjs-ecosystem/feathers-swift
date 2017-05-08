@@ -20,87 +20,22 @@ final public class RestProvider: Provider {
 
     public final func setup() {}
 
+    public func request(endpoint: Endpoint, _ completion: @escaping FeathersCallback) {
+        guard let request = endpoint.urlRequest else {
+            completion(.badRequest, nil)
+            return
+        }
+        Alamofire.request(request)
+            .validate()
+            .response(responseSerializer: DataRequest.jsonResponseSerializer()) { [weak self] response in
+                guard let vSelf = self else { return }
+                let result = vSelf.handleResponse(response)
+                completion(result.error, result.value)
+        }
+    }
+
     public final func authenticate(_ path: String, credentials: [String: Any], _ completion: @escaping FeathersCallback) {
         Alamofire.request(baseURL.appendingPathComponent(path), method: .post, parameters: credentials, encoding: URLEncoding.httpBody)
-            .validate()
-            .response(responseSerializer: DataRequest.jsonResponseSerializer()) { [weak self] response in
-                guard let vSelf = self else { return }
-                let result = vSelf.handleResponse(response)
-                completion(result.error, result.value)
-        }
-
-    }
-
-    public final func find(_ path: String, parameters: [String : Any], _ completion: @escaping FeathersCallback) {
-        Alamofire.request(baseURL.appendingPathComponent(path), method: .get, parameters: parameters, encoding: URLEncoding.queryString)
-            .validate()
-            .response(responseSerializer: DataRequest.jsonResponseSerializer()) { [weak self] response in
-                guard let vSelf = self else { return }
-                let result = vSelf.handleResponse(response)
-                completion(result.error, result.value)
-        }
-    }
-
-    public final func get(_ path: String, id: String, parameters: [String : Any], _ completion: @escaping FeathersCallback) {
-        Alamofire.request(baseURL.appendingPathComponent(path).appendingPathComponent(id), method: .get, parameters: parameters, encoding: URLEncoding.queryString)
-            .validate()
-            .response(responseSerializer: DataRequest.jsonResponseSerializer()) { [weak self] response in
-                guard let vSelf = self else { return }
-                let result = vSelf.handleResponse(response)
-                completion(result.error, result.value)
-        }
-    }
-
-    public final func create(_ path: String, data: [String : Any], parameters: [String : Any], _ completion: @escaping FeathersCallback) {
-        let queryURL = baseURL.appendingPathComponent(path).URLByAppendingQueryParameters(parameters: parameters)
-        var mutableRequest = URLRequest(url: queryURL!)
-        mutableRequest.httpMethod = "POST"
-        mutableRequest.httpBody = try? JSONSerialization.data(withJSONObject: data, options: [])
-        Alamofire.request(mutableRequest)
-            .validate()
-            .response(responseSerializer: DataRequest.jsonResponseSerializer()) { [weak self] response in
-                guard let vSelf = self else { return }
-                let result = vSelf.handleResponse(response)
-                completion(result.error, result.value)
-        }
-    }
-
-    public final func update(_ path: String, id: String, data: [String : Any], parameters: [String : Any], _ completion: @escaping FeathersCallback) {
-        let queryURL = baseURL
-            .appendingPathComponent(path)
-            .appendingPathComponent(id)
-            .URLByAppendingQueryParameters(parameters: parameters)
-        var mutableRequest = URLRequest(url: queryURL!)
-        mutableRequest.httpMethod = "PUT"
-        mutableRequest.httpBody = try? JSONSerialization.data(withJSONObject: data, options: [])
-        Alamofire.request(mutableRequest)
-            .validate()
-            .response(responseSerializer: DataRequest.jsonResponseSerializer()) { [weak self] response in
-                guard let vSelf = self else { return }
-                let result = vSelf.handleResponse(response)
-                completion(result.error, result.value)
-        }
-    }
-
-    public final func patch(_ path: String, id: String, data: [String : Any], parameters: [String : Any], _ completion: @escaping FeathersCallback) {
-        let queryURL = baseURL
-            .appendingPathComponent(path)
-            .appendingPathComponent(id)
-            .URLByAppendingQueryParameters(parameters: parameters)
-        var mutableRequest = URLRequest(url: queryURL!)
-        mutableRequest.httpMethod = "PATCH"
-        mutableRequest.httpBody = try? JSONSerialization.data(withJSONObject: data, options: [])
-        Alamofire.request(mutableRequest)
-            .validate()
-            .response(responseSerializer: DataRequest.jsonResponseSerializer()) { [weak self] response in
-                guard let vSelf = self else { return }
-                let result = vSelf.handleResponse(response)
-                completion(result.error, result.value)
-        }
-    }
-
-    public final func remove(_ path: String, id: String, parameters: [String : Any], _ completion: @escaping FeathersCallback) {
-        Alamofire.request(baseURL.appendingPathComponent(path).appendingPathComponent(id), method: .delete, parameters: parameters, encoding: URLEncoding.queryString)
             .validate()
             .response(responseSerializer: DataRequest.jsonResponseSerializer()) { [weak self] response in
                 guard let vSelf = self else { return }
