@@ -27,8 +27,18 @@ public final class SocketProvider: Provider {
     }
 
     public func request(endpoint: Endpoint, _ completion: @escaping FeathersCallback) {
+        // If there's an access token, we have to "inject" it into the existing config.
         if let accessToken = endpoint.accessToken {
-            client.config = [.connectParams([endpoint.authenticationConfiguration.header: accessToken])]
+            var config: SocketIOClientConfiguration = []
+            for option in client.config {
+                if case var .connectParams(data) = option {
+                    data[endpoint.authenticationConfiguration.header] = accessToken
+                    config.insert(.connectParams(data))
+                } else {
+                    config.insert(option)
+                }
+            }
+            client.config = config
         }
         client.emitWithAck("\(endpoint.path)::\(endpoint.method.socketEvent)", endpoint.method.socketData).timingOut(after: timeout) { data in
             print(data)
