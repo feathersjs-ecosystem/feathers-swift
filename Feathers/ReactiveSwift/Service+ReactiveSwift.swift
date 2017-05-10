@@ -16,7 +16,7 @@ extension Service: ReactiveExtensionsProvider {}
 
 public extension Reactive where Base: Service {
 
-    public func request(_ method: FeathersMethod) -> SignalProducer<Response, FeathersError> {
+    public func request(_ method: Service.Method) -> SignalProducer<Response, FeathersError> {
         return SignalProducer { [weak base = base] observer, disposable in
             guard let vBase = base else {
                 observer.sendInterrupted()

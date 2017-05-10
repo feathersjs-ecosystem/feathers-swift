@@ -21,9 +21,9 @@
 		EABBADEB1EBF95C800522603 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABBADE91EBF95C800522603 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EABBADEC1EBF95C900522603 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABBADEA1EBF95C800522603 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EABBAE061EBFA31300522603 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBAE051EBFA31300522603 /* RxSwift.framework */; };
-		EABBAE141EBFA6A400522603 /* AuthenticationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationOptions.swift */; };
-		EABBAE151EBFA6A400522603 /* AuthenticationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationOptions.swift */; };
-		EABBAE161EBFA6A400522603 /* AuthenticationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationOptions.swift */; };
+		EABBAE141EBFA6A400522603 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
+		EABBAE151EBFA6A400522603 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
+		EABBAE161EBFA6A400522603 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
 		EABBAE181EBFA6A400522603 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
 		EABBAE191EBFA6A400522603 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
 		EABBAE1A1EBFA6A400522603 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
@@ -108,7 +108,7 @@
 		EABBADEA1EBF95C800522603 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		EABBADF51EBF960C00522603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../FeathersTests/Info.plist; sourceTree = "<group>"; };
 		EABBAE051EBFA31300522603 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		EABBAE0A1EBFA6A400522603 /* AuthenticationOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationOptions.swift; path = Core/AuthenticationOptions.swift; sourceTree = "<group>"; };
+		EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationConfiguration.swift; path = Core/AuthenticationConfiguration.swift; sourceTree = "<group>"; };
 		EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationStorage.swift; path = Core/AuthenticationStorage.swift; sourceTree = "<group>"; };
 		EABBAE0C1EBFA6A400522603 /* Feathers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Feathers.swift; path = Core/Feathers.swift; sourceTree = "<group>"; };
 		EABBAE0D1EBFA6A400522603 /* FeathersError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeathersError.swift; path = Core/FeathersError.swift; sourceTree = "<group>"; };
@@ -246,7 +246,7 @@
 		EABBAE091EBFA69C00522603 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				EABBAE0A1EBFA6A400522603 /* AuthenticationOptions.swift */,
+				EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */,
 				EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */,
 				EABBAE0C1EBFA6A400522603 /* Feathers.swift */,
 				EABBAE0D1EBFA6A400522603 /* FeathersError.swift */,
@@ -523,7 +523,7 @@
 				EABBAE3F1EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */,
 				EABBAE351EBFA6A400522603 /* Service.swift in Sources */,
 				EABBAE291EBFA6A400522603 /* Provider.swift in Sources */,
-				EABBAE151EBFA6A400522603 /* AuthenticationOptions.swift in Sources */,
+				EABBAE151EBFA6A400522603 /* AuthenticationConfiguration.swift in Sources */,
 				EABBAE311EBFA6A400522603 /* RestProvider.swift in Sources */,
 				EABBAE431EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */,
 				EABBAE251EBFA6A400522603 /* NSURL+QueryParameters.swift in Sources */,
@@ -544,7 +544,7 @@
 				EABBAE401EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */,
 				EABBAE361EBFA6A400522603 /* Service.swift in Sources */,
 				EABBAE2A1EBFA6A400522603 /* Provider.swift in Sources */,
-				EABBAE161EBFA6A400522603 /* AuthenticationOptions.swift in Sources */,
+				EABBAE161EBFA6A400522603 /* AuthenticationConfiguration.swift in Sources */,
 				EABBAE321EBFA6A400522603 /* RestProvider.swift in Sources */,
 				EABBAE441EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */,
 				EABBAE261EBFA6A400522603 /* NSURL+QueryParameters.swift in Sources */,
@@ -566,7 +566,7 @@
 				EABBAE3E1EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */,
 				EABBAE341EBFA6A400522603 /* Service.swift in Sources */,
 				EABBAE281EBFA6A400522603 /* Provider.swift in Sources */,
-				EABBAE141EBFA6A400522603 /* AuthenticationOptions.swift in Sources */,
+				EABBAE141EBFA6A400522603 /* AuthenticationConfiguration.swift in Sources */,
 				EABBAE301EBFA6A400522603 /* RestProvider.swift in Sources */,
 				EABBAE421EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */,
 				EABBAE241EBFA6A400522603 /* NSURL+QueryParameters.swift in Sources */,

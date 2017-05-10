@@ -1,5 +1,5 @@
 //
-//  AuthenticationOptions.swift
+//  AuthenticationConfiguration.swift
 //  Feathers
 //
 //  Created by Brendan Conron on 4/16/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct AuthenticationOptions {
+public struct AuthenticationConfiguration {
 
     /// Authorization header field in requests.
     let header: String
@@ -25,9 +25,6 @@ public struct AuthenticationOptions {
     /// The service to look up the entity
     let service: String
 
-    /// The name of the cookie to parse the JWT from when cookies are enabled server side.
-    let cookie: String
-
     // The key to store the accessToken with.
     let storageKey: String
 
@@ -37,14 +34,12 @@ public struct AuthenticationOptions {
         jwtStrategy: String = "jwt",
         entity: String = "user",
         service: String = "users",
-        cookie: String = "feathers-jwt",
         storageKey: String = "feathers-jwt") {
         self.header = header
         self.path = path
         self.jwtStrategy = jwtStrategy
         self.entity = entity
         self.service = service
-        self.cookie = cookie
         self.storageKey = storageKey
     }
 }

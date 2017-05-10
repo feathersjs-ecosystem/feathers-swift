@@ -21,10 +21,7 @@ final public class RestProvider: Provider {
     public final func setup() {}
 
     public func request(endpoint: Endpoint, _ completion: @escaping FeathersCallback) {
-        guard let request = endpoint.urlRequest else {
-            completion(.badRequest, nil)
-            return
-        }
+        let request = buildRequest(from: endpoint)
         Alamofire.request(request)
             .validate()
             .response(responseSerializer: DataRequest.jsonResponseSerializer()) { [weak self] response in
@@ -73,4 +70,69 @@ final public class RestProvider: Provider {
         return .failure(.unknown)
     }
 
+    private func buildRequest(from endpoint: Endpoint) -> URLRequest {
+        var urlRequest = URLRequest(url: endpoint.url)
+        urlRequest.httpMethod = endpoint.method.httpMethod.rawValue
+        if let accessToken = endpoint.accessToken {
+            urlRequest.allHTTPHeaderFields = [endpoint.authenticationConfiguration.header: accessToken]
+        }
+        urlRequest.httpBody = endpoint.method.data != nil ? try? JSONSerialization.data(withJSONObject: endpoint.method.data!, options: []) : nil
+        return urlRequest
+    }
+
 }
+
+public extension Service.Method {
+
+    public var httpMethod: HTTPMethod {
+        switch self {
+        case .find: return .get
+        case .get: return .get
+        case .create: return .post
+        case .update: return .put
+        case .patch: return .patch
+        case .remove: return .delete
+        }
+    }
+
+    var parameters: [String: Any]? {
+        switch self {
+        case .find(let parameters): return parameters
+        case .get(_, let parameters): return parameters
+        case .create(_, let parameters): return parameters
+        case .update(_, _, let parameters): return parameters
+        case .patch(_, _, let parameters): return parameters
+        case .remove(_, let parameters): return parameters
+        }
+    }
+
+    var data: [String: Any]? {
+        switch self {
+        case .create(let data, _): return data
+        case .update(_, let data, _): return data
+        case .patch(_, let data, _): return data
+        default: return nil
+        }
+    }
+
+}
+
+
+internal extension Endpoint {
+
+    internal var url: URL {
+        var url = baseURL.appendingPathComponent(path)
+        switch method {
+        case .get(let id, _),
+             .update(let id, _, _),
+             .patch(let id, _, _),
+             .remove(let id, _):
+            url = url.appendingPathComponent(id)
+        default: break
+        }
+        url = method.parameters != nil ? (url.URLByAppendingQueryParameters(parameters: method.parameters!) ?? url) : url
+        return url
+    }
+
+}
+

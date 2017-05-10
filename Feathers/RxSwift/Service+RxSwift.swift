@@ -14,7 +14,7 @@ import RxSwift
 
 public extension Service {
 
-    public func request(_ method: FeathersMethod) -> Observable<Response> {
+    public func request(_ method: Service.Method) -> Observable<Response> {
         return Observable.create { [weak self] observer in
             guard let vSelf = self else {
                 return Disposables.create()
@@ -25,8 +25,6 @@ public extension Service {
                 } else if let response = response {
                     observer.onNext(response)
                     observer.onCompleted()
-                } else {
-                    observer.onError(FeathersError.unknown)
                 }
             }
             return Disposables.create()
