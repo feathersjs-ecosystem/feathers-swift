@@ -8,6 +8,7 @@
 
 import SocketIO
 import Foundation
+import Result
 
 public final class SocketProvider: Provider {
 
@@ -31,32 +32,72 @@ public final class SocketProvider: Provider {
     public func request(endpoint: Endpoint, _ completion: @escaping FeathersCallback) {
         // If there's an access token, we have to "inject" it into the existing config.
         if let accessToken = endpoint.accessToken {
-            var config: SocketIOClientConfiguration = []
+            var data: [String: Any] = [:]
             for option in client.config {
-                if case var .connectParams(data) = option {
-                    data[endpoint.authenticationConfiguration.header] = accessToken
-                    config.insert(.connectParams(data))
-                } else {
-                    config.insert(option)
+                if case let .connectParams(params) = option {
+                    data = params
+                    break
                 }
             }
-            client.config = config
+            if let oldAccessToken = data[endpoint.authenticationConfiguration.header] as? String, oldAccessToken != accessToken {
+                data[endpoint.authenticationConfiguration.header] = accessToken
+                client.config.insert(.connectParams(data), replacing: true)
+                client.reconnect()
+            }
         }
-        client.emitWithAck("\(endpoint.path)::\(endpoint.method.socketEvent)", endpoint.method.socketData).timingOut(after: timeout) { data in
-            print(data)
+        let emitPath = "\(endpoint.path)::\(endpoint.method.socketRequestPath)"
+        if client.status == .connecting {
+            client.on("connect") { [weak self] data, ack in
+                self?.client.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: self?.timeout ?? 5) { data in
+                    print(data)
+                }
+            }
+        } else if client.status == .disconnected || client.status == .notConnected {
+            client.on("connect") { [weak self] data, ack in
+                self?.client.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: self?.timeout ?? 5) { data in
+                    print(data)
+                }
+            }
+            client.connect()
+        } else {
+            client.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: timeout) { data in
+                print(data)
+            }
         }
     }
 
     public func authenticate(_ path: String, credentials: [String : Any], _ completion: @escaping FeathersCallback) {
-        client.emitWithAck("\(path)::create", credentials).timingOut(after: timeout) { data in
-            print(data)
+        if client.status == .connecting {
+            client.on("connect") { [weak self] data, ack in
+                self?.client.emitWithAck("authenticate", credentials).timingOut(after: self?.timeout ?? 5) { data in
+                    print(data)
+                }
+            }
+        } else if client.status == .disconnected || client.status == .notConnected {
+            client.on("connect") { [weak self] data, ack in
+                self?.client.emitWithAck("authenticate", credentials).timingOut(after: self?.timeout ?? 5) { data in
+                    print(data)
+                }
+            }
+            client.connect()
+        } else {
+            client.emitWithAck("authenticate", credentials).timingOut(after: timeout) { data in
+                print(data)
+            }
         }
     }
+
+//    private func handleResponseData(data: [Any]) -> Result<Response, FeathersError> {
+//        if let noAck = data.first as? String, noAck == "NO ACK" {
+//            return .failure(.notFound)
+//        }
+//    }
+
 }
 
 extension Service.Method {
 
-    var socketEvent: String {
+    var socketRequestPath: String {
         switch self {
         case .find: return "find"
         case .get: return "get"

@@ -17,6 +17,7 @@ public final class Feathers {
 
     public init(provider: Provider) {
         self.provider = provider
+        provider.setup()
     }
 
     public func service(path: String) -> Service {
