@@ -16,14 +16,16 @@ public final class SocketProvider: Provider {
     private let client: SocketIOClient
     private let timeout: Int
 
-    public init(baseURL: URL, client: SocketIOClient, timeout: Int = 5000) {
-        self.baseURL = baseURL
+    public init(client: SocketIOClient, timeout: Int = 5) {
+        self.baseURL = client.socketURL
         self.client = client
         self.timeout = timeout
     }
 
     public func setup() {
-        client.connect()
+        client.connect(timeoutAfter: timeout) {
+            print("feathers socket failed to connect")
+        }
     }
 
     public func request(endpoint: Endpoint, _ completion: @escaping FeathersCallback) {
@@ -46,7 +48,7 @@ public final class SocketProvider: Provider {
     }
 
     public func authenticate(_ path: String, credentials: [String : Any], _ completion: @escaping FeathersCallback) {
-        client.emitWithAck(path, credentials).timingOut(after: timeout) { data in
+        client.emitWithAck("\(path)::create", credentials).timingOut(after: timeout) { data in
             print(data)
         }
     }
