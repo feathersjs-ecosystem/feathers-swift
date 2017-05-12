@@ -10,13 +10,12 @@ import SocketIO
 import Foundation
 import Result
 
-public final class SocketProvider: Provider {
+public final class SocketProvider: RealTimeProvider {
 
     public let baseURL: URL
 
     private let configuration: SocketIOClientConfiguration
-    private let unauthenticatedClient: SocketIOClient
-    private var authenticatedClient: SocketIOClient?
+    private let client: SocketIOClient
 
     private let timeout: Int
 
@@ -24,7 +23,7 @@ public final class SocketProvider: Provider {
         self.baseURL = baseURL
         self.configuration = configuration
         self.timeout = timeout
-        unauthenticatedClient = SocketIOClient(socketURL: baseURL, config: configuration)
+        client = SocketIOClient(socketURL: baseURL, config: configuration)
     }
 
     private func createClient(with url: URL, configuration: SocketIOClientConfiguration) -> SocketIOClient {
@@ -32,76 +31,84 @@ public final class SocketProvider: Provider {
     }
 
     public func setup() {
-        unauthenticatedClient.connect(timeoutAfter: timeout) {
+        client.connect(timeoutAfter: timeout) {
             print("feathers socket failed to connect")
         }
     }
 
     public func request(endpoint: Endpoint, _ completion: @escaping FeathersCallback) {
         let emitPath = "\(endpoint.path)::\(endpoint.method.socketRequestPath)"
-        if let accessToken = endpoint.accessToken, authenticatedClient == nil {
-            authenticatedClient = spinUpAuthenticatedClient(with: accessToken, header: endpoint.authenticationConfiguration.header)
-            authenticatedClient?.connect()
-        }
-        let client = authenticatedClient != nil ? authenticatedClient! : unauthenticatedClient
         if client.status == .connecting {
-            client.once("connect") { [weak client = client, weak self] data, ack in
-                client?.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: self?.timeout ?? 5) { data in
-                    print(data)
+            client.once("connect") { [weak self] data, ack in
+                guard let vSelf = self else { return }
+                vSelf.client.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: vSelf.timeout) { data in
+                    let result = vSelf.handleResponseData(data: data)
+                    completion(result.error, result.value)
                 }
             }
-        } else if client.status == .disconnected || client.status == .notConnected {
-            client.once("connect") { [weak client = client, weak self] data, ack in
-                client?.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: self?.timeout ?? 5) { data in
-                    print(data)
-                }
-            }
-            client.connect()
         } else {
-            client.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: timeout) { data in
-                print(data)
+            client.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: timeout) { [weak self] data in
+                guard let vSelf = self else { return }
+                let result = vSelf.handleResponseData(data: data)
+                completion(result.error, result.value)
             }
         }
     }
 
     public func authenticate(_ path: String, credentials: [String : Any], _ completion: @escaping FeathersCallback) {
-        if unauthenticatedClient.status == .connecting {
-            unauthenticatedClient.once("connect") { [weak self] data, ack in
-                self?.unauthenticatedClient.emitWithAck("authenticate", credentials).timingOut(after: self?.timeout ?? 5) { data in
-                    print(data)
+        if client.status == .connecting {
+            client.once("connect") { [weak self] data, ack in
+                self?.client.emitWithAck("authenticate", credentials).timingOut(after: self?.timeout ?? 5) { data in
+                    let result = self!.handleResponseData(data: data)
+                    completion(result.error, result.value)
                 }
             }
-        } else if unauthenticatedClient.status == .disconnected || unauthenticatedClient.status == .notConnected {
-            unauthenticatedClient.once("connect") { [weak self] data, ack in
-                self?.unauthenticatedClient.emitWithAck("authenticate", credentials).timingOut(after: self?.timeout ?? 5) { data in
-                    print(data)
-                }
-            }
-            unauthenticatedClient.connect()
         } else {
-            unauthenticatedClient.emitWithAck("authenticate", credentials).timingOut(after: timeout) { data in
-                print(data)
+            client.emitWithAck("authenticate", credentials).timingOut(after: timeout) { [weak self] data in
+                guard let vSelf = self else { return }
+                let result = vSelf.handleResponseData(data: data)
+                completion(result.error, result.value)
             }
         }
     }
 
-    private func spinUpAuthenticatedClient(with accessToken: String, header: String) -> SocketIOClient {
-        var config = configuration
-        for option in config {
-            if case var .extraHeaders(headers) = option {
-                headers[header] = accessToken
-                config.insert(.extraHeaders(headers), replacing: true)
-                break
+   private func handleResponseData(data: [Any]) -> Result<Response, FeathersError> {
+        if let noAck = data.first as? String, noAck == "NO ACK" {
+            return .failure(.notFound)
+        } else if let errorData = data.first as? [String: Any], let code = errorData["code"] as? Int, let error = FeathersError(statusCode: code) {
+            return .failure(error)
+        } else if let jsonObject = data.last as? [String: Any] {
+            if let pagination = parsePagination(data: jsonObject), let data = jsonObject["data"] as? [Any] {
+                return .success(Response(pagination: pagination, data: .jsonArray(data)))
             }
+            return .success(Response(pagination: nil, data: .jsonObject(jsonObject)))
+        } else if let jsonArray = data.last as? [Any] {
+            return .success(Response(pagination: nil, data: .jsonArray(jsonArray)))
         }
-        return SocketIOClient(socketURL: baseURL, config: config)
+        return .failure(.unknown)
     }
 
-//    private func handleResponseData(data: [Any]) -> Result<Response, FeathersError> {
-//        if let noAck = data.first as? String, noAck == "NO ACK" {
-//            return .failure(.notFound)
-//        }
-//    }
+    private func parsePagination(data: [String: Any]) -> Pagination? {
+        guard
+        let limit = data["limit"] as? Int,
+        let skip = data["skip"] as? Int,
+        let total = data["total"] as? Int else {
+            return nil
+        }
+        return Pagination(total: total, limit: limit, skip: skip)
+    }
+
+    // MARK: - RealTimeProvider
+
+    public func on(event: String, callback: (Response) -> ()) {
+        client.on(event, callback: { data, _ in
+            print(data)
+        })
+    }
+
+    public func off(event: String) {
+        client.off(event)
+    }
 
 }
 

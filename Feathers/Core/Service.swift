@@ -21,6 +21,24 @@ open class Service {
 
     }
 
+    public enum RealTimeEvent: CustomStringConvertible {
+
+        case created
+        case updated
+        case patched
+        case removed
+
+        public var description: String {
+            switch self {
+            case .created: return "created"
+            case .updated: return "updated"
+            case .patched: return "patched"
+            case .removed: return "removed"
+            }
+        }
+
+    }
+
     public let provider: Provider
     public let path: String
     private weak var storage: AuthenticationStorage?
@@ -43,8 +61,18 @@ open class Service {
         provider.request(endpoint: endpoint, completion)
     }
 
-    func on(event: String) {
-        
+    func on(event: RealTimeEvent, _ callback: @escaping (Response) -> ()) {
+        if let realTimeProvider = provider as? RealTimeProvider {
+            realTimeProvider.on(event: "\(path) \(event.description)", callback: { response in
+                callback(response)
+            })
+        }
+    }
+
+    func off(event: RealTimeEvent) {
+        if let realTimeProvider = provider as? RealTimeProvider {
+            realTimeProvider.off(event: "\(path) \(event.description)")
+        }
     }
 
 }
