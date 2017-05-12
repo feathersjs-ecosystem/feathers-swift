@@ -38,16 +38,24 @@ public final class SocketProvider: RealTimeProvider {
 
     public func request(endpoint: Endpoint, _ completion: @escaping FeathersCallback) {
         let emitPath = "\(endpoint.path)::\(endpoint.method.socketRequestPath)"
+        emit(to: emitPath, with: endpoint.method.socketData, completion)
+    }
+
+    public func authenticate(_ path: String, credentials: [String : Any], _ completion: @escaping FeathersCallback) {
+        emit(to: "authenticate", with: credentials, completion)
+    }
+
+    private func emit(to path: String, with data: SocketData, _ completion: @escaping FeathersCallback) {
         if client.status == .connecting {
             client.once("connect") { [weak self] data, ack in
                 guard let vSelf = self else { return }
-                vSelf.client.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: vSelf.timeout) { data in
+                vSelf.client.emitWithAck(path, data).timingOut(after: vSelf.timeout) { data in
                     let result = vSelf.handleResponseData(data: data)
                     completion(result.error, result.value)
                 }
             }
         } else {
-            client.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: timeout) { [weak self] data in
+            client.emitWithAck(path, data).timingOut(after: timeout) { [weak self] data in
                 guard let vSelf = self else { return }
                 let result = vSelf.handleResponseData(data: data)
                 completion(result.error, result.value)
@@ -55,24 +63,7 @@ public final class SocketProvider: RealTimeProvider {
         }
     }
 
-    public func authenticate(_ path: String, credentials: [String : Any], _ completion: @escaping FeathersCallback) {
-        if client.status == .connecting {
-            client.once("connect") { [weak self] data, ack in
-                self?.client.emitWithAck("authenticate", credentials).timingOut(after: self?.timeout ?? 5) { data in
-                    let result = self!.handleResponseData(data: data)
-                    completion(result.error, result.value)
-                }
-            }
-        } else {
-            client.emitWithAck("authenticate", credentials).timingOut(after: timeout) { [weak self] data in
-                guard let vSelf = self else { return }
-                let result = vSelf.handleResponseData(data: data)
-                completion(result.error, result.value)
-            }
-        }
-    }
-
-   private func handleResponseData(data: [Any]) -> Result<Response, FeathersError> {
+    private func handleResponseData(data: [Any]) -> Result<Response, FeathersError> {
         if let noAck = data.first as? String, noAck == "NO ACK" {
             return .failure(.notFound)
         } else if let errorData = data.first as? [String: Any], let code = errorData["code"] as? Int, let error = FeathersError(statusCode: code) {
