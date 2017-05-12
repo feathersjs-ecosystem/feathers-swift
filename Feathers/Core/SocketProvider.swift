@@ -91,9 +91,10 @@ public final class SocketProvider: RealTimeProvider {
 
     // MARK: - RealTimeProvider
 
-    public func on(event: String, callback: (Response) -> ()) {
+    public func on(event: String, callback: @escaping ([String: Any]) -> ()) {
         client.on(event, callback: { data, _ in
-            print(data)
+            guard let object = data.first as? [String: Any] else { return }
+            callback(object)
         })
     }
 

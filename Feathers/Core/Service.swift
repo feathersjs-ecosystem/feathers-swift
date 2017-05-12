@@ -61,15 +61,15 @@ open class Service {
         provider.request(endpoint: endpoint, completion)
     }
 
-    func on(event: RealTimeEvent, _ callback: @escaping (Response) -> ()) {
+    public func on(event: RealTimeEvent, _ callback: @escaping ([String: Any]) -> ()) {
         if let realTimeProvider = provider as? RealTimeProvider {
-            realTimeProvider.on(event: "\(path) \(event.description)", callback: { response in
-                callback(response)
+            realTimeProvider.on(event: "\(path) \(event.description)", callback: { object in
+                callback(object)
             })
         }
     }
 
-    func off(event: RealTimeEvent) {
+    public func off(event: RealTimeEvent) {
         if let realTimeProvider = provider as? RealTimeProvider {
             realTimeProvider.off(event: "\(path) \(event.description)")
         }
