@@ -32,7 +32,7 @@ public protocol Provider {
 
 public protocol RealTimeProvider: Provider {
 
-    func on(event: String, callback: ([String: Any]) -> ())
+    func on(event: String, callback: @escaping ([String: Any]) -> ())
     func off(event: String)
 
 }
