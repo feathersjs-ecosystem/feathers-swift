@@ -29,3 +29,10 @@ public protocol Provider {
     func authenticate(_ path: String, credentials: [String: Any], _ completion: @escaping FeathersCallback)
 
 }
+
+public protocol RealTimeProvider: Provider {
+
+    func on(event: String, callback:() -> ())
+    func off(event: String, callback: () -> ())
+
+}

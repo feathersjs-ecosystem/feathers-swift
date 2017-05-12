@@ -14,47 +14,45 @@ public final class SocketProvider: Provider {
 
     public let baseURL: URL
 
-    private let client: SocketIOClient
+    private let configuration: SocketIOClientConfiguration
+    private let unauthenticatedClient: SocketIOClient
+    private var authenticatedClient: SocketIOClient?
+
     private let timeout: Int
 
-    public init(client: SocketIOClient, timeout: Int = 5) {
-        self.baseURL = client.socketURL
-        self.client = client
+    public init(baseURL: URL, configuration: SocketIOClientConfiguration, timeout: Int = 5) {
+        self.baseURL = baseURL
+        self.configuration = configuration
         self.timeout = timeout
+        unauthenticatedClient = SocketIOClient(socketURL: baseURL, config: configuration)
+    }
+
+    private func createClient(with url: URL, configuration: SocketIOClientConfiguration) -> SocketIOClient {
+        return SocketIOClient(socketURL: url, config: configuration)
     }
 
     public func setup() {
-        client.connect(timeoutAfter: timeout) {
+        unauthenticatedClient.connect(timeoutAfter: timeout) {
             print("feathers socket failed to connect")
         }
     }
 
     public func request(endpoint: Endpoint, _ completion: @escaping FeathersCallback) {
-        // If there's an access token, we have to "inject" it into the existing config.
-        if let accessToken = endpoint.accessToken {
-            var data: [String: Any] = [:]
-            for option in client.config {
-                if case let .connectParams(params) = option {
-                    data = params
-                    break
-                }
-            }
-            if let oldAccessToken = data[endpoint.authenticationConfiguration.header] as? String, oldAccessToken != accessToken {
-                data[endpoint.authenticationConfiguration.header] = accessToken
-                client.config.insert(.connectParams(data), replacing: true)
-                client.reconnect()
-            }
-        }
         let emitPath = "\(endpoint.path)::\(endpoint.method.socketRequestPath)"
+        if let accessToken = endpoint.accessToken, authenticatedClient == nil {
+            authenticatedClient = spinUpAuthenticatedClient(with: accessToken, header: endpoint.authenticationConfiguration.header)
+            authenticatedClient?.connect()
+        }
+        let client = authenticatedClient != nil ? authenticatedClient! : unauthenticatedClient
         if client.status == .connecting {
-            client.on("connect") { [weak self] data, ack in
-                self?.client.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: self?.timeout ?? 5) { data in
+            client.once("connect") { [weak client = client, weak self] data, ack in
+                client?.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: self?.timeout ?? 5) { data in
                     print(data)
                 }
             }
         } else if client.status == .disconnected || client.status == .notConnected {
-            client.on("connect") { [weak self] data, ack in
-                self?.client.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: self?.timeout ?? 5) { data in
+            client.once("connect") { [weak client = client, weak self] data, ack in
+                client?.emitWithAck(emitPath, endpoint.method.socketData).timingOut(after: self?.timeout ?? 5) { data in
                     print(data)
                 }
             }
@@ -67,24 +65,36 @@ public final class SocketProvider: Provider {
     }
 
     public func authenticate(_ path: String, credentials: [String : Any], _ completion: @escaping FeathersCallback) {
-        if client.status == .connecting {
-            client.on("connect") { [weak self] data, ack in
-                self?.client.emitWithAck("authenticate", credentials).timingOut(after: self?.timeout ?? 5) { data in
+        if unauthenticatedClient.status == .connecting {
+            unauthenticatedClient.once("connect") { [weak self] data, ack in
+                self?.unauthenticatedClient.emitWithAck("authenticate", credentials).timingOut(after: self?.timeout ?? 5) { data in
                     print(data)
                 }
             }
-        } else if client.status == .disconnected || client.status == .notConnected {
-            client.on("connect") { [weak self] data, ack in
-                self?.client.emitWithAck("authenticate", credentials).timingOut(after: self?.timeout ?? 5) { data in
+        } else if unauthenticatedClient.status == .disconnected || unauthenticatedClient.status == .notConnected {
+            unauthenticatedClient.once("connect") { [weak self] data, ack in
+                self?.unauthenticatedClient.emitWithAck("authenticate", credentials).timingOut(after: self?.timeout ?? 5) { data in
                     print(data)
                 }
             }
-            client.connect()
+            unauthenticatedClient.connect()
         } else {
-            client.emitWithAck("authenticate", credentials).timingOut(after: timeout) { data in
+            unauthenticatedClient.emitWithAck("authenticate", credentials).timingOut(after: timeout) { data in
                 print(data)
             }
         }
+    }
+
+    private func spinUpAuthenticatedClient(with accessToken: String, header: String) -> SocketIOClient {
+        var config = configuration
+        for option in config {
+            if case var .extraHeaders(headers) = option {
+                headers[header] = accessToken
+                config.insert(.extraHeaders(headers), replacing: true)
+                break
+            }
+        }
+        return SocketIOClient(socketURL: baseURL, config: config)
     }
 
 //    private func handleResponseData(data: [Any]) -> Result<Response, FeathersError> {

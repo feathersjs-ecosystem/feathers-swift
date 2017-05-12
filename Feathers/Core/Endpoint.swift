@@ -25,6 +25,4 @@ public final class Endpoint {
         self.authenticationConfiguration = authenticationConfiguration
     }
 
-
-
 }

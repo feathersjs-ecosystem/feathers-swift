@@ -8,7 +8,7 @@
 
 import Foundation
 
-final public class Service {
+open class Service {
 
     public enum Method {
 
@@ -41,6 +41,10 @@ final public class Service {
             endpoint = Endpoint(baseURL: provider.baseURL, path: path, method: method, accessToken: accessToken, authenticationConfiguration: authenticationConfig)
         }
         provider.request(endpoint: endpoint, completion)
+    }
+
+    func on(event: String) {
+        
     }
 
 }

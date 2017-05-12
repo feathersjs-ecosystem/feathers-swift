@@ -14,7 +14,6 @@
 		EABBADCC1EBF941C00522603 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC71EBF941C00522603 /* KeychainSwift.framework */; };
 		EABBADCD1EBF941C00522603 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC81EBF941C00522603 /* ReactiveSwift.framework */; };
 		EABBADCE1EBF941C00522603 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC91EBF941C00522603 /* Result.framework */; };
-		EABBADCF1EBF941C00522603 /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADCA1EBF941C00522603 /* SocketIO.framework */; };
 		EABBADD91EBF94E800522603 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA452A671EA2B14300427CEF /* Feathers.framework */; };
 		EABBADE21EBF953200522603 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADE01EBF953200522603 /* Nimble.framework */; };
 		EABBADE31EBF953200522603 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADE11EBF953200522603 /* Quick.framework */; };
@@ -64,6 +63,26 @@
 		EABBAE4D1EBFA6B800522603 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
 		EABBAE4E1EBFA6B800522603 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
 		EAE05D6A1EBFDB0000DA55BF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
+		EAE05D781EC4BA7600DA55BF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D721EC4BA7600DA55BF /* Alamofire.framework */; };
+		EAE05D791EC4BA7600DA55BF /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D731EC4BA7600DA55BF /* KeychainSwift.framework */; };
+		EAE05D7A1EC4BA7600DA55BF /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D741EC4BA7600DA55BF /* ReactiveSwift.framework */; };
+		EAE05D7B1EC4BA7600DA55BF /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D751EC4BA7600DA55BF /* Result.framework */; };
+		EAE05D7C1EC4BA7600DA55BF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D761EC4BA7600DA55BF /* RxSwift.framework */; };
+		EAE05D851EC4BB2800DA55BF /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAE05D7F1EC4BB2800DA55BF /* Alamofire.framework.dSYM */; };
+		EAE05D861EC4BB2800DA55BF /* KeychainSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAE05D801EC4BB2800DA55BF /* KeychainSwift.framework.dSYM */; };
+		EAE05D871EC4BB2800DA55BF /* ReactiveSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAE05D811EC4BB2800DA55BF /* ReactiveSwift.framework.dSYM */; };
+		EAE05D881EC4BB2800DA55BF /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAE05D821EC4BB2800DA55BF /* Result.framework.dSYM */; };
+		EAE05D891EC4BB2800DA55BF /* RxSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAE05D831EC4BB2800DA55BF /* RxSwift.framework.dSYM */; };
+		EAE05D8B1EC4BB5100DA55BF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
+		EAE05D8C1EC4BB5100DA55BF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
+		EAE05D8D1EC4C2AF00DA55BF /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADCA1EBF941C00522603 /* SocketIO.framework */; };
+		EAE05D8F1EC4C2C000DA55BF /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D8E1EC4C2C000DA55BF /* SocketIO.framework */; };
+		EAE05D961EC4C2E900DA55BF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D901EC4C2E900DA55BF /* Alamofire.framework */; };
+		EAE05D971EC4C2E900DA55BF /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D911EC4C2E900DA55BF /* KeychainSwift.framework */; };
+		EAE05D981EC4C2E900DA55BF /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D921EC4C2E900DA55BF /* ReactiveSwift.framework */; };
+		EAE05D991EC4C2E900DA55BF /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D931EC4C2E900DA55BF /* Result.framework */; };
+		EAE05D9A1EC4C2E900DA55BF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D941EC4C2E900DA55BF /* RxSwift.framework */; };
+		EAE05D9B1EC4C2E900DA55BF /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D951EC4C2E900DA55BF /* SocketIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +104,20 @@
 			files = (
 				EABBADEB1EBF95C800522603 /* Nimble.framework in CopyFiles */,
 				EABBADEC1EBF95C900522603 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE05D7E1EC4BA8700DA55BF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				EAE05D851EC4BB2800DA55BF /* Alamofire.framework.dSYM in CopyFiles */,
+				EAE05D861EC4BB2800DA55BF /* KeychainSwift.framework.dSYM in CopyFiles */,
+				EAE05D871EC4BB2800DA55BF /* ReactiveSwift.framework.dSYM in CopyFiles */,
+				EAE05D881EC4BB2800DA55BF /* Result.framework.dSYM in CopyFiles */,
+				EAE05D891EC4BB2800DA55BF /* RxSwift.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +156,26 @@
 		EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Feathers+RxSwift.swift"; path = "RxSwift/Feathers+RxSwift.swift"; sourceTree = "<group>"; };
 		EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Service+RxSwift.swift"; path = "RxSwift/Service+RxSwift.swift"; sourceTree = "<group>"; };
 		EAE05D691EBFDB0000DA55BF /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Core/Endpoint.swift; sourceTree = "<group>"; };
+		EAE05D701EC4B91000DA55BF /* SwiftWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftWebSocket.framework; path = Carthage/Build/iOS/SwiftWebSocket.framework; sourceTree = "<group>"; };
+		EAE05D721EC4BA7600DA55BF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		EAE05D731EC4BA7600DA55BF /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/Mac/KeychainSwift.framework; sourceTree = "<group>"; };
+		EAE05D741EC4BA7600DA55BF /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/Mac/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EAE05D751EC4BA7600DA55BF /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+		EAE05D761EC4BA7600DA55BF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		EAE05D771EC4BA7600DA55BF /* SwiftWebSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftWebSocket.framework; path = Carthage/Build/Mac/SwiftWebSocket.framework; sourceTree = "<group>"; };
+		EAE05D7F1EC4BB2800DA55BF /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/Mac/Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		EAE05D801EC4BB2800DA55BF /* KeychainSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = KeychainSwift.framework.dSYM; path = Carthage/Build/Mac/KeychainSwift.framework.dSYM; sourceTree = "<group>"; };
+		EAE05D811EC4BB2800DA55BF /* ReactiveSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveSwift.framework.dSYM; path = Carthage/Build/Mac/ReactiveSwift.framework.dSYM; sourceTree = "<group>"; };
+		EAE05D821EC4BB2800DA55BF /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/Mac/Result.framework.dSYM; sourceTree = "<group>"; };
+		EAE05D831EC4BB2800DA55BF /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxSwift.framework.dSYM; path = Carthage/Build/Mac/RxSwift.framework.dSYM; sourceTree = "<group>"; };
+		EAE05D841EC4BB2800DA55BF /* SwiftWebSocket.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftWebSocket.framework.dSYM; path = Carthage/Build/Mac/SwiftWebSocket.framework.dSYM; sourceTree = "<group>"; };
+		EAE05D8E1EC4C2C000DA55BF /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = Carthage/Build/Mac/SocketIO.framework; sourceTree = "<group>"; };
+		EAE05D901EC4C2E900DA55BF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
+		EAE05D911EC4C2E900DA55BF /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/tvOS/KeychainSwift.framework; sourceTree = "<group>"; };
+		EAE05D921EC4C2E900DA55BF /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/tvOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EAE05D931EC4C2E900DA55BF /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/tvOS/Result.framework; sourceTree = "<group>"; };
+		EAE05D941EC4C2E900DA55BF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/tvOS/RxSwift.framework; sourceTree = "<group>"; };
+		EAE05D951EC4C2E900DA55BF /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = Carthage/Build/tvOS/SocketIO.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +183,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE05D8F1EC4C2C000DA55BF /* SocketIO.framework in Frameworks */,
+				EAE05D781EC4BA7600DA55BF /* Alamofire.framework in Frameworks */,
+				EAE05D791EC4BA7600DA55BF /* KeychainSwift.framework in Frameworks */,
+				EAE05D7A1EC4BA7600DA55BF /* ReactiveSwift.framework in Frameworks */,
+				EAE05D7B1EC4BA7600DA55BF /* Result.framework in Frameworks */,
+				EAE05D7C1EC4BA7600DA55BF /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +196,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE05D961EC4C2E900DA55BF /* Alamofire.framework in Frameworks */,
+				EAE05D971EC4C2E900DA55BF /* KeychainSwift.framework in Frameworks */,
+				EAE05D981EC4C2E900DA55BF /* ReactiveSwift.framework in Frameworks */,
+				EAE05D991EC4C2E900DA55BF /* Result.framework in Frameworks */,
+				EAE05D9A1EC4C2E900DA55BF /* RxSwift.framework in Frameworks */,
+				EAE05D9B1EC4C2E900DA55BF /* SocketIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,12 +209,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE05D8D1EC4C2AF00DA55BF /* SocketIO.framework in Frameworks */,
 				EABBAE061EBFA31300522603 /* RxSwift.framework in Frameworks */,
 				EABBADCB1EBF941C00522603 /* Alamofire.framework in Frameworks */,
 				EABBADCC1EBF941C00522603 /* KeychainSwift.framework in Frameworks */,
 				EABBADCD1EBF941C00522603 /* ReactiveSwift.framework in Frameworks */,
 				EABBADCE1EBF941C00522603 /* Result.framework in Frameworks */,
-				EABBADCF1EBF941C00522603 /* SocketIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +285,26 @@
 		EABBADC51EBF941B00522603 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAE05D901EC4C2E900DA55BF /* Alamofire.framework */,
+				EAE05D911EC4C2E900DA55BF /* KeychainSwift.framework */,
+				EAE05D921EC4C2E900DA55BF /* ReactiveSwift.framework */,
+				EAE05D931EC4C2E900DA55BF /* Result.framework */,
+				EAE05D941EC4C2E900DA55BF /* RxSwift.framework */,
+				EAE05D951EC4C2E900DA55BF /* SocketIO.framework */,
+				EAE05D8E1EC4C2C000DA55BF /* SocketIO.framework */,
+				EAE05D7F1EC4BB2800DA55BF /* Alamofire.framework.dSYM */,
+				EAE05D801EC4BB2800DA55BF /* KeychainSwift.framework.dSYM */,
+				EAE05D811EC4BB2800DA55BF /* ReactiveSwift.framework.dSYM */,
+				EAE05D821EC4BB2800DA55BF /* Result.framework.dSYM */,
+				EAE05D831EC4BB2800DA55BF /* RxSwift.framework.dSYM */,
+				EAE05D841EC4BB2800DA55BF /* SwiftWebSocket.framework.dSYM */,
+				EAE05D721EC4BA7600DA55BF /* Alamofire.framework */,
+				EAE05D731EC4BA7600DA55BF /* KeychainSwift.framework */,
+				EAE05D741EC4BA7600DA55BF /* ReactiveSwift.framework */,
+				EAE05D751EC4BA7600DA55BF /* Result.framework */,
+				EAE05D761EC4BA7600DA55BF /* RxSwift.framework */,
+				EAE05D771EC4BA7600DA55BF /* SwiftWebSocket.framework */,
+				EAE05D701EC4B91000DA55BF /* SwiftWebSocket.framework */,
 				EABBAE051EBFA31300522603 /* RxSwift.framework */,
 				EABBADE91EBF95C800522603 /* Nimble.framework */,
 				EABBADEA1EBF95C800522603 /* Quick.framework */,
@@ -246,6 +331,7 @@
 		EABBAE091EBFA69C00522603 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EABBAE121EBFA6A400522603 /* Service.swift */,
 				EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */,
 				EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */,
 				EABBAE0C1EBFA6A400522603 /* Feathers.swift */,
@@ -254,7 +340,6 @@
 				EABBAE0F1EBFA6A400522603 /* Provider.swift */,
 				EABBAE101EBFA6A400522603 /* Response.swift */,
 				EABBAE111EBFA6A400522603 /* RestProvider.swift */,
-				EABBAE121EBFA6A400522603 /* Service.swift */,
 				EABBAE131EBFA6A400522603 /* SocketProvider.swift */,
 				EAE05D691EBFDB0000DA55BF /* Endpoint.swift */,
 			);
@@ -300,6 +385,7 @@
 				EA2ABD3F1EA2BA6F0099A091 /* Headers */,
 				EA2ABD411EA2BA6F0099A091 /* Resources */,
 				EAE710ED1EA3B8DA002BEFE2 /* Carthage */,
+				EAE05D7E1EC4BA8700DA55BF /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -480,6 +566,7 @@
 				"$(SRCROOT)/Carthage/Build/tvOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/tvOS/SocketIO.framework",
 				"$(SRCROOT)/Carthage/Build/tvOS/KeychainSwift.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/RxSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -499,6 +586,7 @@
 				"$(SRCROOT)/Carthage/Build/Mac/Result.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/SocketIO.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/KeychainSwift.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/RxSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -518,6 +606,7 @@
 				EABBAE391EBFA6A400522603 /* SocketProvider.swift in Sources */,
 				EABBAE211EBFA6A400522603 /* FeathersError.swift in Sources */,
 				EABBAE1D1EBFA6A400522603 /* Feathers.swift in Sources */,
+				EAE05D8B1EC4BB5100DA55BF /* Endpoint.swift in Sources */,
 				EABBAE191EBFA6A400522603 /* AuthenticationStorage.swift in Sources */,
 				EABBAE2D1EBFA6A400522603 /* Response.swift in Sources */,
 				EABBAE3F1EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */,
@@ -539,6 +628,7 @@
 				EABBAE3A1EBFA6A400522603 /* SocketProvider.swift in Sources */,
 				EABBAE221EBFA6A400522603 /* FeathersError.swift in Sources */,
 				EABBAE1E1EBFA6A400522603 /* Feathers.swift in Sources */,
+				EAE05D8C1EC4BB5100DA55BF /* Endpoint.swift in Sources */,
 				EABBAE1A1EBFA6A400522603 /* AuthenticationStorage.swift in Sources */,
 				EABBAE2E1EBFA6A400522603 /* Response.swift in Sources */,
 				EABBAE401EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */,
