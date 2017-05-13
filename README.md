@@ -150,6 +150,6 @@ Have an issue? Open an issue! Have an idea? Open a pull request!
 ### Further Help
 
 Feathers is extensively documented so please take a look at the source code if you have any questions about how something works.
-You can also ping me in the [Feathers' slack team](https://slack.feathersjs.com) @brendan.
+You can also ping me in the [Feathers' slack team](http://slack.feathersjs.com/) @brendan.
 
 Cheers! :beers:
