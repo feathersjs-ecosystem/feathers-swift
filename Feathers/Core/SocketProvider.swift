@@ -143,6 +143,12 @@ public final class SocketProvider: RealTimeProvider {
         client.off(event)
     }
 
+    // MARK: - Deinit
+
+    deinit {
+        client.disconnect()
+    }
+
 }
 
 fileprivate extension Service.Method {
