@@ -9,6 +9,7 @@
 import Foundation
 import KeychainSwift
 
+/// Authentication storage protocol.
 public protocol AuthenticationStorage: class {
 
     init(storageKey: String)
@@ -16,6 +17,7 @@ public protocol AuthenticationStorage: class {
 
 }
 
+/// An encrypted authentication store. Uses the keychain to store a token.
 public final class EncryptedAuthenticationStore: AuthenticationStorage {
 
     private let keychain = KeychainSwift()

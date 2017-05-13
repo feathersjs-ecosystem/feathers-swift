@@ -18,7 +18,7 @@ final public class RestProvider: Provider {
         self.baseURL = baseURL
     }
 
-    public final func setup() {}
+    public final func setup(app: Feathers) {}
 
     public func request(endpoint: Endpoint, _ completion: @escaping FeathersCallback) {
         let request = buildRequest(from: endpoint)
@@ -32,7 +32,23 @@ final public class RestProvider: Provider {
     }
 
     public final func authenticate(_ path: String, credentials: [String: Any], _ completion: @escaping FeathersCallback) {
-        Alamofire.request(baseURL.appendingPathComponent(path), method: .post, parameters: credentials, encoding: URLEncoding.httpBody)
+        authenticationRequest(path: path, method: .post, parameters: credentials, encoding: URLEncoding.httpBody, completion)
+    }
+
+    public func logout(path: String, _ completion: @escaping FeathersCallback) {
+        authenticationRequest(path: path, method: .delete, parameters: nil, encoding: URLEncoding.default, completion)
+    }
+
+    /// Perform an authentication request.
+    ///
+    /// - Parameters:
+    ///   - path: Authentication service path.
+    ///   - method: HTTP method.
+    ///   - parameters: Parameters.
+    ///   - encoding: Parameter encoding.
+    ///   - completion: Completion block.
+    private func authenticationRequest(path: String, method: HTTPMethod, parameters: [String: Any]?, encoding: ParameterEncoding, _ completion: @escaping FeathersCallback) {
+        Alamofire.request(baseURL.appendingPathComponent(path), method: method, parameters: parameters, encoding: encoding)
             .validate()
             .response(responseSerializer: DataRequest.jsonResponseSerializer()) { [weak self] response in
                 guard let vSelf = self else { return }
@@ -41,6 +57,10 @@ final public class RestProvider: Provider {
         }
     }
 
+    /// Handle the data response from an Alamofire request.
+    ///
+    /// - Parameter dataResponse: Alamofire data response.
+    /// - Returns: Result with an error or a successful response.
     private func handleResponse(_ dataResponse: DataResponse<Any>) -> Result<Response, FeathersError> {
         // If the status code maps to a feathers error code, return that error.
         if let statusCode = dataResponse.response?.statusCode,
@@ -70,6 +90,10 @@ final public class RestProvider: Provider {
         return .failure(.unknown)
     }
 
+    /// Build a request from the given endpiont.
+    ///
+    /// - Parameter endpoint: Request endpoint.
+    /// - Returns: Request object.
     private func buildRequest(from endpoint: Endpoint) -> URLRequest {
         var urlRequest = URLRequest(url: endpoint.url)
         urlRequest.httpMethod = endpoint.method.httpMethod.rawValue
@@ -82,9 +106,9 @@ final public class RestProvider: Provider {
 
 }
 
-public extension Service.Method {
+fileprivate extension Service.Method {
 
-    public var httpMethod: HTTPMethod {
+    fileprivate var httpMethod: HTTPMethod {
         switch self {
         case .find: return .get
         case .get: return .get
@@ -95,7 +119,7 @@ public extension Service.Method {
         }
     }
 
-    var parameters: [String: Any]? {
+    fileprivate var parameters: [String: Any]? {
         switch self {
         case .find(let parameters): return parameters
         case .get(_, let parameters): return parameters
@@ -106,7 +130,7 @@ public extension Service.Method {
         }
     }
 
-    var data: [String: Any]? {
+    fileprivate var data: [String: Any]? {
         switch self {
         case .create(let data, _): return data
         case .update(_, let data, _): return data
@@ -123,11 +147,12 @@ internal extension Endpoint {
     internal var url: URL {
         var url = baseURL.appendingPathComponent(path)
         switch method {
-        case .get(let id, _),
-             .update(let id, _, _),
+        case .get(let id, _):
+            url = url.appendingPathComponent(id)
+        case .update(let id, _, _),
              .patch(let id, _, _),
              .remove(let id, _):
-            url = url.appendingPathComponent(id)
+            url = id != nil ? url.appendingPathComponent(id!) : url
         default: break
         }
         url = method.parameters != nil ? (url.URLByAppendingQueryParameters(parameters: method.parameters!) ?? url) : url

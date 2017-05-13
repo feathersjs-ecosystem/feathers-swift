@@ -14,11 +14,22 @@ public final class SocketProvider: RealTimeProvider {
 
     public let baseURL: URL
 
+    /// SocketIO client configuration object.
     private let configuration: SocketIOClientConfiguration
+
+    /// SocketIO client.
     private let client: SocketIOClient
 
+    /// Socket timeout for `connect` and all emits.
     private let timeout: Int
 
+    /// Socket provider initializer.
+    ///
+    /// - Parameters:
+    ///   - baseURL: Socket url.
+    ///   - configuration: Socket configuration object. See `SocketIO` for more details
+    /// on the possible options.
+    ///   - timeout: Socket timeout.
     public init(baseURL: URL, configuration: SocketIOClientConfiguration, timeout: Int = 5) {
         self.baseURL = baseURL
         self.configuration = configuration
@@ -26,11 +37,23 @@ public final class SocketProvider: RealTimeProvider {
         client = SocketIOClient(socketURL: baseURL, config: configuration)
     }
 
-    private func createClient(with url: URL, configuration: SocketIOClientConfiguration) -> SocketIOClient {
-        return SocketIOClient(socketURL: url, config: configuration)
-    }
-
-    public func setup() {
+    public func setup(app: Feathers) {
+        // Attempt to authenticate using a previously stored token once the client connects.
+        client.once("connect") { [weak app = app, weak self] data, ack in
+            guard let vSelf = self else { return }
+            guard let vApp = app else { return }
+            guard let accessToken = vApp.authenticationStorage.accessToken else { return }
+            vSelf.emit(to: "authenticate", with: [
+                "strategy": vApp.authenticationConfiguration.jwtStrategy,
+                "accessToken": accessToken
+            ]) { error, response in
+                if let _ = error {
+                    print("failed to authenticate the client")
+                } else {
+                    print("successfully authenticated the client")
+                }
+            }
+        }
         client.connect(timeoutAfter: timeout) {
             print("feathers socket failed to connect")
         }
@@ -45,6 +68,16 @@ public final class SocketProvider: RealTimeProvider {
         emit(to: "authenticate", with: credentials, completion)
     }
 
+    public func logout(path: String, _ completion: @escaping FeathersCallback) {
+        emit(to: "logout", with: [], completion)
+    }
+
+    /// Emit data to a given path.
+    ///
+    /// - Parameters:
+    ///   - path: Path to emit on.
+    ///   - data: Data to emit.
+    ///   - completion: Completion callback.
     private func emit(to path: String, with data: SocketData, _ completion: @escaping FeathersCallback) {
         if client.status == .connecting {
             client.once("connect") { [weak self] data, ack in
@@ -63,6 +96,10 @@ public final class SocketProvider: RealTimeProvider {
         }
     }
 
+    /// Parse and handle socket response data.
+    ///
+    /// - Parameter data: Socket response data.
+    /// - Returns: Result object with error or response.
     private func handleResponseData(data: [Any]) -> Result<Response, FeathersError> {
         if let noAck = data.first as? String, noAck == "NO ACK" {
             return .failure(.notFound)
@@ -79,6 +116,10 @@ public final class SocketProvider: RealTimeProvider {
         return .failure(.unknown)
     }
 
+    /// Parse pagination data if any.
+    ///
+    /// - Parameter data: Data to parse from.
+    /// - Returns: Paginiation object or nil.
     private func parsePagination(data: [String: Any]) -> Pagination? {
         guard
         let limit = data["limit"] as? Int,
@@ -104,9 +145,9 @@ public final class SocketProvider: RealTimeProvider {
 
 }
 
-extension Service.Method {
+fileprivate extension Service.Method {
 
-    var socketRequestPath: String {
+    fileprivate var socketRequestPath: String {
         switch self {
         case .find: return "find"
         case .get: return "get"
@@ -117,18 +158,19 @@ extension Service.Method {
         }
     }
 
-    var socketData: [SocketData] {
+    fileprivate var socketData: [SocketData?] {
         switch self {
         case .find(let parameters):
             return [parameters ?? [:]]
-        case .get(let id, let parameters),
-             .remove(let id, let parameters):
+        case .get(let id, let parameters):
             return [id, parameters ?? [:]]
         case .create(let data, let parameters):
             return [data, parameters ?? [:]]
         case .update(let id, let data, let parameters),
              .patch(let id, let data, let parameters):
-            return [id, data, parameters ?? [:]]
+            return [id ?? nil, data, parameters ?? [:]]
+        case .remove(let id, let parameters):
+            return [id ?? nil, parameters]
         }
     }
 

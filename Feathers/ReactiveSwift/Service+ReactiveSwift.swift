@@ -8,6 +8,7 @@
 
 import Foundation
 import ReactiveSwift
+import Result
 #if !COCOAPODS
     import Feathers
 #endif
@@ -31,6 +32,21 @@ public extension Reactive where Base: Service {
                 } else {
                     observer.send(error: .unknown)
                 }
+            }
+        }
+    }
+
+    public func on(event: Service.RealTimeEvent) -> SignalProducer<[String: Any], NoError> {
+        return SignalProducer { [weak base = base] observer, disposable in
+            guard let vBase = base else {
+                observer.sendInterrupted()
+                return
+            }
+            vBase.on(event: event) { response in
+                observer.send(value: response)
+            }
+            disposable.add {
+                vBase.off(event: event)
             }
         }
     }

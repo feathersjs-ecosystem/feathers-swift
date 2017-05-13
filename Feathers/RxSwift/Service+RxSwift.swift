@@ -31,4 +31,18 @@ public extension Service {
         }
     }
 
+    public func on(event: Service.RealTimeEvent) -> Observable<[String: Any]> {
+        return Observable.create { [weak self] observer in
+            guard let vSelf = self else {
+                return Disposables.create()
+            }
+            vSelf.on(event: event) { response in
+                observer.onNext(response)
+            }
+            return Disposables.create {
+                vSelf.off(event: event)
+            }
+        }
+    }
+
 }

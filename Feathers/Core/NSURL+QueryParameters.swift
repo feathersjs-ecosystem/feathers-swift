@@ -8,9 +8,13 @@
 
 import Foundation
 
-extension URL {
+internal extension URL {
 
-    func URLByAppendingQueryParameters(parameters: [String: Any]) -> URL? {
+    /// Create a url by appending query parameters.
+    ///
+    /// - Parameter parameters: Query parameters.
+    /// - Returns: New url with query parameters appended to the end.
+    internal func URLByAppendingQueryParameters(parameters: [String: Any]) -> URL? {
         guard var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: true) else {
             return self
         }
