@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
                    ReactiveSwift and RxSwift extensions are available.
                    DESC
   s.homepage     = "https://github.com/startupthekid/feathers-ios"
-  s.license      = { :type => "MIT", :file => "LICENSE.md" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = "startupthekid"
 
   s.ios.deployment_target = "8.0"
