@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA2ABD401EA2BA6F0099A091 /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA2ABD5C1EA2BA8A0099A091 /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA3017141EC7867E00114F19 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
 		EA452A781EA2B14300427CEF /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EABBADCB1EBF941C00522603 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC61EBF941C00522603 /* Alamofire.framework */; };
 		EABBADCC1EBF941C00522603 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC71EBF941C00522603 /* KeychainSwift.framework */; };
@@ -126,6 +127,7 @@
 /* Begin PBXFileReference section */
 		EA2ABD451EA2BA6F0099A091 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2ABD611EA2BA8A0099A091 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA3017131EC7867E00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = Core/Hooks.swift; sourceTree = "<group>"; };
 		EA452A671EA2B14300427CEF /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA452A6A1EA2B14300427CEF /* Feathers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feathers.h; sourceTree = "<group>"; };
 		EA452A6B1EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				EABBAE111EBFA6A400522603 /* RestProvider.swift */,
 				EABBAE131EBFA6A400522603 /* SocketProvider.swift */,
 				EAE05D691EBFDB0000DA55BF /* Endpoint.swift */,
+				EA3017131EC7867E00114F19 /* Hooks.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				EABBAE3E1EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */,
 				EABBAE341EBFA6A400522603 /* Service.swift in Sources */,
 				EABBAE281EBFA6A400522603 /* Provider.swift in Sources */,
+				EA3017141EC7867E00114F19 /* Hooks.swift in Sources */,
 				EABBAE141EBFA6A400522603 /* AuthenticationConfiguration.swift in Sources */,
 				EABBAE301EBFA6A400522603 /* RestProvider.swift in Sources */,
 				EABBAE421EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */,
