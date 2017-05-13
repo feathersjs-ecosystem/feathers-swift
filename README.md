@@ -2,10 +2,19 @@
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Feathers.svg)](#cocoapods) [![GitHub release](https://img.shields.io/github/release/startupthekid/feathers-ios.svg)](https://github.com/startupthekid/feathers-ios/releases) ![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS-lightgrey.svg)
 
+![feathers](https://media.giphy.com/media/Fn8LZVVgTqXba/giphy.gif)
 
 ## What is Feathers?
 
-Feathers is a Swift 3 compliant SDK for interacting with a FeathersJS backend. Feathers makes it easy to integrate with any Feathers services on the backend, providing REST and SocketIO transport providers.
+Feathers is a Swift SDK for interacting with a [FeathersJS](https://feathersjs.com/) backend.
+Why should you use it?
+
+* Swift 3 :thumbsup:
+* Network abstraction layer
+* Reactive extensions (ReactiveSwift and RxSwift)
+* Integrates seemlessly with any FeathersJS services
+
+If you use FeathersJS (which you should), Feathers is the perfect choice for you. No more dealing with HTTP requests or socket clients. One simple interface to rule them all and in the darkness, unify them :ring:.
 
 ## Installation
 
@@ -146,6 +155,8 @@ There are reactive extensions for the following classes and methods:
 ### Contributing
 
 Have an issue? Open an issue! Have an idea? Open a pull request!
+
+If you like the library, please :star: it!
 
 ### Further Help
 
