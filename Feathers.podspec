@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name         = "Feathers"
   # Version goes here and will be used to access the git tag later on, once we have a first release.
-  s.version      = "0.0.91"
-  s.summary      = "Swift framework for interacting with featherjs apis"
+  s.version      = "0.1.0"
+  s.summary      = "Swift framework for interacting with Featherjs apis"
   s.description  = <<-DESC
                    Swift library for connecting to a FeathersJS backend.
 

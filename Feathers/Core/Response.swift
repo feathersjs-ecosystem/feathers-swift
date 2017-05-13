@@ -27,7 +27,7 @@ public enum ResponseData: CustomDebugStringConvertible, CustomStringConvertible 
     public var description: String {
         switch self {
         case .jsonArray(let data):
-            return data.reduce("") { $0 + "\($1)\n" }
+            return data.reduce("") { $0 + "\n\($1)\n" }
         case .jsonObject(let object):
             return "\(object)"
         }
