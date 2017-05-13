@@ -147,6 +147,8 @@ There are reactive extensions for the following classes and methods:
 
 Have an issue? Open an issue! Have an idea? Open a pull request!
 
+If you like the library, please :star: it!
+
 ### Further Help
 
 Feathers is extensively documented so please take a look at the source code if you have any questions about how something works.
