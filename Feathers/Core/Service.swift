@@ -34,6 +34,65 @@ public final class Service {
 
     }
 
+    // MARK: - Hooks
+
+    /// Service hooks
+    public struct Hooks {
+
+        /// Hooks for all service methods.
+        public let all: [HookFunction]
+
+        /// Hooks for `.find` requests.
+        public let find: [HookFunction]
+
+        /// Hooks for `.get` requests.
+        public let get: [HookFunction]
+
+        /// Hooks for `.create` requests.
+        public let create: [HookFunction]
+
+        /// Hooks for `.update` requests.
+        public let update: [HookFunction]
+
+        /// Hooks for `.patch` requests.
+        public let patch: [HookFunction]
+
+        /// Hooks for `.remove` requests.
+        public let remove: [HookFunction]
+
+        /// Service hooks initializer.
+        ///
+        /// - Parameters:
+        ///   - kind: The kind of hooks.
+        ///   - all: Hooks to run on all service methods.
+        ///   - find: Find hooks.
+        ///   - get: Get hooks.
+        ///   - create: Create hooks.
+        ///   - update: Update hooks.
+        ///   - patch: Patch hooks.
+        ///   - remove: Remove hooks.
+        public init(
+            all: [HookFunction] = [],
+            find: [HookFunction] = [],
+            get: [HookFunction] = [],
+            create: [HookFunction] = [],
+            update: [HookFunction] = [],
+            patch: [HookFunction] = [],
+            remove: [HookFunction] = []) {
+            self.all = all
+            self.find = find
+            self.get = get
+            self.create = create
+            self.update = update
+            self.patch = patch
+            self.remove = remove
+        }
+
+    }
+
+    // MARK: Real-time
+
+    /// Callback for real-time events.
     public typealias RealTimeEventCallback = ([String: Any]) -> ()
 
     /// A real time event that `RealTimeProvider`s can emit.
