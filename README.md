@@ -64,7 +64,7 @@ public enum Method {
 }
 ```
 
-With `.update`, `.patch`, and `.remove`, you may pass in nil for the id when you want to delete a list of entities. The list of entities to be deleted is determined by the query parameters you pass in.
+With `.update`, `.patch`, and `.remove`, you may pass in nil for the id when you want to delete a list of entities. The list of entities is determined by the query parameters you pass in.
 
 ### Authentication
 
@@ -149,7 +149,7 @@ Have an issue? Open an issue! Have an idea? Open a pull request!
 
 ### Further Help
 
-Feathers is extensively documented so please take a look at the source if you have any questions about how something works.
-You can also ping me in the [Feathers' slack team](slack.feathersjs.com) @brendan.
+Feathers is extensively documented so please take a look at the source code if you have any questions about how something works.
+You can also ping me in the [Feathers' slack team](https://slack.feathersjs.com) @brendan.
 
 Cheers! :beers:
