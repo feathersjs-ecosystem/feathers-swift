@@ -34,4 +34,24 @@ public extension Feathers {
         }
     }
 
+    public func logout() -> Observable<Response> {
+        return Observable.create { [weak self] observer in
+            guard let vSelf = self else {
+                return Disposables.create()
+            }
+            vSelf.logout { error, response in
+                if let error = error {
+                    observer.onError(error)
+                    return
+                } else if let response = response {
+                    observer.onNext(response)
+                    observer.onCompleted()
+                } else {
+                    observer.onError(FeathersError.unknown)
+                }
+            }
+            return Disposables.create()
+        }
+    }
+
 }

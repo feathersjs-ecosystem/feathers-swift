@@ -29,7 +29,7 @@ public final class Service {
         case get(id: String, parameters: [String: Any]?)
         case create(data: [String: Any], parameters: [String: Any]?)
         case update(id: String?, data: [String: Any], parameters: [String: Any]?)
-        case patch(id: String?, data: [String: Any], paramters: [String: Any]?)
+        case patch(id: String?, data: [String: Any], parameters: [String: Any]?)
         case remove(id: String?, parameters: [String: Any]?)
 
     }
