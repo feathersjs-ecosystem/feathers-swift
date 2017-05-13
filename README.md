@@ -7,9 +7,12 @@
 ## What is Feathers?
 
 Feathers is a Swift SDK for interacting with a [FeathersJS](https://feathersjs.com/) backend.
+Why should you use it?
 
 * Swift 3 :thumbsup:
 * Network abstraction layer
+* Reactive extensions (ReactiveSwift and RxSwift)
+* Integrates seemlessly with any FeathersJS services
 
 If you use FeathersJS (which you should), Feathers is the perfect choice for you. No more dealing with HTTP requests or socket clients. One simple interface to rule them all and in the darkness, unify them :ring:.
 
