@@ -105,6 +105,9 @@ public final class Service {
         }
     }
 
+    /// Unregister for an event. Must be called to end the stream.
+    ///
+    /// - Parameter event: Real-time event to unregister from.
     public func off(event: RealTimeEvent) {
         if let realTimeProvider = provider as? RealTimeProvider {
             realTimeProvider.off(event: "\(path) \(event.rawValue)")
