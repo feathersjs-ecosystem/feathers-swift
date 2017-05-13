@@ -5,7 +5,7 @@
 
 ## What is Feathers?
 
-Feathers is a Swift 3 compliant SDK for interacting with a FeathersJS backend. Feathers makes it easy to integrate with any Feathers services on the backend, providing REST and SocketIO transport providers.
+Feathers is a Swift 3 compliant SDK for interacting with a [FeathersJS](https://feathersjs.com/) backend. Feathers makes it easy to integrate with any FeathersJS services on the backend, providing REST and SocketIO transport providers. It's a small, easy-to-use, network abstraction layer.
 
 ## Installation
 
