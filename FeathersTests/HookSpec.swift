@@ -179,7 +179,7 @@ class HookSpec: QuickSpec {
                             response = $1
                         }
                         expect(error).toEventuallyNot(beNil())
-//                        expect(response).toEventually(beNil())
+                        expect(response).toEventually(beNil())
                     }
 
                 }

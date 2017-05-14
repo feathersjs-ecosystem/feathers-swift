@@ -8,9 +8,6 @@
 
 import Foundation
 import RxSwift
-#if !COCOAPODS
-    import Feathers
-#endif
 
 public extension Service {
 
