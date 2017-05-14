@@ -2,8 +2,10 @@ language: objective-c
 osx_image: xcode8.3
 before_install: true
 install: true
+before_script:
+ - chmod +x ./script/build
 script:
-  - scripts/build
+  - script/build
 xcode_project: Feathers.xcodeproj
 matrix:
   include:
