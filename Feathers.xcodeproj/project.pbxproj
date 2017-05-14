@@ -31,18 +31,12 @@
 		EA301ABC1EC8CD0400114F19 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
 		EA301ABE1EC8F58500114F19 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
 		EA301ABF1EC8F58500114F19 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
-		EA301AC11EC8FB7200114F19 /* SocketIO.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA301AC01EC8FB7200114F19 /* SocketIO.framework.dSYM */; };
 		EA452A781EA2B14300427CEF /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EABBADCB1EBF941C00522603 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC61EBF941C00522603 /* Alamofire.framework */; };
-		EABBADCC1EBF941C00522603 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC71EBF941C00522603 /* KeychainSwift.framework */; };
-		EABBADCD1EBF941C00522603 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC81EBF941C00522603 /* ReactiveSwift.framework */; };
-		EABBADCE1EBF941C00522603 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC91EBF941C00522603 /* Result.framework */; };
 		EABBADD91EBF94E800522603 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA452A671EA2B14300427CEF /* Feathers.framework */; };
 		EABBADE21EBF953200522603 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADE01EBF953200522603 /* Nimble.framework */; };
 		EABBADE31EBF953200522603 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADE11EBF953200522603 /* Quick.framework */; };
 		EABBADEB1EBF95C800522603 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABBADE91EBF95C800522603 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EABBADEC1EBF95C900522603 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABBADEA1EBF95C800522603 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EABBAE061EBFA31300522603 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBAE051EBFA31300522603 /* RxSwift.framework */; };
 		EABBAE141EBFA6A400522603 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
 		EABBAE151EBFA6A400522603 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
 		EABBAE161EBFA6A400522603 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
@@ -86,26 +80,8 @@
 		EABBAE4D1EBFA6B800522603 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
 		EABBAE4E1EBFA6B800522603 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
 		EAE05D6A1EBFDB0000DA55BF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
-		EAE05D781EC4BA7600DA55BF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D721EC4BA7600DA55BF /* Alamofire.framework */; };
-		EAE05D791EC4BA7600DA55BF /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D731EC4BA7600DA55BF /* KeychainSwift.framework */; };
-		EAE05D7A1EC4BA7600DA55BF /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D741EC4BA7600DA55BF /* ReactiveSwift.framework */; };
-		EAE05D7B1EC4BA7600DA55BF /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D751EC4BA7600DA55BF /* Result.framework */; };
-		EAE05D7C1EC4BA7600DA55BF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D761EC4BA7600DA55BF /* RxSwift.framework */; };
-		EAE05D851EC4BB2800DA55BF /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAE05D7F1EC4BB2800DA55BF /* Alamofire.framework.dSYM */; };
-		EAE05D861EC4BB2800DA55BF /* KeychainSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAE05D801EC4BB2800DA55BF /* KeychainSwift.framework.dSYM */; };
-		EAE05D871EC4BB2800DA55BF /* ReactiveSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAE05D811EC4BB2800DA55BF /* ReactiveSwift.framework.dSYM */; };
-		EAE05D881EC4BB2800DA55BF /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAE05D821EC4BB2800DA55BF /* Result.framework.dSYM */; };
-		EAE05D891EC4BB2800DA55BF /* RxSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAE05D831EC4BB2800DA55BF /* RxSwift.framework.dSYM */; };
 		EAE05D8B1EC4BB5100DA55BF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
 		EAE05D8C1EC4BB5100DA55BF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
-		EAE05D8D1EC4C2AF00DA55BF /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADCA1EBF941C00522603 /* SocketIO.framework */; };
-		EAE05D8F1EC4C2C000DA55BF /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D8E1EC4C2C000DA55BF /* SocketIO.framework */; };
-		EAE05D961EC4C2E900DA55BF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D901EC4C2E900DA55BF /* Alamofire.framework */; };
-		EAE05D971EC4C2E900DA55BF /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D911EC4C2E900DA55BF /* KeychainSwift.framework */; };
-		EAE05D981EC4C2E900DA55BF /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D921EC4C2E900DA55BF /* ReactiveSwift.framework */; };
-		EAE05D991EC4C2E900DA55BF /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D931EC4C2E900DA55BF /* Result.framework */; };
-		EAE05D9A1EC4C2E900DA55BF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D941EC4C2E900DA55BF /* RxSwift.framework */; };
-		EAE05D9B1EC4C2E900DA55BF /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE05D951EC4C2E900DA55BF /* SocketIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,21 +139,6 @@
 			files = (
 				EABBADEB1EBF95C800522603 /* Nimble.framework in CopyFiles */,
 				EABBADEC1EBF95C900522603 /* Quick.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAE05D7E1EC4BA8700DA55BF /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				EA301AC11EC8FB7200114F19 /* SocketIO.framework.dSYM in CopyFiles */,
-				EAE05D851EC4BB2800DA55BF /* Alamofire.framework.dSYM in CopyFiles */,
-				EAE05D861EC4BB2800DA55BF /* KeychainSwift.framework.dSYM in CopyFiles */,
-				EAE05D871EC4BB2800DA55BF /* ReactiveSwift.framework.dSYM in CopyFiles */,
-				EAE05D881EC4BB2800DA55BF /* Result.framework.dSYM in CopyFiles */,
-				EAE05D891EC4BB2800DA55BF /* RxSwift.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,12 +211,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE05D8F1EC4C2C000DA55BF /* SocketIO.framework in Frameworks */,
-				EAE05D781EC4BA7600DA55BF /* Alamofire.framework in Frameworks */,
-				EAE05D791EC4BA7600DA55BF /* KeychainSwift.framework in Frameworks */,
-				EAE05D7A1EC4BA7600DA55BF /* ReactiveSwift.framework in Frameworks */,
-				EAE05D7B1EC4BA7600DA55BF /* Result.framework in Frameworks */,
-				EAE05D7C1EC4BA7600DA55BF /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,12 +218,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE05D961EC4C2E900DA55BF /* Alamofire.framework in Frameworks */,
-				EAE05D971EC4C2E900DA55BF /* KeychainSwift.framework in Frameworks */,
-				EAE05D981EC4C2E900DA55BF /* ReactiveSwift.framework in Frameworks */,
-				EAE05D991EC4C2E900DA55BF /* Result.framework in Frameworks */,
-				EAE05D9A1EC4C2E900DA55BF /* RxSwift.framework in Frameworks */,
-				EAE05D9B1EC4C2E900DA55BF /* SocketIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,12 +245,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE05D8D1EC4C2AF00DA55BF /* SocketIO.framework in Frameworks */,
-				EABBAE061EBFA31300522603 /* RxSwift.framework in Frameworks */,
-				EABBADCB1EBF941C00522603 /* Alamofire.framework in Frameworks */,
-				EABBADCC1EBF941C00522603 /* KeychainSwift.framework in Frameworks */,
-				EABBADCD1EBF941C00522603 /* ReactiveSwift.framework in Frameworks */,
-				EABBADCE1EBF941C00522603 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,7 +438,6 @@
 				EA2ABD3F1EA2BA6F0099A091 /* Headers */,
 				EA2ABD411EA2BA6F0099A091 /* Resources */,
 				EAE710ED1EA3B8DA002BEFE2 /* Carthage */,
-				EAE05D7E1EC4BA8700DA55BF /* CopyFiles */,
 			);
 			buildRules = (
 			);
