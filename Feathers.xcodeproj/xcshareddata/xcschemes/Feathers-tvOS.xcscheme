@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Feathers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EA301A9C1EC8BD7300114F19"
+               BuildableName = "FeathersTests-tvOS.xctest"
+               BlueprintName = "FeathersTests-tvOS"
+               ReferencedContainer = "container:Feathers.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,7 +42,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EA301A9C1EC8BD7300114F19"
+               BuildableName = "FeathersTests-tvOS.xctest"
+               BlueprintName = "FeathersTests-tvOS"
+               ReferencedContainer = "container:Feathers.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "EA2ABD551EA2BA8A0099A091"
+            BuildableName = "Feathers.framework"
+            BlueprintName = "Feathers-tvOS"
+            ReferencedContainer = "container:Feathers.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
