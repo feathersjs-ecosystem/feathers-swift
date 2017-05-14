@@ -10,6 +10,25 @@
 		EA2ABD401EA2BA6F0099A091 /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA2ABD5C1EA2BA8A0099A091 /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA3017141EC7867E00114F19 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
+		EA301A901EC8BCD500114F19 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA452A671EA2B14300427CEF /* Feathers.framework */; };
+		EA301A911EC8BCD500114F19 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADE01EBF953200522603 /* Nimble.framework */; };
+		EA301A921EC8BCD500114F19 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADE11EBF953200522603 /* Quick.framework */; };
+		EA301A951EC8BCD500114F19 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABBADE91EBF95C800522603 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA301A961EC8BCD500114F19 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABBADEA1EBF95C800522603 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA301AA21EC8BD7300114F19 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA452A671EA2B14300427CEF /* Feathers.framework */; };
+		EA301AA31EC8BD7300114F19 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADE01EBF953200522603 /* Nimble.framework */; };
+		EA301AA41EC8BD7300114F19 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADE11EBF953200522603 /* Quick.framework */; };
+		EA301AA71EC8BD7300114F19 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABBADE91EBF95C800522603 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA301AA81EC8BD7300114F19 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EABBADEA1EBF95C800522603 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA301AB01EC8BDC300114F19 /* HookSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AAE1EC8BDB300114F19 /* HookSpec.swift */; };
+		EA301AB11EC8BDC300114F19 /* HookSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AAE1EC8BDB300114F19 /* HookSpec.swift */; };
+		EA301AB21EC8BDC400114F19 /* HookSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AAE1EC8BDB300114F19 /* HookSpec.swift */; };
+		EA301AB61EC8BEFF00114F19 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
+		EA301AB71EC8BEFF00114F19 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
+		EA301AB81EC8BF0000114F19 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
+		EA301ABA1EC8CD0400114F19 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
+		EA301ABB1EC8CD0400114F19 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
+		EA301ABC1EC8CD0400114F19 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
 		EA452A781EA2B14300427CEF /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EABBADCB1EBF941C00522603 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC61EBF941C00522603 /* Alamofire.framework */; };
 		EABBADCC1EBF941C00522603 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC71EBF941C00522603 /* KeychainSwift.framework */; };
@@ -87,6 +106,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EA301A8C1EC8BCD500114F19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA452A5E1EA2B14300427CEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA452A661EA2B14300427CEF;
+			remoteInfo = "Feathers-iOS";
+		};
+		EA301A9E1EC8BD7300114F19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA452A5E1EA2B14300427CEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA452A661EA2B14300427CEF;
+			remoteInfo = "Feathers-iOS";
+		};
 		EABBADDA1EBF94E800522603 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA452A5E1EA2B14300427CEF /* Project object */;
@@ -97,6 +130,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		EA301A941EC8BCD500114F19 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA301A951EC8BCD500114F19 /* Nimble.framework in CopyFiles */,
+				EA301A961EC8BCD500114F19 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA301AA61EC8BD7300114F19 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA301AA71EC8BD7300114F19 /* Nimble.framework in CopyFiles */,
+				EA301AA81EC8BD7300114F19 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EABBADE41EBF959B00522603 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,6 +183,13 @@
 		EA2ABD451EA2BA6F0099A091 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2ABD611EA2BA8A0099A091 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3017131EC7867E00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = Core/Hooks.swift; sourceTree = "<group>"; };
+		EA301A9A1EC8BCD500114F19 /* FeathersTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FeathersTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA301A9B1EC8BCD500114F19 /* FeathersTests-iOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FeathersTests-iOS copy-Info.plist"; path = "/Users/brendanconron/Github/feathers-ios/FeathersTests-iOS copy-Info.plist"; sourceTree = "<absolute>"; };
+		EA301AAC1EC8BD7300114F19 /* FeathersTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FeathersTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA301AAD1EC8BD7300114F19 /* FeathersTests-macOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FeathersTests-macOS copy-Info.plist"; path = "/Users/brendanconron/Github/feathers-ios/FeathersTests-macOS copy-Info.plist"; sourceTree = "<absolute>"; };
+		EA301AAE1EC8BDB300114F19 /* HookSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HookSpec.swift; path = FeathersTests/HookSpec.swift; sourceTree = SOURCE_ROOT; };
+		EA301AB41EC8BEBD00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = FeathersTests/Hooks.swift; sourceTree = SOURCE_ROOT; };
+		EA301AB91EC8CD0400114F19 /* StubProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StubProvider.swift; path = FeathersTests/StubProvider.swift; sourceTree = SOURCE_ROOT; };
 		EA452A671EA2B14300427CEF /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA452A6A1EA2B14300427CEF /* Feathers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feathers.h; sourceTree = "<group>"; };
 		EA452A6B1EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -207,6 +269,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA301A8F1EC8BCD500114F19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA301A901EC8BCD500114F19 /* Feathers.framework in Frameworks */,
+				EA301A911EC8BCD500114F19 /* Nimble.framework in Frameworks */,
+				EA301A921EC8BCD500114F19 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA301AA11EC8BD7300114F19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA301AA21EC8BD7300114F19 /* Feathers.framework in Frameworks */,
+				EA301AA31EC8BD7300114F19 /* Nimble.framework in Frameworks */,
+				EA301AA41EC8BD7300114F19 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA452A631EA2B14300427CEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +315,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA301AB31EC8BEAF00114F19 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				EA301AB41EC8BEBD00114F19 /* Hooks.swift */,
+			);
+			name = Fakes;
+			sourceTree = "<group>";
+		};
+		EA301ABD1EC8CD0B00114F19 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				EA301AB91EC8CD0400114F19 /* StubProvider.swift */,
+			);
+			name = Stubs;
+			sourceTree = "<group>";
+		};
 		EA44E1151EA417A7000879EB /* ReactiveSwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +347,8 @@
 				EABBADB01EBE77C900522603 /* FeathersTests */,
 				EA452A681EA2B14300427CEF /* Products */,
 				EABBADC51EBF941B00522603 /* Frameworks */,
+				EA301A9B1EC8BCD500114F19 /* FeathersTests-iOS copy-Info.plist */,
+				EA301AAD1EC8BD7300114F19 /* FeathersTests-macOS copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,6 +359,8 @@
 				EA2ABD451EA2BA6F0099A091 /* Feathers.framework */,
 				EA2ABD611EA2BA8A0099A091 /* Feathers.framework */,
 				EABBADD41EBF94E800522603 /* FeathersTests-iOS.xctest */,
+				EA301A9A1EC8BCD500114F19 /* FeathersTests-macOS.xctest */,
+				EA301AAC1EC8BD7300114F19 /* FeathersTests-tvOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,7 +380,10 @@
 		EABBADB01EBE77C900522603 /* FeathersTests */ = {
 			isa = PBXGroup;
 			children = (
+				EA301ABD1EC8CD0B00114F19 /* Stubs */,
+				EA301AB31EC8BEAF00114F19 /* Fakes */,
 				EABBADF51EBF960C00522603 /* Info.plist */,
+				EA301AAE1EC8BDB300114F19 /* HookSpec.swift */,
 			);
 			name = FeathersTests;
 			path = "FeathersTests-iOS";
@@ -418,6 +523,44 @@
 			productReference = EA2ABD611EA2BA8A0099A091 /* Feathers.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		EA301A8A1EC8BCD500114F19 /* FeathersTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA301A971EC8BCD500114F19 /* Build configuration list for PBXNativeTarget "FeathersTests-macOS" */;
+			buildPhases = (
+				EA301A8D1EC8BCD500114F19 /* Sources */,
+				EA301A8F1EC8BCD500114F19 /* Frameworks */,
+				EA301A931EC8BCD500114F19 /* Resources */,
+				EA301A941EC8BCD500114F19 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA301A8B1EC8BCD500114F19 /* PBXTargetDependency */,
+			);
+			name = "FeathersTests-macOS";
+			productName = "FeathersTests-iOS";
+			productReference = EA301A9A1EC8BCD500114F19 /* FeathersTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA301A9C1EC8BD7300114F19 /* FeathersTests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA301AA91EC8BD7300114F19 /* Build configuration list for PBXNativeTarget "FeathersTests-tvOS" */;
+			buildPhases = (
+				EA301A9F1EC8BD7300114F19 /* Sources */,
+				EA301AA11EC8BD7300114F19 /* Frameworks */,
+				EA301AA51EC8BD7300114F19 /* Resources */,
+				EA301AA61EC8BD7300114F19 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA301A9D1EC8BD7300114F19 /* PBXTargetDependency */,
+			);
+			name = "FeathersTests-tvOS";
+			productName = "FeathersTests-iOS";
+			productReference = EA301AAC1EC8BD7300114F19 /* FeathersTests-tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EA452A661EA2B14300427CEF /* Feathers-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA452A7B1EA2B14300427CEF /* Build configuration list for PBXNativeTarget "Feathers-iOS" */;
@@ -472,6 +615,12 @@
 					EA2ABD551EA2BA8A0099A091 = {
 						DevelopmentTeam = 8959XVXX2J;
 					};
+					EA301A8A1EC8BCD500114F19 = {
+						DevelopmentTeam = 8959XVXX2J;
+					};
+					EA301A9C1EC8BD7300114F19 = {
+						DevelopmentTeam = 8959XVXX2J;
+					};
 					EA452A661EA2B14300427CEF = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 8959XVXX2J;
@@ -502,6 +651,8 @@
 				EA2ABD391EA2BA6F0099A091 /* Feathers-macOS */,
 				EA2ABD551EA2BA8A0099A091 /* Feathers-tvOS */,
 				EABBADD31EBF94E800522603 /* FeathersTests-iOS */,
+				EA301A8A1EC8BCD500114F19 /* FeathersTests-macOS */,
+				EA301A9C1EC8BD7300114F19 /* FeathersTests-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -515,6 +666,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EA2ABD5D1EA2BA8A0099A091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA301A931EC8BCD500114F19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA301AA51EC8BD7300114F19 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -645,6 +810,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA301A8D1EC8BCD500114F19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA301AB71EC8BEFF00114F19 /* Hooks.swift in Sources */,
+				EA301ABB1EC8CD0400114F19 /* StubProvider.swift in Sources */,
+				EA301AB11EC8BDC300114F19 /* HookSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA301A9F1EC8BD7300114F19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA301AB61EC8BEFF00114F19 /* Hooks.swift in Sources */,
+				EA301ABC1EC8CD0400114F19 /* StubProvider.swift in Sources */,
+				EA301AB21EC8BDC400114F19 /* HookSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA452A621EA2B14300427CEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -672,12 +857,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA301AB81EC8BF0000114F19 /* Hooks.swift in Sources */,
+				EA301ABA1EC8CD0400114F19 /* StubProvider.swift in Sources */,
+				EA301AB01EC8BDC300114F19 /* HookSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EA301A8B1EC8BCD500114F19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA452A661EA2B14300427CEF /* Feathers-iOS */;
+			targetProxy = EA301A8C1EC8BCD500114F19 /* PBXContainerItemProxy */;
+		};
+		EA301A9D1EC8BD7300114F19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA452A661EA2B14300427CEF /* Feathers-iOS */;
+			targetProxy = EA301A9E1EC8BD7300114F19 /* PBXContainerItemProxy */;
+		};
 		EABBADDB1EBF94E800522603 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EA452A661EA2B14300427CEF /* Feathers-iOS */;
@@ -702,13 +900,16 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Feathers/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
 				PRODUCT_NAME = Feathers;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -728,12 +929,15 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Feathers/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
 				PRODUCT_NAME = Feathers;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -753,13 +957,16 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Feathers/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
 				PRODUCT_NAME = Feathers;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -779,12 +986,101 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Feathers/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
 				PRODUCT_NAME = Feathers;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		EA301A981EC8BCD500114F19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 8959XVXX2J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "FeathersTests-iOS copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		EA301A991EC8BCD500114F19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 8959XVXX2J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "FeathersTests-iOS copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		EA301AAA1EC8BD7300114F19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 8959XVXX2J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "FeathersTests-macOS copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		EA301AAB1EC8BD7300114F19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 8959XVXX2J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "FeathersTests-macOS copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -909,11 +1205,13 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
 				PRODUCT_NAME = Feathers;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -935,10 +1233,12 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.feathersjs.Feathers;
 				PRODUCT_NAME = Feathers;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -952,11 +1252,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = FeathersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -970,10 +1273,13 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = FeathersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -994,6 +1300,24 @@
 			buildConfigurations = (
 				EA2ABD5F1EA2BA8A0099A091 /* Debug */,
 				EA2ABD601EA2BA8A0099A091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA301A971EC8BCD500114F19 /* Build configuration list for PBXNativeTarget "FeathersTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA301A981EC8BCD500114F19 /* Debug */,
+				EA301A991EC8BCD500114F19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA301AA91EC8BD7300114F19 /* Build configuration list for PBXNativeTarget "FeathersTests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA301AAA1EC8BD7300114F19 /* Debug */,
+				EA301AAB1EC8BD7300114F19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
