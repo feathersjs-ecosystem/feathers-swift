@@ -36,13 +36,8 @@ matrix:
       env:
         - JOB=CARTHAGE-tvOS
     - script:
-        - carthage build --no-skip-current --platform watchOS
-      env:
-        - JOB=CARTHAGE-watchOS
-    - script:
       - gem install cocoapods
       - pod repo update --silent
       - pod lib lint Feathers.podspec
       env:
         - JOB=PODSPEC
-        
