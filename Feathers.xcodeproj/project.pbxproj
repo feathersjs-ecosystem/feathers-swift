@@ -29,6 +29,8 @@
 		EA301ABA1EC8CD0400114F19 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
 		EA301ABB1EC8CD0400114F19 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
 		EA301ABC1EC8CD0400114F19 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
+		EA301ABE1EC8F58500114F19 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
+		EA301ABF1EC8F58500114F19 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
 		EA452A781EA2B14300427CEF /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EABBADCB1EBF941C00522603 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC61EBF941C00522603 /* Alamofire.framework */; };
 		EABBADCC1EBF941C00522603 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC71EBF941C00522603 /* KeychainSwift.framework */; };
@@ -780,6 +782,7 @@
 				EABBAE3F1EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */,
 				EABBAE351EBFA6A400522603 /* Service.swift in Sources */,
 				EABBAE291EBFA6A400522603 /* Provider.swift in Sources */,
+				EA301ABE1EC8F58500114F19 /* Hooks.swift in Sources */,
 				EABBAE151EBFA6A400522603 /* AuthenticationConfiguration.swift in Sources */,
 				EABBAE311EBFA6A400522603 /* RestProvider.swift in Sources */,
 				EABBAE431EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */,
@@ -802,6 +805,7 @@
 				EABBAE401EBFA6B200522603 /* Feathers+ReactiveSwift.swift in Sources */,
 				EABBAE361EBFA6A400522603 /* Service.swift in Sources */,
 				EABBAE2A1EBFA6A400522603 /* Provider.swift in Sources */,
+				EA301ABF1EC8F58500114F19 /* Hooks.swift in Sources */,
 				EABBAE161EBFA6A400522603 /* AuthenticationConfiguration.swift in Sources */,
 				EABBAE321EBFA6A400522603 /* RestProvider.swift in Sources */,
 				EABBAE441EBFA6B200522603 /* Service+ReactiveSwift.swift in Sources */,
