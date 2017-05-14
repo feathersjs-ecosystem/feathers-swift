@@ -6,6 +6,60 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EAC0BCDB1EC90FDB0049FB13 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */; };
+		EAC0BCE91EC90FF30049FB13 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
+		EAC0BCEA1EC90FF30049FB13 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
+		EAC0BCEB1EC90FF30049FB13 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
+		EAC0BCEC1EC90FF30049FB13 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
+		EAC0BCED1EC90FF30049FB13 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
+		EAC0BCEE1EC90FF30049FB13 /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */; };
+		EAC0BCEF1EC90FF30049FB13 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
+		EAC0BCF01EC90FF30049FB13 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
+		EAC0BCF11EC90FF30049FB13 /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE111EBFA6A400522603 /* RestProvider.swift */; };
+		EAC0BCF21EC90FF30049FB13 /* SocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE131EBFA6A400522603 /* SocketProvider.swift */; };
+		EAC0BCF31EC90FF30049FB13 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
+		EAC0BCF41EC90FF30049FB13 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
+		EAC0BCF51EC90FF30049FB13 /* Feathers+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */; };
+		EAC0BCF61EC90FF30049FB13 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
+		EAC0BCF71EC90FF30049FB13 /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */; };
+		EAC0BCF81EC90FF30049FB13 /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
+		EAC0BCF91EC9110A0049FB13 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCAC1EC90E4E0049FB13 /* Alamofire.framework */; };
+		EAC0BCFA1EC9110A0049FB13 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCAD1EC90E4E0049FB13 /* KeychainSwift.framework */; };
+		EAC0BCFB1EC9110A0049FB13 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCAE1EC90E4E0049FB13 /* ReactiveSwift.framework */; };
+		EAC0BCFC1EC9110A0049FB13 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCAF1EC90E4E0049FB13 /* Result.framework */; };
+		EAC0BCFD1EC9110A0049FB13 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCB01EC90E4E0049FB13 /* RxSwift.framework */; };
+		EAC0BCFE1EC9110A0049FB13 /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCB11EC90E4E0049FB13 /* SocketIO.framework */; };
+		EAC0BD001EC91CC20049FB13 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BC921EC90B1A0049FB13 /* Nimble.framework */; };
+		EAC0BD011EC91CC20049FB13 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BC931EC90B1A0049FB13 /* Quick.framework */; };
+		EAC0BD051EC91CE00049FB13 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAC0BD031EC91CE00049FB13 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EAC0BD061EC91CE00049FB13 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAC0BD041EC91CE00049FB13 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAC0BCDC1EC90FDB0049FB13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA452A5E1EA2B14300427CEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAC0BCD11EC90FDB0049FB13;
+			remoteInfo = "Feathers-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EAC0BD021EC91CC80049FB13 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EAC0BD051EC91CE00049FB13 /* Nimble.framework in CopyFiles */,
+				EAC0BD061EC91CE00049FB13 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		EA3017131EC7867E00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = Core/Hooks.swift; sourceTree = "<group>"; };
 		EA301AAE1EC8BDB300114F19 /* HookSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HookSpec.swift; path = FeathersTests/HookSpec.swift; sourceTree = SOURCE_ROOT; };
@@ -64,8 +118,38 @@
 		EAC0BCAF1EC90E4E0049FB13 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		EAC0BCB01EC90E4E0049FB13 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		EAC0BCB11EC90E4E0049FB13 /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = Carthage/Build/iOS/SocketIO.framework; sourceTree = "<group>"; };
+		EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC0BCDA1EC90FDB0049FB13 /* Feathers-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC0BD031EC91CE00049FB13 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		EAC0BD041EC91CE00049FB13 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		EAE05D691EBFDB0000DA55BF /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Core/Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAC0BCCE1EC90FDB0049FB13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC0BCF91EC9110A0049FB13 /* Alamofire.framework in Frameworks */,
+				EAC0BCFA1EC9110A0049FB13 /* KeychainSwift.framework in Frameworks */,
+				EAC0BCFB1EC9110A0049FB13 /* ReactiveSwift.framework in Frameworks */,
+				EAC0BCFC1EC9110A0049FB13 /* Result.framework in Frameworks */,
+				EAC0BCFD1EC9110A0049FB13 /* RxSwift.framework in Frameworks */,
+				EAC0BCFE1EC9110A0049FB13 /* SocketIO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC0BCD71EC90FDB0049FB13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC0BD001EC91CC20049FB13 /* Nimble.framework in Frameworks */,
+				EAC0BD011EC91CC20049FB13 /* Quick.framework in Frameworks */,
+				EAC0BCDB1EC90FDB0049FB13 /* Feathers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		EA301AB31EC8BEAF00114F19 /* Fakes */ = {
@@ -106,6 +190,8 @@
 		EA452A681EA2B14300427CEF /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */,
+				EAC0BCDA1EC90FDB0049FB13 /* Feathers-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +223,8 @@
 		EABBADC51EBF941B00522603 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAC0BD031EC91CE00049FB13 /* Nimble.framework */,
+				EAC0BD041EC91CE00049FB13 /* Quick.framework */,
 				EAC0BCAC1EC90E4E0049FB13 /* Alamofire.framework */,
 				EAC0BCAD1EC90E4E0049FB13 /* KeychainSwift.framework */,
 				EAC0BCAE1EC90E4E0049FB13 /* ReactiveSwift.framework */,
@@ -207,6 +295,57 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		EAC0BCCF1EC90FDB0049FB13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EAC0BCD11EC90FDB0049FB13 /* Feathers-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAC0BCE31EC90FDB0049FB13 /* Build configuration list for PBXNativeTarget "Feathers-iOS" */;
+			buildPhases = (
+				EAC0BCCD1EC90FDB0049FB13 /* Sources */,
+				EAC0BCCE1EC90FDB0049FB13 /* Frameworks */,
+				EAC0BCCF1EC90FDB0049FB13 /* Headers */,
+				EAC0BCD01EC90FDB0049FB13 /* Resources */,
+				EAC0BCFF1EC911130049FB13 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Feathers-iOS";
+			productName = "Feathers-iOS";
+			productReference = EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EAC0BCD91EC90FDB0049FB13 /* Feathers-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAC0BCE61EC90FDB0049FB13 /* Build configuration list for PBXNativeTarget "Feathers-iOSTests" */;
+			buildPhases = (
+				EAC0BCD61EC90FDB0049FB13 /* Sources */,
+				EAC0BCD71EC90FDB0049FB13 /* Frameworks */,
+				EAC0BCD81EC90FDB0049FB13 /* Resources */,
+				EAC0BD021EC91CC80049FB13 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAC0BCDD1EC90FDB0049FB13 /* PBXTargetDependency */,
+			);
+			name = "Feathers-iOSTests";
+			productName = "Feathers-iOSTests";
+			productReference = EAC0BCDA1EC90FDB0049FB13 /* Feathers-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
 /* Begin PBXProject section */
 		EA452A5E1EA2B14300427CEF /* Project object */ = {
 			isa = PBXProject;
@@ -214,6 +353,16 @@
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Swoopy Studios";
+				TargetAttributes = {
+					EAC0BCD11EC90FDB0049FB13 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					EAC0BCD91EC90FDB0049FB13 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = EA452A611EA2B14300427CEF /* Build configuration list for PBXProject "Feathers" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -228,9 +377,92 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				EAC0BCD11EC90FDB0049FB13 /* Feathers-iOS */,
+				EAC0BCD91EC90FDB0049FB13 /* Feathers-iOSTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAC0BCD01EC90FDB0049FB13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC0BCD81EC90FDB0049FB13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EAC0BCFF1EC911130049FB13 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SocketIO.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAC0BCCD1EC90FDB0049FB13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC0BCF51EC90FF30049FB13 /* Feathers+RxSwift.swift in Sources */,
+				EAC0BCF01EC90FF30049FB13 /* Response.swift in Sources */,
+				EAC0BCF81EC90FF30049FB13 /* Service+ReactiveSwift.swift in Sources */,
+				EAC0BCEB1EC90FF30049FB13 /* AuthenticationStorage.swift in Sources */,
+				EAC0BCEE1EC90FF30049FB13 /* NSURL+QueryParameters.swift in Sources */,
+				EAC0BCEF1EC90FF30049FB13 /* Provider.swift in Sources */,
+				EAC0BCEA1EC90FF30049FB13 /* AuthenticationConfiguration.swift in Sources */,
+				EAC0BCE91EC90FF30049FB13 /* Service.swift in Sources */,
+				EAC0BCF71EC90FF30049FB13 /* Feathers+ReactiveSwift.swift in Sources */,
+				EAC0BCF41EC90FF30049FB13 /* Hooks.swift in Sources */,
+				EAC0BCED1EC90FF30049FB13 /* FeathersError.swift in Sources */,
+				EAC0BCF21EC90FF30049FB13 /* SocketProvider.swift in Sources */,
+				EAC0BCEC1EC90FF30049FB13 /* Feathers.swift in Sources */,
+				EAC0BCF31EC90FF30049FB13 /* Endpoint.swift in Sources */,
+				EAC0BCF11EC90FF30049FB13 /* RestProvider.swift in Sources */,
+				EAC0BCF61EC90FF30049FB13 /* Service+RxSwift.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC0BCD61EC90FDB0049FB13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAC0BCDD1EC90FDB0049FB13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAC0BCD11EC90FDB0049FB13 /* Feathers-iOS */;
+			targetProxy = EAC0BCDC1EC90FDB0049FB13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		EA452A791EA2B14300427CEF /* Debug */ = {
@@ -336,6 +568,82 @@
 			};
 			name = Release;
 		};
+		EAC0BCE41EC90FDB0049FB13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Feathers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-iOS";
+				PRODUCT_NAME = Feathers;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EAC0BCE51EC90FDB0049FB13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Feathers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-iOS";
+				PRODUCT_NAME = Feathers;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EAC0BCE71EC90FDB0049FB13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = FeathersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EAC0BCE81EC90FDB0049FB13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = FeathersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -347,6 +655,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EAC0BCE31EC90FDB0049FB13 /* Build configuration list for PBXNativeTarget "Feathers-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC0BCE41EC90FDB0049FB13 /* Debug */,
+				EAC0BCE51EC90FDB0049FB13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EAC0BCE61EC90FDB0049FB13 /* Build configuration list for PBXNativeTarget "Feathers-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC0BCE71EC90FDB0049FB13 /* Debug */,
+				EAC0BCE81EC90FDB0049FB13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
