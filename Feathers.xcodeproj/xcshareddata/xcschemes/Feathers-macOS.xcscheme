@@ -28,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EABBAD781EBE73F800522603"
+               BlueprintIdentifier = "EA301A8A1EC8BCD500114F19"
                BuildableName = "FeathersTests-macOS.xctest"
                BlueprintName = "FeathersTests-macOS"
                ReferencedContainer = "container:Feathers.xcodeproj">

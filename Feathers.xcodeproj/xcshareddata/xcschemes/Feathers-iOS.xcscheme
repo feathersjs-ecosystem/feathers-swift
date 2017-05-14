@@ -28,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EABBADAE1EBE77C900522603"
+               BlueprintIdentifier = "EABBADD31EBF94E800522603"
                BuildableName = "FeathersTests-iOS.xctest"
                BlueprintName = "FeathersTests-iOS"
                ReferencedContainer = "container:Feathers.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EABBADAE1EBE77C900522603"
+               BlueprintIdentifier = "EABBADD31EBF94E800522603"
                BuildableName = "FeathersTests-iOS.xctest"
                BlueprintName = "FeathersTests-iOS"
                ReferencedContainer = "container:Feathers.xcodeproj">
