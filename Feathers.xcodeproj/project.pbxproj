@@ -31,6 +31,7 @@
 		EA301ABC1EC8CD0400114F19 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
 		EA301ABE1EC8F58500114F19 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
 		EA301ABF1EC8F58500114F19 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
+		EA301AC11EC8FB7200114F19 /* SocketIO.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA301AC01EC8FB7200114F19 /* SocketIO.framework.dSYM */; };
 		EA452A781EA2B14300427CEF /* Feathers.h in Headers */ = {isa = PBXBuildFile; fileRef = EA452A6A1EA2B14300427CEF /* Feathers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EABBADCB1EBF941C00522603 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC61EBF941C00522603 /* Alamofire.framework */; };
 		EABBADCC1EBF941C00522603 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EABBADC71EBF941C00522603 /* KeychainSwift.framework */; };
@@ -171,6 +172,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				EA301AC11EC8FB7200114F19 /* SocketIO.framework.dSYM in CopyFiles */,
 				EAE05D851EC4BB2800DA55BF /* Alamofire.framework.dSYM in CopyFiles */,
 				EAE05D861EC4BB2800DA55BF /* KeychainSwift.framework.dSYM in CopyFiles */,
 				EAE05D871EC4BB2800DA55BF /* ReactiveSwift.framework.dSYM in CopyFiles */,
@@ -186,12 +188,11 @@
 		EA2ABD611EA2BA8A0099A091 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3017131EC7867E00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = Core/Hooks.swift; sourceTree = "<group>"; };
 		EA301A9A1EC8BCD500114F19 /* FeathersTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FeathersTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA301A9B1EC8BCD500114F19 /* FeathersTests-iOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FeathersTests-iOS copy-Info.plist"; path = "/Users/brendanconron/Github/feathers-ios/FeathersTests-iOS copy-Info.plist"; sourceTree = "<absolute>"; };
 		EA301AAC1EC8BD7300114F19 /* FeathersTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FeathersTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA301AAD1EC8BD7300114F19 /* FeathersTests-macOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FeathersTests-macOS copy-Info.plist"; path = "/Users/brendanconron/Github/feathers-ios/FeathersTests-macOS copy-Info.plist"; sourceTree = "<absolute>"; };
 		EA301AAE1EC8BDB300114F19 /* HookSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HookSpec.swift; path = FeathersTests/HookSpec.swift; sourceTree = SOURCE_ROOT; };
 		EA301AB41EC8BEBD00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = FeathersTests/Hooks.swift; sourceTree = SOURCE_ROOT; };
 		EA301AB91EC8CD0400114F19 /* StubProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StubProvider.swift; path = FeathersTests/StubProvider.swift; sourceTree = SOURCE_ROOT; };
+		EA301AC01EC8FB7200114F19 /* SocketIO.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SocketIO.framework.dSYM; path = Carthage/Build/Mac/SocketIO.framework.dSYM; sourceTree = "<group>"; };
 		EA452A671EA2B14300427CEF /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA452A6A1EA2B14300427CEF /* Feathers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feathers.h; sourceTree = "<group>"; };
 		EA452A6B1EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -349,8 +350,6 @@
 				EABBADB01EBE77C900522603 /* FeathersTests */,
 				EA452A681EA2B14300427CEF /* Products */,
 				EABBADC51EBF941B00522603 /* Frameworks */,
-				EA301A9B1EC8BCD500114F19 /* FeathersTests-iOS copy-Info.plist */,
-				EA301AAD1EC8BD7300114F19 /* FeathersTests-macOS copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -394,6 +393,7 @@
 		EABBADC51EBF941B00522603 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA301AC01EC8FB7200114F19 /* SocketIO.framework.dSYM */,
 				EAE05D901EC4C2E900DA55BF /* Alamofire.framework */,
 				EAE05D911EC4C2E900DA55BF /* KeychainSwift.framework */,
 				EAE05D921EC4C2E900DA55BF /* ReactiveSwift.framework */,
@@ -1011,11 +1011,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "FeathersTests-iOS copy-Info.plist";
+				INFOPLIST_FILE = FeathersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1033,11 +1033,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "FeathersTests-iOS copy-Info.plist";
+				INFOPLIST_FILE = FeathersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
@@ -1054,11 +1054,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "FeathersTests-macOS copy-Info.plist";
+				INFOPLIST_FILE = FeathersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1076,11 +1076,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "FeathersTests-macOS copy-Info.plist";
+				INFOPLIST_FILE = FeathersTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.FeathersTests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;

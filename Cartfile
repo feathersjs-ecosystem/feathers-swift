@@ -1,5 +1,4 @@
 github "Alamofire/Alamofire"
 github "ReactiveCocoa/ReactiveSwift"
 github "ReactiveX/RxSwift"
-github "tidwall/SwiftWebSocket"
 github "marketplacer/keychain-swift"
