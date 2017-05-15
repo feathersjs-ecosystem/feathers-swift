@@ -154,7 +154,7 @@ struct CreateLogHook: Hook {
     if object.method == .create {
       print("create happened")
     }
-    next(objective-c)
+    next(object)
   }
 
 }
