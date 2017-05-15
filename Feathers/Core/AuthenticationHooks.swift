@@ -8,9 +8,9 @@
 
 
 /// Hook to reauthenticate the application if it becomes unauthorized
-struct ReauthenticationHook: Hook {
+public struct ReauthenticationHook: Hook {
 
-    func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ()) {
+    public func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ()) {
         var object = hookObject
         let app = object.app
         if let error = object.error as? FeathersError, let accessToken = app.authenticationStorage.accessToken, error == .notAuthenticated {
