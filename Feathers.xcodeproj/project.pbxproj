@@ -35,6 +35,22 @@
 		EAC0BD051EC91CE00049FB13 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAC0BD031EC91CE00049FB13 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EAC0BD061EC91CE00049FB13 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAC0BD041EC91CE00049FB13 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EAC0BD151EC952A40049FB13 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BD0C1EC952A40049FB13 /* Feathers.framework */; };
+		EAC0BD231EC953A90049FB13 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
+		EAC0BD241EC953A90049FB13 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
+		EAC0BD251EC953A90049FB13 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
+		EAC0BD261EC953A90049FB13 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
+		EAC0BD271EC953A90049FB13 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
+		EAC0BD281EC953A90049FB13 /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */; };
+		EAC0BD291EC953A90049FB13 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
+		EAC0BD2A1EC953A90049FB13 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
+		EAC0BD2B1EC953A90049FB13 /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE111EBFA6A400522603 /* RestProvider.swift */; };
+		EAC0BD2C1EC953A90049FB13 /* SocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE131EBFA6A400522603 /* SocketProvider.swift */; };
+		EAC0BD2D1EC953A90049FB13 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
+		EAC0BD2E1EC953A90049FB13 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
+		EAC0BD2F1EC953A90049FB13 /* Feathers+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */; };
+		EAC0BD301EC953A90049FB13 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
+		EAC0BD311EC953A90049FB13 /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */; };
+		EAC0BD321EC953A90049FB13 /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -552,6 +568,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC0BD2F1EC953A90049FB13 /* Feathers+RxSwift.swift in Sources */,
+				EAC0BD2A1EC953A90049FB13 /* Response.swift in Sources */,
+				EAC0BD321EC953A90049FB13 /* Service+ReactiveSwift.swift in Sources */,
+				EAC0BD251EC953A90049FB13 /* AuthenticationStorage.swift in Sources */,
+				EAC0BD281EC953A90049FB13 /* NSURL+QueryParameters.swift in Sources */,
+				EAC0BD291EC953A90049FB13 /* Provider.swift in Sources */,
+				EAC0BD241EC953A90049FB13 /* AuthenticationConfiguration.swift in Sources */,
+				EAC0BD231EC953A90049FB13 /* Service.swift in Sources */,
+				EAC0BD311EC953A90049FB13 /* Feathers+ReactiveSwift.swift in Sources */,
+				EAC0BD2E1EC953A90049FB13 /* Hooks.swift in Sources */,
+				EAC0BD271EC953A90049FB13 /* FeathersError.swift in Sources */,
+				EAC0BD2C1EC953A90049FB13 /* SocketProvider.swift in Sources */,
+				EAC0BD261EC953A90049FB13 /* Feathers.swift in Sources */,
+				EAC0BD2D1EC953A90049FB13 /* Endpoint.swift in Sources */,
+				EAC0BD2B1EC953A90049FB13 /* RestProvider.swift in Sources */,
+				EAC0BD301EC953A90049FB13 /* Service+RxSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +836,7 @@
 		EAC0BD211EC952A40049FB13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = FeathersTests/Info.plist;
@@ -819,6 +852,7 @@
 		EAC0BD221EC952A40049FB13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = FeathersTests/Info.plist;
@@ -850,6 +884,7 @@
 				EAC0BCE51EC90FDB0049FB13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAC0BCE61EC90FDB0049FB13 /* Build configuration list for PBXNativeTarget "Feathers-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -858,6 +893,7 @@
 				EAC0BCE81EC90FDB0049FB13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAC0BD1D1EC952A40049FB13 /* Build configuration list for PBXNativeTarget "Feathers-macOS" */ = {
 			isa = XCConfigurationList;
@@ -866,6 +902,7 @@
 				EAC0BD1F1EC952A40049FB13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAC0BD201EC952A40049FB13 /* Build configuration list for PBXNativeTarget "Feathers-macOSTests" */ = {
 			isa = XCConfigurationList;
@@ -874,6 +911,7 @@
 				EAC0BD221EC952A40049FB13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

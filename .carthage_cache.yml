@@ -1,5 +1,0 @@
----
-:bucket_name: carthage_cache_feathers_swift
-:prune_on_publish: true
-:aws_s3_client_options:
-  :region: us-west-2
