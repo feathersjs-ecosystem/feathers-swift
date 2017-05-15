@@ -1,12 +1,12 @@
-# Feathers Swift
+# FeathersSwift
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Feathers.svg)](#cocoapods) [![GitHub release](https://img.shields.io/github/release/startupthekid/feathers-ios.svg)](https://github.com/startupthekid/feathers-ios/releases) ![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS-lightgrey.svg)
 
 ![feathers](https://media.giphy.com/media/Fn8LZVVgTqXba/giphy.gif)
 
-## What is Feathers Swift?
+## What is FeathersSwift?
 
-Feathers Swift is a Cocoa networking library for interacting with a [FeathersJS](https://feathersjs.com/) backend.
+FeathersSwift is a Cocoa networking library for interacting with a [FeathersJS](https://feathersjs.com/) backend.
 Why should you use it?
 
 * Swift 3 :thumbsup:
@@ -15,7 +15,7 @@ Why should you use it?
 * Integrates seemlessly with any FeathersJS services
 * Supports iOS, macOS, and tvOS
 
-If you use FeathersJS (which you should), Feathers Swift is the perfect choice for you. No more dealing with HTTP requests or socket clients. One simple interface to rule them all and in the darkness, unify them :ring:.
+If you use FeathersJS (which you should), FeathersSwift is the perfect choice for you. No more dealing with HTTP requests or socket clients. One simple interface to rule them all and in the darkness, unify them :ring:.
 
 ## Installation
 
@@ -252,7 +252,7 @@ service.hooks(
 
 ### Reactive Extensions
 
-Feathers Swift also providers reactive extensions for ReactiveSwift and RxSwift.
+FeathersSwift also providers reactive extensions for ReactiveSwift and RxSwift.
 
 To install via Cocoapods:
 
@@ -280,7 +280,7 @@ If you like the library, please :star: it!
 
 ### Further Help
 
-Feathers Swift is extensively documented so please take a look at the source code if you have any questions about how something works.
+FeathersSwift is extensively documented so please take a look at the source code if you have any questions about how something works.
 You can also ping me in the [Feathers' slack team](http://slack.feathersjs.com/) @brendan.
 
 Cheers! :beers:
