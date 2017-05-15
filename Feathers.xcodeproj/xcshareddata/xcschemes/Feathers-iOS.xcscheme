@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EAC0BCD11EC90FDB0049FB13"
-               BuildableName = "Feathers-iOS.framework"
+               BuildableName = "Feathers.framework"
                BlueprintName = "Feathers-iOS"
                ReferencedContainer = "container:Feathers.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EAC0BCD11EC90FDB0049FB13"
-            BuildableName = "Feathers-iOS.framework"
+            BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-iOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EAC0BCD11EC90FDB0049FB13"
-            BuildableName = "Feathers-iOS.framework"
+            BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-iOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EAC0BCD11EC90FDB0049FB13"
-            BuildableName = "Feathers-iOS.framework"
+            BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-iOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
          </BuildableReference>
