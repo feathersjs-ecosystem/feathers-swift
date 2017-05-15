@@ -2,10 +2,10 @@ language: objective-c
 osx_image: xcode8.3
 before_install: true
 install:
-  - rvm get stable
-  - brew update
+  - rvm get stable || true
+  - brew update || true
   - brew install carthage || true
-  - carthage bootstrap --no-use-binaries --cache-builds
+  - carthage bootstrap --no-use-binaries --cache-builds || true
 before_script:
  - chmod +x ./script/build
 script:
