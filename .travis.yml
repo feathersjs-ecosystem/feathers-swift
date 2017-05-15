@@ -5,6 +5,7 @@ install: true
 before_script:
  - chmod +x ./script/build
 script:
+  - rvm get stable
   - brew update
   - brew install carthage
   - carthage bootstrap
