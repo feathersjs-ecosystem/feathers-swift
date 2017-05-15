@@ -1,0 +1,39 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Feathers (1.0.1):
+    - Feathers/Core (= 1.0.1)
+  - Feathers/Core (1.0.1):
+    - Alamofire (~> 4.4.0)
+    - KeychainSwift
+    - Result
+    - Socket.IO-Client-Swift (~> 8.3.3)
+  - Feathers/ReactiveSwift (1.0.1):
+    - Feathers/Core
+    - ReactiveSwift (~> 1.1)
+  - Feathers/RxSwift (1.0.1):
+    - Feathers/Core
+    - RxSwift (~> 3.0)
+  - KeychainSwift (8.0.2)
+  - ReactiveSwift (1.1.2):
+    - Result (~> 3.2)
+  - Result (3.2.1)
+  - RxSwift (3.4.1)
+  - Socket.IO-Client-Swift (8.3.3)
+
+DEPENDENCIES:
+  - Feathers
+  - Feathers/ReactiveSwift
+  - Feathers/RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Feathers: 5c19696a00180263761a9c4ae9c7c10e4778e9a6
+  KeychainSwift: 213db04dfe7244988e61f77c72a2afb2f775954a
+  ReactiveSwift: 507089cf806c42e09db96f9e48477b777f0e02ba
+  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
+  Socket.IO-Client-Swift: a2faffdbde89c63aebc5d631041530c1068b02b8
+
+PODFILE CHECKSUM: bbbb997087de519974d9f9ca83b986f5e6d91370
+
+COCOAPODS: 1.2.1

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAFB4251BD875D6CFE05A120 /* Pods_FeathersDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F4DFD3728AD527A2323247 /* Pods_FeathersDemo.framework */; };
 		EA954C511EC99BF30094FF43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C501EC99BF30094FF43 /* AppDelegate.swift */; };
 		EA954C531EC99BF30094FF43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C521EC99BF30094FF43 /* ViewController.swift */; };
 		EA954C561EC99BF30094FF43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA954C541EC99BF30094FF43 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68750C5CA035D8300663002B /* Pods-FeathersDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeathersDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeathersDemo/Pods-FeathersDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8B54A4D3F74C4769EEB71D77 /* Pods-FeathersDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeathersDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeathersDemo/Pods-FeathersDemo.release.xcconfig"; sourceTree = "<group>"; };
+		95F4DFD3728AD527A2323247 /* Pods_FeathersDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeathersDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA954C4D1EC99BF30094FF43 /* FeathersDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeathersDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA954C501EC99BF30094FF43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA954C521EC99BF30094FF43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAFB4251BD875D6CFE05A120 /* Pods_FeathersDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05ADB7BC32DFB03CDDF3870C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68750C5CA035D8300663002B /* Pods-FeathersDemo.debug.xcconfig */,
+				8B54A4D3F74C4769EEB71D77 /* Pods-FeathersDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3F2490648A6A9EE50F57BEC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95F4DFD3728AD527A2323247 /* Pods_FeathersDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA954C441EC99BF30094FF43 = {
 			isa = PBXGroup;
 			children = (
 				EA954C4F1EC99BF30094FF43 /* FeathersDemo */,
 				EA954C4E1EC99BF30094FF43 /* Products */,
+				05ADB7BC32DFB03CDDF3870C /* Pods */,
+				3F2490648A6A9EE50F57BEC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA954C5F1EC99BF30094FF43 /* Build configuration list for PBXNativeTarget "FeathersDemo" */;
 			buildPhases = (
+				4AA69A6BB0999656E5B2F3A6 /* [CP] Check Pods Manifest.lock */,
 				EA954C491EC99BF30094FF43 /* Sources */,
 				EA954C4A1EC99BF30094FF43 /* Frameworks */,
 				EA954C4B1EC99BF30094FF43 /* Resources */,
+				AA40C2BF2625B18E4CB81D3F /* [CP] Embed Pods Frameworks */,
+				0D48780A55D6E5F7592E82B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D48780A55D6E5F7592E82B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeathersDemo/Pods-FeathersDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AA69A6BB0999656E5B2F3A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AA40C2BF2625B18E4CB81D3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeathersDemo/Pods-FeathersDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA954C491EC99BF30094FF43 /* Sources */ = {
@@ -260,6 +335,7 @@
 		};
 		EA954C601EC99BF30094FF43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68750C5CA035D8300663002B /* Pods-FeathersDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FeathersDemo/Info.plist;
@@ -272,6 +348,7 @@
 		};
 		EA954C611EC99BF30094FF43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B54A4D3F74C4769EEB71D77 /* Pods-FeathersDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FeathersDemo/Info.plist;
