@@ -94,7 +94,6 @@ class HookSpec: QuickSpec {
 
             describe("after hooks") {
 
-
                 var afterHooks: Service.Hooks!
                 beforeEach {
                     app = Feathers(provider: StubProvider())
@@ -108,7 +107,7 @@ class HookSpec: QuickSpec {
                         userService.hooks(before: nil, after: afterHooks, error: nil)
                     }
 
-                    it("should popuplate the hook data") {
+                    it("should populate the hook data") {
                         var error: FeathersError?
                         var response: Response?
                         var data: ResponseData?
@@ -149,7 +148,7 @@ class HookSpec: QuickSpec {
                         expect(jsonData).toEventually(equal(["name":"Bob"]))
                     }
 
-                    it("should not run the hook (or popuplate the result) for other service methods") {
+                    it("should not run the hook (or populate the result) for other service methods") {
                         var error: FeathersError?
                         var response: Response?
                         var jsonData: [String: String]?
@@ -183,6 +182,10 @@ class HookSpec: QuickSpec {
                     }
 
                 }
+
+            }
+
+            describe("error hooks") {
 
             }
 

@@ -9,6 +9,16 @@
 import Feathers
 import Foundation
 
+struct ErrorHook: Hook {
+
+    func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ()) {
+        var object = hookObject
+        object.error = NSError(domain: "com.feathersjs.com", code: 0, userInfo: nil)
+        next(object)
+    }
+
+}
+
 struct StubHook: Hook {
 
     let data: ResponseData
@@ -20,7 +30,7 @@ struct StubHook: Hook {
     func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ()) {
         var object = hookObject
         if object.type != .before {
-            object.error = NSError(domain: "com.feathersjs.com", code: 0, userInfo: [:])
+            object.error = NSError(domain: "com.feathersjs.com", code: 0, userInfo: nil)
         } else {
             object.result = Response(pagination: nil, data: data)
         }
@@ -41,7 +51,7 @@ struct PopuplateDataAfterHook: Hook {
     func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ()) {
         var object = hookObject
         if object.type != .after {
-            object.error = NSError(domain: "com.feathersjs.com", code: 0, userInfo: [:])
+            object.error = NSError(domain: "com.feathersjs.com", code: 0, userInfo: nil)
         } else {
             object.result = Response(pagination: nil, data: .jsonObject(data))
         }

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EAC0BCD11EC90FDB0049FB13"
+               BlueprintIdentifier = "EAC0BD0B1EC952A40049FB13"
                BuildableName = "Feathers.framework"
-               BlueprintName = "Feathers-iOS"
+               BlueprintName = "Feathers-macOS"
                ReferencedContainer = "container:Feathers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,16 +26,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EAC0BCD91EC90FDB0049FB13"
-               BuildableName = "Feathers-iOSTests.xctest"
-               BlueprintName = "Feathers-iOSTests"
+               BlueprintIdentifier = "EAC0BD131EC952A40049FB13"
+               BuildableName = "Feathers-macOSTests.xctest"
+               BlueprintName = "Feathers-macOSTests"
                ReferencedContainer = "container:Feathers.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAC0BCD11EC90FDB0049FB13"
+            BlueprintIdentifier = "EAC0BD0B1EC952A40049FB13"
             BuildableName = "Feathers.framework"
-            BlueprintName = "Feathers-iOS"
+            BlueprintName = "Feathers-macOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAC0BCD11EC90FDB0049FB13"
+            BlueprintIdentifier = "EAC0BD0B1EC952A40049FB13"
             BuildableName = "Feathers.framework"
-            BlueprintName = "Feathers-iOS"
+            BlueprintName = "Feathers-macOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAC0BCD11EC90FDB0049FB13"
+            BlueprintIdentifier = "EAC0BD0B1EC952A40049FB13"
             BuildableName = "Feathers.framework"
-            BlueprintName = "Feathers-iOS"
+            BlueprintName = "Feathers-macOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

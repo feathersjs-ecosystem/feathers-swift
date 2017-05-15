@@ -20,11 +20,11 @@ class StubProvider: Provider {
     }
 
     func request(endpoint: Endpoint, _ completion: @escaping FeathersCallback) {
-        completion(nil, Response(pagination: nil, data: .jsonObject([:])))
+        completion(nil, Response(pagination: nil, data: .jsonObject(["accessToken":"some_token"])))
     }
 
     func authenticate(_ path: String, credentials: [String : Any], _ completion: @escaping FeathersCallback) {
-        completion(nil, Response(pagination: nil, data: .jsonObject([:])))
+        completion(nil, Response(pagination: nil, data: .jsonObject(["accessToken":"some_token"])))
     }
 
     func logout(path: String, _ completion: @escaping FeathersCallback) {
