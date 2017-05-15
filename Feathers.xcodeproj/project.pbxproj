@@ -10,6 +10,9 @@
 		EA1BBE861EC976680085A9F3 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BC881EC90AAD0049FB13 /* ReactiveSwift.framework */; };
 		EA1BBE871EC976680085A9F3 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BC891EC90AAD0049FB13 /* Result.framework */; };
 		EA1BBE881EC976680085A9F3 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BC8A1EC90AAD0049FB13 /* RxSwift.framework */; };
+		EA954C701EC9A4B10094FF43 /* AuthenticationHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */; };
+		EA954C711EC9A4B70094FF43 /* AuthenticationHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */; };
+		EA954C721EC9A4B70094FF43 /* AuthenticationHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */; };
 		EA9AB62A1EC96F32007CEDF3 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BC531EC909980049FB13 /* ReactiveSwift.framework */; };
 		EA9AB62F1EC96F6D007CEDF3 /* ReactiveSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA9AB62D1EC96F6D007CEDF3 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA9AB6301EC96F6D007CEDF3 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA9AB62E1EC96F6D007CEDF3 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -220,6 +223,7 @@
 		EA301AB91EC8CD0400114F19 /* StubProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StubProvider.swift; path = FeathersTests/StubProvider.swift; sourceTree = SOURCE_ROOT; };
 		EA452A6A1EA2B14300427CEF /* Feathers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feathers.h; sourceTree = "<group>"; };
 		EA452A6B1EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationHooks.swift; path = Core/AuthenticationHooks.swift; sourceTree = "<group>"; };
 		EA9AB62B1EC96F45007CEDF3 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		EA9AB62D1EC96F6D007CEDF3 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		EA9AB62E1EC96F6D007CEDF3 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
@@ -448,6 +452,15 @@
 			path = Feathers;
 			sourceTree = "<group>";
 		};
+		EA954C6E1EC9A4990094FF43 /* Hooks */ = {
+			isa = PBXGroup;
+			children = (
+				EA3017131EC7867E00114F19 /* Hooks.swift */,
+				EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */,
+			);
+			name = Hooks;
+			sourceTree = "<group>";
+		};
 		EABBADB01EBE77C900522603 /* FeathersTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,6 +554,7 @@
 		EABBAE091EBFA69C00522603 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EA954C6E1EC9A4990094FF43 /* Hooks */,
 				EABBAE121EBFA6A400522603 /* Service.swift */,
 				EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */,
 				EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */,
@@ -552,7 +566,6 @@
 				EABBAE111EBFA6A400522603 /* RestProvider.swift */,
 				EABBAE131EBFA6A400522603 /* SocketProvider.swift */,
 				EAE05D691EBFDB0000DA55BF /* Endpoint.swift */,
-				EA3017131EC7867E00114F19 /* Hooks.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -879,6 +892,7 @@
 				EAC0BCEF1EC90FF30049FB13 /* Provider.swift in Sources */,
 				EAC0BCEA1EC90FF30049FB13 /* AuthenticationConfiguration.swift in Sources */,
 				EAC0BCE91EC90FF30049FB13 /* Service.swift in Sources */,
+				EA954C701EC9A4B10094FF43 /* AuthenticationHooks.swift in Sources */,
 				EAC0BCF71EC90FF30049FB13 /* Feathers+ReactiveSwift.swift in Sources */,
 				EAC0BCF41EC90FF30049FB13 /* Hooks.swift in Sources */,
 				EAC0BCED1EC90FF30049FB13 /* FeathersError.swift in Sources */,
@@ -914,6 +928,7 @@
 				EAC0BD291EC953A90049FB13 /* Provider.swift in Sources */,
 				EAC0BD241EC953A90049FB13 /* AuthenticationConfiguration.swift in Sources */,
 				EAC0BD231EC953A90049FB13 /* Service.swift in Sources */,
+				EA954C711EC9A4B70094FF43 /* AuthenticationHooks.swift in Sources */,
 				EAC0BD311EC953A90049FB13 /* Feathers+ReactiveSwift.swift in Sources */,
 				EAC0BD2E1EC953A90049FB13 /* Hooks.swift in Sources */,
 				EAC0BD271EC953A90049FB13 /* FeathersError.swift in Sources */,
@@ -949,6 +964,7 @@
 				EAC0BD881EC969780049FB13 /* Provider.swift in Sources */,
 				EAC0BD831EC969780049FB13 /* AuthenticationConfiguration.swift in Sources */,
 				EAC0BD821EC969780049FB13 /* Service.swift in Sources */,
+				EA954C721EC9A4B70094FF43 /* AuthenticationHooks.swift in Sources */,
 				EAC0BD901EC969780049FB13 /* Feathers+ReactiveSwift.swift in Sources */,
 				EAC0BD8D1EC969780049FB13 /* Hooks.swift in Sources */,
 				EAC0BD861EC969780049FB13 /* FeathersError.swift in Sources */,
