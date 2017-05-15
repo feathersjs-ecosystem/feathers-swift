@@ -17,7 +17,7 @@ class HookSpec: QuickSpec {
         describe("Hooks") {
 
             var app: Feathers!
-            var userService: Service!
+            var service: Service!
 
 
             describe("before hooks") {
@@ -31,10 +31,10 @@ class HookSpec: QuickSpec {
                     beforeEach {
                         // Have to use a real provider to make sure we can skip the result
                         app = Feathers(provider: RestProvider(baseURL: URL(string: "https://myserver.com")!))
-                        userService = app.service(path: "users")
+                        service = app.service(path: "users")
                         stubData = ["name": "Bob"]
                         beforeHooks = Service.Hooks(all: [StubHook(data: .jsonObject(stubData))])
-                        userService.hooks(before: beforeHooks)
+                        service.hooks(before: beforeHooks)
                     }
 
                     context("when any request is made") {
@@ -44,7 +44,7 @@ class HookSpec: QuickSpec {
                             var response: Response?
                             var data: ResponseData?
                             var jsonData: [String: String]?
-                            userService.request(.get(id: "", parameters: [:])) {
+                            service.request(.get(id: "", parameters: [:])) {
                                 error = $0
                                 response = $1
                                 data = $1?.data
@@ -64,20 +64,20 @@ class HookSpec: QuickSpec {
 
                     beforeEach {
                         app = Feathers(provider: StubProvider())
-                        userService = app.service(path: "users")
+                        service = app.service(path: "users")
                     }
 
                     context("when using a before hook as an after/error hook") {
 
                         beforeEach {
                             beforeHooks = Service.Hooks(all: [StubHook(data: .jsonObject([:]))])
-                            userService.hooks(after: beforeHooks)
+                            service.hooks(after: beforeHooks)
                         }
 
                         it("should error") {
                             var error: FeathersError?
                             var response: Response?
-                            userService.request(.find(parameters: nil)) {
+                            service.request(.find(parameters: nil)) {
                                 error = $0
                                 response = $1
                             }
@@ -97,14 +97,14 @@ class HookSpec: QuickSpec {
                 var afterHooks: Service.Hooks!
                 beforeEach {
                     app = Feathers(provider: StubProvider())
-                    userService = app.service(path: "users")
+                    service = app.service(path: "users")
                 }
 
                 context("when any request is made") {
 
                     beforeEach {
                         afterHooks = Service.Hooks(all: [PopuplateDataAfterHook(data: ["name": "Bob"])])
-                        userService.hooks(before: nil, after: afterHooks, error: nil)
+                        service.hooks(before: nil, after: afterHooks, error: nil)
                     }
 
                     it("should populate the hook data") {
@@ -112,7 +112,7 @@ class HookSpec: QuickSpec {
                         var response: Response?
                         var data: ResponseData?
                         var jsonData: [String: String]?
-                        userService.request(.get(id: "", parameters: [:])) {
+                        service.request(.get(id: "", parameters: [:])) {
                             error = $0
                             response = $1
                             data = $1?.data
@@ -131,14 +131,14 @@ class HookSpec: QuickSpec {
 
                     beforeEach {
                         afterHooks = Service.Hooks(find: [PopuplateDataAfterHook(data: ["name": "Bob"])])
-                        userService.hooks(after: afterHooks)
+                        service.hooks(after: afterHooks)
                     }
 
                     it("should only run the hook for that method") {
                         var error: FeathersError?
                         var response: Response?
                         var jsonData: [String: String]?
-                        userService.request(.find(parameters: nil)) {
+                        service.request(.find(parameters: nil)) {
                             error = $0
                             response = $1
                             jsonData = $1?.data.value as? [String: String]
@@ -152,7 +152,7 @@ class HookSpec: QuickSpec {
                         var error: FeathersError?
                         var response: Response?
                         var jsonData: [String: String]?
-                        userService.request(.get(id: "", parameters: nil)) {
+                        service.request(.get(id: "", parameters: nil)) {
                             error = $0
                             response = $1
                             jsonData = $1?.data.value as? [String: String]
@@ -167,13 +167,13 @@ class HookSpec: QuickSpec {
                 context("when an after only hook is used as a before hook") {
 
                     beforeEach {
-                        userService.hooks(before: afterHooks)
+                        service.hooks(before: afterHooks)
                     }
 
                     it("should error") {
                         var error: FeathersError?
                         var response: Response?
-                        userService.request(.find(parameters: nil)) {
+                        service.request(.find(parameters: nil)) {
                             error = $0
                             response = $1
                         }
@@ -186,6 +186,31 @@ class HookSpec: QuickSpec {
             }
 
             describe("error hooks") {
+
+                var beforeHooks: Service.Hooks!
+                var errorHooks: Service.Hooks!
+
+                beforeEach {
+                    app = Feathers(provider: StubProvider())
+                    service = app.service(path: "users")
+                    // The before hook has to trigger the error hooks to run by setting the error
+                    // we can test that the error hook ran by the type of error that comes back
+                    beforeHooks = Service.Hooks(all: [ErrorHook(error: .general)])
+                    errorHooks = Service.Hooks(all: [ErrorHook(error: .unknown)])
+                    service.hooks(before: beforeHooks, error: errorHooks)
+                }
+
+                it("should always produce an error") {
+                    var error: FeathersError?
+                    var response: Response?
+                    service.request(.remove(id: nil, parameters: nil)) {
+                        error = $0
+                        response = $1
+                    }
+                    expect(error).toEventuallyNot(beNil())
+                    expect(error).toEventually(equal(FeathersError.unknown))
+                    expect(response).toEventually(beNil())
+                }
 
             }
 

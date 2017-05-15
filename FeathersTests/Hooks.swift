@@ -11,9 +11,16 @@ import Foundation
 
 struct ErrorHook: Hook {
 
+    let error: FeathersError
+
+    init(error: FeathersError) {
+        self.error = error
+    }
+
     func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ()) {
         var object = hookObject
-        object.error = NSError(domain: "com.feathersjs.com", code: 0, userInfo: nil)
+        object.error = error
+        print("running error hook")
         next(object)
     }
 
