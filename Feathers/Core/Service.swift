@@ -289,9 +289,11 @@ public final class Service {
             return
         }
         // If the error has been set in the hook object, exit early from the processing chain.
-        guard object.error == nil else {
-            next(object)
-            return
+        if object.type != .error {
+            guard object.error == nil else {
+                next(object)
+                return
+            }
         }
         // Get the next middleware to run.
         let hook = hooks.first!
