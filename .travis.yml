@@ -1,14 +1,14 @@
 language: objective-c
 osx_image: xcode8.3
 before_install: true
-install: true
-before_script:
- - chmod +x ./script/build
-script:
-  - rvm get head || true
+install:
+  - rvm get stable
   - brew update
   - brew install carthage || true
   - carthage bootstrap --no-use-binaries --cache-builds
+before_script:
+ - chmod +x ./script/build
+script:
   - script/build
 xcode_project: Feathers.xcodeproj
 matrix:
@@ -33,6 +33,7 @@ matrix:
       env:
         - JOB=CARTHAGE-macOS
     - script:
+
         - carthage build --no-skip-current --platform iOS --verbose
       env:
         - JOB=CARTHAGE-iOS
