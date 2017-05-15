@@ -62,18 +62,30 @@ public struct HookObject {
 
 public extension HookObject {
 
+    /// Modify the hook object by adding a result.
+    ///
+    /// - Parameter result: Result to add.
+    /// - Returns: Modified hook object.
     public func objectByAdding(result: Response) -> HookObject {
         var object = self
         object.result = result
         return object
     }
 
+    /// Modify the hook object by attaching an error.
+    ///
+    /// - Parameter error: Error to attach.
+    /// - Returns: Modified hook object.
     public func objectByAdding(error: Error) -> HookObject {
         var object = self
         object.error = error
         return object
     }
 
+    /// Create a new hook object with a new type.
+    ///
+    /// - Parameter type: New type.
+    /// - Returns: A new hook object with copied over properties.
     func object(with type: Kind) -> HookObject {
         var object = HookObject(type: type, app: app, service: service, method: method)
         object.parameters = parameters
@@ -88,6 +100,19 @@ public extension HookObject {
 
 public typealias HookNext = (HookObject) -> ()
 
+/// Hook protocol.
 public protocol Hook {
+
+    /// Function that's called by the middleware system to run the hook.
+    ///
+    /// In order to modify the hook, a copy of it has to be made because
+    /// Swift function parameters are `let` by default. If `next` is not called,
+    /// unexpected behavior will happen as the hook system will never finish processing the
+    /// rest of the chain.
+    ///
+    /// - Warning: `next` *MUST* be called.
+    /// - Parameters:
+    ///   - hookObject: Hook object.
+    ///   - next: Next function.
     func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ())
 }
