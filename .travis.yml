@@ -1,0 +1,53 @@
+language: objective-c
+osx_image: xcode8.3
+
+cache:
+  directories:
+  - Carthage
+
+before_install: true
+install:
+  - rvm get stable || true
+  - brew update || true
+  - brew install carthage || true
+  - carthage bootstrap --no-use-binaries --cache-builds || true
+before_script:
+ - chmod +x ./script/build
+script:
+  - script/build
+xcode_project: Feathers.xcodeproj
+matrix:
+  include:
+    - xcode_scheme: Feathers-macOS
+      env:
+        - XCODE_SDK=macosx
+        - XCODE_ACTION="build test"
+        - XCODE_DESTINATION="arch=x86_64"
+    - xcode_scheme: Feathers-iOS
+      env:
+        - XCODE_SDK=iphonesimulator
+        - XCODE_ACTION="build-for-testing test-without-building"
+        - XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 6s"
+    - xcode_scheme: Feathers-tvOS
+      env:
+        - XCODE_SDK=appletvsimulator
+        - XCODE_ACTION="build-for-testing test-without-building"
+        - XCODE_DESTINATION="platform=tvOS Simulator,name=Apple TV 1080p"
+    - script:
+        - carthage build --no-skip-current --platform mac
+      env:
+        - JOB=CARTHAGE-macOS
+    - script:
+        - carthage build --no-skip-current --platform iOS
+      env:
+        - JOB=CARTHAGE-iOS
+    - script:
+        - carthage build --no-skip-current --platform tvOS
+      env:
+        - JOB=CARTHAGE-tvOS
+    - script:
+      - gem install cocoapods
+      - pod repo update --silent
+      - travis_wait 30 pod lib lint Feathers.podspec
+      env:
+        - JOB=PODSPEC

@@ -31,6 +31,10 @@ final public class RestProvider: Provider {
         }
     }
 
+    public func request(hookObject: HookObject, _ next: @escaping HookNext) {
+
+    }
+
     public final func authenticate(_ path: String, credentials: [String: Any], _ completion: @escaping FeathersCallback) {
         authenticationRequest(path: path, method: .post, parameters: credentials, encoding: URLEncoding.httpBody, completion)
     }
@@ -118,27 +122,7 @@ fileprivate extension Service.Method {
         case .remove: return .delete
         }
     }
-
-    fileprivate var parameters: [String: Any]? {
-        switch self {
-        case .find(let parameters): return parameters
-        case .get(_, let parameters): return parameters
-        case .create(_, let parameters): return parameters
-        case .update(_, _, let parameters): return parameters
-        case .patch(_, _, let parameters): return parameters
-        case .remove(_, let parameters): return parameters
-        }
-    }
-
-    fileprivate var data: [String: Any]? {
-        switch self {
-        case .create(let data, _): return data
-        case .update(_, let data, _): return data
-        case .patch(_, let data, _): return data
-        default: return nil
-        }
-    }
-
+    
 }
 
 

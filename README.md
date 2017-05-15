@@ -130,6 +130,125 @@ When you're finished, be sure to call `.off` to unregister from the event. Other
 userService.off(.created)
 ```
 
+### Hooks
+
+![hooks](https://giphy.com/gifs/arrested-development-monster-buster-bluth-ujGSCZeZs2yXu/links)
+
+Like in FeathersJS, you can register `before`, `after`, and `error` hooks to run when requests are made. Possible use cases could include stubbing out a unit test with a before hook or simple logging.
+
+To create a hook, create an object that conforms to `Hook`:
+
+```swift
+public protocol Hook {
+    func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ())
+}
+```
+
+A hook that looks all `create` events might look like this:
+
+```swift
+struct CreateLogHook: Hook {
+
+  func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ()) {
+    var object = hookObject
+    if object.method == .create {
+      print("create happened")
+    }
+    next(objective-c)
+  }
+
+}
+```
+
+There are two things to note here. One, `var object = hookObject`. Swift function parameters are `let` constants so you first have to copy the object. Second, the next block. Because promises aren't standard in Cocoa, hooks use an ExpressJS-like middleware system, using a next block to process a chain of hooks. You **must** call `next` with the hook object.
+
+#### Hook Object
+
+The hook object gets passed around through hooks in succession. The interface matches the JS one fairly closely:
+
+```swift
+/// Hook object that gets passed through hook functions
+public struct HookObject {
+
+    /// Represents the kind of hook.
+    ///
+    /// - before: Hook is run before the request is made.
+    /// - after: Hook is run after the request is made.
+    /// - error: Runs when there's an error.
+    public enum Kind {
+        case before, after, error
+    }
+
+    /// The kind of hook.
+    public let type: Kind
+
+    /// Feathers application, used to retrieve other services.
+    public let app: Feathers
+
+    /// The service this hook currently runs on.
+    public let service: Service
+
+    /// The service method.
+    public let method: Service.Method
+
+    /// The service method parameters.
+    public var parameters: [String: Any]?
+
+    /// The request data.
+    public var data: [String: Any]?
+
+    /// The id (for get, remove, update and patch).
+    public var id: String?
+
+    /// Error that can be set which will stop the hook processing chain and run a special chain of error hooks.
+    public var error: Error?
+
+    /// Result of a successful method call, only in after hooks.
+    public var result: Response?
+
+    public init(
+        type: Kind,
+        app: Feathers,
+        service: Service,
+        method: Service.Method) {
+        self.type = type
+        self.app = app
+        self.service = service
+        self.method = method
+    }
+
+}
+```
+
+All the `var` declarations are mutable and you can set and mutate them as needed in your hooks.
+
+Important things to note about the hook object:
+- Setting `error` will cause the hook processing chain to stop and immediately run any error hooks. If that happens in a `before` hook, the request will also be skipped.
+- Setting `result` to some `Response` value in a `before` hook will skip the request, essentially stubbing it.
+
+#### Hook Registration
+
+To register your hooks, you first have to create a `Service.Hooks` object:
+
+```swift
+let beforeHooks = Service.Hooks(all: [LogResultHook()], create: [AppendUserIdHook()]])
+let afterHooks = Service.Hooks(find: [SaveInRealmHook()])
+let errorHooks = Service.Hooks(all: [LogErrorHook(destination: "log.txt")])
+```
+
+Registering the hooks then is easy:
+
+```swift
+let service = app.service("users")
+service.hooks(
+  before: beforeHooks,
+  after: afterHooks,
+  error: errorHooks
+)
+```
+
+**Important**: The hooks registered for `all` are run first, then the hooks for the particular service method.
+
 ### Reactive Extensions
 
 Feathers also providers reactive extensions for ReactiveSwift and RxSwift.

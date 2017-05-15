@@ -35,7 +35,7 @@ public final class Feathers {
     /// - Parameter path: Service path.
     /// - Returns: Service object.
     public func service(path: String) -> Service {
-        return Service(provider: provider, path: path, storage: authenticationStorage, authenticationConfig: authenticationConfiguration)
+        return Service(app: self, provider: provider, path: path, storage: authenticationStorage, authenticationConfig: authenticationConfiguration)
     }
 
     /// Configure any authentication options.

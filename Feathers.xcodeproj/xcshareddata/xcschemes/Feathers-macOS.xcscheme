@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA2ABD391EA2BA6F0099A091"
+               BlueprintIdentifier = "EAC0BD0B1EC952A40049FB13"
                BuildableName = "Feathers.framework"
                BlueprintName = "Feathers-macOS"
-               ReferencedContainer = "container:Feathers.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EABBAD781EBE73F800522603"
-               BuildableName = "FeathersTests-macOS.xctest"
-               BlueprintName = "FeathersTests-macOS"
                ReferencedContainer = "container:Feathers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,11 +28,21 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EAC0BD131EC952A40049FB13"
+               BuildableName = "Feathers-macOSTests.xctest"
+               BlueprintName = "Feathers-macOSTests"
+               ReferencedContainer = "container:Feathers.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA2ABD391EA2BA6F0099A091"
+            BlueprintIdentifier = "EAC0BD0B1EC952A40049FB13"
             BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-macOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
@@ -68,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA2ABD391EA2BA6F0099A091"
+            BlueprintIdentifier = "EAC0BD0B1EC952A40049FB13"
             BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-macOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
@@ -86,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA2ABD391EA2BA6F0099A091"
+            BlueprintIdentifier = "EAC0BD0B1EC952A40049FB13"
             BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-macOS"
             ReferencedContainer = "container:Feathers.xcodeproj">

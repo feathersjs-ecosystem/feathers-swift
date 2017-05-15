@@ -8,9 +8,6 @@
 
 import Foundation
 import ReactiveSwift
-#if !COCOAPODS
-    import Feathers
-#endif
 
 extension Feathers: ReactiveExtensionsProvider {}
 

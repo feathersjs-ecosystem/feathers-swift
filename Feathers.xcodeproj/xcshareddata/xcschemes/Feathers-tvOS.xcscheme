@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA2ABD551EA2BA8A0099A091"
+               BlueprintIdentifier = "EAC0BD611EC9686E0049FB13"
                BuildableName = "Feathers.framework"
                BlueprintName = "Feathers-tvOS"
                ReferencedContainer = "container:Feathers.xcodeproj">
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EAC0BD691EC9686E0049FB13"
+               BuildableName = "Feathers-tvOSTests.xctest"
+               BlueprintName = "Feathers-tvOSTests"
+               ReferencedContainer = "container:Feathers.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "EAC0BD611EC9686E0049FB13"
+            BuildableName = "Feathers.framework"
+            BlueprintName = "Feathers-tvOS"
+            ReferencedContainer = "container:Feathers.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA2ABD551EA2BA8A0099A091"
+            BlueprintIdentifier = "EAC0BD611EC9686E0049FB13"
             BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-tvOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
@@ -63,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA2ABD551EA2BA8A0099A091"
+            BlueprintIdentifier = "EAC0BD611EC9686E0049FB13"
             BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-tvOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
