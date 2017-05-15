@@ -8,14 +8,14 @@ Pod::Spec.new do |s|
 
                    ReactiveSwift and RxSwift extensions are available.
                    DESC
-  s.homepage     = "https://github.com/startupthekid/feathers-ios"
+  s.homepage     = "https://github.com/startupthekid/feathers-swift"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = "startupthekid"
 
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.10"
   s.tvos.deployment_target = "9.0"
-  s.source       = { :git => "https://github.com/startupthekid/feathers-ios.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/startupthekid/feathers-swift.git", :tag => "#{s.version}" }
 
   s.default_subspec = "Core"
 
