@@ -13,6 +13,7 @@ public struct ReauthenticationHook: Hook {
     public func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ()) {
         var object = hookObject
         let app = object.app
+        // If we're not authenticated, make a call to authenticate before calling next
         if let error = object.error as? FeathersError, let accessToken = app.authenticationStorage.accessToken, error == .notAuthenticated {
             app.authenticate([
                 "strategy": app.authenticationConfiguration.jwtStrategy,
