@@ -132,7 +132,7 @@ userService.off(.created)
 
 ### Hooks
 
-![hooks](https://giphy.com/gifs/arrested-development-monster-buster-bluth-ujGSCZeZs2yXu/links)
+![hooks](https://media.giphy.com/media/ujGSCZeZs2yXu/giphy.gif)
 
 Like in FeathersJS, you can register `before`, `after`, and `error` hooks to run when requests are made. Possible use cases could include stubbing out a unit test with a before hook or simple logging.
 
