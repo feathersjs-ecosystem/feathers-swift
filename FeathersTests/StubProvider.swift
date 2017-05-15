@@ -7,6 +7,7 @@
 //
 
 import Feathers
+import Foundation
 
 class StubProvider: Provider {
 
