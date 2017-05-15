@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum FeathersError: Error {
+public enum FeathersError: Error, Equatable {
 
     case badRequest
     case notAuthenticated
@@ -54,4 +54,28 @@ public enum FeathersError: Error {
         self = .underlying(error)
     }
     
+}
+
+public func ==(lhs: FeathersError, rhs: FeathersError) -> Bool {
+    switch (lhs, rhs) {
+    case (.badRequest, .badRequest): return true
+    case (.notAuthenticated, .notAuthenticated): return true
+    case (.paymentError, .paymentError): return true
+    case (.forbidden, .forbidden): return true
+    case (.notFound, .notFound): return true
+    case (.methodNotAllowed, .methodNotAllowed): return true
+    case (.notAcceptable, .notAcceptable): return true
+    case (.timeout, .timeout): return true
+    case (.conflict, .conflict): return true
+    case (.lengthRequired, .lengthRequired): return true
+    case (.unprocessable, .unprocessable): return true
+    case (.tooManyRequests, .tooManyRequests): return true
+    case (.general, .general): return true
+    case (.notImplemented, .notImplemented): return true
+    case (.badGateway, .badGateway): return true
+    case (.unavailable, .unavailable): return true
+    case (.underlying(_), .underlying(_)): return true
+    case (.unknown, .unknown): return true
+    default: return false
+    }
 }
