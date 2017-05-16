@@ -22,7 +22,6 @@
 		EA3B503B1ECAC11B0046DCFF /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
 		EA3B503C1ECAC11B0046DCFF /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
 		EA3B503D1ECAC11B0046DCFF /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
-		EA3B503E1ECAC11B0046DCFF /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */; };
 		EA3B503F1ECAC11B0046DCFF /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
 		EA3B50401ECAC11B0046DCFF /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
 		EA3B50411ECAC11B0046DCFF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
@@ -60,7 +59,6 @@
 		EAC0BCEB1EC90FF30049FB13 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
 		EAC0BCEC1EC90FF30049FB13 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
 		EAC0BCED1EC90FF30049FB13 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
-		EAC0BCEE1EC90FF30049FB13 /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */; };
 		EAC0BCEF1EC90FF30049FB13 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
 		EAC0BCF01EC90FF30049FB13 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
 		EAC0BCF31EC90FF30049FB13 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
@@ -82,7 +80,6 @@
 		EAC0BD251EC953A90049FB13 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
 		EAC0BD261EC953A90049FB13 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
 		EAC0BD271EC953A90049FB13 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
-		EAC0BD281EC953A90049FB13 /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */; };
 		EAC0BD291EC953A90049FB13 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
 		EAC0BD2A1EC953A90049FB13 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
 		EAC0BD2D1EC953A90049FB13 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
@@ -120,7 +117,6 @@
 		EAC0BD841EC969780049FB13 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
 		EAC0BD851EC969780049FB13 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
 		EAC0BD861EC969780049FB13 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
-		EAC0BD871EC969780049FB13 /* NSURL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */; };
 		EAC0BD881EC969780049FB13 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
 		EAC0BD891EC969780049FB13 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
 		EAC0BD8C1EC969780049FB13 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
@@ -254,7 +250,6 @@
 		EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationStorage.swift; path = Core/AuthenticationStorage.swift; sourceTree = "<group>"; };
 		EABBAE0C1EBFA6A400522603 /* Feathers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Feathers.swift; path = Core/Feathers.swift; sourceTree = "<group>"; };
 		EABBAE0D1EBFA6A400522603 /* FeathersError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeathersError.swift; path = Core/FeathersError.swift; sourceTree = "<group>"; };
-		EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSURL+QueryParameters.swift"; path = "Core/NSURL+QueryParameters.swift"; sourceTree = "<group>"; };
 		EABBAE0F1EBFA6A400522603 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Provider.swift; path = Core/Provider.swift; sourceTree = "<group>"; };
 		EABBAE101EBFA6A400522603 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Core/Response.swift; sourceTree = "<group>"; };
 		EABBAE121EBFA6A400522603 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = Core/Service.swift; sourceTree = "<group>"; };
@@ -582,7 +577,6 @@
 				EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */,
 				EABBAE0C1EBFA6A400522603 /* Feathers.swift */,
 				EABBAE0D1EBFA6A400522603 /* FeathersError.swift */,
-				EABBAE0E1EBFA6A400522603 /* NSURL+QueryParameters.swift */,
 				EABBAE0F1EBFA6A400522603 /* Provider.swift */,
 				EABBAE101EBFA6A400522603 /* Response.swift */,
 				EAE05D691EBFDB0000DA55BF /* Endpoint.swift */,
@@ -957,7 +951,6 @@
 				EA3B50421ECAC11B0046DCFF /* Feathers+RxSwift.swift in Sources */,
 				EA3B50381ECAC11B0046DCFF /* LoggerHooks.swift in Sources */,
 				EA3B50451ECAC11B0046DCFF /* Service+ReactiveSwift.swift in Sources */,
-				EA3B503E1ECAC11B0046DCFF /* NSURL+QueryParameters.swift in Sources */,
 				EA3B50391ECAC11B0046DCFF /* Service.swift in Sources */,
 				EA3B503D1ECAC11B0046DCFF /* FeathersError.swift in Sources */,
 				EA3B503A1ECAC11B0046DCFF /* AuthenticationConfiguration.swift in Sources */,
@@ -982,7 +975,6 @@
 				EAC0BCF01EC90FF30049FB13 /* Response.swift in Sources */,
 				EAC0BCF81EC90FF30049FB13 /* Service+ReactiveSwift.swift in Sources */,
 				EAC0BCEB1EC90FF30049FB13 /* AuthenticationStorage.swift in Sources */,
-				EAC0BCEE1EC90FF30049FB13 /* NSURL+QueryParameters.swift in Sources */,
 				EAC0BCEF1EC90FF30049FB13 /* Provider.swift in Sources */,
 				EAC0BCEA1EC90FF30049FB13 /* AuthenticationConfiguration.swift in Sources */,
 				EAC0BCE91EC90FF30049FB13 /* Service.swift in Sources */,
@@ -1017,7 +1009,6 @@
 				EAC0BD2A1EC953A90049FB13 /* Response.swift in Sources */,
 				EAC0BD321EC953A90049FB13 /* Service+ReactiveSwift.swift in Sources */,
 				EAC0BD251EC953A90049FB13 /* AuthenticationStorage.swift in Sources */,
-				EAC0BD281EC953A90049FB13 /* NSURL+QueryParameters.swift in Sources */,
 				EAC0BD291EC953A90049FB13 /* Provider.swift in Sources */,
 				EAC0BD241EC953A90049FB13 /* AuthenticationConfiguration.swift in Sources */,
 				EAC0BD231EC953A90049FB13 /* Service.swift in Sources */,
@@ -1052,7 +1043,6 @@
 				EAC0BD891EC969780049FB13 /* Response.swift in Sources */,
 				EAC0BD911EC969780049FB13 /* Service+ReactiveSwift.swift in Sources */,
 				EAC0BD841EC969780049FB13 /* AuthenticationStorage.swift in Sources */,
-				EAC0BD871EC969780049FB13 /* NSURL+QueryParameters.swift in Sources */,
 				EAC0BD881EC969780049FB13 /* Provider.swift in Sources */,
 				EAC0BD831EC969780049FB13 /* AuthenticationConfiguration.swift in Sources */,
 				EAC0BD821EC969780049FB13 /* Service.swift in Sources */,
@@ -1518,6 +1508,7 @@
 				EA3B502C1ECAC05C0046DCFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA452A611EA2B14300427CEF /* Build configuration list for PBXProject "Feathers" */ = {
 			isa = XCConfigurationList;
