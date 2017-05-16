@@ -57,6 +57,13 @@ public protocol RealTimeProvider: Provider {
     /// - warning: Events will continue to emit until `off` is called.
     func on(event: String, callback: @escaping ([String: Any]) -> ())
 
+    /// Register for single-use handler for the event.
+    ///
+    /// - Parameters:
+    ///   - event: Event name.
+    ///   - callback: Event callback, only called once.
+    func once(event: String, callback: @escaping ([String: Any]) -> ())
+
     /// Unregister for an event. Must be called to end the stream.
     ///
     /// - Parameter event: Event name.
