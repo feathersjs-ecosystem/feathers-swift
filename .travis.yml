@@ -10,6 +10,7 @@ install:
   - rvm get stable || true
   - brew update || true
   - brew install carthage || true
+  - brew outdated carthage || brew upgrade carthage
   - carthage bootstrap --no-use-binaries --cache-builds || true
 before_script:
  - chmod +x ./script/build
