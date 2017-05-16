@@ -34,6 +34,11 @@ matrix:
         - XCODE_SDK=appletvsimulator
         - XCODE_ACTION="build-for-testing test-without-building"
         - XCODE_DESTINATION="platform=tvOS Simulator,name=Apple TV 1080p"
+    - xcode_scheme: Feathers-watchOS
+      env:
+        - XCODE_SDK=watchsimulator
+        - XCODE_ACTION=build
+        - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm,OS=2.2"
     - script:
         - carthage build --no-skip-current --platform mac
       env:
@@ -46,6 +51,10 @@ matrix:
         - carthage build --no-skip-current --platform tvOS
       env:
         - JOB=CARTHAGE-tvOS
+    - script:
+        - carthage build --no-skip-current --platform watchOS
+      env:
+        - JOB=CARTHAGE-watchOS
     - script:
       - gem install cocoapods
       - pod repo update --silent
