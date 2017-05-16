@@ -145,14 +145,7 @@ open class Service {
     /// Application authentication configuration. Used in constructing endpoints.
     internal var authenticationConfig: AuthenticationConfiguration = AuthenticationConfiguration()
 
-    /// Service initializer, internal to Feathers. You can't construct services yourself.
-    ///
-    /// - Parameters:
-    ///   - app: Feathers application object.
-    ///   - provider: Application provider.
-    ///   - path: Service path.
-    ///   - storage: Authentication storage mechanism passed in from the application.
-    ///   - authenticationConfig: Application authentication configuration.
+    /// Service initializer.
     required public init() {
     }
 
@@ -169,7 +162,7 @@ open class Service {
     /// - Parameters:
     ///   - method: Service method to request for.
     ///   - completion: Completion block.
-    public func request(_ method: Service.Method, _ completion: @escaping FeathersCallback) {
+    open func request(_ method: Service.Method, _ completion: @escaping FeathersCallback) {
         runBeforeHooks(with: method, completion)
     }
 
