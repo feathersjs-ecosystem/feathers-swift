@@ -29,11 +29,13 @@ pod `Feathers`
 Add the following line to your Cartfile:
 
 ```
-github "startupthekid/feathers-ios"
+github "startupthekid/feathers-swift"
 ```
 ## Getting Started
 
-Create an instance of a `Feathers` application with the desired provider:
+FeathersSwift is spread out across multiple repositories to ensure that you're only pulling in exactly what you need and no more. There are two Feathers providers, [feathers-swift-rest](https://github.com/startupthekid/feathers-swift-rest) and [feathers-swift-socketio](https://github.com.startupthekid/feathers-swift-socketio). Install either provider using the instructions on their respective READMEs.
+
+Once you've install a provider, either rest of socketio, an instance of a `Feathers` application with it:
 
 ```swift
 
@@ -99,7 +101,7 @@ feathersRestApp.logout { error, response in
 
 ### Real-Time Events
 
-When using the socket provider, you can not only use it to call Feathers service methods, you can also listen for real-time events. Simply create a feathers application with an instance of `SocketProvider` and register for events using `.on` on your services.
+When using the socket provider, you can not only use it to call Feathers service methods, you can also listen for real-time events. Simply use [feathers-swift-socketio](https://github.com.startupthekid/feathers-swift-socketio) create a feathers application with an instance of `SocketProvider` and register for events using `.on` on your services.
 
 There are four different real-time events:
 
