@@ -42,4 +42,17 @@ public extension Service {
         }
     }
 
+    public func once(event: Service.RealTimeEvent) -> Observable<[String: Any]> {
+        return Observable.create { [weak self] observer in
+            guard let vSelf = self else {
+                return Disposables.create()
+            }
+            vSelf.on(event: event) { response in
+                observer.onNext(response)
+                observer.onCompleted()
+            }
+            return Disposables.create()
+        }
+    }
+
 }
