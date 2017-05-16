@@ -10,6 +10,5 @@ target 'FeathersDemo' do
   pod 'Feathers'
   pod 'Feathers/ReactiveSwift'
   pod 'Feathers/RxSwift'
-  # Pods for FeathersDemo
 
 end
