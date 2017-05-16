@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 
 /// Describes a request's pagination properties.
 public struct Pagination {
