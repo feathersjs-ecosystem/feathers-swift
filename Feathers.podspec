@@ -22,9 +22,7 @@ Pod::Spec.new do |s|
 
   s.subspec "Core" do |ss|
     ss.source_files = "Feathers/Core/*.{swift}"
-    ss.dependency "Alamofire", '~> 4.4.0'
     ss.framework = "Foundation"
-    ss.dependency 'Socket.IO-Client-Swift', '~> 8.3.3'
     ss.dependency 'KeychainSwift'
     ss.dependency 'Result'
   end
