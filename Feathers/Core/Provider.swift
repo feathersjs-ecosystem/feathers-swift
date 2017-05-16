@@ -11,7 +11,7 @@ import Foundation
 public typealias FeathersCallback = (FeathersError?, Response?) -> ()
 
 /// Abstract interface for a provider.
-public protocol Provider {
+public protocol Provider: class {
 
     /// Provider's base url.
     var baseURL: URL { get }

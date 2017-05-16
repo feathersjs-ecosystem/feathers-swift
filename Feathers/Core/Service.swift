@@ -10,7 +10,7 @@ import Foundation
 
 /// Represents a Feather's service. Used for making requests and in the case
 /// of real-time providers, emitting real-time events.
-public final class Service {
+open class Service {
 
     /// Service methods.
     ///
@@ -133,32 +133,20 @@ public final class Service {
 
     }
 
-    public let app: Feathers
+    internal weak var app: Feathers?
     /// The application's provider.
-    public let provider: Provider
+    internal weak var provider: Provider?
     /// The service path.
-    public let path: String
+    internal var path: String = ""
 
     /// Application auth storage mechanism.
-    private weak var storage: AuthenticationStorage?
+    internal weak var storage: AuthenticationStorage?
 
     /// Application authentication configuration. Used in constructing endpoints.
-    private let authenticationConfig: AuthenticationConfiguration
+    internal var authenticationConfig: AuthenticationConfiguration = AuthenticationConfiguration()
 
-    /// Service initializer, internal to Feathers. You can't construct services yourself.
-    ///
-    /// - Parameters:
-    ///   - app: Feathers application object.
-    ///   - provider: Application provider.
-    ///   - path: Service path.
-    ///   - storage: Authentication storage mechanism passed in from the application.
-    ///   - authenticationConfig: Application authentication configuration.
-    internal init(app: Feathers, provider: Provider, path: String, storage: AuthenticationStorage, authenticationConfig: AuthenticationConfiguration) {
-        self.app = app
-        self.provider = provider
-        self.path = path
-        self.storage = storage
-        self.authenticationConfig = authenticationConfig
+    /// Service initializer.
+    required public init() {
     }
 
     /// Request data from the server.
@@ -174,7 +162,7 @@ public final class Service {
     /// - Parameters:
     ///   - method: Service method to request for.
     ///   - completion: Completion block.
-    public func request(_ method: Service.Method, _ completion: @escaping FeathersCallback) {
+    open func request(_ method: Service.Method, _ completion: @escaping FeathersCallback) {
         runBeforeHooks(with: method, completion)
     }
 
@@ -189,8 +177,12 @@ public final class Service {
     ///   - method: Service method.
     ///   - completion: Completion block.
     private func runBeforeHooks(with method: Service.Method, _ completion: @escaping FeathersCallback) {
+        guard let application = app else {
+            completion(.unknown, nil)
+            return
+        }
         // Create our original hook object
-        var beforeHookObject = HookObject(type: .before, app: app, service: self, method: method)
+        var beforeHookObject = HookObject(type: .before, app: application, service: self, method: method)
         beforeHookObject.parameters = method.parameters
         beforeHookObject.data = method.data
         beforeHookObject.id = method.id
@@ -210,7 +202,7 @@ public final class Service {
             } else {
                 // Otherwise construct an endpoint
                 let endpoint = vSelf.constructEndpoint(from: method)
-                vSelf.provider.request(endpoint: endpoint) { error, response in
+                vSelf.provider?.request(endpoint: endpoint) { error, response in
                     // If there's an error in the response, run the error hooks
                     if let error = error {
                         vSelf.runErrorHooks(with: beforeHookObject, error: error, completion)
@@ -312,6 +304,7 @@ public final class Service {
     /// - Parameter method: Service method.
     /// - Returns: `Endpoint` object.
     private func constructEndpoint(from method: Service.Method) -> Endpoint {
+        guard let provider = provider else { fatalError("provider must be given to the service before making requests") }
         var endpoint = Endpoint(baseURL: provider.baseURL, path: path, method: method, accessToken: nil, authenticationConfiguration: authenticationConfig)
         if let storage = storage,
             let accessToken = storage.accessToken {

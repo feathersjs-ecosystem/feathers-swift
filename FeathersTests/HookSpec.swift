@@ -29,8 +29,7 @@ class HookSpec: QuickSpec {
                     var stubData: [String: String]!
 
                     beforeEach {
-                        // Have to use a real provider to make sure we can skip the result
-                        app = Feathers(provider: RestProvider(baseURL: URL(string: "https://myserver.com")!))
+                        app = Feathers(provider: StubProvider())
                         service = app.service(path: "users")
                         stubData = ["name": "Bob"]
                         beforeHooks = Service.Hooks(all: [StubHook(data: .jsonObject(stubData))])

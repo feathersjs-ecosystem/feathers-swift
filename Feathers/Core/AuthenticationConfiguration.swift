@@ -11,24 +11,24 @@ import Foundation
 public struct AuthenticationConfiguration {
 
     /// Authorization header field in requests.
-    let header: String
+    public let header: String
 
     /// Path for authentication service.
-    let path: String
+    public let path: String
 
     /// Strategy name for jwt authentication.
-    let jwtStrategy: String
+    public let jwtStrategy: String
 
     /// The entity you are authenticating.
-    let entity: String
+    public let entity: String
 
     /// The service to look up the entity
-    let service: String
+    public let service: String
 
     // The key to store the accessToken with.
-    let storageKey: String
+    public let storageKey: String
 
-    init(
+    public init(
         header: String = "Authorization",
         path: String = "/authentication",
         jwtStrategy: String = "jwt",

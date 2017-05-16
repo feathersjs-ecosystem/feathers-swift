@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 
 /// Represents an endpoint on the server.
 public final class Endpoint {
