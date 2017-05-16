@@ -337,6 +337,19 @@ public final class Service {
         }
     }
 
+    /// Register to listen for an event once and only once.
+    ///
+    /// - Parameters:
+    ///   - event: Event to listen for.
+    ///   - callback: Single-use-callback.
+    public func once(event: RealTimeEvent, _ callback: @escaping RealTimeEventCallback) {
+        if let realTimeProvider = provider as? RealTimeProvider {
+            realTimeProvider.once(event: "\(path) \(event.rawValue)", callback: { object in
+                callback(object)
+            })
+        }
+    }
+
     /// Unregister for an event. Must be called to end the stream.
     ///
     /// - Parameter event: Real-time event to unregister from.

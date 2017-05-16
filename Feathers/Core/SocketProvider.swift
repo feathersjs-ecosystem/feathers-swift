@@ -139,6 +139,13 @@ public final class SocketProvider: RealTimeProvider {
         })
     }
 
+    public func once(event: String, callback: @escaping ([String : Any]) -> ()) {
+        client.once(event, callback: { data, _ in
+            guard let object = data.first as? [String: Any] else { return }
+            callback(object)
+        })
+    }
+
     public func off(event: String) {
         client.off(event)
     }
