@@ -16,7 +16,6 @@ install:
   - pod repo update --silent
 before_script:
  - chmod +x ./script/build
- - pod install
 script:
   - script/build
 xcode_workspace: Feathers.xcworkspace
@@ -27,21 +26,25 @@ matrix:
         - XCODE_SDK=macosx
         - XCODE_ACTION="build test"
         - XCODE_DESTINATION="arch=x86_64"
+      before_script: pod install
     - xcode_scheme: Feathers-iOS
       env:
         - XCODE_SDK=iphonesimulator
         - XCODE_ACTION="build-for-testing test-without-building"
         - XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 6s"
+      before_script: pod install
     - xcode_scheme: Feathers-tvOS
       env:
         - XCODE_SDK=appletvsimulator
         - XCODE_ACTION="build-for-testing test-without-building"
         - XCODE_DESTINATION="platform=tvOS Simulator,name=Apple TV 1080p"
+      before_script: pod install
     - xcode_scheme: Feathers-watchOS
       env:
         - XCODE_SDK=watchsimulator
         - XCODE_ACTION=build
         - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm,OS=2.2"
+      before_script: pod install
     - script:
         - carthage checkout || true
         - carthage build --no-skip-current --platform mac
