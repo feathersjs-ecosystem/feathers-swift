@@ -13,7 +13,7 @@ Why should you use it?
 * Network abstraction layer
 * Reactive extensions (ReactiveSwift and RxSwift)
 * Integrates seemlessly with any FeathersJS services
-* Supports iOS, macOS, and tvOS
+* Supports iOS, macOS, tvOS, and watchOS
 
 If you use FeathersJS (which you should), FeathersSwift is the perfect choice for you. No more dealing with HTTP requests or socket clients. One simple interface to rule them all and in the darkness, unify them :ring:.
 
