@@ -23,20 +23,20 @@ Pod::Spec.new do |s|
   s.subspec "Core" do |ss|
     ss.source_files = "Feathers/Core/*.{swift}"
     ss.framework = "Foundation"
-    ss.dependency 'KeychainSwift'
-    ss.dependency 'Result'
+    ss.dependency 'KeychainSwift', '8.0.2'
+    ss.dependency 'Result', '3.2.2'
   end
 
   s.subspec "ReactiveSwift" do |ss|
     ss.source_files = "Feathers/ReactiveSwift/*{.swift}"
     ss.dependency "Feathers/Core"
-    ss.dependency "ReactiveSwift", "~> 1.1"
+    ss.dependency "ReactiveSwift", "1.1.3"
   end
 
   s.subspec "RxSwift" do |ss|
     ss.source_files = "Feathers/RxSwift/*{.swift}"
     ss.dependency "Feathers/Core"
-    ss.dependency "RxSwift", "~> 3.0"
+    ss.dependency "RxSwift", "3.4.1"
   end
 
   s.pod_target_xcconfig = {"OTHER_SWIFT_FLAGS[config=Release]" => "-suppress-warnings" }
