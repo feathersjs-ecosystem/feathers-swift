@@ -36,3 +36,5 @@ Carthage
 # Pods/
 /.env
 /Pods
+
+Podfile.lock
