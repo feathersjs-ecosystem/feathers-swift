@@ -14,9 +14,9 @@ install:
   - brew outdated carthage || brew upgrade carthage
   - gem install cocoapods
   - pod repo update --silent
-  - pod install
 before_script:
  - chmod +x ./script/build
+ - pod install
 script:
   - script/build
 xcode_workspace: Feathers.xcworkspace
