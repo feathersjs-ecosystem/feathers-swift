@@ -2,8 +2,9 @@ language: objective-c
 osx_image: xcode8.3
 
 cache:
-  directories:
-  - Carthage
+  - cocoapods
+  - directories:
+    - Carthage
 
 before_install: true
 install:
@@ -11,7 +12,8 @@ install:
   - brew update || true
   - brew install carthage || true
   - brew outdated carthage || brew upgrade carthage
-  - carthage bootstrap --no-use-binaries --cache-builds || true
+  - gem install cocoapods
+  - pod repo update --silent
 before_script:
  - chmod +x ./script/build
 script:
@@ -40,24 +42,26 @@ matrix:
         - XCODE_ACTION=build
         - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm,OS=2.2"
     - script:
+        - carthage checkout || true
         - carthage build --no-skip-current --platform mac
       env:
         - JOB=CARTHAGE-macOS
     - script:
+        - carthage checkout || true
         - carthage build --no-skip-current --platform iOS
       env:
         - JOB=CARTHAGE-iOS
     - script:
+        - carthage checkout || true
         - carthage build --no-skip-current --platform tvOS
       env:
         - JOB=CARTHAGE-tvOS
     - script:
+        - carthage checkout || true
         - carthage build --no-skip-current --platform watchOS
       env:
         - JOB=CARTHAGE-watchOS
     - script:
-      - gem install cocoapods
-      - pod repo update --silent
       - travis_wait 30 pod lib lint Feathers.podspec
       env:
         - JOB=PODSPEC
