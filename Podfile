@@ -13,6 +13,8 @@ target 'Feathers-iOS' do
 
   target 'Feathers-iOSTests' do
     inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
     # Pods for testing
   end
 
@@ -30,6 +32,8 @@ target 'Feathers-macOS' do
 
   target 'Feathers-macOSTests' do
     inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
     # Pods for testing
   end
 
@@ -47,6 +51,8 @@ target 'Feathers-tvOS' do
 
   target 'Feathers-tvOSTests' do
     inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
     # Pods for testing
   end
 
