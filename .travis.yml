@@ -13,7 +13,7 @@ install:
   - brew install carthage || true
   - brew outdated carthage || brew upgrade carthage
   - gem install cocoapods
-  - pod repo update --silent
+  - pod repo update
 before_script:
   - pod install
   - chmod +x ./script/build
@@ -43,19 +43,27 @@ matrix:
         - XCODE_ACTION=build
         - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm,OS=2.2"
     - script: carthage build --no-skip-current --platform mac
-      before_script: carthage checkout || true
+      before_script:
+        - pod install
+        - carthage checkout || true
       env:
         - JOB=CARTHAGE-macOS
     - script: carthage build --no-skip-current --platform iOS
-      before_script: carthage checkout || true
+      before_script:
+        - pod install
+        - carthage checkout || true
       env:
         - JOB=CARTHAGE-iOS
     - script: carthage build --no-skip-current --platform tvOS
-      before_script: carthage checkout || true
+      before_script:
+        - pod install
+        - carthage checkout || true
       env:
         - JOB=CARTHAGE-tvOS
     - script: carthage build --no-skip-current --platform watchOS
-      before_script: carthage checkout || true
+      before_script:
+        - pod install
+        - carthage checkout || true
       env:
         - JOB=CARTHAGE-watchOS
     - script:
