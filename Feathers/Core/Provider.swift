@@ -42,7 +42,7 @@ public protocol Provider: class {
     ///
     /// - Parameter path: Logout path.
     /// - Parameter completion: Completion block.
-    func logout(path: String, _ completion: @escaping FeathersCallback)
+    func logout(path: String) -> Promise<Response>
 
 }
 

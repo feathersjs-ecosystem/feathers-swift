@@ -32,6 +32,11 @@
 		EA3B50441ECAC11B0046DCFF /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */; };
 		EA3B50451ECAC11B0046DCFF /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
 		EA63C9F91ECDE6FF000997B4 /* Promise+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9F81ECDE6FF000997B4 /* Promise+Error.swift */; };
+		EA63C9FB1ECE60A3000997B4 /* SignalProducer+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FA1ECE60A3000997B4 /* SignalProducer+Promise.swift */; };
+		EA63C9FD1ECE625B000997B4 /* Observable+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */; };
+		EA63C9FE1ECE625B000997B4 /* Observable+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */; };
+		EA63C9FF1ECE625B000997B4 /* Observable+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */; };
+		EA63CA001ECE625B000997B4 /* Observable+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */; };
 		EA954C701EC9A4B10094FF43 /* AuthenticationHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */; };
 		EA954C711EC9A4B70094FF43 /* AuthenticationHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */; };
 		EA954C721EC9A4B70094FF43 /* AuthenticationHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */; };
@@ -143,6 +148,8 @@
 		EA452A6A1EA2B14300427CEF /* Feathers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feathers.h; sourceTree = "<group>"; };
 		EA452A6B1EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA63C9F81ECDE6FF000997B4 /* Promise+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Promise+Error.swift"; path = "Core/Promise+Error.swift"; sourceTree = "<group>"; };
+		EA63C9FA1ECE60A3000997B4 /* SignalProducer+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SignalProducer+Promise.swift"; path = "ReactiveSwift/SignalProducer+Promise.swift"; sourceTree = "<group>"; };
+		EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Observable+Promise.swift"; path = "RxSwift/Observable+Promise.swift"; sourceTree = "<group>"; };
 		EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationHooks.swift; path = Core/AuthenticationHooks.swift; sourceTree = "<group>"; };
 		EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggerHooks.swift; path = Core/LoggerHooks.swift; sourceTree = "<group>"; };
 		EA9AB63D1EC973F4007CEDF3 /* RxSwiftSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxSwiftSpec.swift; path = FeathersTests/RxSwiftSpec.swift; sourceTree = SOURCE_ROOT; };
@@ -275,6 +282,7 @@
 			children = (
 				EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */,
 				EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */,
+				EA63C9FA1ECE60A3000997B4 /* SignalProducer+Promise.swift */,
 			);
 			name = ReactiveSwift;
 			sourceTree = "<group>";
@@ -367,6 +375,7 @@
 			children = (
 				EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */,
 				EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */,
+				EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */,
 			);
 			name = RxSwift;
 			sourceTree = "<group>";
@@ -954,6 +963,7 @@
 			files = (
 				EA3B50421ECAC11B0046DCFF /* Feathers+RxSwift.swift in Sources */,
 				EA3B50381ECAC11B0046DCFF /* LoggerHooks.swift in Sources */,
+				EA63CA001ECE625B000997B4 /* Observable+Promise.swift in Sources */,
 				EA3B50451ECAC11B0046DCFF /* Service+ReactiveSwift.swift in Sources */,
 				EA3B50391ECAC11B0046DCFF /* Service.swift in Sources */,
 				EA3B503D1ECAC11B0046DCFF /* FeathersError.swift in Sources */,
@@ -979,10 +989,12 @@
 				EA63C9F91ECDE6FF000997B4 /* Promise+Error.swift in Sources */,
 				EAC0BCF01EC90FF30049FB13 /* Response.swift in Sources */,
 				EAC0BCF81EC90FF30049FB13 /* Service+ReactiveSwift.swift in Sources */,
+				EA63C9FB1ECE60A3000997B4 /* SignalProducer+Promise.swift in Sources */,
 				EAC0BCEB1EC90FF30049FB13 /* AuthenticationStorage.swift in Sources */,
 				EAC0BCEF1EC90FF30049FB13 /* Provider.swift in Sources */,
 				EAC0BCEA1EC90FF30049FB13 /* AuthenticationConfiguration.swift in Sources */,
 				EAC0BCE91EC90FF30049FB13 /* Service.swift in Sources */,
+				EA63C9FD1ECE625B000997B4 /* Observable+Promise.swift in Sources */,
 				EA954C701EC9A4B10094FF43 /* AuthenticationHooks.swift in Sources */,
 				EAC0BCF71EC90FF30049FB13 /* Feathers+ReactiveSwift.swift in Sources */,
 				EAC0BCF41EC90FF30049FB13 /* Hooks.swift in Sources */,
@@ -999,6 +1011,7 @@
 			files = (
 				EA954C791EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */,
 				EAC0BD2F1EC953A90049FB13 /* Feathers+RxSwift.swift in Sources */,
+				EA63C9FE1ECE625B000997B4 /* Observable+Promise.swift in Sources */,
 				EAC0BD2A1EC953A90049FB13 /* Response.swift in Sources */,
 				EAC0BD321EC953A90049FB13 /* Service+ReactiveSwift.swift in Sources */,
 				EAC0BD251EC953A90049FB13 /* AuthenticationStorage.swift in Sources */,
@@ -1033,6 +1046,7 @@
 			files = (
 				EA954C7A1EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */,
 				EAC0BD8E1EC969780049FB13 /* Feathers+RxSwift.swift in Sources */,
+				EA63C9FF1ECE625B000997B4 /* Observable+Promise.swift in Sources */,
 				EAC0BD891EC969780049FB13 /* Response.swift in Sources */,
 				EAC0BD911EC969780049FB13 /* Service+ReactiveSwift.swift in Sources */,
 				EAC0BD841EC969780049FB13 /* AuthenticationStorage.swift in Sources */,

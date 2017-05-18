@@ -188,24 +188,24 @@ final public class Service {
         guard let application = app else {
             return Promise(error: FeathersError.unknown)
         }
-        let beforeHookObject = HookObject(type: .before, app: application, service: self, method: method)
-        let beforeHooks = self.beforeHooks.hooks(for: method)
-        let afterHooks = self.afterHooks.hooks(for: method)
-        let errorHooks = self.errorHooks.hooks(for: method)
-        let beforeChain = beforeHooks.reduce(Promise(value: beforeHookObject)) { acc, current in
+        // Reduces an array of `Hook` objects into a single promise.
+        let reduceHooksClosure: (Promise<HookObject>, Hook) -> Promise<HookObject> = { acc, current in
             return acc.then { value in
                 return current.run(with: value)
             }
         }
+        let beforeHookObject = HookObject(type: .before, app: application, service: self, method: method)
+        // Get all the hooks
+        let beforeHooks = self.beforeHooks.hooks(for: method)
+        let afterHooks = self.afterHooks.hooks(for: method)
+        let errorHooks = self.errorHooks.hooks(for: method)
+        // Chain of hooks to run before the request
+        let beforeChain = beforeHooks.reduce(Promise(value: beforeHookObject), reduceHooksClosure)
         let chain = beforeChain.then { [weak self] hook -> Promise<Response> in
             guard let vSelf = self else { return Promise(error: FeathersError.unknown) }
             // Create the chain of after hooks
             let afterHookObject = hook.object(with: .after)
-            let afterChain = afterHooks.reduce(Promise(value: afterHookObject)) { acc, current in
-                return acc.then { value in
-                    return current.run(with: value)
-                }
-            }
+            let afterChain = afterHooks.reduce(Promise(value: afterHookObject), reduceHooksClosure)
             // If the result has been set, skip the request and run the after hooks
             if let _ = hook.result?.value {
                 return afterChain.then {
@@ -219,14 +219,11 @@ final public class Service {
                 }
             }
         }
+        // If the chain errors at any point, run all the error hooks then send the final error
         return chain.flatMapError { [weak self] (error: Error) -> Promise<Response> in
             guard let vSelf = self else { return Promise(error: error) }
             let hook = HookObject(type: .error, app: application, service: vSelf, method: method)
-            let errorChain = errorHooks.reduce(Promise(value: hook)) { acc, current in
-                return acc.then { value in
-                    return current.run(with: value)
-                }
-            }
+            let errorChain = errorHooks.reduce(Promise(value: hook), reduceHooksClosure)
             return errorChain.then { hook in
                 return hook.result?.error != nil ? Promise(error: hook.result!.error!) : Promise(error: FeathersError.unknown)
             }

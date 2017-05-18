@@ -77,16 +77,11 @@ public final class Feathers {
     /// Log out the application.
     ///
     /// - Parameter completion: Completion block.
-    public func logout(_ completion: @escaping FeathersCallback) {
-        provider.logout(path: authenticationConfiguration.path) { [weak self] error, response in
-            if let error = error {
-                completion(error, nil)
-            } else if let response = response {
+    public func logout() -> Promise<Response> {
+        return provider.logout(path: authenticationConfiguration.path)
+            .then { [weak self] response in
                 self?.authenticationStorage.accessToken = nil
-                completion(nil, response)
-            } else {
-                completion(.unknown, nil)
-            }
+                return Promise(value: response)
         }
     }
 
