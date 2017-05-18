@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 public typealias FeathersCallback = (FeathersError?, Response?) -> ()
 
@@ -27,7 +28,7 @@ public protocol Provider: class {
     /// - Parameters:
     ///   - endpoint: Endpoint to hit.
     ///   - completion: Completion block.
-    func request(endpoint: Endpoint, _ completion: @escaping FeathersCallback)
+    func request(endpoint: Endpoint) -> Promise<Response>
 
     /// Authenticate the provider.
     ///
@@ -35,7 +36,7 @@ public protocol Provider: class {
     ///   - path: Authentication path.
     ///   - credentials: Credentials object for authentication.
     ///   - completion: Completion block.
-    func authenticate(_ path: String, credentials: [String: Any], _ completion: @escaping FeathersCallback)
+    func authenticate(_ path: String, credentials: [String: Any]) -> Promise<Response>
 
     /// Logout the provider.
     ///
