@@ -31,6 +31,7 @@
 		EA3B50431ECAC11B0046DCFF /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
 		EA3B50441ECAC11B0046DCFF /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */; };
 		EA3B50451ECAC11B0046DCFF /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
+		EA63C9F91ECDE6FF000997B4 /* Promise+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9F81ECDE6FF000997B4 /* Promise+Error.swift */; };
 		EA954C701EC9A4B10094FF43 /* AuthenticationHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */; };
 		EA954C711EC9A4B70094FF43 /* AuthenticationHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */; };
 		EA954C721EC9A4B70094FF43 /* AuthenticationHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */; };
@@ -141,6 +142,7 @@
 		EA3B50251ECAC05C0046DCFF /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA452A6A1EA2B14300427CEF /* Feathers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feathers.h; sourceTree = "<group>"; };
 		EA452A6B1EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA63C9F81ECDE6FF000997B4 /* Promise+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Promise+Error.swift"; path = "Core/Promise+Error.swift"; sourceTree = "<group>"; };
 		EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationHooks.swift; path = Core/AuthenticationHooks.swift; sourceTree = "<group>"; };
 		EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggerHooks.swift; path = Core/LoggerHooks.swift; sourceTree = "<group>"; };
 		EA9AB63D1EC973F4007CEDF3 /* RxSwiftSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxSwiftSpec.swift; path = FeathersTests/RxSwiftSpec.swift; sourceTree = SOURCE_ROOT; };
@@ -314,6 +316,14 @@
 			path = Feathers;
 			sourceTree = "<group>";
 		};
+		EA63C9F71ECDE6EC000997B4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA63C9F81ECDE6FF000997B4 /* Promise+Error.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		EA954C6E1EC9A4990094FF43 /* Hooks */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +374,7 @@
 		EABBAE091EBFA69C00522603 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EA63C9F71ECDE6EC000997B4 /* Extensions */,
 				EA954C6E1EC9A4990094FF43 /* Hooks */,
 				EABBAE121EBFA6A400522603 /* Service.swift */,
 				EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */,
@@ -965,6 +976,7 @@
 			files = (
 				EA954C781EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */,
 				EAC0BCF51EC90FF30049FB13 /* Feathers+RxSwift.swift in Sources */,
+				EA63C9F91ECDE6FF000997B4 /* Promise+Error.swift in Sources */,
 				EAC0BCF01EC90FF30049FB13 /* Response.swift in Sources */,
 				EAC0BCF81EC90FF30049FB13 /* Service+ReactiveSwift.swift in Sources */,
 				EAC0BCEB1EC90FF30049FB13 /* AuthenticationStorage.swift in Sources */,

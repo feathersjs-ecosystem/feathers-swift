@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import PromiseKit
+import enum Result.Result
 
 /// Hook object that gets passed through hook functions
 public struct HookObject {
@@ -30,22 +32,9 @@ public struct HookObject {
     public let service: Service
 
     /// The service method.
-    public let method: Service.Method
+    public var method: Service.Method
 
-    /// The service method parameters.
-    public var parameters: [String: Any]?
-
-    /// The request data.
-    public var data: [String: Any]?
-
-    /// The id (for get, remove, update and patch).
-    public var id: String?
-
-    /// Error that can be set which will stop the hook processing chain and run a special chain of error hooks.
-    public var error: Error?
-
-    /// Result of a successful method call, only in after hooks.
-    public var result: Response?
+    var result: Result<Response, FeathersError>?
 
     public init(
         type: Kind,
@@ -68,7 +57,7 @@ public extension HookObject {
     /// - Returns: Modified hook object.
     public func objectByAdding(result: Response) -> HookObject {
         var object = self
-        object.result = result
+        object.result = .success(result)
         return object
     }
 
@@ -76,9 +65,9 @@ public extension HookObject {
     ///
     /// - Parameter error: Error to attach.
     /// - Returns: Modified hook object.
-    public func objectByAdding(error: Error) -> HookObject {
+    public func objectByAdding(error: FeathersError) -> HookObject {
         var object = self
-        object.error = error
+        object.result = .failure(error)
         return object
     }
 
@@ -88,10 +77,6 @@ public extension HookObject {
     /// - Returns: A new hook object with copied over properties.
     func object(with type: Kind) -> HookObject {
         var object = HookObject(type: type, app: app, service: service, method: method)
-        object.parameters = parameters
-        object.data = data
-        object.id = id
-        object.error = error
         object.result = result
         return object
     }
@@ -114,5 +99,5 @@ public protocol Hook {
     /// - Parameters:
     ///   - hookObject: Hook object.
     ///   - next: Next function.
-    func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ())
+    func run(with hookObject: HookObject) -> Promise<HookObject>
 }
