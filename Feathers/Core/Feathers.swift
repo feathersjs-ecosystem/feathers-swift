@@ -37,23 +37,14 @@ public final class Feathers {
     /// - Parameter path: Service path.
     /// - Returns: Service object.
     public func service(path: String) -> Service {
-        if let service = services[path] {
+        let servicePath = path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+        if let service = services[servicePath] {
             return service
         }
-        let service = Service()
-        service.app = self
-        service.provider = provider
-        service.storage = authenticationStorage
-        service.authenticationConfig = authenticationConfiguration
+        let service = Service(path: servicePath)
+        service.setup(app: self)
+        services[servicePath] = service
         return service
-    }
-
-    public func use(path: String, service: Service) {
-        service.app = self
-        service.provider = provider
-        service.storage = authenticationStorage
-        service.authenticationConfig = authenticationConfiguration
-        services[path] = service
     }
 
     /// Configure any authentication options.

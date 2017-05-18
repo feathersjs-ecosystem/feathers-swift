@@ -10,7 +10,7 @@ import Foundation
 
 /// Represents a Feather's service. Used for making requests and in the case
 /// of real-time providers, emitting real-time events.
-open class Service {
+final public class Service {
 
     /// Service methods.
     ///
@@ -133,20 +133,20 @@ open class Service {
 
     }
 
-    internal weak var app: Feathers?
-    /// The application's provider.
-    internal weak var provider: Provider?
     /// The service path.
-    internal var path: String = ""
+    internal let path: String
 
-    /// Application auth storage mechanism.
-    internal weak var storage: AuthenticationStorage?
-
-    /// Application authentication configuration. Used in constructing endpoints.
-    internal var authenticationConfig: AuthenticationConfiguration = AuthenticationConfiguration()
-
+    private weak var app: Feathers?
+    
     /// Service initializer.
-    required public init() {
+    ///
+    /// - Parameter path: Service path.
+    public init(path: String) {
+        self.path = path
+    }
+
+    public func setup(app: Feathers) {
+        self.app = app
     }
 
     /// Request data from the server.
@@ -202,7 +202,7 @@ open class Service {
             } else {
                 // Otherwise construct an endpoint
                 let endpoint = vSelf.constructEndpoint(from: method)
-                vSelf.provider?.request(endpoint: endpoint) { error, response in
+                vSelf.app?.provider.request(endpoint: endpoint) { error, response in
                     // If there's an error in the response, run the error hooks
                     if let error = error {
                         vSelf.runErrorHooks(with: beforeHookObject, error: error, completion)
@@ -304,11 +304,11 @@ open class Service {
     /// - Parameter method: Service method.
     /// - Returns: `Endpoint` object.
     private func constructEndpoint(from method: Service.Method) -> Endpoint {
-        guard let provider = provider else { fatalError("provider must be given to the service before making requests") }
-        var endpoint = Endpoint(baseURL: provider.baseURL, path: path, method: method, accessToken: nil, authenticationConfiguration: authenticationConfig)
-        if let storage = storage,
+        guard let provider = app?.provider else { fatalError("provider must be given to the service before making requests") }
+        var endpoint = Endpoint(baseURL: provider.baseURL, path: path, method: method, accessToken: nil, authenticationConfiguration: app?.authenticationConfiguration ?? AuthenticationConfiguration())
+        if let storage = app?.authenticationStorage,
             let accessToken = storage.accessToken {
-            endpoint = Endpoint(baseURL: provider.baseURL, path: path, method: method, accessToken: accessToken, authenticationConfiguration: authenticationConfig)
+            endpoint = Endpoint(baseURL: provider.baseURL, path: path, method: method, accessToken: accessToken, authenticationConfiguration: app?.authenticationConfiguration ?? AuthenticationConfiguration())
         }
         return endpoint
     }
@@ -323,7 +323,7 @@ open class Service {
     ///
     /// - Note: If the provider doesn't conform to `RealTimeProvider`, nothing will happen.
     public func on(event: RealTimeEvent, _ callback: @escaping RealTimeEventCallback) {
-        if let realTimeProvider = provider as? RealTimeProvider {
+        if let realTimeProvider = app?.provider as? RealTimeProvider {
             realTimeProvider.on(event: "\(path) \(event.rawValue)", callback: { object in
                 callback(object)
             })
@@ -336,7 +336,7 @@ open class Service {
     ///   - event: Event to listen for.
     ///   - callback: Single-use-callback.
     public func once(event: RealTimeEvent, _ callback: @escaping RealTimeEventCallback) {
-        if let realTimeProvider = provider as? RealTimeProvider {
+        if let realTimeProvider = app?.provider as? RealTimeProvider {
             realTimeProvider.once(event: "\(path) \(event.rawValue)", callback: { object in
                 callback(object)
             })
@@ -347,7 +347,7 @@ open class Service {
     ///
     /// - Parameter event: Real-time event to unregister from.
     public func off(event: RealTimeEvent) {
-        if let realTimeProvider = provider as? RealTimeProvider {
+        if let realTimeProvider = app?.provider as? RealTimeProvider {
             realTimeProvider.off(event: "\(path) \(event.rawValue)")
         }
     }
