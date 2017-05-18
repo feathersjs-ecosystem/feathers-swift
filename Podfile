@@ -9,6 +9,7 @@ target 'Feathers-iOS' do
   pod 'KeychainSwift', '8.0.2'
   pod 'ReactiveSwift', '1.1.3'
   pod 'RxSwift', '3.4.1'
+  pod 'PromiseKit', '4.2.0'
   # Pods for Feathers-iOS
 
   target 'Feathers-iOSTests' do
@@ -28,6 +29,7 @@ target 'Feathers-macOS' do
   pod 'KeychainSwift', '8.0.2'
   pod 'ReactiveSwift', '1.1.3'
   pod 'RxSwift', '3.4.1'
+  pod 'PromiseKit', '4.2.0'
   # Pods for Feathers-macOS
 
   target 'Feathers-macOSTests' do
@@ -47,6 +49,7 @@ target 'Feathers-tvOS' do
   pod 'KeychainSwift', '8.0.2'
   pod 'ReactiveSwift', '1.1.3'
   pod 'RxSwift', '3.4.1'
+  pod 'PromiseKit', '4.2.0'
   # Pods for Feathers-tvOS
 
   target 'Feathers-tvOSTests' do
@@ -66,6 +69,7 @@ target 'Feathers-watchOS' do
   pod 'KeychainSwift', '8.0.2'
   pod 'ReactiveSwift', '1.1.3'
   pod 'RxSwift', '3.4.1'
+  pod 'PromiseKit', '4.2.0'
   # Pods for Feathers-watchOS
 
 end
