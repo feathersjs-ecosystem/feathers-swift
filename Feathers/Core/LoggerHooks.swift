@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import PromiseKit
 
 /// Simple request logger
 public struct RequestLoggerHook: Hook {
 
-    public func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ()) {
+    public func run(with hookObject: HookObject) -> Promise<HookObject> {
         print("request to \(hookObject.service.path) for method \(hookObject.method)")
-        next(hookObject)
+        return Promise(value: hookObject)
     }
 
 }

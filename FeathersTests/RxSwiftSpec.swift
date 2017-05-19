@@ -10,6 +10,7 @@ import Quick
 import Nimble
 import Feathers
 import RxSwift
+import PromiseKit
 
 class RxSwiftSpec: QuickSpec {
 
@@ -21,7 +22,7 @@ class RxSwiftSpec: QuickSpec {
             var service: Service!
 
             beforeEach {
-                app = Feathers(provider: StubProvider())
+                app = Feathers(provider: StubProvider(data: ["name": "bob"]))
                 service = app.service(path: "users")
             }
 
@@ -99,8 +100,21 @@ class RxSwiftSpec: QuickSpec {
 
             }
 
+            describe("Promises") {
+
+                it("should forward the promises value") {
+                    var value = 0
+                    let _ = Observable<Int>.from(promise: Promise(value: 1))
+                        .do(onNext: {
+                            value = $0
+                        })
+                        .subscribe()
+                    expect(value).toEventually(equal(1))
+                }
+            }
+            
         }
-
+        
     }
-
+    
 }

@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import PromiseKit
+import enum Result.Result
 
 /// Hook object that gets passed through hook functions
 public struct HookObject {
@@ -30,22 +32,11 @@ public struct HookObject {
     public let service: Service
 
     /// The service method.
-    public let method: Service.Method
+    public var method: Service.Method
 
-    /// The service method parameters.
-    public var parameters: [String: Any]?
-
-    /// The request data.
-    public var data: [String: Any]?
-
-    /// The id (for get, remove, update and patch).
-    public var id: String?
-
-    /// Error that can be set which will stop the hook processing chain and run a special chain of error hooks.
-    public var error: Error?
-
-    /// Result of a successful method call, only in after hooks.
     public var result: Response?
+
+    public var error: Error?
 
     public init(
         type: Kind,
@@ -88,17 +79,11 @@ public extension HookObject {
     /// - Returns: A new hook object with copied over properties.
     func object(with type: Kind) -> HookObject {
         var object = HookObject(type: type, app: app, service: service, method: method)
-        object.parameters = parameters
-        object.data = data
-        object.id = id
-        object.error = error
         object.result = result
         return object
     }
 
 }
-
-public typealias HookNext = (HookObject) -> ()
 
 /// Hook protocol.
 public protocol Hook {
@@ -106,13 +91,11 @@ public protocol Hook {
     /// Function that's called by the middleware system to run the hook.
     ///
     /// In order to modify the hook, a copy of it has to be made because
-    /// Swift function parameters are `let` by default. If `next` is not called,
-    /// unexpected behavior will happen as the hook system will never finish processing the
-    /// rest of the chain.
+    /// Swift function parameters are `let` by default. 
     ///
-    /// - Warning: `next` *MUST* be called.
     /// - Parameters:
     ///   - hookObject: Hook object.
-    ///   - next: Next function.
-    func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ())
+    ///
+    /// - Returns: `Promise` object.
+    func run(with hookObject: HookObject) -> Promise<HookObject>
 }

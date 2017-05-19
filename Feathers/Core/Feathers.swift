@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 /// Main application object. Creates services and provides an interface for authentication.
 public final class Feathers {
@@ -59,36 +60,28 @@ public final class Feathers {
     ///
     /// - Parameters:
     ///   - credentials: Credentials to authenticate with.
-    ///   - completion: Completion block.
-    public func authenticate(_ credentials: [String: Any], completion: @escaping AuthenticationCallback) {
-        provider.authenticate(authenticationConfiguration.path, credentials: credentials) { [weak self] error, response in
-            if let error = error {
-                completion(nil, error)
-            } else if let response = response,
-                case let .jsonObject(object) = response.data,
+    /// - Returns: Promise that emits an access token.
+    public func authenticate(_ credentials: [String: Any]) -> Promise<String> {
+        return provider.authenticate(authenticationConfiguration.path, credentials: credentials)
+            .then { [weak self] response in
+                if case let .jsonObject(object) = response.data,
                 let json = object as? [String: Any],
                 let accessToken = json["accessToken"] as? String {
                     self?.authenticationStorage.accessToken = accessToken
-                    completion(accessToken, nil)
-            } else {
-                completion(nil, .unknown)
-            }
+                    return Promise(value: accessToken)
+                }
+                return Promise(error: FeathersError.unknown)
         }
     }
-
+    
     /// Log out the application.
     ///
-    /// - Parameter completion: Completion block.
-    public func logout(_ completion: @escaping FeathersCallback) {
-        provider.logout(path: authenticationConfiguration.path) { [weak self] error, response in
-            if let error = error {
-                completion(error, nil)
-            } else if let response = response {
+    /// - Returns: Promise that emits a response.
+    public func logout() -> Promise<Response> {
+        return provider.logout(path: authenticationConfiguration.path)
+            .then { [weak self] response in
                 self?.authenticationStorage.accessToken = nil
-                completion(nil, response)
-            } else {
-                completion(.unknown, nil)
-            }
+                return Promise(value: response)
         }
     }
 

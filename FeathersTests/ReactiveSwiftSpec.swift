@@ -10,6 +10,8 @@ import Quick
 import Nimble
 import ReactiveSwift
 import Feathers
+import PromiseKit
+import Result
 
 class ReactiveSwift: QuickSpec {
 
@@ -21,7 +23,7 @@ class ReactiveSwift: QuickSpec {
             var service: Service!
 
             beforeEach {
-                app = Feathers(provider: StubProvider())
+                app = Feathers(provider: StubProvider(data: ["name": "Bob"]))
                 service = app.service(path: "users")
             }
 
@@ -41,7 +43,7 @@ class ReactiveSwift: QuickSpec {
                     }, value: { value in
                         didReceiveValue = true
                     })
-                    .start()
+                        .start()
                     expect(didDispose).toEventually(beTrue())
                     expect(didInterrupt).toEventually(beFalse())
                     expect(didReceiveValue).toEventually(beTrue())
@@ -74,7 +76,7 @@ class ReactiveSwift: QuickSpec {
 
             describe("Service") {
 
-                it("should send a request") {
+                xit("should send a request") {
                     var didDispose = false
                     var didReceiveValue = false
                     var didComplete = false
@@ -99,8 +101,43 @@ class ReactiveSwift: QuickSpec {
 
             }
 
+            describe("Promises") {
+
+                it("should forward the promise's value then complete") {
+                    let producer = SignalProducer<Int, NoError>.from(promise: Promise(value: 1))
+                    var value = 0
+                    var didComplete = false
+                    producer
+                        .on(completed: {
+                            didComplete = true
+                        }, value: {
+                            value = $0
+                        })
+                        .start()
+                    expect(didComplete).toEventually(beTrue())
+                    expect(value).toEventually(equal(1))
+                }
+
+                it("should forward the promise's error") {
+                    let producer = SignalProducer<Int, FeathersError>.from(promise: Promise(error: FeathersError.unknown))
+                    var error: FeathersError?
+                    var didComplete = false
+                    producer
+                        .on(failed: {
+                            error = $0
+                        }, completed: {
+                            didComplete = true
+                        })
+                        .start()
+                    expect(didComplete).toEventually(beFalse())
+                    expect(error).toEventuallyNot(beNil())
+                    
+                }
+                
+            }
+            
         }
-
+        
     }
-
+    
 }

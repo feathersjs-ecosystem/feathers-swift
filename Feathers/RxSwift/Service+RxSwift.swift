@@ -12,20 +12,7 @@ import RxSwift
 public extension Service {
 
     public func request(_ method: Service.Method) -> Observable<Response> {
-        return Observable.create { [weak self] observer in
-            guard let vSelf = self else {
-                return Disposables.create()
-            }
-            vSelf.request(method) { error, response in
-                if let error = error {
-                    observer.onError(error)
-                } else if let response = response {
-                    observer.onNext(response)
-                    observer.onCompleted()
-                }
-            }
-            return Disposables.create()
-        }
+        return Observable.from(promise: request(method))
     }
 
     public func on(event: Service.RealTimeEvent) -> Observable<[String: Any]> {

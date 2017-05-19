@@ -8,27 +8,34 @@
 
 import Feathers
 import Foundation
+import PromiseKit
 
 class StubProvider: Provider {
 
+    private let stubbedData: [String: Any]
+
     var baseURL: URL {
         return URL(string: "http://myserver.com")!
+    }
+
+    init(data: [String: Any]) {
+        stubbedData = data
     }
 
     func setup(app: Feathers) {
         // no-op
     }
 
-    func request(endpoint: Endpoint, _ completion: @escaping FeathersCallback) {
-        completion(nil, Response(pagination: nil, data: .jsonObject([:])))
+    func request(endpoint: Endpoint) -> Promise<Response> {
+        return Promise(value: Response(pagination: nil, data: .jsonObject(stubbedData)))
     }
 
-    func authenticate(_ path: String, credentials: [String : Any], _ completion: @escaping FeathersCallback) {
-        completion(nil, Response(pagination: nil, data: .jsonObject(["accessToken":"some_token"])))
+    func authenticate(_ path: String, credentials: [String : Any]) -> Promise<Response> {
+        return Promise(value: Response(pagination: nil, data: .jsonObject(["accessToken":"some_token"])))
     }
 
-    func logout(path: String, _ completion: @escaping FeathersCallback) {
-        completion(nil, Response(pagination: nil, data: .jsonObject([:])))
+    func logout(path: String) -> Promise<Response> {
+        return Promise(value: Response(pagination: nil, data: .jsonObject([:])))
     }
 
 }
