@@ -14,6 +14,7 @@ Why should you use it?
 * Reactive extensions (ReactiveSwift and RxSwift)
 * Integrates seemlessly with any FeathersJS services
 * Supports iOS, macOS, tvOS, and watchOS
+* Promise-based
 
 If you use FeathersJS (which you should), FeathersSwift is the perfect choice for you. No more dealing with HTTP requests or socket clients. One simple interface to rule them all and in the darkness, unify them :ring:.
 
@@ -52,12 +53,12 @@ let userService = feathersRestApp.service("users")
 Finally, make a request:
 
 ```swift
-service.request(.find(parameters: ["name": "Bob"])) { error, response in
-  if let error = error {
-    // Do something with the error
-  } else if let response = response {
-      print(response.data)
-  }
+service.request(.find(parameters: ["name": "Bob"]))
+.then { response in
+  print(response)
+}
+.catch { error in
+  print("Error finding Bob!")
 }
 ```
 
@@ -94,7 +95,9 @@ Authentication returns a JWT payload which is cached by the application and used
 To log out, simply call:
 
 ```swift
-feathersRestApp.logout { error, response in
+feathersRestApp.logout().then { response in
+
+}.catch { _ in
 
 }
 ```
@@ -143,27 +146,53 @@ To create a hook, create an object that conforms to `Hook`:
 
 ```swift
 public protocol Hook {
-    func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ())
+    func run(with hookObject: HookObject) -> Promise<HookObject>
 }
 ```
 
-A hook that looks all `create` events might look like this:
+A hook that logs all `create` events might look like this:
 
 ```swift
 struct CreateLogHook: Hook {
 
-  func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ()) {
+  func run(with hookObject: HookObject) -> Promise<HookObject> {
     var object = hookObject
     if object.method == .create {
       print("create happened")
     }
-    next(object)
+    return Promise(value: object)
   }
 
 }
 ```
 
-There are two things to note here. One, `var object = hookObject`. Swift function parameters are `let` constants so you first have to copy the object. Second, the next block. Because promises aren't standard in Cocoa, hooks use an ExpressJS-like middleware system, using a next block to process a chain of hooks. You **must** call `next` with the hook object.
+Or you can do something more complex like a network call:
+
+```swift
+struct FetchAssociatedUserHook: Hook {
+  func run(with hookObject: HookObject) -> Promise<HookObject> {
+    var object = hookObject
+    guard object.app.service.path == "groups" else {
+      return Promise(value: hookObject)
+    }
+    guard case var .get(id, parameters)  = object.method else {
+      return Promise(value: hookObject)
+    }
+    guard let userIdentifier = parameters["user_id"] as? String else {
+      return Promise(value: hookObject)
+    }
+    return object.app.service("users").request(.get(parameters: ["id": userIdentifier])).then { response in
+      if case let .jsonObject(object) = response.data {
+        parameters["user_id"] = object["id"]
+        object.method = .get(id, parameters)
+      }
+      return Promise(value: object)
+    }
+  }
+}
+```
+
+Important to note is `var object = hookObject`. Swift function parameters are `let` constants so you first have to copy the object if you want to modify it.
 
 #### Hook Object
 
@@ -192,16 +221,7 @@ public struct HookObject {
     public let service: Service
 
     /// The service method.
-    public let method: Service.Method
-
-    /// The service method parameters.
-    public var parameters: [String: Any]?
-
-    /// The request data.
-    public var data: [String: Any]?
-
-    /// The id (for get, remove, update and patch).
-    public var id: String?
+    public var method: Service.Method
 
     /// Error that can be set which will stop the hook processing chain and run a special chain of error hooks.
     public var error: Error?
