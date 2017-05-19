@@ -183,7 +183,8 @@ final public class Service {
     ///
     /// - Parameters:
     ///   - method: Service method to request for.
-    ///   - completion: Completion block.
+    ///
+    /// - Returns a promise that emits a response.
     open func request(_ method: Service.Method) -> Promise<Response> {
         guard let application = app else {
             return Promise(error: FeathersError.unknown)

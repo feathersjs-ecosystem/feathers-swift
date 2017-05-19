@@ -73,10 +73,10 @@ public final class Feathers {
                 return Promise(error: FeathersError.unknown)
         }
     }
-
+    
     /// Log out the application.
     ///
-    /// - Parameter completion: Completion block.
+    /// - Returns: Promise that emits a response.
     public func logout() -> Promise<Response> {
         return provider.logout(path: authenticationConfiguration.path)
             .then { [weak self] response in
