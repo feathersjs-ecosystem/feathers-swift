@@ -83,8 +83,6 @@ public extension HookObject {
 
 }
 
-public typealias HookNext = (HookObject) -> ()
-
 /// Hook protocol.
 public protocol Hook {
 
