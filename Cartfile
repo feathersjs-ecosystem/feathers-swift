@@ -1,3 +1,4 @@
 github "ReactiveCocoa/ReactiveSwift"
 github "ReactiveX/RxSwift"
 github "marketplacer/keychain-swift"
+github "mxcl/PromiseKit", "4.2.0"
