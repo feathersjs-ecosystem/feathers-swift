@@ -224,10 +224,12 @@ final public class Service {
         // If the chain errors at any point, run all the error hooks then send the final error
         return chain.recover { [weak self] error -> Promise<Response> in
             guard let vSelf = self else { throw error }
-            let hook = HookObject(type: .error, app: application, service: vSelf, method: method)
+            var hook = HookObject(type: .error, app: application, service: vSelf, method: method)
+            // Attach the error to the hook so the user can inspect what happened
+            hook.result = error as? FeathersError != nil ? .failure(error as! FeathersError) : hook.result
             let errorChain = errorHooks.reduce(Promise(value: hook), reduceHooksClosure)
             return errorChain.then { hook -> Promise<Response> in
-                return hook.result?.error != nil ? Promise(error: hook.result!.error!) : Promise(error: FeathersError.unknown)
+                return hook.result?.error != nil ? Promise(error: hook.result!.error!) : Promise(error: error)
             }
         }
     }
