@@ -26,6 +26,21 @@ struct ErrorHook: Hook {
 
 }
 
+struct ModifyErrorHook: Hook {
+    let error: FeathersError
+
+    init(error: FeathersError) {
+        self.error = error
+    }
+
+    func run(with hookObject: HookObject) -> Promise<HookObject> {
+        var object = hookObject
+        object.result = .failure(error)
+        return Promise(value: object)
+    }
+
+}
+
 struct StubHook: Hook {
 
     let data: ResponseData
