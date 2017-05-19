@@ -12,8 +12,14 @@ import PromiseKit
 
 class StubProvider: Provider {
 
+    private let stubbedData: [String: Any]
+
     var baseURL: URL {
         return URL(string: "http://myserver.com")!
+    }
+
+    init(data: [String: Any]) {
+        stubbedData = data
     }
 
     func setup(app: Feathers) {
@@ -21,7 +27,7 @@ class StubProvider: Provider {
     }
 
     func request(endpoint: Endpoint) -> Promise<Response> {
-        return Promise(value: Response(pagination: nil, data: .jsonObject([:])))
+        return Promise(value: Response(pagination: nil, data: .jsonObject(stubbedData)))
     }
 
     func authenticate(_ path: String, credentials: [String : Any]) -> Promise<Response> {
