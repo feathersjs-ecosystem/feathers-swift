@@ -36,7 +36,7 @@ struct ModifyErrorHook: Hook {
 
     func run(with hookObject: HookObject) -> Promise<HookObject> {
         var object = hookObject
-        object.result = .failure(error)
+        object.error = error
         return Promise(value: object)
     }
 
@@ -52,7 +52,7 @@ struct StubHook: Hook {
 
     func run(with hookObject: HookObject) -> Promise<HookObject> {
         var object = hookObject
-        object.result = .success(Response(pagination: nil, data: data))
+        object.result = Response(pagination: nil, data: data)
         return Promise(value: object)
     }
 
@@ -69,7 +69,7 @@ struct PopuplateDataAfterHook: Hook {
 
     func run(with hookObject: HookObject) -> Promise<HookObject> {
         var object = hookObject
-        object.result = .success(Response(pagination: nil, data: .jsonObject(data)))
+        object.result = Response(pagination: nil, data: .jsonObject(data))
         return Promise(value: object)
     }
 

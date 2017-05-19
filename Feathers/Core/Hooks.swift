@@ -34,7 +34,9 @@ public struct HookObject {
     /// The service method.
     public var method: Service.Method
 
-    public var result: Result<Response, FeathersError>?
+    public var result: Response?
+
+    public var error: Error?
 
     public init(
         type: Kind,
@@ -57,7 +59,7 @@ public extension HookObject {
     /// - Returns: Modified hook object.
     public func objectByAdding(result: Response) -> HookObject {
         var object = self
-        object.result = .success(result)
+        object.result = result
         return object
     }
 
@@ -65,9 +67,9 @@ public extension HookObject {
     ///
     /// - Parameter error: Error to attach.
     /// - Returns: Modified hook object.
-    public func objectByAdding(error: FeathersError) -> HookObject {
+    public func objectByAdding(error: Error) -> HookObject {
         var object = self
-        object.result = .failure(error)
+        object.error = error
         return object
     }
 
