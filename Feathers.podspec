@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
     ss.framework = "Foundation"
     ss.dependency 'KeychainSwift', '8.0.2'
     ss.dependency 'Result', '3.2.2'
+    ss.dependency 'PromiseKit', '4.2.0'
   end
 
   s.subspec "ReactiveSwift" do |ss|
