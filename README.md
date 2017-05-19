@@ -179,7 +179,7 @@ struct FetchAssociatedUserHook: Hook {
       return Promise(value: hookObject)
     }
     guard let userIdentifier = parameters["user_id"] as? String else {
-      return Promise(value: hookObject)
+      return Promise(error: .myCustomError("no associated user found when expected to exist"))
     }
     return object.app.service("users").request(.get(parameters: ["id": userIdentifier])).then { response in
       if case let .jsonObject(object) = response.data {
@@ -243,7 +243,7 @@ public struct HookObject {
 }
 ```
 
-All the `var` declarations are mutable and you can set and mutate them as needed in your hooks.
+All the `var` declarations are mutable and you can set and mutate them as needed in your hooks, including `.method` if you want to do things like swap out parameters or change the method call entirely (e.g. changing a `.get` to a `.find`).
 
 Important things to note about the hook object:
 - Setting `error` will cause the hook processing chain to stop and immediately run any error hooks. If that happens in a `before` hook, the request will also be skipped.
