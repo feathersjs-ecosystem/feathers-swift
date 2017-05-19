@@ -14,14 +14,16 @@
 		A42A318B5CD4A92F1664A78A /* Pods_Feathers_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42B8A357113C8DF04CA54B3 /* Pods_Feathers_watchOS.framework */; };
 		BDE8A6E68F45A2DEBB9BA658 /* Pods_Feathers_macOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14980B3F92E1BDF24218634 /* Pods_Feathers_macOSTests.framework */; };
 		E73C522711569D179CC62302 /* Pods_Feathers_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1097E70407C5C1C5F50445EC /* Pods_Feathers_tvOS.framework */; };
-		EA12E0611ECE950000A0DCF7 /* FeathersTests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12E0601ECE950000A0DCF7 /* FeathersTests_iOS.swift */; };
 		EA12E0631ECE950100A0DCF7 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */; };
 		EA12E0691ECE950C00A0DCF7 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
 		EA12E06A1ECE952400A0DCF7 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
 		EA12E06B1ECE952400A0DCF7 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
-		EA1DEBC11ECE93AD002CA124 /* Promise+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9F81ECDE6FF000997B4 /* Promise+Error.swift */; };
-		EA1DEBC21ECE93AD002CA124 /* Promise+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9F81ECDE6FF000997B4 /* Promise+Error.swift */; };
-		EA1DEBC31ECE93AE002CA124 /* Promise+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9F81ECDE6FF000997B4 /* Promise+Error.swift */; };
+		EA12E0711ECEA4C000A0DCF7 /* RxSwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12E0701ECEA4C000A0DCF7 /* RxSwiftSpec.swift */; };
+		EA12E0721ECEA4C000A0DCF7 /* RxSwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12E0701ECEA4C000A0DCF7 /* RxSwiftSpec.swift */; };
+		EA12E0731ECEA4C000A0DCF7 /* RxSwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12E0701ECEA4C000A0DCF7 /* RxSwiftSpec.swift */; };
+		EA12E0791ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12E0781ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift */; };
+		EA12E07A1ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12E0781ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift */; };
+		EA12E07B1ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12E0781ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift */; };
 		EA3B50361ECAC11B0046DCFF /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
 		EA3B50371ECAC11B0046DCFF /* AuthenticationHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */; };
 		EA3B50381ECAC11B0046DCFF /* LoggerHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */; };
@@ -39,7 +41,6 @@
 		EA3B50451ECAC11B0046DCFF /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
 		EA52954D1ECE912C0014F156 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
 		EA52954E1ECE912C0014F156 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
-		EA63C9F91ECDE6FF000997B4 /* Promise+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9F81ECDE6FF000997B4 /* Promise+Error.swift */; };
 		EA63C9FB1ECE60A3000997B4 /* SignalProducer+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FA1ECE60A3000997B4 /* SignalProducer+Promise.swift */; };
 		EA63C9FD1ECE625B000997B4 /* Observable+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */; };
 		EA63C9FE1ECE625B000997B4 /* Observable+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */; };
@@ -146,8 +147,8 @@
 		DA52CC1FCAA59D18EE332870 /* Pods-Feathers-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-tvOSTests/Pods-Feathers-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		E53767B71C789A5486F032B4 /* Pods_Feathers_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feathers_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA12E05E1ECE950000A0DCF7 /* Feathers-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA12E0601ECE950000A0DCF7 /* FeathersTests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeathersTests_iOS.swift; sourceTree = "<group>"; };
-		EA12E0621ECE950100A0DCF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA12E0701ECEA4C000A0DCF7 /* RxSwiftSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxSwiftSpec.swift; path = FeathersTests/RxSwiftSpec.swift; sourceTree = SOURCE_ROOT; };
+		EA12E0781ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactiveSwiftSpec.swift; path = FeathersTests/ReactiveSwiftSpec.swift; sourceTree = SOURCE_ROOT; };
 		EA3017131EC7867E00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = Core/Hooks.swift; sourceTree = "<group>"; };
 		EA301AB41EC8BEBD00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = FeathersTests/Hooks.swift; sourceTree = SOURCE_ROOT; };
 		EA301AB91EC8CD0400114F19 /* StubProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StubProvider.swift; path = FeathersTests/StubProvider.swift; sourceTree = SOURCE_ROOT; };
@@ -155,7 +156,6 @@
 		EA452A6A1EA2B14300427CEF /* Feathers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feathers.h; sourceTree = "<group>"; };
 		EA452A6B1EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA52954B1ECE912C0014F156 /* ServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceSpec.swift; path = FeathersTests/ServiceSpec.swift; sourceTree = SOURCE_ROOT; };
-		EA63C9F81ECDE6FF000997B4 /* Promise+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Promise+Error.swift"; path = "Core/Promise+Error.swift"; sourceTree = "<group>"; };
 		EA63C9FA1ECE60A3000997B4 /* SignalProducer+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SignalProducer+Promise.swift"; path = "ReactiveSwift/SignalProducer+Promise.swift"; sourceTree = "<group>"; };
 		EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Observable+Promise.swift"; path = "RxSwift/Observable+Promise.swift"; sourceTree = "<group>"; };
 		EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationHooks.swift; path = Core/AuthenticationHooks.swift; sourceTree = "<group>"; };
@@ -280,15 +280,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EA12E05F1ECE950000A0DCF7 /* FeathersTests-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				EA12E0601ECE950000A0DCF7 /* FeathersTests_iOS.swift */,
-				EA12E0621ECE950100A0DCF7 /* Info.plist */,
-			);
-			path = "FeathersTests-iOS";
-			sourceTree = "<group>";
-		};
 		EA301AB31EC8BEAF00114F19 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,7 +311,6 @@
 			children = (
 				EA452A691EA2B14300427CEF /* Feathers */,
 				EABBADB01EBE77C900522603 /* FeathersTests */,
-				EA12E05F1ECE950000A0DCF7 /* FeathersTests-iOS */,
 				EA452A681EA2B14300427CEF /* Products */,
 				ADDB450F2B405972BF99D674 /* Pods */,
 				E6F86BE4240DD808800C3F09 /* Frameworks */,
@@ -353,14 +343,6 @@
 			path = Feathers;
 			sourceTree = "<group>";
 		};
-		EA63C9F71ECDE6EC000997B4 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				EA63C9F81ECDE6FF000997B4 /* Promise+Error.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
 		EA954C6E1EC9A4990094FF43 /* Hooks */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +360,8 @@
 				EA301AB31EC8BEAF00114F19 /* Fakes */,
 				EAC0BC821EC90A600049FB13 /* Info.plist */,
 				EA52954B1ECE912C0014F156 /* ServiceSpec.swift */,
+				EA12E0701ECEA4C000A0DCF7 /* RxSwiftSpec.swift */,
+				EA12E0781ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift */,
 			);
 			name = FeathersTests;
 			path = "FeathersTests-iOS";
@@ -396,7 +380,6 @@
 		EABBAE091EBFA69C00522603 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				EA63C9F71ECDE6EC000997B4 /* Extensions */,
 				EA954C6E1EC9A4990094FF43 /* Hooks */,
 				EABBAE121EBFA6A400522603 /* Service.swift */,
 				EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */,
@@ -967,9 +950,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA12E06A1ECE952400A0DCF7 /* StubProvider.swift in Sources */,
+				EA12E0791ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift in Sources */,
+				EA12E0711ECEA4C000A0DCF7 /* RxSwiftSpec.swift in Sources */,
 				EA12E0691ECE950C00A0DCF7 /* ServiceSpec.swift in Sources */,
 				EA12E06B1ECE952400A0DCF7 /* Hooks.swift in Sources */,
-				EA12E0611ECE950000A0DCF7 /* FeathersTests_iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,7 +963,6 @@
 			files = (
 				EA3B50421ECAC11B0046DCFF /* Feathers+RxSwift.swift in Sources */,
 				EA3B50381ECAC11B0046DCFF /* LoggerHooks.swift in Sources */,
-				EA1DEBC31ECE93AE002CA124 /* Promise+Error.swift in Sources */,
 				EA63CA001ECE625B000997B4 /* Observable+Promise.swift in Sources */,
 				EA3B50451ECAC11B0046DCFF /* Service+ReactiveSwift.swift in Sources */,
 				EA3B50391ECAC11B0046DCFF /* Service.swift in Sources */,
@@ -1004,7 +987,6 @@
 			files = (
 				EA954C781EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */,
 				EAC0BCF51EC90FF30049FB13 /* Feathers+RxSwift.swift in Sources */,
-				EA63C9F91ECDE6FF000997B4 /* Promise+Error.swift in Sources */,
 				EAC0BCF01EC90FF30049FB13 /* Response.swift in Sources */,
 				EAC0BCF81EC90FF30049FB13 /* Service+ReactiveSwift.swift in Sources */,
 				EA63C9FB1ECE60A3000997B4 /* SignalProducer+Promise.swift in Sources */,
@@ -1029,7 +1011,6 @@
 			files = (
 				EA954C791EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */,
 				EAC0BD2F1EC953A90049FB13 /* Feathers+RxSwift.swift in Sources */,
-				EA1DEBC11ECE93AD002CA124 /* Promise+Error.swift in Sources */,
 				EA63C9FE1ECE625B000997B4 /* Observable+Promise.swift in Sources */,
 				EAC0BD2A1EC953A90049FB13 /* Response.swift in Sources */,
 				EAC0BD321EC953A90049FB13 /* Service+ReactiveSwift.swift in Sources */,
@@ -1053,6 +1034,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAC0BD521EC964430049FB13 /* Hooks.swift in Sources */,
+				EA12E07A1ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift in Sources */,
+				EA12E0721ECEA4C000A0DCF7 /* RxSwiftSpec.swift in Sources */,
 				EA52954D1ECE912C0014F156 /* ServiceSpec.swift in Sources */,
 				EAC0BD511EC964430049FB13 /* StubProvider.swift in Sources */,
 			);
@@ -1064,7 +1047,6 @@
 			files = (
 				EA954C7A1EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */,
 				EAC0BD8E1EC969780049FB13 /* Feathers+RxSwift.swift in Sources */,
-				EA1DEBC21ECE93AD002CA124 /* Promise+Error.swift in Sources */,
 				EA63C9FF1ECE625B000997B4 /* Observable+Promise.swift in Sources */,
 				EAC0BD891EC969780049FB13 /* Response.swift in Sources */,
 				EAC0BD911EC969780049FB13 /* Service+ReactiveSwift.swift in Sources */,
@@ -1088,6 +1070,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAC0BD931EC9697E0049FB13 /* Hooks.swift in Sources */,
+				EA12E07B1ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift in Sources */,
+				EA12E0731ECEA4C000A0DCF7 /* RxSwiftSpec.swift in Sources */,
 				EA52954E1ECE912C0014F156 /* ServiceSpec.swift in Sources */,
 				EAC0BD921EC9697E0049FB13 /* StubProvider.swift in Sources */,
 			);
@@ -1118,7 +1102,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 80360198F5F8A0B2676AA35C /* Pods-Feathers-iOSTests.debug.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = "FeathersTests-iOS/Info.plist";
+				INFOPLIST_FILE = FeathersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.FeathersTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1130,7 +1114,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D1907BA98DA87172BF1BC2D1 /* Pods-Feathers-iOSTests.release.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = "FeathersTests-iOS/Info.plist";
+				INFOPLIST_FILE = FeathersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.FeathersTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1230,7 +1214,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Feathers;
@@ -1279,7 +1264,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Feathers;
 				SDKROOT = iphoneos;
@@ -1515,6 +1501,7 @@
 				EA12E0681ECE950100A0DCF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA3B502A1ECAC05C0046DCFF /* Build configuration list for PBXNativeTarget "Feathers-watchOS" */ = {
 			isa = XCConfigurationList;
