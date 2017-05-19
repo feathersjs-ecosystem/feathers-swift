@@ -26,6 +26,7 @@ struct ErrorHook: Hook {
 
 }
 
+// Hook that doesn't reject, just modifies the error
 struct ModifyErrorHook: Hook {
     let error: FeathersError
 
