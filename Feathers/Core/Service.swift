@@ -203,28 +203,30 @@ final public class Service {
         let beforeChain = beforeHooks.reduce(Promise(value: beforeHookObject), reduceHooksClosure)
         let chain = beforeChain.then { [weak self] hook -> Promise<Response> in
             guard let vSelf = self else { return Promise(error: FeathersError.unknown) }
-            // Create the chain of after hooks
-            let afterHookObject = hook.object(with: .after)
-            let afterChain = afterHooks.reduce(Promise(value: afterHookObject), reduceHooksClosure)
             // If the result has been set, skip the request and run the after hooks
             if let _ = hook.result?.value {
+                let afterHookObject = hook.object(with: .after)
+                let afterChain = afterHooks.reduce(Promise(value: afterHookObject), reduceHooksClosure)
                 return afterChain.then {
                     return $0.result?.value != nil ? Promise(value: $0.result!.value!) : Promise(error: FeathersError.unknown)
                 }
-            }
-            let endpoint = vSelf.constructEndpoint(from: hook.method)
-            return application.provider.request(endpoint: endpoint).then { response in
-                return afterChain.then { value in
-                    return value.result?.value != nil ? Promise(value: value.result!.value!) : Promise(error: FeathersError.unknown)
+            } else {
+                let endpoint = vSelf.constructEndpoint(from: hook.method)
+                return application.provider.request(endpoint: endpoint).then { response in
+                    let afterHookObject = hook.object(with: .after).objectByAdding(result: response)
+                    let afterChain = afterHooks.reduce(Promise(value: afterHookObject), reduceHooksClosure)
+                    return afterChain.then { value in
+                        return value.result?.value != nil ? Promise(value: value.result!.value!) : Promise(error: FeathersError.unknown)
+                    }
                 }
             }
         }
         // If the chain errors at any point, run all the error hooks then send the final error
-        return chain.flatMapError { [weak self] (error: Error) -> Promise<Response> in
-            guard let vSelf = self else { return Promise(error: error) }
+        return chain.recover { [weak self] error -> Promise<Response> in
+            guard let vSelf = self else { throw error }
             let hook = HookObject(type: .error, app: application, service: vSelf, method: method)
             let errorChain = errorHooks.reduce(Promise(value: hook), reduceHooksClosure)
-            return errorChain.then { hook in
+            return errorChain.then { hook -> Promise<Response> in
                 return hook.result?.error != nil ? Promise(error: hook.result!.error!) : Promise(error: FeathersError.unknown)
             }
         }
