@@ -9,8 +9,6 @@
 import Foundation
 import PromiseKit
 
-public typealias FeathersCallback = (FeathersError?, Response?) -> ()
-
 /// Abstract interface for a provider.
 public protocol Provider: class {
 

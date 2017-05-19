@@ -10,9 +10,9 @@ import Foundation
 import RxSwift
 import PromiseKit
 
-extension Observable {
+public extension Observable {
 
-    static func from(promise: Promise<Element>) -> Observable<Element> {
+    static public func from(promise: Promise<Element>) -> Observable<Element> {
         return Observable.create { observer in
             promise.then { value -> () in
                 observer.onNext(value)

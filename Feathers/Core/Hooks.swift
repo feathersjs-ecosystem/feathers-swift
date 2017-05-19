@@ -34,7 +34,7 @@ public struct HookObject {
     /// The service method.
     public var method: Service.Method
 
-    var result: Result<Response, FeathersError>?
+    public var result: Result<Response, FeathersError>?
 
     public init(
         type: Kind,

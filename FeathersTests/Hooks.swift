@@ -8,7 +8,10 @@
 
 import Feathers
 import Foundation
+import PromiseKit
+import enum Result.Result
 
+/// Hook that always errors
 struct ErrorHook: Hook {
 
     let error: FeathersError
@@ -17,11 +20,8 @@ struct ErrorHook: Hook {
         self.error = error
     }
 
-    func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ()) {
-        var object = hookObject
-        object.error = error
-        print("running error hook")
-        next(object)
+    func run(with hookObject: HookObject) -> Promise<HookObject> {
+        return Promise(error: error)
     }
 
 }
@@ -34,14 +34,10 @@ struct StubHook: Hook {
         self.data = data
     }
 
-    func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ()) {
+    func run(with hookObject: HookObject) -> Promise<HookObject> {
         var object = hookObject
-        if object.type != .before {
-            object.error = NSError(domain: "com.feathersjs.com", code: 0, userInfo: nil)
-        } else {
-            object.result = Response(pagination: nil, data: data)
-        }
-        next(object)
+        object.result = .success(Response(pagination: nil, data: data))
+        return Promise(value: object)
     }
 
 }
@@ -55,14 +51,10 @@ struct PopuplateDataAfterHook: Hook {
         self.data = data
     }
 
-    func run(with hookObject: HookObject, _ next: @escaping (HookObject) -> ()) {
+    func run(with hookObject: HookObject) -> Promise<HookObject> {
         var object = hookObject
-        if object.type != .after {
-            object.error = NSError(domain: "com.feathersjs.com", code: 0, userInfo: nil)
-        } else {
-            object.result = Response(pagination: nil, data: .jsonObject(data))
-        }
-        next(object)
+        object.result = .success(Response(pagination: nil, data: .jsonObject(data)))
+        return Promise(value: object)
     }
 
 }

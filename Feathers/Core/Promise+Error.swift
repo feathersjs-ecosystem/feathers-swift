@@ -17,6 +17,8 @@ public extension Promise {
                 let promise = transform(error)
                 let _ = promise.then { value in
                     resolve(value)
+                }.catch { error in
+                    reject(error)
                 }
             }
         }
