@@ -38,6 +38,9 @@
 		EA2062271ECEC2A4005FF6AE /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */; };
 		EA2062281ECEC2A4005FF6AE /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
 		EA2062291ECEC2A4005FF6AE /* SignalProducer+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FA1ECE60A3000997B4 /* SignalProducer+Promise.swift */; };
+		EA20622A1ECEC5A8005FF6AE /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
+		EA20622B1ECEC5AC005FF6AE /* AuthenticationHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C6F1EC9A4B10094FF43 /* AuthenticationHooks.swift */; };
+		EA20622C1ECEC5AC005FF6AE /* LoggerHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */; };
 		EA52954D1ECE912C0014F156 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
 		EA52954E1ECE912C0014F156 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
 		EA63C9FB1ECE60A3000997B4 /* SignalProducer+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FA1ECE60A3000997B4 /* SignalProducer+Promise.swift */; };
@@ -966,7 +969,10 @@
 				EA2062271ECEC2A4005FF6AE /* Feathers+ReactiveSwift.swift in Sources */,
 				EA20621C1ECEC29D005FF6AE /* Service.swift in Sources */,
 				EA2062251ECEC2A4005FF6AE /* Service+RxSwift.swift in Sources */,
+				EA20622B1ECEC5AC005FF6AE /* AuthenticationHooks.swift in Sources */,
 				EA2062201ECEC29D005FF6AE /* FeathersError.swift in Sources */,
+				EA20622C1ECEC5AC005FF6AE /* LoggerHooks.swift in Sources */,
+				EA20622A1ECEC5A8005FF6AE /* Hooks.swift in Sources */,
 				EA2062291ECEC2A4005FF6AE /* SignalProducer+Promise.swift in Sources */,
 				EA2062211ECEC29D005FF6AE /* Provider.swift in Sources */,
 				EA20621F1ECEC29D005FF6AE /* Feathers.swift in Sources */,
@@ -1500,6 +1506,7 @@
 				EA20621B1ECEC0F4005FF6AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA452A611EA2B14300427CEF /* Build configuration list for PBXProject "Feathers" */ = {
 			isa = XCConfigurationList;
