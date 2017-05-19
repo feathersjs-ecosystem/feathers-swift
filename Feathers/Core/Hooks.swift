@@ -89,13 +89,11 @@ public protocol Hook {
     /// Function that's called by the middleware system to run the hook.
     ///
     /// In order to modify the hook, a copy of it has to be made because
-    /// Swift function parameters are `let` by default. If `next` is not called,
-    /// unexpected behavior will happen as the hook system will never finish processing the
-    /// rest of the chain.
+    /// Swift function parameters are `let` by default. 
     ///
-    /// - Warning: `next` *MUST* be called.
     /// - Parameters:
     ///   - hookObject: Hook object.
-    ///   - next: Next function.
+    ///
+    /// - Returns: `Promise` object.
     func run(with hookObject: HookObject) -> Promise<HookObject>
 }
