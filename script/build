@@ -30,7 +30,7 @@ fi
 
 set -o pipefail
 xcodebuild $XCODE_ACTION \
-    -workspace "$TRAVIS_XCODE_PROJECT" \
+    -project "$TRAVIS_XCODE_PROJECT" \
     -scheme "$TRAVIS_XCODE_SCHEME" \
     -sdk "$XCODE_SDK" \
     -destination "$XCODE_DESTINATION" \
