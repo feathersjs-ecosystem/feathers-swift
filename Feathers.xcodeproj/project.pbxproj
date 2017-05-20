@@ -8,19 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		EA0F0BB21ED0A6C9000517A4 /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */; };
-		EA0F0BB81ED0AAEA000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0BB51ED0AAEA000517A4 /* KeychainSwift.framework */; };
-		EA0F0BBA1ED0AAEA000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0BB71ED0AAEA000517A4 /* Result.framework */; };
-		EA0F0BBE1ED0ABA1000517A4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0BBC1ED0ABA1000517A4 /* Nimble.framework */; };
-		EA0F0BBF1ED0ABA1000517A4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0BBD1ED0ABA1000517A4 /* Quick.framework */; };
-		EA0F0BC31ED0ABBC000517A4 /* Nimble.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0BC11ED0ABBC000517A4 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EA0F0BC41ED0ABBC000517A4 /* Quick.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0BC21ED0ABBC000517A4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EA0F0C231ED0AF3D000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0BB61ED0AAEA000517A4 /* ReactiveSwift.framework */; };
-		EA0F0C651ED0B16C000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0BB51ED0AAEA000517A4 /* KeychainSwift.framework */; };
-		EA0F0C661ED0B16C000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0BB61ED0AAEA000517A4 /* ReactiveSwift.framework */; };
-		EA0F0C671ED0B16C000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0BB71ED0AAEA000517A4 /* Result.framework */; };
-		EA0F0C6B1ED0B19B000517A4 /* KeychainSwift.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0C681ED0B19B000517A4 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EA0F0C6C1ED0B19B000517A4 /* ReactiveSwift.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0C691ED0B19B000517A4 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EA0F0C6D1ED0B19B000517A4 /* Result.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0C6A1ED0B19B000517A4 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0C7C1ED0B25F000517A4 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C731ED0B25E000517A4 /* Feathers.framework */; };
+		EA0F0C8D1ED0B2D0000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8A1ED0B2D0000517A4 /* KeychainSwift.framework */; };
+		EA0F0C8E1ED0B2D0000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8B1ED0B2D0000517A4 /* ReactiveSwift.framework */; };
+		EA0F0C8F1ED0B2D0000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8C1ED0B2D0000517A4 /* Result.framework */; };
+		EA0F0C901ED0B2DD000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8A1ED0B2D0000517A4 /* KeychainSwift.framework */; };
+		EA0F0C911ED0B2DD000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8B1ED0B2D0000517A4 /* ReactiveSwift.framework */; };
+		EA0F0C921ED0B2DD000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8C1ED0B2D0000517A4 /* Result.framework */; };
+		EA0F0C951ED0B2E1000517A4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C931ED0B2E1000517A4 /* Nimble.framework */; };
+		EA0F0C961ED0B2E1000517A4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C941ED0B2E1000517A4 /* Quick.framework */; };
+		EA0F0C9C1ED0B2EA000517A4 /* KeychainSwift.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0C971ED0B2EA000517A4 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0C9D1ED0B2EA000517A4 /* Nimble.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0C981ED0B2EA000517A4 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0C9E1ED0B2EA000517A4 /* Quick.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0C991ED0B2EA000517A4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0C9F1ED0B2EA000517A4 /* ReactiveSwift.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0C9A1ED0B2EA000517A4 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CA01ED0B2EA000517A4 /* Result.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0C9B1ED0B2EA000517A4 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CA41ED0B318000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CA11ED0B318000517A4 /* KeychainSwift.framework */; };
+		EA0F0CA51ED0B318000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CA21ED0B318000517A4 /* ReactiveSwift.framework */; };
+		EA0F0CA61ED0B318000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CA31ED0B318000517A4 /* Result.framework */; };
+		EA0F0CAC1ED0B38B000517A4 /* KeychainSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CA91ED0B38B000517A4 /* KeychainSwift.framework.dSYM */; };
+		EA0F0CAD1ED0B38B000517A4 /* ReactiveSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CAA1ED0B38B000517A4 /* ReactiveSwift.framework.dSYM */; };
+		EA0F0CAE1ED0B38B000517A4 /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CAB1ED0B38B000517A4 /* Result.framework.dSYM */; };
+		EA0F0CAF1ED0B3B3000517A4 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
+		EA0F0CB01ED0B3B3000517A4 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
+		EA0F0CB11ED0B3B3000517A4 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
+		EA0F0CB21ED0B3B3000517A4 /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */; };
+		EA0F0CB31ED0B3E2000517A4 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
+		EA0F0CB41ED0B3E2000517A4 /* LoggerHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */; };
+		EA0F0CB51ED0B3E2000517A4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
+		EA0F0CB61ED0B3E2000517A4 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
+		EA0F0CB71ED0B3E2000517A4 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
+		EA0F0CB81ED0B3E2000517A4 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
+		EA0F0CB91ED0B3E2000517A4 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
+		EA0F0CBA1ED0B3E2000517A4 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
+		EA0F0CBB1ED0B3E2000517A4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
+		EA0F0CBC1ED0B3E2000517A4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
+		EA0F0CBD1ED0B400000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CA11ED0B318000517A4 /* KeychainSwift.framework */; };
+		EA0F0CBE1ED0B400000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CA21ED0B318000517A4 /* ReactiveSwift.framework */; };
+		EA0F0CBF1ED0B400000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CA31ED0B318000517A4 /* Result.framework */; };
+		EA0F0CC21ED0B400000517A4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CC01ED0B400000517A4 /* Nimble.framework */; };
+		EA0F0CC31ED0B400000517A4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CC11ED0B400000517A4 /* Quick.framework */; };
+		EA0F0CCA1ED0B413000517A4 /* KeychainSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CC51ED0B413000517A4 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CCB1ED0B413000517A4 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CC61ED0B413000517A4 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CCC1ED0B413000517A4 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CC71ED0B413000517A4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CCD1ED0B413000517A4 /* ReactiveSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CC81ED0B413000517A4 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CCE1ED0B413000517A4 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CC91ED0B413000517A4 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA12E0631ECE950100A0DCF7 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */; };
 		EA12E0691ECE950C00A0DCF7 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
 		EA12E06A1ECE952400A0DCF7 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
@@ -38,6 +69,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EA0F0C7D1ED0B25F000517A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA452A5E1EA2B14300427CEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA0F0C721ED0B25E000517A4;
+			remoteInfo = "Feathers-macOS";
+		};
 		EA12E0641ECE950100A0DCF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA452A5E1EA2B14300427CEF /* Project object */;
@@ -54,48 +92,70 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EA0F0BC31ED0ABBC000517A4 /* Nimble.framework in Copy Files */,
-				EA0F0BC41ED0ABBC000517A4 /* Quick.framework in Copy Files */,
-				EA0F0C6B1ED0B19B000517A4 /* KeychainSwift.framework in Copy Files */,
-				EA0F0C6C1ED0B19B000517A4 /* ReactiveSwift.framework in Copy Files */,
-				EA0F0C6D1ED0B19B000517A4 /* Result.framework in Copy Files */,
+				EA0F0C9C1ED0B2EA000517A4 /* KeychainSwift.framework in Copy Files */,
+				EA0F0C9D1ED0B2EA000517A4 /* Nimble.framework in Copy Files */,
+				EA0F0C9E1ED0B2EA000517A4 /* Quick.framework in Copy Files */,
+				EA0F0C9F1ED0B2EA000517A4 /* ReactiveSwift.framework in Copy Files */,
+				EA0F0CA01ED0B2EA000517A4 /* Result.framework in Copy Files */,
 			);
 			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CA81ED0B380000517A4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				EA0F0CAC1ED0B38B000517A4 /* KeychainSwift.framework.dSYM in CopyFiles */,
+				EA0F0CAD1ED0B38B000517A4 /* ReactiveSwift.framework.dSYM in CopyFiles */,
+				EA0F0CAE1ED0B38B000517A4 /* Result.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CC41ED0B403000517A4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA0F0CCA1ED0B413000517A4 /* KeychainSwift.framework in CopyFiles */,
+				EA0F0CCB1ED0B413000517A4 /* Nimble.framework in CopyFiles */,
+				EA0F0CCC1ED0B413000517A4 /* Quick.framework in CopyFiles */,
+				EA0F0CCD1ED0B413000517A4 /* ReactiveSwift.framework in CopyFiles */,
+				EA0F0CCE1ED0B413000517A4 /* Result.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeathersSpec.swift; path = FeathersTests/FeathersSpec.swift; sourceTree = SOURCE_ROOT; };
-		EA0F0BB51ED0AAEA000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
-		EA0F0BB61ED0AAEA000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
-		EA0F0BB71ED0AAEA000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		EA0F0BBC1ED0ABA1000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		EA0F0BBD1ED0ABA1000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		EA0F0BC11ED0ABBC000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		EA0F0BC21ED0ABBC000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		EA0F0BCA1ED0AC51000517A4 /* KeychainSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = KeychainSwift.framework.dSYM; path = Carthage/Build/Mac/KeychainSwift.framework.dSYM; sourceTree = "<group>"; };
-		EA0F0BCB1ED0AC51000517A4 /* ReactiveSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveSwift.framework.dSYM; path = Carthage/Build/Mac/ReactiveSwift.framework.dSYM; sourceTree = "<group>"; };
-		EA0F0BCC1ED0AC51000517A4 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/Mac/Result.framework.dSYM; sourceTree = "<group>"; };
-		EA0F0BD01ED0AC86000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
-		EA0F0BD11ED0AC86000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
-		EA0F0BD51ED0AC9A000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
-		EA0F0BD61ED0AC9A000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
-		EA0F0BD91ED0ACD0000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/Mac/KeychainSwift.framework; sourceTree = "<group>"; };
-		EA0F0BDA1ED0ACD0000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/Mac/ReactiveSwift.framework; sourceTree = "<group>"; };
-		EA0F0BDB1ED0ACD0000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
-		EA0F0C4E1ED0B061000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/Mac/ReactiveSwift.framework; sourceTree = "<group>"; };
-		EA0F0C511ED0B080000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
-		EA0F0C531ED0B09F000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/Mac/KeychainSwift.framework; sourceTree = "<group>"; };
-		EA0F0C591ED0B0DE000517A4 /* KeychainSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = KeychainSwift.framework.dSYM; path = Carthage/Build/Mac/KeychainSwift.framework.dSYM; sourceTree = "<group>"; };
-		EA0F0C5A1ED0B0DE000517A4 /* ReactiveSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveSwift.framework.dSYM; path = Carthage/Build/Mac/ReactiveSwift.framework.dSYM; sourceTree = "<group>"; };
-		EA0F0C5B1ED0B0DE000517A4 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/Mac/Result.framework.dSYM; sourceTree = "<group>"; };
-		EA0F0C5F1ED0B144000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/Mac/KeychainSwift.framework; sourceTree = "<group>"; };
-		EA0F0C601ED0B144000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/Mac/ReactiveSwift.framework; sourceTree = "<group>"; };
-		EA0F0C611ED0B144000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
-		EA0F0C681ED0B19B000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
-		EA0F0C691ED0B19B000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
-		EA0F0C6A1ED0B19B000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		EA0F0C731ED0B25E000517A4 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0F0C7B1ED0B25F000517A4 /* Feathers-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0F0C8A1ED0B2D0000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
+		EA0F0C8B1ED0B2D0000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EA0F0C8C1ED0B2D0000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		EA0F0C931ED0B2E1000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		EA0F0C941ED0B2E1000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		EA0F0C971ED0B2EA000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
+		EA0F0C981ED0B2EA000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		EA0F0C991ED0B2EA000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		EA0F0C9A1ED0B2EA000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EA0F0C9B1ED0B2EA000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		EA0F0CA11ED0B318000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/Mac/KeychainSwift.framework; sourceTree = "<group>"; };
+		EA0F0CA21ED0B318000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/Mac/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EA0F0CA31ED0B318000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+		EA0F0CA91ED0B38B000517A4 /* KeychainSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = KeychainSwift.framework.dSYM; path = Carthage/Build/Mac/KeychainSwift.framework.dSYM; sourceTree = "<group>"; };
+		EA0F0CAA1ED0B38B000517A4 /* ReactiveSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveSwift.framework.dSYM; path = Carthage/Build/Mac/ReactiveSwift.framework.dSYM; sourceTree = "<group>"; };
+		EA0F0CAB1ED0B38B000517A4 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/Mac/Result.framework.dSYM; sourceTree = "<group>"; };
+		EA0F0CC01ED0B400000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		EA0F0CC11ED0B400000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		EA0F0CC51ED0B413000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/Mac/KeychainSwift.framework; sourceTree = "<group>"; };
+		EA0F0CC61ED0B413000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		EA0F0CC71ED0B413000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		EA0F0CC81ED0B413000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/Mac/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EA0F0CC91ED0B413000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
 		EA12E05E1ECE950000A0DCF7 /* Feathers-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3017131EC7867E00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = Core/Hooks.swift; sourceTree = "<group>"; };
 		EA301AB41EC8BEBD00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = FeathersTests/Hooks.swift; sourceTree = SOURCE_ROOT; };
@@ -117,16 +177,39 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA0F0C6F1ED0B25E000517A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CA41ED0B318000517A4 /* KeychainSwift.framework in Frameworks */,
+				EA0F0CA51ED0B318000517A4 /* ReactiveSwift.framework in Frameworks */,
+				EA0F0CA61ED0B318000517A4 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0C781ED0B25F000517A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0C7C1ED0B25F000517A4 /* Feathers.framework in Frameworks */,
+				EA0F0CC21ED0B400000517A4 /* Nimble.framework in Frameworks */,
+				EA0F0CC31ED0B400000517A4 /* Quick.framework in Frameworks */,
+				EA0F0CBD1ED0B400000517A4 /* KeychainSwift.framework in Frameworks */,
+				EA0F0CBE1ED0B400000517A4 /* ReactiveSwift.framework in Frameworks */,
+				EA0F0CBF1ED0B400000517A4 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA12E05B1ECE950000A0DCF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA0F0C651ED0B16C000517A4 /* KeychainSwift.framework in Frameworks */,
-				EA0F0C661ED0B16C000517A4 /* ReactiveSwift.framework in Frameworks */,
-				EA0F0C671ED0B16C000517A4 /* Result.framework in Frameworks */,
-				EA0F0BBE1ED0ABA1000517A4 /* Nimble.framework in Frameworks */,
-				EA0F0BBF1ED0ABA1000517A4 /* Quick.framework in Frameworks */,
 				EA12E0631ECE950100A0DCF7 /* Feathers.framework in Frameworks */,
+				EA0F0C901ED0B2DD000517A4 /* KeychainSwift.framework in Frameworks */,
+				EA0F0C911ED0B2DD000517A4 /* ReactiveSwift.framework in Frameworks */,
+				EA0F0C921ED0B2DD000517A4 /* Result.framework in Frameworks */,
+				EA0F0C951ED0B2E1000517A4 /* Nimble.framework in Frameworks */,
+				EA0F0C961ED0B2E1000517A4 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,9 +217,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA0F0C231ED0AF3D000517A4 /* ReactiveSwift.framework in Frameworks */,
-				EA0F0BB81ED0AAEA000517A4 /* KeychainSwift.framework in Frameworks */,
-				EA0F0BBA1ED0AAEA000517A4 /* Result.framework in Frameworks */,
+				EA0F0C8D1ED0B2D0000517A4 /* KeychainSwift.framework in Frameworks */,
+				EA0F0C8E1ED0B2D0000517A4 /* ReactiveSwift.framework in Frameworks */,
+				EA0F0C8F1ED0B2D0000517A4 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,23 +229,29 @@
 		E6F86BE4240DD808800C3F09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EA0F0BD51ED0AC9A000517A4 /* Nimble.framework */,
-				EA0F0BD61ED0AC9A000517A4 /* Quick.framework */,
-				EA0F0BCA1ED0AC51000517A4 /* KeychainSwift.framework.dSYM */,
-				EA0F0BCB1ED0AC51000517A4 /* ReactiveSwift.framework.dSYM */,
-				EA0F0BCC1ED0AC51000517A4 /* Result.framework.dSYM */,
-				EA0F0BD91ED0ACD0000517A4 /* KeychainSwift.framework */,
-				EA0F0BDA1ED0ACD0000517A4 /* ReactiveSwift.framework */,
-				EA0F0BDB1ED0ACD0000517A4 /* Result.framework */,
-				EA0F0BD01ED0AC86000517A4 /* Nimble.framework */,
-				EA0F0BD11ED0AC86000517A4 /* Quick.framework */,
-				EA0F0BC11ED0ABBC000517A4 /* Nimble.framework */,
-				EA0F0BC21ED0ABBC000517A4 /* Quick.framework */,
-				EA0F0BBC1ED0ABA1000517A4 /* Nimble.framework */,
-				EA0F0BBD1ED0ABA1000517A4 /* Quick.framework */,
-				EA0F0BB51ED0AAEA000517A4 /* KeychainSwift.framework */,
-				EA0F0BB61ED0AAEA000517A4 /* ReactiveSwift.framework */,
-				EA0F0BB71ED0AAEA000517A4 /* Result.framework */,
+				EA0F0CC51ED0B413000517A4 /* KeychainSwift.framework */,
+				EA0F0CC61ED0B413000517A4 /* Nimble.framework */,
+				EA0F0CC71ED0B413000517A4 /* Quick.framework */,
+				EA0F0CC81ED0B413000517A4 /* ReactiveSwift.framework */,
+				EA0F0CC91ED0B413000517A4 /* Result.framework */,
+				EA0F0CC01ED0B400000517A4 /* Nimble.framework */,
+				EA0F0CC11ED0B400000517A4 /* Quick.framework */,
+				EA0F0CA91ED0B38B000517A4 /* KeychainSwift.framework.dSYM */,
+				EA0F0CAA1ED0B38B000517A4 /* ReactiveSwift.framework.dSYM */,
+				EA0F0CAB1ED0B38B000517A4 /* Result.framework.dSYM */,
+				EA0F0C971ED0B2EA000517A4 /* KeychainSwift.framework */,
+				EA0F0C981ED0B2EA000517A4 /* Nimble.framework */,
+				EA0F0C991ED0B2EA000517A4 /* Quick.framework */,
+				EA0F0C9A1ED0B2EA000517A4 /* ReactiveSwift.framework */,
+				EA0F0C9B1ED0B2EA000517A4 /* Result.framework */,
+				EA0F0CA11ED0B318000517A4 /* KeychainSwift.framework */,
+				EA0F0CA21ED0B318000517A4 /* ReactiveSwift.framework */,
+				EA0F0CA31ED0B318000517A4 /* Result.framework */,
+				EA0F0C931ED0B2E1000517A4 /* Nimble.framework */,
+				EA0F0C941ED0B2E1000517A4 /* Quick.framework */,
+				EA0F0C8A1ED0B2D0000517A4 /* KeychainSwift.framework */,
+				EA0F0C8B1ED0B2D0000517A4 /* ReactiveSwift.framework */,
+				EA0F0C8C1ED0B2D0000517A4 /* Result.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,18 +275,6 @@
 		EA452A5D1EA2B14300427CEF = {
 			isa = PBXGroup;
 			children = (
-				EA0F0C681ED0B19B000517A4 /* KeychainSwift.framework */,
-				EA0F0C691ED0B19B000517A4 /* ReactiveSwift.framework */,
-				EA0F0C6A1ED0B19B000517A4 /* Result.framework */,
-				EA0F0C5F1ED0B144000517A4 /* KeychainSwift.framework */,
-				EA0F0C601ED0B144000517A4 /* ReactiveSwift.framework */,
-				EA0F0C611ED0B144000517A4 /* Result.framework */,
-				EA0F0C591ED0B0DE000517A4 /* KeychainSwift.framework.dSYM */,
-				EA0F0C5A1ED0B0DE000517A4 /* ReactiveSwift.framework.dSYM */,
-				EA0F0C5B1ED0B0DE000517A4 /* Result.framework.dSYM */,
-				EA0F0C531ED0B09F000517A4 /* KeychainSwift.framework */,
-				EA0F0C511ED0B080000517A4 /* Result.framework */,
-				EA0F0C4E1ED0B061000517A4 /* ReactiveSwift.framework */,
 				EA452A691EA2B14300427CEF /* Feathers */,
 				EABBADB01EBE77C900522603 /* FeathersTests */,
 				EA452A681EA2B14300427CEF /* Products */,
@@ -210,6 +287,8 @@
 			children = (
 				EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */,
 				EA12E05E1ECE950000A0DCF7 /* Feathers-iOSTests.xctest */,
+				EA0F0C731ED0B25E000517A4 /* Feathers.framework */,
+				EA0F0C7B1ED0B25F000517A4 /* Feathers-macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,15 +301,6 @@
 				EA452A6B1EA2B14300427CEF /* Info.plist */,
 			);
 			path = Feathers;
-			sourceTree = "<group>";
-		};
-		EA954C6E1EC9A4990094FF43 /* Hooks */ = {
-			isa = PBXGroup;
-			children = (
-				EA3017131EC7867E00114F19 /* Hooks.swift */,
-				EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */,
-			);
-			name = Hooks;
 			sourceTree = "<group>";
 		};
 		EABBADB01EBE77C900522603 /* FeathersTests */ = {
@@ -249,7 +319,8 @@
 		EABBAE091EBFA69C00522603 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				EA954C6E1EC9A4990094FF43 /* Hooks */,
+				EA3017131EC7867E00114F19 /* Hooks.swift */,
+				EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */,
 				EABBAE121EBFA6A400522603 /* Service.swift */,
 				EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */,
 				EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */,
@@ -265,6 +336,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		EA0F0C701ED0B25E000517A4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EAC0BCCF1EC90FDB0049FB13 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,6 +353,45 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		EA0F0C721ED0B25E000517A4 /* Feathers-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0F0C841ED0B25F000517A4 /* Build configuration list for PBXNativeTarget "Feathers-macOS" */;
+			buildPhases = (
+				EA0F0C6E1ED0B25E000517A4 /* Sources */,
+				EA0F0C6F1ED0B25E000517A4 /* Frameworks */,
+				EA0F0C701ED0B25E000517A4 /* Headers */,
+				EA0F0C711ED0B25E000517A4 /* Resources */,
+				EA0F0CA71ED0B31F000517A4 /* Carthage */,
+				EA0F0CA81ED0B380000517A4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Feathers-macOS";
+			productName = "Feathers-macOS";
+			productReference = EA0F0C731ED0B25E000517A4 /* Feathers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EA0F0C7A1ED0B25F000517A4 /* Feathers-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0F0C871ED0B25F000517A4 /* Build configuration list for PBXNativeTarget "Feathers-macOSTests" */;
+			buildPhases = (
+				EA0F0C771ED0B25F000517A4 /* Sources */,
+				EA0F0C781ED0B25F000517A4 /* Frameworks */,
+				EA0F0C791ED0B25F000517A4 /* Resources */,
+				EA0F0CC41ED0B403000517A4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA0F0C7E1ED0B25F000517A4 /* PBXTargetDependency */,
+			);
+			name = "Feathers-macOSTests";
+			productName = "Feathers-macOSTests";
+			productReference = EA0F0C7B1ED0B25F000517A4 /* Feathers-macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EA12E05D1ECE950000A0DCF7 /* Feathers-iOSTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA12E0661ECE950100A0DCF7 /* Build configuration list for PBXNativeTarget "Feathers-iOSTests" */;
@@ -323,6 +440,14 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Swoopy Studios";
 				TargetAttributes = {
+					EA0F0C721ED0B25E000517A4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					EA0F0C7A1ED0B25F000517A4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
 					EA12E05D1ECE950000A0DCF7 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
@@ -348,11 +473,27 @@
 			targets = (
 				EAC0BCD11EC90FDB0049FB13 /* Feathers-iOS */,
 				EA12E05D1ECE950000A0DCF7 /* Feathers-iOSTests */,
+				EA0F0C721ED0B25E000517A4 /* Feathers-macOS */,
+				EA0F0C7A1ED0B25F000517A4 /* Feathers-macOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EA0F0C711ED0B25E000517A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0C791ED0B25F000517A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA12E05C1ECE950000A0DCF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -387,9 +528,54 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		EA0F0CA71ED0B31F000517A4 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Result.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/KeychainSwift.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/ReactiveSwift.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA0F0C6E1ED0B25E000517A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CB61ED0B3E2000517A4 /* AuthenticationConfiguration.swift in Sources */,
+				EA0F0CB91ED0B3E2000517A4 /* FeathersError.swift in Sources */,
+				EA0F0CB81ED0B3E2000517A4 /* Feathers.swift in Sources */,
+				EA0F0CB71ED0B3E2000517A4 /* AuthenticationStorage.swift in Sources */,
+				EA0F0CBC1ED0B3E2000517A4 /* Endpoint.swift in Sources */,
+				EA0F0CBB1ED0B3E2000517A4 /* Response.swift in Sources */,
+				EA0F0CBA1ED0B3E2000517A4 /* Provider.swift in Sources */,
+				EA0F0CB41ED0B3E2000517A4 /* LoggerHooks.swift in Sources */,
+				EA0F0CB31ED0B3E2000517A4 /* Hooks.swift in Sources */,
+				EA0F0CB51ED0B3E2000517A4 /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0C771ED0B25F000517A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CB01ED0B3B3000517A4 /* Hooks.swift in Sources */,
+				EA0F0CB11ED0B3B3000517A4 /* ServiceSpec.swift in Sources */,
+				EA0F0CB21ED0B3B3000517A4 /* FeathersSpec.swift in Sources */,
+				EA0F0CAF1ED0B3B3000517A4 /* StubProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA12E05A1ECE950000A0DCF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,6 +607,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EA0F0C7E1ED0B25F000517A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA0F0C721ED0B25E000517A4 /* Feathers-macOS */;
+			targetProxy = EA0F0C7D1ED0B25F000517A4 /* PBXContainerItemProxy */;
+		};
 		EA12E0651ECE950100A0DCF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EAC0BCD11EC90FDB0049FB13 /* Feathers-iOS */;
@@ -429,6 +620,98 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		EA0F0C851ED0B25F000517A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Feathers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-macOS";
+				PRODUCT_NAME = Feathers;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EA0F0C861ED0B25F000517A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Feathers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-macOS";
+				PRODUCT_NAME = Feathers;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EA0F0C881ED0B25F000517A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = FeathersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EA0F0C891ED0B25F000517A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = FeathersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		EA12E0671ECE950100A0DCF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -617,6 +900,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA0F0C841ED0B25F000517A4 /* Build configuration list for PBXNativeTarget "Feathers-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0F0C851ED0B25F000517A4 /* Debug */,
+				EA0F0C861ED0B25F000517A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EA0F0C871ED0B25F000517A4 /* Build configuration list for PBXNativeTarget "Feathers-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0F0C881ED0B25F000517A4 /* Debug */,
+				EA0F0C891ED0B25F000517A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EA12E0661ECE950100A0DCF7 /* Build configuration list for PBXNativeTarget "Feathers-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
