@@ -40,9 +40,6 @@ matrix:
         - XCODE_ACTION=build
         - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm,OS=3.2"
     - script: carthage build --no-skip-current --platform mac
-      before_script:
-        - pod install
-        - carthage checkout || true
       env:
         - JOB=CARTHAGE-macOS
     - script: carthage build --no-skip-current --platform iOS
@@ -55,6 +52,7 @@ matrix:
       env:
         - JOB=CARTHAGE-watchOS
     - script:
+      - pod repo update --silent
       - travis_wait 30 pod lib lint Feathers.podspec
       env:
         - JOB=PODSPEC
