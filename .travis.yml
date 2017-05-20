@@ -2,7 +2,6 @@ language: objective-c
 osx_image: xcode8.3
 
 cache:
-  - cocoapods
   - directories:
     - Carthage
 
@@ -12,10 +11,8 @@ install:
   - brew update || true
   - brew install carthage || true
   - brew outdated carthage || brew upgrade carthage
-  - gem install cocoapods
-  - pod repo update
+  - carthage bootstrap --no-use-binaries
 before_script:
-  - pod install
   - chmod +x ./script/build
 script:
   - script/build
@@ -49,21 +46,12 @@ matrix:
       env:
         - JOB=CARTHAGE-macOS
     - script: carthage build --no-skip-current --platform iOS
-      before_script:
-        - pod install
-        - carthage checkout || true
       env:
         - JOB=CARTHAGE-iOS
     - script: carthage build --no-skip-current --platform tvOS
-      before_script:
-        - pod install
-        - carthage checkout || true
       env:
         - JOB=CARTHAGE-tvOS
     - script: carthage build --no-skip-current --platform watchOS
-      before_script:
-        - pod install
-        - carthage checkout || true
       env:
         - JOB=CARTHAGE-watchOS
     - script:
