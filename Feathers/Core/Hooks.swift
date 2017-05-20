@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import PromiseKit
-import enum Result.Result
+import Result
+import ReactiveSwift
 
 /// Hook object that gets passed through hook functions
 public struct HookObject {
@@ -36,7 +36,7 @@ public struct HookObject {
 
     public var result: Response?
 
-    public var error: Error?
+    public var error: FeathersError?
 
     public init(
         type: Kind,
@@ -67,7 +67,7 @@ public extension HookObject {
     ///
     /// - Parameter error: Error to attach.
     /// - Returns: Modified hook object.
-    public func objectByAdding(error: Error) -> HookObject {
+    public func objectByAdding(error: FeathersError) -> HookObject {
         var object = self
         object.error = error
         return object
@@ -97,5 +97,5 @@ public protocol Hook {
     ///   - hookObject: Hook object.
     ///
     /// - Returns: `Promise` object.
-    func run(with hookObject: HookObject) -> Promise<HookObject>
+    func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError>
 }

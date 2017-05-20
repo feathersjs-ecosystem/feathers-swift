@@ -8,7 +8,7 @@
 
 import Feathers
 import Foundation
-import PromiseKit
+import ReactiveSwift
 
 class StubProvider: Provider {
 
@@ -26,16 +26,16 @@ class StubProvider: Provider {
         // no-op
     }
 
-    func request(endpoint: Endpoint) -> Promise<Response> {
-        return Promise(value: Response(pagination: nil, data: .jsonObject(stubbedData)))
+    func request(endpoint: Endpoint) -> SignalProducer<Response, FeathersError> {
+        return SignalProducer(value: Response(pagination: nil, data: .jsonObject(stubbedData)))
     }
 
-    func authenticate(_ path: String, credentials: [String : Any]) -> Promise<Response> {
-        return Promise(value: Response(pagination: nil, data: .jsonObject(["accessToken":"some_token"])))
+    func authenticate(_ path: String, credentials: [String : Any]) -> SignalProducer<Response, FeathersError> {
+        return SignalProducer(value: Response(pagination: nil, data: .jsonObject(["accessToken":"some_token"])))
     }
 
-    func logout(path: String) -> Promise<Response> {
-        return Promise(value: Response(pagination: nil, data: .jsonObject([:])))
+    func logout(path: String) -> SignalProducer<Response, FeathersError> {
+        return SignalProducer(value: Response(pagination: nil, data: .jsonObject([:])))
     }
 
 }

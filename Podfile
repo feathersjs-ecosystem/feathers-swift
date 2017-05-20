@@ -12,8 +12,6 @@ def framework_pods
   pod 'Result', '3.2.2'
   pod 'KeychainSwift', '8.0.2'
   pod 'ReactiveSwift', '1.1.3'
-  pod 'RxSwift', '3.4.1'
-  pod 'PromiseKit', '4.2.0'
 end
 
 target 'Feathers-iOS' do

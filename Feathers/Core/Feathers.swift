@@ -7,12 +7,10 @@
 //
 
 import Foundation
-import PromiseKit
+import ReactiveSwift
 
 /// Main application object. Creates services and provides an interface for authentication.
 public final class Feathers {
-
-    public typealias AuthenticationCallback = (String?, FeathersError?) -> ()
 
     /// Transport provider.
     public let provider: Provider
@@ -61,28 +59,30 @@ public final class Feathers {
     /// - Parameters:
     ///   - credentials: Credentials to authenticate with.
     /// - Returns: Promise that emits an access token.
-    public func authenticate(_ credentials: [String: Any]) -> Promise<String> {
+    public func authenticate(_ credentials: [String: Any]) -> SignalProducer<String, FeathersError> {
         return provider.authenticate(authenticationConfiguration.path, credentials: credentials)
-            .then { [weak self] response in
+            .flatMap(.latest) { response -> SignalProducer<String, FeathersError> in
                 if case let .jsonObject(object) = response.data,
                 let json = object as? [String: Any],
                 let accessToken = json["accessToken"] as? String {
-                    self?.authenticationStorage.accessToken = accessToken
-                    return Promise(value: accessToken)
+                    return SignalProducer(value: accessToken)
                 }
-                return Promise(error: FeathersError.unknown)
-        }
+                return SignalProducer(error: .unknown)
+            }.on(failed: { [weak self] _ in
+                self?.authenticationStorage.accessToken = nil
+            }, value: { [weak self] value in
+                self?.authenticationStorage.accessToken = value
+            })
     }
     
     /// Log out the application.
     ///
     /// - Returns: Promise that emits a response.
-    public func logout() -> Promise<Response> {
+    public func logout() -> SignalProducer<Response, FeathersError> {
         return provider.logout(path: authenticationConfiguration.path)
-            .then { [weak self] response in
+            .on(value: { [weak self] _ in
                 self?.authenticationStorage.accessToken = nil
-                return Promise(value: response)
-        }
+        })
     }
 
 }

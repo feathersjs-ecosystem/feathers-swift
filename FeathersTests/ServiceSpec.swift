@@ -30,13 +30,13 @@ class ServiceSpec: QuickSpec {
                 var response: Response?
                 var data: [String: String]?
                 service.request(.find(parameters: nil))
-                    .then { value -> Promise<Void> in
-                        response = value
-                        data = value.data.value as? [String: String]
-                        return Promise(value: ())
-                    }.catch {
+                    .on(failed: {
                         error = $0
-                }
+                    }, value: {
+                        response = $0
+                        data = $0.data.value as? [String: String]
+                    })
+                    .start()
                 expect(error).toEventually(beNil())
                 expect(response).toEventuallyNot(beNil())
                 expect(data).toEventuallyNot(beNil())
@@ -59,13 +59,13 @@ class ServiceSpec: QuickSpec {
                         var response: Response?
                         var data: [String: String]?
                         service.request(.find(parameters: nil))
-                            .then { value -> Promise<Void> in
-                                response = value
-                                data = value.data.value as? [String: String]
-                                return Promise(value: ())
-                            }.catch {
+                            .on(failed: {
                                 error = $0
-                        }
+                            }, value: {
+                                response = $0
+                                data = $0.data.value as? [String: String]
+                            })
+                            .start()
                         expect(error).toEventually(beNil())
                         expect(response).toEventuallyNot(beNil())
                         expect(data).toEventuallyNot(beNil())
@@ -88,13 +88,13 @@ class ServiceSpec: QuickSpec {
                         var response: Response?
                         var data: [String: String]?
                         service.request(.find(parameters: nil))
-                            .then { value -> Promise<Void> in
-                                response = value
-                                data = value.data.value as? [String: String]
-                                return Promise(value: ())
-                            }.catch {
+                            .on(failed: {
                                 error = $0
-                        }
+                            }, value: {
+                                response = $0
+                                data = $0.data.value as? [String: String]
+                            })
+                            .start()
                         expect(error).toEventually(beNil())
                         expect(response).toEventuallyNot(beNil())
                         expect(data).toEventuallyNot(beNil())
@@ -120,13 +120,13 @@ class ServiceSpec: QuickSpec {
                             var response: Response?
                             var data: [String: String]?
                             service.request(.find(parameters: nil))
-                                .then { value -> Promise<Void> in
-                                    response = value
-                                    data = value.data.value as? [String: String]
-                                    return Promise(value: ())
-                                }.catch {
-                                    error = $0 as? FeathersError
-                            }
+                                .on(failed: {
+                                    error = $0
+                                }, value: {
+                                    response = $0
+                                    data = $0.data.value as? [String: String]
+                                })
+                                .start()
                             expect(error).toEventuallyNot(beNil())
                             expect(error).toEventually(equal(FeathersError.unknown))
                             expect(response).toEventually(beNil())
@@ -147,13 +147,13 @@ class ServiceSpec: QuickSpec {
                                 var response: Response?
                                 var data: [String: String]?
                                 service.request(.find(parameters: nil))
-                                    .then { value -> Promise<Void> in
-                                        response = value
-                                        data = value.data.value as? [String: String]
-                                        return Promise(value: ())
-                                    }.catch {
-                                        error = $0 as? FeathersError
-                                }
+                                    .on(failed: {
+                                        error = $0
+                                    }, value: {
+                                        response = $0
+                                        data = $0.data.value as? [String: String]
+                                    })
+                                    .start()
                                 expect(error).toEventuallyNot(beNil())
                                 expect(error).toEventually(equal(FeathersError.unavailable))
                                 expect(response).toEventually(beNil())
@@ -176,13 +176,13 @@ class ServiceSpec: QuickSpec {
                                 var response: Response?
                                 var data: [String: String]?
                                 service.request(.find(parameters: nil))
-                                    .then { value -> Promise<Void> in
-                                        response = value
-                                        data = value.data.value as? [String: String]
-                                        return Promise(value: ())
-                                    }.catch {
-                                        error = $0 as? FeathersError
-                                }
+                                    .on(failed: {
+                                        error = $0
+                                    }, value: {
+                                        response = $0
+                                        data = $0.data.value as? [String: String]
+                                    })
+                                    .start()
                                 expect(error).toEventuallyNot(beNil())
                                 expect(error).toEventually(equal(FeathersError.unavailable))
                                 expect(response).toEventually(beNil())
@@ -200,13 +200,13 @@ class ServiceSpec: QuickSpec {
                                     var response: Response?
                                     var data: [String: String]?
                                     service.request(.find(parameters: nil))
-                                        .then { value -> Promise<Void> in
-                                            response = value
-                                            data = value.data.value as? [String: String]
-                                            return Promise(value: ())
-                                        }.catch {
-                                            error = $0 as? FeathersError
-                                    }
+                                        .on(failed: {
+                                            error = $0
+                                        }, value: {
+                                            response = $0
+                                            data = $0.data.value as? [String: String]
+                                        })
+                                        .start()
                                     expect(error).toEventuallyNot(beNil())
                                     expect(error).toEventually(equal(FeathersError.unknown))
                                     expect(response).toEventually(beNil())

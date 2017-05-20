@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import PromiseKit
+import ReactiveSwift
 
 /// Abstract interface for a provider.
 public protocol Provider: class {
@@ -26,7 +26,7 @@ public protocol Provider: class {
     /// - Parameters:
     ///   - endpoint: Endpoint to hit.
     ///   - completion: Completion block.
-    func request(endpoint: Endpoint) -> Promise<Response>
+    func request(endpoint: Endpoint) -> SignalProducer<Response, FeathersError>
 
     /// Authenticate the provider.
     ///
@@ -34,13 +34,13 @@ public protocol Provider: class {
     ///   - path: Authentication path.
     ///   - credentials: Credentials object for authentication.
     ///   - completion: Completion block.
-    func authenticate(_ path: String, credentials: [String: Any]) -> Promise<Response>
+    func authenticate(_ path: String, credentials: [String: Any]) -> SignalProducer<Response, FeathersError>
 
     /// Logout the provider.
     ///
     /// - Parameter path: Logout path.
     /// - Parameter completion: Completion block.
-    func logout(path: String) -> Promise<Response>
+    func logout(path: String) -> SignalProducer<Response, FeathersError>
 
 }
 

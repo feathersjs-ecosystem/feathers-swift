@@ -7,14 +7,14 @@
 //
 
 import Foundation
-import PromiseKit
+import ReactiveSwift
 
 /// Simple request logger
 public struct RequestLoggerHook: Hook {
 
-    public func run(with hookObject: HookObject) -> Promise<HookObject> {
+    public func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError> {
         print("request to \(hookObject.service.path) for method \(hookObject.method)")
-        return Promise(value: hookObject)
+        return SignalProducer(value: hookObject)
     }
 
 }

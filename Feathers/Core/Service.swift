@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import PromiseKit
+import ReactiveSwift
 
 /// Represents a Feather's service. Used for making requests and in the case
 /// of real-time providers, emitting real-time events.
@@ -185,50 +185,52 @@ final public class Service {
     ///   - method: Service method to request for.
     ///
     /// - Returns a promise that emits a response.
-    open func request(_ method: Service.Method) -> Promise<Response> {
+    open func request(_ method: Service.Method) -> SignalProducer<Response, FeathersError> {
         guard let application = app else {
-            return Promise(error: FeathersError.unknown)
+            return SignalProducer(error: FeathersError.unknown)
         }
-        // Reduces an array of `Hook` objects into a single promise.
-        let reduceHooksClosure: (Promise<HookObject>, Hook) -> Promise<HookObject> = { acc, current in
-            return acc.then { value in
+
+        let reduceHooksClosure: (SignalProducer<HookObject, FeathersError>, Hook) -> SignalProducer<HookObject, FeathersError> = { acc, current in
+            return acc.flatMap(.concat) { value in
                 return current.run(with: value)
             }
         }
+
         let beforeHookObject = HookObject(type: .before, app: application, service: self, method: method)
         // Get all the hooks
         let beforeHooks = self.beforeHooks.hooks(for: method)
         let afterHooks = self.afterHooks.hooks(for: method)
         let errorHooks = self.errorHooks.hooks(for: method)
         // Chain of hooks to run before the request
-        let beforeChain = beforeHooks.reduce(Promise(value: beforeHookObject), reduceHooksClosure)
-        let chain = beforeChain.then { [weak self] hook -> Promise<Response> in
-            guard let vSelf = self else { return Promise(error: FeathersError.unknown) }
-            // If the result has been set, skip the request and run the after hooks
+        let beforeChain = beforeHooks.reduce(SignalProducer(value: beforeHookObject), reduceHooksClosure)
+        let chain = beforeChain.flatMap(.concat) { [weak self] hook -> SignalProducer<Response, FeathersError> in
+            guard let vSelf = self else { return SignalProducer(error: .unknown) }
             if let _ = hook.result {
                 let afterHookObject = hook.object(with: .after)
-                let afterChain = afterHooks.reduce(Promise(value: afterHookObject), reduceHooksClosure)
-                return afterChain.then {
-                    return $0.result != nil ? Promise(value: $0.result!) : Promise(error: FeathersError.unknown)
+                let afterChain = afterHooks.reduce(SignalProducer(value: afterHookObject), reduceHooksClosure)
+                return afterChain.flatMap(.concat) {
+                    return $0.result != nil ? SignalProducer(value: $0.result!) : SignalProducer(error: .unknown)
                 }
+            } else if let error = hook.error {
+                return SignalProducer(error: error)
             } else {
                 let endpoint = vSelf.constructEndpoint(from: hook.method)
-                return application.provider.request(endpoint: endpoint).then { response in
-                    let afterHookObject = hook.object(with: .after).objectByAdding(result: response)
-                    let afterChain = afterHooks.reduce(Promise(value: afterHookObject), reduceHooksClosure)
-                    return afterChain.then { value in
-                        return value.result != nil ? Promise(value: value.result!) : Promise(error: FeathersError.unknown)
-                    }
+                return application.provider.request(endpoint: endpoint)
+                    .flatMap(.latest) { response -> SignalProducer<Response, FeathersError> in
+                        let afterHookObject = hook.object(with: .after).objectByAdding(result: response)
+                        let afterChain = afterHooks.reduce(SignalProducer(value: afterHookObject), reduceHooksClosure)
+                        return afterChain.flatMap(.concat) { value in
+                            return value.result != nil ? SignalProducer(value: value.result!) : SignalProducer(error: .unknown)
+                        }
                 }
             }
         }
-        // If the chain errors at any point, run all the error hooks then send the final error
-        return chain.recover { [weak self] error -> Promise<Response> in
-            guard let vSelf = self else { throw error }
-            let hook = HookObject(type: .error, app: application, service: vSelf, method: method).objectByAdding(error: error)
-            let errorChain = errorHooks.reduce(Promise(value: hook), reduceHooksClosure)
-            return errorChain.then { hook -> Promise<Response> in
-                return hook.error != nil ? Promise(error: hook.error!) : Promise(error: error)
+        return chain.flatMapError { [weak self] error -> SignalProducer<Response, FeathersError> in
+            guard let vSelf = self else { return SignalProducer(error: .unknown) }
+            let errorHookObject = HookObject(type: .error, app: application, service: vSelf, method: method).objectByAdding(error: error)
+            let errorChain = errorHooks.reduce(SignalProducer(value: errorHookObject), reduceHooksClosure)
+            return errorChain.flatMap(.concat) { hookObject -> SignalProducer<Response, FeathersError> in
+                return hookObject.error != nil ? SignalProducer(error: hookObject.error!) : SignalProducer(error: error)
             }
         }
     }
