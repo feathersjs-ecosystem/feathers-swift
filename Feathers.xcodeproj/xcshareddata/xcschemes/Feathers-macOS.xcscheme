@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EAC0BD0B1EC952A40049FB13"
+               BlueprintIdentifier = "EA0F0C281ED0AF54000517A4"
                BuildableName = "Feathers.framework"
                BlueprintName = "Feathers-macOS"
                ReferencedContainer = "container:Feathers.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAC0BD0B1EC952A40049FB13"
+            BlueprintIdentifier = "EA0F0C281ED0AF54000517A4"
             BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-macOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAC0BD0B1EC952A40049FB13"
+            BlueprintIdentifier = "EA0F0C281ED0AF54000517A4"
             BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-macOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAC0BD0B1EC952A40049FB13"
+            BlueprintIdentifier = "EA0F0C281ED0AF54000517A4"
             BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-macOS"
             ReferencedContainer = "container:Feathers.xcodeproj">

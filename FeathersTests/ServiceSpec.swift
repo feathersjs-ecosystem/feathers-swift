@@ -9,7 +9,6 @@
 import Quick
 import Nimble
 import Feathers
-import PromiseKit
 
 class ServiceSpec: QuickSpec {
 
