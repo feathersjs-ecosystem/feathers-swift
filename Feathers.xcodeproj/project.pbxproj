@@ -52,6 +52,34 @@
 		EA0F0CCC1ED0B413000517A4 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CC71ED0B413000517A4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA0F0CCD1ED0B413000517A4 /* ReactiveSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CC81ED0B413000517A4 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA0F0CCE1ED0B413000517A4 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CC91ED0B413000517A4 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CDD1ED0B448000517A4 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CD41ED0B448000517A4 /* Feathers.framework */; };
+		EA0F0CEB1ED0B46B000517A4 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
+		EA0F0CEC1ED0B46B000517A4 /* LoggerHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */; };
+		EA0F0CED1ED0B46B000517A4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
+		EA0F0CEE1ED0B46B000517A4 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
+		EA0F0CEF1ED0B46B000517A4 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
+		EA0F0CF01ED0B46B000517A4 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
+		EA0F0CF11ED0B46B000517A4 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
+		EA0F0CF21ED0B46B000517A4 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
+		EA0F0CF31ED0B46B000517A4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
+		EA0F0CF41ED0B46B000517A4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
+		EA0F0CF51ED0B46F000517A4 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
+		EA0F0CF61ED0B46F000517A4 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
+		EA0F0CF71ED0B46F000517A4 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
+		EA0F0CF81ED0B46F000517A4 /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */; };
+		EA0F0CFC1ED0B48C000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CF91ED0B48C000517A4 /* KeychainSwift.framework */; };
+		EA0F0CFD1ED0B48C000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CFA1ED0B48C000517A4 /* ReactiveSwift.framework */; };
+		EA0F0CFE1ED0B48C000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CFB1ED0B48C000517A4 /* Result.framework */; };
+		EA0F0D001ED0B4C7000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CF91ED0B48C000517A4 /* KeychainSwift.framework */; };
+		EA0F0D011ED0B4C7000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CFA1ED0B48C000517A4 /* ReactiveSwift.framework */; };
+		EA0F0D021ED0B4C7000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CFB1ED0B48C000517A4 /* Result.framework */; };
+		EA0F0D051ED0B4C7000517A4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0D031ED0B4C7000517A4 /* Nimble.framework */; };
+		EA0F0D061ED0B4C7000517A4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0D041ED0B4C7000517A4 /* Quick.framework */; };
+		EA0F0D0D1ED0B4D7000517A4 /* KeychainSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0D081ED0B4D7000517A4 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0D0E1ED0B4D7000517A4 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0D091ED0B4D7000517A4 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0D0F1ED0B4D7000517A4 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0D0A1ED0B4D7000517A4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0D101ED0B4D7000517A4 /* ReactiveSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0D0B1ED0B4D7000517A4 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0D111ED0B4D7000517A4 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0D0C1ED0B4D7000517A4 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA12E0631ECE950100A0DCF7 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */; };
 		EA12E0691ECE950C00A0DCF7 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
 		EA12E06A1ECE952400A0DCF7 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
@@ -75,6 +103,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = EA0F0C721ED0B25E000517A4;
 			remoteInfo = "Feathers-macOS";
+		};
+		EA0F0CDE1ED0B448000517A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA452A5E1EA2B14300427CEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA0F0CD31ED0B448000517A4;
+			remoteInfo = "Feathers-tvOS";
 		};
 		EA12E0641ECE950100A0DCF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -127,6 +162,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA0F0D071ED0B4CC000517A4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA0F0D0D1ED0B4D7000517A4 /* KeychainSwift.framework in CopyFiles */,
+				EA0F0D0E1ED0B4D7000517A4 /* Nimble.framework in CopyFiles */,
+				EA0F0D0F1ED0B4D7000517A4 /* Quick.framework in CopyFiles */,
+				EA0F0D101ED0B4D7000517A4 /* ReactiveSwift.framework in CopyFiles */,
+				EA0F0D111ED0B4D7000517A4 /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +205,18 @@
 		EA0F0CC71ED0B413000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		EA0F0CC81ED0B413000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/Mac/ReactiveSwift.framework; sourceTree = "<group>"; };
 		EA0F0CC91ED0B413000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+		EA0F0CD41ED0B448000517A4 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0F0CDC1ED0B448000517A4 /* Feathers-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0F0CF91ED0B48C000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/tvOS/KeychainSwift.framework; sourceTree = "<group>"; };
+		EA0F0CFA1ED0B48C000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/tvOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EA0F0CFB1ED0B48C000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/tvOS/Result.framework; sourceTree = "<group>"; };
+		EA0F0D031ED0B4C7000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
+		EA0F0D041ED0B4C7000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
+		EA0F0D081ED0B4D7000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/tvOS/KeychainSwift.framework; sourceTree = "<group>"; };
+		EA0F0D091ED0B4D7000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
+		EA0F0D0A1ED0B4D7000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
+		EA0F0D0B1ED0B4D7000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/tvOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EA0F0D0C1ED0B4D7000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/tvOS/Result.framework; sourceTree = "<group>"; };
 		EA12E05E1ECE950000A0DCF7 /* Feathers-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3017131EC7867E00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = Core/Hooks.swift; sourceTree = "<group>"; };
 		EA301AB41EC8BEBD00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = FeathersTests/Hooks.swift; sourceTree = SOURCE_ROOT; };
@@ -200,6 +261,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA0F0CD01ED0B448000517A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CFC1ED0B48C000517A4 /* KeychainSwift.framework in Frameworks */,
+				EA0F0CFD1ED0B48C000517A4 /* ReactiveSwift.framework in Frameworks */,
+				EA0F0CFE1ED0B48C000517A4 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CD91ED0B448000517A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CDD1ED0B448000517A4 /* Feathers.framework in Frameworks */,
+				EA0F0D051ED0B4C7000517A4 /* Nimble.framework in Frameworks */,
+				EA0F0D061ED0B4C7000517A4 /* Quick.framework in Frameworks */,
+				EA0F0D001ED0B4C7000517A4 /* KeychainSwift.framework in Frameworks */,
+				EA0F0D011ED0B4C7000517A4 /* ReactiveSwift.framework in Frameworks */,
+				EA0F0D021ED0B4C7000517A4 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA12E05B1ECE950000A0DCF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +313,11 @@
 		E6F86BE4240DD808800C3F09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA0F0D031ED0B4C7000517A4 /* Nimble.framework */,
+				EA0F0D041ED0B4C7000517A4 /* Quick.framework */,
+				EA0F0CF91ED0B48C000517A4 /* KeychainSwift.framework */,
+				EA0F0CFA1ED0B48C000517A4 /* ReactiveSwift.framework */,
+				EA0F0CFB1ED0B48C000517A4 /* Result.framework */,
 				EA0F0CC51ED0B413000517A4 /* KeychainSwift.framework */,
 				EA0F0CC61ED0B413000517A4 /* Nimble.framework */,
 				EA0F0CC71ED0B413000517A4 /* Quick.framework */,
@@ -275,6 +364,11 @@
 		EA452A5D1EA2B14300427CEF = {
 			isa = PBXGroup;
 			children = (
+				EA0F0D081ED0B4D7000517A4 /* KeychainSwift.framework */,
+				EA0F0D091ED0B4D7000517A4 /* Nimble.framework */,
+				EA0F0D0A1ED0B4D7000517A4 /* Quick.framework */,
+				EA0F0D0B1ED0B4D7000517A4 /* ReactiveSwift.framework */,
+				EA0F0D0C1ED0B4D7000517A4 /* Result.framework */,
 				EA452A691EA2B14300427CEF /* Feathers */,
 				EABBADB01EBE77C900522603 /* FeathersTests */,
 				EA452A681EA2B14300427CEF /* Products */,
@@ -289,6 +383,8 @@
 				EA12E05E1ECE950000A0DCF7 /* Feathers-iOSTests.xctest */,
 				EA0F0C731ED0B25E000517A4 /* Feathers.framework */,
 				EA0F0C7B1ED0B25F000517A4 /* Feathers-macOSTests.xctest */,
+				EA0F0CD41ED0B448000517A4 /* Feathers.framework */,
+				EA0F0CDC1ED0B448000517A4 /* Feathers-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -343,6 +439,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA0F0CD11ED0B448000517A4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EAC0BCCF1EC90FDB0049FB13 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,6 +493,44 @@
 			name = "Feathers-macOSTests";
 			productName = "Feathers-macOSTests";
 			productReference = EA0F0C7B1ED0B25F000517A4 /* Feathers-macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA0F0CD31ED0B448000517A4 /* Feathers-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0F0CE51ED0B448000517A4 /* Build configuration list for PBXNativeTarget "Feathers-tvOS" */;
+			buildPhases = (
+				EA0F0CCF1ED0B448000517A4 /* Sources */,
+				EA0F0CD01ED0B448000517A4 /* Frameworks */,
+				EA0F0CD11ED0B448000517A4 /* Headers */,
+				EA0F0CD21ED0B448000517A4 /* Resources */,
+				EA0F0CFF1ED0B499000517A4 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Feathers-tvOS";
+			productName = "Feathers-tvOS";
+			productReference = EA0F0CD41ED0B448000517A4 /* Feathers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EA0F0CDB1ED0B448000517A4 /* Feathers-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0F0CE81ED0B448000517A4 /* Build configuration list for PBXNativeTarget "Feathers-tvOSTests" */;
+			buildPhases = (
+				EA0F0CD81ED0B448000517A4 /* Sources */,
+				EA0F0CD91ED0B448000517A4 /* Frameworks */,
+				EA0F0CDA1ED0B448000517A4 /* Resources */,
+				EA0F0D071ED0B4CC000517A4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA0F0CDF1ED0B448000517A4 /* PBXTargetDependency */,
+			);
+			name = "Feathers-tvOSTests";
+			productName = "Feathers-tvOSTests";
+			productReference = EA0F0CDC1ED0B448000517A4 /* Feathers-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		EA12E05D1ECE950000A0DCF7 /* Feathers-iOSTests */ = {
@@ -448,6 +589,14 @@
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
+					EA0F0CD31ED0B448000517A4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					EA0F0CDB1ED0B448000517A4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
 					EA12E05D1ECE950000A0DCF7 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
@@ -475,6 +624,8 @@
 				EA12E05D1ECE950000A0DCF7 /* Feathers-iOSTests */,
 				EA0F0C721ED0B25E000517A4 /* Feathers-macOS */,
 				EA0F0C7A1ED0B25F000517A4 /* Feathers-macOSTests */,
+				EA0F0CD31ED0B448000517A4 /* Feathers-tvOS */,
+				EA0F0CDB1ED0B448000517A4 /* Feathers-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -488,6 +639,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EA0F0C791ED0B25F000517A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CD21ED0B448000517A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CDA1ED0B448000517A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -545,6 +710,23 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		EA0F0CFF1ED0B499000517A4 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/KeychainSwift.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/ReactiveSwift.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -573,6 +755,34 @@
 				EA0F0CB11ED0B3B3000517A4 /* ServiceSpec.swift in Sources */,
 				EA0F0CB21ED0B3B3000517A4 /* FeathersSpec.swift in Sources */,
 				EA0F0CAF1ED0B3B3000517A4 /* StubProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CCF1ED0B448000517A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CEE1ED0B46B000517A4 /* AuthenticationConfiguration.swift in Sources */,
+				EA0F0CF11ED0B46B000517A4 /* FeathersError.swift in Sources */,
+				EA0F0CF01ED0B46B000517A4 /* Feathers.swift in Sources */,
+				EA0F0CEF1ED0B46B000517A4 /* AuthenticationStorage.swift in Sources */,
+				EA0F0CF41ED0B46B000517A4 /* Endpoint.swift in Sources */,
+				EA0F0CF31ED0B46B000517A4 /* Response.swift in Sources */,
+				EA0F0CF21ED0B46B000517A4 /* Provider.swift in Sources */,
+				EA0F0CEC1ED0B46B000517A4 /* LoggerHooks.swift in Sources */,
+				EA0F0CEB1ED0B46B000517A4 /* Hooks.swift in Sources */,
+				EA0F0CED1ED0B46B000517A4 /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CD81ED0B448000517A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CF61ED0B46F000517A4 /* Hooks.swift in Sources */,
+				EA0F0CF71ED0B46F000517A4 /* ServiceSpec.swift in Sources */,
+				EA0F0CF81ED0B46F000517A4 /* FeathersSpec.swift in Sources */,
+				EA0F0CF51ED0B46F000517A4 /* StubProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +821,11 @@
 			isa = PBXTargetDependency;
 			target = EA0F0C721ED0B25E000517A4 /* Feathers-macOS */;
 			targetProxy = EA0F0C7D1ED0B25F000517A4 /* PBXContainerItemProxy */;
+		};
+		EA0F0CDF1ED0B448000517A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA0F0CD31ED0B448000517A4 /* Feathers-tvOS */;
+			targetProxy = EA0F0CDE1ED0B448000517A4 /* PBXContainerItemProxy */;
 		};
 		EA12E0651ECE950100A0DCF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -709,6 +924,92 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EA0F0CE61ED0B448000517A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = Feathers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-tvOS";
+				PRODUCT_NAME = Feathers;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		EA0F0CE71ED0B448000517A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = Feathers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-tvOS";
+				PRODUCT_NAME = Feathers;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		EA0F0CE91ED0B448000517A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = FeathersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		EA0F0CEA1ED0B448000517A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = FeathersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
 			};
 			name = Release;
 		};
@@ -913,6 +1214,22 @@
 			buildConfigurations = (
 				EA0F0C881ED0B25F000517A4 /* Debug */,
 				EA0F0C891ED0B25F000517A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EA0F0CE51ED0B448000517A4 /* Build configuration list for PBXNativeTarget "Feathers-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0F0CE61ED0B448000517A4 /* Debug */,
+				EA0F0CE71ED0B448000517A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EA0F0CE81ED0B448000517A4 /* Build configuration list for PBXNativeTarget "Feathers-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0F0CE91ED0B448000517A4 /* Debug */,
+				EA0F0CEA1ED0B448000517A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
