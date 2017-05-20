@@ -16,7 +16,7 @@ before_script:
   - chmod +x ./script/build
 script:
   - script/build
-xcode_workspace: Feathers.xcworkspace
+xcode_project: Feathers.xcodeproj
 matrix:
   include:
     - xcode_scheme: Feathers-macOS
