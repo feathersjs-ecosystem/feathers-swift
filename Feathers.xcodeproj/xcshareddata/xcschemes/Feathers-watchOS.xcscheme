@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA2062131ECEC0F4005FF6AE"
-               BuildableName = "Feathers.framework"
+               BlueprintIdentifier = "EA0F0D161ED0B50D000517A4"
+               BuildableName = "Feathers-watchOS.framework"
                BlueprintName = "Feathers-watchOS"
                ReferencedContainer = "container:Feathers.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA2062131ECEC0F4005FF6AE"
-            BuildableName = "Feathers.framework"
+            BlueprintIdentifier = "EA0F0D161ED0B50D000517A4"
+            BuildableName = "Feathers-watchOS.framework"
             BlueprintName = "Feathers-watchOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA2062131ECEC0F4005FF6AE"
-            BuildableName = "Feathers.framework"
+            BlueprintIdentifier = "EA0F0D161ED0B50D000517A4"
+            BuildableName = "Feathers-watchOS.framework"
             BlueprintName = "Feathers-watchOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
          </BuildableReference>
