@@ -25,8 +25,8 @@ Pod::Spec.new do |s|
     ss.framework = "Foundation"
     ss.dependency 'KeychainSwift', '8.0.2'
     ss.dependency 'Result'
-    ss.dependency "ReactiveSwift", "1.1.3"
+    ss.dependency "ReactiveSwift"
   end
-  
+
   s.pod_target_xcconfig = {"OTHER_SWIFT_FLAGS[config=Release]" => "-suppress-warnings" }
 end
