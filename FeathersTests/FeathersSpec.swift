@@ -16,8 +16,6 @@ class FeathersSpec: QuickSpec {
 
         describe("ReactiveSwift Extensions") {
 
-
-
             describe("Feathers") {
 
                 var app: Feathers!
@@ -45,7 +43,6 @@ class FeathersSpec: QuickSpec {
                     expect(didInterrupt).toEventually(beFalse())
                     expect(didReceiveValue).toEventually(beTrue())
                     expect(didComplete).toEventually(beTrue())
-
                 }
 
                 it("should logout successfully") {

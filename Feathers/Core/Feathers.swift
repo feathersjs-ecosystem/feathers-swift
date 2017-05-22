@@ -21,7 +21,7 @@ public final class Feathers {
     /// Authentication configuration.
     private(set) public var authenticationConfiguration = AuthenticationConfiguration()
 
-    private var services: [String: Service] = [:]
+    private var services: [String: ServiceType] = [:]
 
     /// Feather's initializer.
     ///
@@ -35,15 +35,26 @@ public final class Feathers {
     ///
     /// - Parameter path: Service path.
     /// - Returns: Service object.
-    public func service(path: String) -> Service {
+    public func service(path: String) -> ServiceType {
         let servicePath = path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
-        if let service = services[servicePath] {
-            return service
+        guard let service = services[servicePath] else {
+            let providerService = ProviderService(provider: provider)
+            providerService.setup(app: self, path: servicePath)
+            return ServiceWrapper(service: providerService)
         }
-        let service = Service(path: servicePath)
-        service.setup(app: self)
+        return ServiceWrapper(service: service)
+    }
+
+    public func use(path: String, service: ServiceType) {
+        let servicePath = path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
         services[servicePath] = service
-        return service
+    }
+
+    public func use(paths: [String], service: ServiceType) {
+        paths.forEach { [weak self] path in
+            let servicePath = path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+            self?.services[servicePath] = service
+        }
     }
 
     /// Configure any authentication options.

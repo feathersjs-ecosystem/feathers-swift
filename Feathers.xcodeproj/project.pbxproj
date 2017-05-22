@@ -93,6 +93,18 @@
 		EA0F0D2C1ED0B539000517A4 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
 		EA0F0D2D1ED0B539000517A4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
 		EA0F0D2E1ED0B539000517A4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
+		EA0F0D311ED290EF000517A4 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D301ED290EF000517A4 /* ServiceType.swift */; };
+		EA0F0D321ED290EF000517A4 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D301ED290EF000517A4 /* ServiceType.swift */; };
+		EA0F0D331ED290EF000517A4 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D301ED290EF000517A4 /* ServiceType.swift */; };
+		EA0F0D341ED290EF000517A4 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D301ED290EF000517A4 /* ServiceType.swift */; };
+		EA0F0D3B1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3A1ED2AA49000517A4 /* ServiceWrapper.swift */; };
+		EA0F0D3C1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3A1ED2AA49000517A4 /* ServiceWrapper.swift */; };
+		EA0F0D3D1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3A1ED2AA49000517A4 /* ServiceWrapper.swift */; };
+		EA0F0D3E1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3A1ED2AA49000517A4 /* ServiceWrapper.swift */; };
+		EA0F0D401ED2AB99000517A4 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */; };
+		EA0F0D411ED2AB99000517A4 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */; };
+		EA0F0D421ED2AB99000517A4 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */; };
+		EA0F0D431ED2AB99000517A4 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */; };
 		EA12E0631ECE950100A0DCF7 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */; };
 		EA12E0691ECE950C00A0DCF7 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
 		EA12E06A1ECE952400A0DCF7 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
@@ -234,6 +246,9 @@
 		EA0F0D1F1ED0B535000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/watchOS/KeychainSwift.framework; sourceTree = "<group>"; };
 		EA0F0D201ED0B535000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/watchOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		EA0F0D211ED0B535000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/watchOS/Result.framework; sourceTree = "<group>"; };
+		EA0F0D301ED290EF000517A4 /* ServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceType.swift; path = Core/ServiceType.swift; sourceTree = "<group>"; };
+		EA0F0D3A1ED2AA49000517A4 /* ServiceWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceWrapper.swift; path = Core/ServiceWrapper.swift; sourceTree = "<group>"; };
+		EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProviderService.swift; path = Core/ProviderService.swift; sourceTree = "<group>"; };
 		EA12E05E1ECE950000A0DCF7 /* Feathers-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3017131EC7867E00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = Core/Hooks.swift; sourceTree = "<group>"; };
 		EA301AB41EC8BEBD00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = FeathersTests/Hooks.swift; sourceTree = SOURCE_ROOT; };
@@ -452,10 +467,13 @@
 				EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */,
 				EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */,
 				EABBAE0C1EBFA6A400522603 /* Feathers.swift */,
+				EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */,
 				EABBAE0D1EBFA6A400522603 /* FeathersError.swift */,
 				EABBAE0F1EBFA6A400522603 /* Provider.swift */,
 				EABBAE101EBFA6A400522603 /* Response.swift */,
 				EAE05D691EBFDB0000DA55BF /* Endpoint.swift */,
+				EA0F0D301ED290EF000517A4 /* ServiceType.swift */,
+				EA0F0D3A1ED2AA49000517A4 /* ServiceWrapper.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -822,6 +840,7 @@
 			files = (
 				EA0F0CB61ED0B3E2000517A4 /* AuthenticationConfiguration.swift in Sources */,
 				EA0F0CB91ED0B3E2000517A4 /* FeathersError.swift in Sources */,
+				EA0F0D411ED2AB99000517A4 /* ProviderService.swift in Sources */,
 				EA0F0CB81ED0B3E2000517A4 /* Feathers.swift in Sources */,
 				EA0F0CB71ED0B3E2000517A4 /* AuthenticationStorage.swift in Sources */,
 				EA0F0CBC1ED0B3E2000517A4 /* Endpoint.swift in Sources */,
@@ -829,6 +848,8 @@
 				EA0F0CBA1ED0B3E2000517A4 /* Provider.swift in Sources */,
 				EA0F0CB41ED0B3E2000517A4 /* LoggerHooks.swift in Sources */,
 				EA0F0CB31ED0B3E2000517A4 /* Hooks.swift in Sources */,
+				EA0F0D3C1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */,
+				EA0F0D321ED290EF000517A4 /* ServiceType.swift in Sources */,
 				EA0F0CB51ED0B3E2000517A4 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -850,6 +871,7 @@
 			files = (
 				EA0F0CEE1ED0B46B000517A4 /* AuthenticationConfiguration.swift in Sources */,
 				EA0F0CF11ED0B46B000517A4 /* FeathersError.swift in Sources */,
+				EA0F0D421ED2AB99000517A4 /* ProviderService.swift in Sources */,
 				EA0F0CF01ED0B46B000517A4 /* Feathers.swift in Sources */,
 				EA0F0CEF1ED0B46B000517A4 /* AuthenticationStorage.swift in Sources */,
 				EA0F0CF41ED0B46B000517A4 /* Endpoint.swift in Sources */,
@@ -857,6 +879,8 @@
 				EA0F0CF21ED0B46B000517A4 /* Provider.swift in Sources */,
 				EA0F0CEC1ED0B46B000517A4 /* LoggerHooks.swift in Sources */,
 				EA0F0CEB1ED0B46B000517A4 /* Hooks.swift in Sources */,
+				EA0F0D3D1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */,
+				EA0F0D331ED290EF000517A4 /* ServiceType.swift in Sources */,
 				EA0F0CED1ED0B46B000517A4 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -878,6 +902,7 @@
 			files = (
 				EA0F0D281ED0B539000517A4 /* AuthenticationConfiguration.swift in Sources */,
 				EA0F0D2B1ED0B539000517A4 /* FeathersError.swift in Sources */,
+				EA0F0D431ED2AB99000517A4 /* ProviderService.swift in Sources */,
 				EA0F0D2A1ED0B539000517A4 /* Feathers.swift in Sources */,
 				EA0F0D291ED0B539000517A4 /* AuthenticationStorage.swift in Sources */,
 				EA0F0D2E1ED0B539000517A4 /* Endpoint.swift in Sources */,
@@ -885,6 +910,8 @@
 				EA0F0D2C1ED0B539000517A4 /* Provider.swift in Sources */,
 				EA0F0D261ED0B539000517A4 /* LoggerHooks.swift in Sources */,
 				EA0F0D251ED0B539000517A4 /* Hooks.swift in Sources */,
+				EA0F0D3E1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */,
+				EA0F0D341ED290EF000517A4 /* ServiceType.swift in Sources */,
 				EA0F0D271ED0B539000517A4 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -906,6 +933,7 @@
 			files = (
 				EA954C781EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */,
 				EAC0BCF01EC90FF30049FB13 /* Response.swift in Sources */,
+				EA0F0D401ED2AB99000517A4 /* ProviderService.swift in Sources */,
 				EAC0BCEB1EC90FF30049FB13 /* AuthenticationStorage.swift in Sources */,
 				EAC0BCEF1EC90FF30049FB13 /* Provider.swift in Sources */,
 				EAC0BCEA1EC90FF30049FB13 /* AuthenticationConfiguration.swift in Sources */,
@@ -913,6 +941,8 @@
 				EAC0BCF41EC90FF30049FB13 /* Hooks.swift in Sources */,
 				EAC0BCED1EC90FF30049FB13 /* FeathersError.swift in Sources */,
 				EAC0BCEC1EC90FF30049FB13 /* Feathers.swift in Sources */,
+				EA0F0D3B1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */,
+				EA0F0D311ED290EF000517A4 /* ServiceType.swift in Sources */,
 				EAC0BCF31EC90FF30049FB13 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

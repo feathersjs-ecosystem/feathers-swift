@@ -29,7 +29,7 @@ public struct HookObject {
     public let app: Feathers
 
     /// The service this hook currently runs on.
-    public let service: Service
+    public let service: ServiceType
 
     /// The service method.
     public var method: Service.Method
@@ -41,7 +41,7 @@ public struct HookObject {
     public init(
         type: Kind,
         app: Feathers,
-        service: Service,
+        service: ServiceType,
         method: Service.Method) {
         self.type = type
         self.app = app
