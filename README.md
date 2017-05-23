@@ -11,10 +11,9 @@ Why should you use it?
 
 * Swift 3 :thumbsup:
 * Network abstraction layer
-* Reactive extensions (ReactiveSwift and RxSwift)
 * Integrates seemlessly with any FeathersJS services
 * Supports iOS, macOS, tvOS, and watchOS
-* Promise-based
+* Reactive API ([ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift))
 
 If you use FeathersJS (which you should), FeathersSwift is the perfect choice for you. No more dealing with HTTP requests or socket clients. One simple interface to rule them all and in the darkness, unify them :ring:.
 
@@ -53,14 +52,16 @@ let userService = feathersRestApp.service("users")
 Finally, make a request:
 
 ```swift
-service.request(.find(parameters: ["name": "Bob"]))
+service.request(.find(parameters: ["name": "Waldo"]))
 .then { response in
   print(response)
 }
 .catch { error in
-  print("Error finding Bob!")
+  print("Error finding Waldo!")
 }
 ```
+
+### Service
 
 There are six types of requests you can make that correspond with Feathers service methods:
 
@@ -78,6 +79,35 @@ public enum Method {
 ```
 
 With `.update`, `.patch`, and `.remove`, you may pass in nil for the id when you want to delete a list of entities. The list of entities is determined by the query parameters you pass in.
+
+By default, FeathersSwift will return an instance of `ProviderService` which wraps the application's transport provider in a service. However, you can also register your own services:
+
+```swift
+feathers.use("users-local", CoreDataService())
+```
+
+All custom services must conform to `ServiceType`. Thankfully, that's easy due to the FeathersSwift provided `Service` class which handles things such as hook storage and no-op implementations of the required methods.
+
+A simple custom service might look like:
+
+```swift
+class FileService: Service {
+
+  public override func request(_ method: Service.Method) -> SignalProducer<Response, FeathersError> {
+        let fileManager = FileManager.default
+        switch method {
+        case let .create(data, _):
+          guard let id = data["id"] else { break }
+          let fileData = NSKeyedArchiver.archiveData(withRootObject: data)
+          fileManager.createFile(atPath: "\(path)/\(id)", contents: fileData, attributes: nil)
+        default: break
+        }
+    }
+
+}
+```
+
+While a tiny example, custom services can be infinitely more complex and used anywhere in the hook process. Just call `hookObject.app.service("my-custom-service").request(.create(data: [:], parameters: nil))`.
 
 ### Authentication
 

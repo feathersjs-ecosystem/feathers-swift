@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EA0F0D161ED0B50D000517A4"
-               BuildableName = "Feathers-watchOS.framework"
+               BuildableName = "Feathers.framework"
                BlueprintName = "Feathers-watchOS"
                ReferencedContainer = "container:Feathers.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EA0F0D161ED0B50D000517A4"
-            BuildableName = "Feathers-watchOS.framework"
+            BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-watchOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EA0F0D161ED0B50D000517A4"
-            BuildableName = "Feathers-watchOS.framework"
+            BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-watchOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
          </BuildableReference>
