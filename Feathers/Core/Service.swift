@@ -10,8 +10,9 @@ import Foundation
 import ReactiveSwift
 import Result
 
-/// Represents a Feather's service. Used for making requests and in the case
-/// of real-time providers, emitting real-time events.
+/// Represents a subclassable Feather's service. `Service` is not to be 
+/// used by itself; it's an abstract base class for all other service to inherit from.
+/// To use a service, see `ProviderService` or create your own!
 open class Service: ServiceType {
 
     /// Service methods.
@@ -116,33 +117,6 @@ open class Service: ServiceType {
     /// Service error hooks.
     private var errorHooks = Hooks()
 
-    /// Register hooks with the service.
-    /// Hooks get added with each successive use, not overridden.
-    ///
-    /// - Parameters:
-    ///   - before: Before hooks.
-    ///   - after: After hooks.
-    ///   - error: Error hooks.
-    final public func hooks(before: Hooks? = nil, after: Hooks? = nil, error: Hooks? = nil) {
-        if let before = before {
-            beforeHooks = beforeHooks.add(hooks: before)
-        }
-        if let after = after {
-            afterHooks = afterHooks.add(hooks: after)
-        }
-        if let error = error {
-            errorHooks = errorHooks.add(hooks: error)
-        }
-    }
-
-    final public func hooks(for kind: HookObject.Kind) -> Service.Hooks? {
-        switch kind {
-        case .before: return beforeHooks
-        case .after: return afterHooks
-        case .error: return errorHooks
-        }
-    }
-
     // MARK: Real-time
 
     /// A real time event that `RealTimeProvider`s can emit.
@@ -160,70 +134,73 @@ open class Service: ServiceType {
 
     }
 
+    /// Weak reference to the main feathers app.
+    private(set) public weak var app: Feathers?
+
+    // MARK: - Initialization
+
+    public init() {}
+
+    // MARK: - ServiceType
+
     /// The service path.
     private(set) public var path: String = ""
 
-    private(set) public weak var app: Feathers?
-
-    public init() {}
 
     open func setup(app: Feathers, path: String) {
         self.app = app
         self.path = path
     }
 
-    /// Request data from the server.
-    ///
-    ///   The service will:
-    ///   - run `all` before hooks then service method specifc before hooks
-    ///   - make the request
-    ///   - process the response and run `all` after hooks then service method specific after hooks
-    ///
-    ///   If at any point in the process a hook sets an error or the response sets the error, 
-    ///   the error hooks will be run and the chain will complete.
-    ///
-    /// - Parameters:
-    ///   - method: Service method to request for.
-    ///
-    /// - Returns a promise that emits a response.
     open func request(_ method: Service.Method) -> SignalProducer<Response, FeathersError> {
         fatalError("Must be overriden by a subclass")
     }
 
-    // MARK: - Real-Time
+    final public func hooks(before: Hooks? = nil, after: Hooks? = nil, error: Hooks? = nil) {
+        if let before = before {
+            beforeHooks = beforeHooks.add(hooks: before)
+        }
+        if let after = after {
+            afterHooks = afterHooks.add(hooks: after)
+        }
+        if let error = error {
+            errorHooks = errorHooks.add(hooks: error)
+        }
+    }
 
-    /// Register to listen for a real-time event.
-    ///
-    /// - Parameters:
-    ///   - event: Event to listen for.
-    ///   - callback: Event callback.
-    ///
-    /// - Note: If the provider doesn't conform to `RealTimeProvider`, nothing will happen.
+    final public func retrieveHooks(for kind: HookObject.Kind) -> Service.Hooks? {
+        switch kind {
+        case .before: return beforeHooks
+        case .after: return afterHooks
+        case .error: return errorHooks
+        }
+    }
+
     public func on(event: RealTimeEvent) -> Signal<[String: Any], NoError> {
         // no-op
         return .empty
     }
 
-    /// Register to listen for an event once and only once.
-    ///
-    /// - Parameters:
-    ///   - event: Event to listen for.
-    ///   - callback: Single-use-callback.
     public func once(event: RealTimeEvent) -> Signal<[String: Any], NoError> {
         return .empty
     }
 
-    /// Unregister for an event. Must be called to end the stream.
-    ///
-    /// - Parameter event: Real-time event to unregister from.
     public func off(event: RealTimeEvent) {
         // no-op
+    }
+
+    public var supportsRealtimeEvents: Bool {
+        return false
     }
 
 }
 
 internal extension Service.Hooks {
 
+    /// Internal extension for grabbing all the hooks for a given method.
+    ///
+    /// - Parameter method: Service method.
+    /// - Returns: A list of hooks registered for that service method.
     internal func hooks(for method: Service.Method) -> [Hook] {
         switch method {
         case .find: return all + find

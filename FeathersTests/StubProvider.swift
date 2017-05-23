@@ -38,4 +38,6 @@ class StubProvider: Provider {
         return SignalProducer(value: Response(pagination: nil, data: .jsonObject([:])))
     }
 
+    
+
 }

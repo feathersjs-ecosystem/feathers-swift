@@ -10,6 +10,7 @@ import Foundation
 import ReactiveSwift
 import Result
 
+/// Service that wraps a transport provider.
 public class ProviderService: Service {
 
     private let provider: Provider
@@ -23,7 +24,24 @@ public class ProviderService: Service {
         let endpoint = constructEndpoint(from: method)
         return provider.request(endpoint: endpoint)
     }
+    
+    override public func on(event: RealTimeEvent) -> Signal<[String: Any], NoError> {
+        return app?.provider.on(event: "\(path) \(event.rawValue)") ?? .never
+    }
 
+    override public func once(event: RealTimeEvent) -> Signal<[String: Any], NoError> {
+        return app?.provider.once(event: "\(path) \(event.rawValue)") ?? .never
+    }
+
+    override public func off(event: RealTimeEvent) {
+        app?.provider.off(event: event.rawValue)
+    }
+
+    override public var supportsRealtimeEvents: Bool {
+        return true
+    }
+
+    // MARK: - Helpers
 
     /// Given a service method, construct an endpoint.
     ///
@@ -37,33 +55,6 @@ public class ProviderService: Service {
             endpoint = Endpoint(baseURL: provider.baseURL, path: path, method: method, accessToken: accessToken, authenticationConfiguration: app?.authenticationConfiguration ?? AuthenticationConfiguration())
         }
         return endpoint
-    }
-
-    /// Register to listen for a real-time event.
-    ///
-    /// - Parameters:
-    ///   - event: Event to listen for.
-    ///   - callback: Event callback.
-    ///
-    /// - Note: If the provider doesn't conform to `RealTimeProvider`, nothing will happen.
-    override public func on(event: RealTimeEvent) -> Signal<[String: Any], NoError> {
-        return app?.provider.on(event: "\(path) \(event.rawValue)") ?? .never
-    }
-
-    /// Register to listen for an event once and only once.
-    ///
-    /// - Parameters:
-    ///   - event: Event to listen for.
-    ///   - callback: Single-use-callback.
-    override public func once(event: RealTimeEvent) -> Signal<[String: Any], NoError> {
-        return app?.provider.once(event: "\(path) \(event.rawValue)") ?? .never
-    }
-
-    /// Unregister for an event. Must be called to end the stream.
-    ///
-    /// - Parameter event: Real-time event to unregister from.
-    override public func off(event: RealTimeEvent) {
-        app?.provider.off(event: event.rawValue)
     }
 
 }

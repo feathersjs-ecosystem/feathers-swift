@@ -18,10 +18,10 @@ import enum Result.NoError
 final public class ServiceWrapper: ServiceType {
 
     /// Weak reference to main feathers app.
-    private weak var app: Feathers?
+    final private weak var app: Feathers?
 
     /// Internally wrapped service.
-    private let service: ServiceType
+    final private let service: ServiceType
 
     // MARK: - Initialization
 
@@ -35,8 +35,12 @@ final public class ServiceWrapper: ServiceType {
         self.app = app
     }
 
-    public var path: String {
+    final public var path: String {
         return service.path
+    }
+
+    final public var supportsRealtimeEvents: Bool {
+        return service.supportsRealtimeEvents
     }
 
 
@@ -115,19 +119,19 @@ final public class ServiceWrapper: ServiceType {
         service.hooks(before: before, after: after, error: error)
     }
 
-    final public func hooks(for kind: HookObject.Kind) -> Service.Hooks? {
-        return service.hooks(for: kind)
+    final public func retrieveHooks(for kind: HookObject.Kind) -> Service.Hooks? {
+        return service.retrieveHooks(for: kind)
     }
 
-    public func on(event: Service.RealTimeEvent) -> Signal<[String: Any], NoError> {
+    final public func on(event: Service.RealTimeEvent) -> Signal<[String: Any], NoError> {
         return service.on(event: event)
     }
 
-    public func once(event: Service.RealTimeEvent) -> Signal<[String: Any], NoError> {
+    final public func once(event: Service.RealTimeEvent) -> Signal<[String: Any], NoError> {
         return service.once(event: event)
     }
 
-    public func off(event: Service.RealTimeEvent) {
+    final public func off(event: Service.RealTimeEvent) {
         service.off(event: event)
     }
 

@@ -91,11 +91,10 @@ public protocol Hook {
     /// Function that's called by the middleware system to run the hook.
     ///
     /// In order to modify the hook, a copy of it has to be made because
-    /// Swift function parameters are `let` by default. 
+    /// Swift function parameters are `let` by default.
     ///
     /// - Parameters:
     ///   - hookObject: Hook object.
-    ///
-    /// - Returns: `Promise` object.
+    /// - Returns: `SignalProducer` that emits the modified hook object or errors.
     func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError>
 }

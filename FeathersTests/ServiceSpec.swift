@@ -17,7 +17,7 @@ class ServiceSpec: QuickSpec {
         describe("Service") {
 
             var app: Feathers!
-            var service: Service!
+            var service: ServiceType!
 
             beforeEach {
                 app = Feathers(provider: StubProvider(data: ["name": "Bob"]))
