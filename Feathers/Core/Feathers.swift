@@ -40,13 +40,16 @@ public final class Feathers {
         guard let service = services[servicePath] else {
             let providerService = ProviderService(provider: provider)
             providerService.setup(app: self, path: servicePath)
-            return ServiceWrapper(service: providerService)
+            let wrapper = ServiceWrapper(service: providerService)
+            wrapper.setup(app: self, path: servicePath)
+            return wrapper
         }
         return ServiceWrapper(service: service)
     }
 
     public func use(path: String, service: ServiceType) {
         let servicePath = path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+        service.setup(app: self, path: servicePath)
         services[servicePath] = service
     }
 

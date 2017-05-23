@@ -69,9 +69,9 @@ final public class ServiceWrapper: ServiceType {
         }
         let beforeHookObject = HookObject(type: .before, app: application, service: service, method: method)
         // Get all the hooks
-        let beforeHooks = service.hooks(for: .before)?.hooks(for: method) ?? []
-        let afterHooks = service.hooks(for: .after)?.hooks(for: method) ?? []
-        let errorHooks = service.hooks(for: .error)?.hooks(for: method) ?? []
+        let beforeHooks = service.retrieveHooks(for: .before)?.hooks(for: method) ?? []
+        let afterHooks = service.retrieveHooks(for: .after)?.hooks(for: method) ?? []
+        let errorHooks = service.retrieveHooks(for: .error)?.hooks(for: method) ?? []
         // Build up the before chains
         let beforeChain = beforeHooks.reduce(SignalProducer(value: beforeHookObject), reduceHooksClosure)
 

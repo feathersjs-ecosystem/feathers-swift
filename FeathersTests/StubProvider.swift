@@ -9,6 +9,7 @@
 import Feathers
 import Foundation
 import ReactiveSwift
+import enum Result.NoError
 
 class StubProvider: Provider {
 
@@ -36,6 +37,19 @@ class StubProvider: Provider {
 
     func logout(path: String) -> SignalProducer<Response, FeathersError> {
         return SignalProducer(value: Response(pagination: nil, data: .jsonObject([:])))
+    }
+
+    public func on(event: String) -> Signal<[String: Any], NoError> {
+        // no-op
+        return .empty
+    }
+
+    public func once(event: String) -> Signal<[String: Any], NoError> {
+        return .empty
+    }
+
+    public func off(event: String) {
+        // no-op
     }
 
     
