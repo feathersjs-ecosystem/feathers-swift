@@ -12,7 +12,7 @@ import ReactiveSwift
 public extension SignalProducer {
 
     /// Sends only an interrupted event.
-    static var interrupted: SignalProducer<Value, Error> {
+    public static var interrupted: SignalProducer<Value, Error> {
         return SignalProducer { observer, _ in
             observer.sendInterrupted()
         }
