@@ -1186,7 +1186,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -1212,7 +1212,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -1411,6 +1411,7 @@
 				EA0F0C861ED0B25F000517A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA0F0C871ED0B25F000517A4 /* Build configuration list for PBXNativeTarget "Feathers-macOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1419,6 +1420,7 @@
 				EA0F0C891ED0B25F000517A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA0F0CE51ED0B448000517A4 /* Build configuration list for PBXNativeTarget "Feathers-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1427,6 +1429,7 @@
 				EA0F0CE71ED0B448000517A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA0F0CE81ED0B448000517A4 /* Build configuration list for PBXNativeTarget "Feathers-tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1435,6 +1438,7 @@
 				EA0F0CEA1ED0B448000517A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA0F0D1C1ED0B50D000517A4 /* Build configuration list for PBXNativeTarget "Feathers-watchOS" */ = {
 			isa = XCConfigurationList;
@@ -1443,6 +1447,7 @@
 				EA0F0D1E1ED0B50D000517A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA12E0661ECE950100A0DCF7 /* Build configuration list for PBXNativeTarget "Feathers-iOSTests" */ = {
 			isa = XCConfigurationList;
