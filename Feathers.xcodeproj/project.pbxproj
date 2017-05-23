@@ -105,6 +105,10 @@
 		EA0F0D411ED2AB99000517A4 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */; };
 		EA0F0D421ED2AB99000517A4 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */; };
 		EA0F0D431ED2AB99000517A4 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */; };
+		EA0F0D461ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */; };
+		EA0F0D471ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */; };
+		EA0F0D481ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */; };
+		EA0F0D491ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */; };
 		EA12E0631ECE950100A0DCF7 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */; };
 		EA12E0691ECE950C00A0DCF7 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
 		EA12E06A1ECE952400A0DCF7 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
@@ -249,6 +253,7 @@
 		EA0F0D301ED290EF000517A4 /* ServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceType.swift; path = Core/ServiceType.swift; sourceTree = "<group>"; };
 		EA0F0D3A1ED2AA49000517A4 /* ServiceWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceWrapper.swift; path = Core/ServiceWrapper.swift; sourceTree = "<group>"; };
 		EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProviderService.swift; path = Core/ProviderService.swift; sourceTree = "<group>"; };
+		EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SignalProducer+Convenience.swift"; path = "Core/SignalProducer+Convenience.swift"; sourceTree = "<group>"; };
 		EA12E05E1ECE950000A0DCF7 /* Feathers-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3017131EC7867E00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = Core/Hooks.swift; sourceTree = "<group>"; };
 		EA301AB41EC8BEBD00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = FeathersTests/Hooks.swift; sourceTree = SOURCE_ROOT; };
@@ -395,6 +400,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EA0F0D441ED3F85A000517A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		EA301AB31EC8BEAF00114F19 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +474,7 @@
 		EABBAE091EBFA69C00522603 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EA0F0D441ED3F85A000517A4 /* Extensions */,
 				EA3017131EC7867E00114F19 /* Hooks.swift */,
 				EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */,
 				EABBAE121EBFA6A400522603 /* Service.swift */,
@@ -848,6 +862,7 @@
 				EA0F0CBA1ED0B3E2000517A4 /* Provider.swift in Sources */,
 				EA0F0CB41ED0B3E2000517A4 /* LoggerHooks.swift in Sources */,
 				EA0F0CB31ED0B3E2000517A4 /* Hooks.swift in Sources */,
+				EA0F0D471ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */,
 				EA0F0D3C1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */,
 				EA0F0D321ED290EF000517A4 /* ServiceType.swift in Sources */,
 				EA0F0CB51ED0B3E2000517A4 /* Service.swift in Sources */,
@@ -879,6 +894,7 @@
 				EA0F0CF21ED0B46B000517A4 /* Provider.swift in Sources */,
 				EA0F0CEC1ED0B46B000517A4 /* LoggerHooks.swift in Sources */,
 				EA0F0CEB1ED0B46B000517A4 /* Hooks.swift in Sources */,
+				EA0F0D481ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */,
 				EA0F0D3D1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */,
 				EA0F0D331ED290EF000517A4 /* ServiceType.swift in Sources */,
 				EA0F0CED1ED0B46B000517A4 /* Service.swift in Sources */,
@@ -910,6 +926,7 @@
 				EA0F0D2C1ED0B539000517A4 /* Provider.swift in Sources */,
 				EA0F0D261ED0B539000517A4 /* LoggerHooks.swift in Sources */,
 				EA0F0D251ED0B539000517A4 /* Hooks.swift in Sources */,
+				EA0F0D491ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */,
 				EA0F0D3E1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */,
 				EA0F0D341ED290EF000517A4 /* ServiceType.swift in Sources */,
 				EA0F0D271ED0B539000517A4 /* Service.swift in Sources */,
@@ -941,6 +958,7 @@
 				EAC0BCF41EC90FF30049FB13 /* Hooks.swift in Sources */,
 				EAC0BCED1EC90FF30049FB13 /* FeathersError.swift in Sources */,
 				EAC0BCEC1EC90FF30049FB13 /* Feathers.swift in Sources */,
+				EA0F0D461ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */,
 				EA0F0D3B1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */,
 				EA0F0D311ED290EF000517A4 /* ServiceType.swift in Sources */,
 				EAC0BCF31EC90FF30049FB13 /* Endpoint.swift in Sources */,

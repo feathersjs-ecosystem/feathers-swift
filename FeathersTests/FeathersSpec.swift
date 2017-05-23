@@ -3,7 +3,7 @@
 //  Feathers
 //
 //  Created by Brendan Conron on 5/20/17.
-//  Copyright © 2017 Swoopy Studios. All rights reserved.
+//  Copyright © 2017 FeathersJS. All rights reserved.
 //
 
 import Quick
