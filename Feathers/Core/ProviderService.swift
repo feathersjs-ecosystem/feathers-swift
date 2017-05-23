@@ -38,7 +38,7 @@ public class ProviderService: Service {
     }
 
     override public var supportsRealtimeEvents: Bool {
-        return true
+        return provider.supportsRealtimeEvents
     }
 
     // MARK: - Helpers

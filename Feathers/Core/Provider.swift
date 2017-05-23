@@ -16,6 +16,9 @@ public protocol Provider: class {
     /// Provider's base url.
     var baseURL: URL { get }
 
+    /// Whether or not the provider supports real-time events.
+    var supportsRealtimeEvents: Bool { get }
+
     /// Used for any extra setup a provider needs. Called by the `Feathers` application.
     ///
     /// - Parameters:
