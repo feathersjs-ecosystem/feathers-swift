@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EAC0BD611EC9686E0049FB13"
+               BlueprintIdentifier = "EA0F0CD31ED0B448000517A4"
                BuildableName = "Feathers.framework"
                BlueprintName = "Feathers-tvOS"
                ReferencedContainer = "container:Feathers.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EAC0BD691EC9686E0049FB13"
+               BlueprintIdentifier = "EA0F0CDB1ED0B448000517A4"
                BuildableName = "Feathers-tvOSTests.xctest"
                BlueprintName = "Feathers-tvOSTests"
                ReferencedContainer = "container:Feathers.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAC0BD611EC9686E0049FB13"
+            BlueprintIdentifier = "EA0F0CD31ED0B448000517A4"
             BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-tvOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAC0BD611EC9686E0049FB13"
+            BlueprintIdentifier = "EA0F0CD31ED0B448000517A4"
             BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-tvOS"
             ReferencedContainer = "container:Feathers.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAC0BD611EC9686E0049FB13"
+            BlueprintIdentifier = "EA0F0CD31ED0B448000517A4"
             BuildableName = "Feathers.framework"
             BlueprintName = "Feathers-tvOS"
             ReferencedContainer = "container:Feathers.xcodeproj">

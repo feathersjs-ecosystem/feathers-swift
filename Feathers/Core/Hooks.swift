@@ -3,12 +3,12 @@
 //  Feathers
 //
 //  Created by Brendan Conron on 5/13/17.
-//  Copyright © 2017 Swoopy Studios. All rights reserved.
+//  Copyright © 2017 FeathersJS. All rights reserved.
 //
 
 import Foundation
-import PromiseKit
-import enum Result.Result
+import Result
+import ReactiveSwift
 
 /// Hook object that gets passed through hook functions
 public struct HookObject {
@@ -29,19 +29,19 @@ public struct HookObject {
     public let app: Feathers
 
     /// The service this hook currently runs on.
-    public let service: Service
+    public let service: ServiceType
 
     /// The service method.
     public var method: Service.Method
 
     public var result: Response?
 
-    public var error: Error?
+    public var error: FeathersError?
 
     public init(
         type: Kind,
         app: Feathers,
-        service: Service,
+        service: ServiceType,
         method: Service.Method) {
         self.type = type
         self.app = app
@@ -67,7 +67,7 @@ public extension HookObject {
     ///
     /// - Parameter error: Error to attach.
     /// - Returns: Modified hook object.
-    public func objectByAdding(error: Error) -> HookObject {
+    public func objectByAdding(error: FeathersError) -> HookObject {
         var object = self
         object.error = error
         return object
@@ -91,11 +91,10 @@ public protocol Hook {
     /// Function that's called by the middleware system to run the hook.
     ///
     /// In order to modify the hook, a copy of it has to be made because
-    /// Swift function parameters are `let` by default. 
+    /// Swift function parameters are `let` by default.
     ///
     /// - Parameters:
     ///   - hookObject: Hook object.
-    ///
-    /// - Returns: `Promise` object.
-    func run(with hookObject: HookObject) -> Promise<HookObject>
+    /// - Returns: `SignalProducer` that emits the modified hook object or errors.
+    func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError>
 }

@@ -3,13 +3,13 @@
 //  Feathers
 //
 //  Created by Brendan Conron on 5/14/17.
-//  Copyright © 2017 Swoopy Studios. All rights reserved.
+//  Copyright © 2017 FeathersJS. All rights reserved.
 //
 
 import Feathers
 import Foundation
-import PromiseKit
-import enum Result.Result
+import ReactiveSwift
+import Result
 
 /// Hook that always errors
 struct ErrorHook: Hook {
@@ -20,8 +20,8 @@ struct ErrorHook: Hook {
         self.error = error
     }
 
-    func run(with hookObject: HookObject) -> Promise<HookObject> {
-        return Promise(error: error)
+    func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError> {
+        return SignalProducer(error: error)
     }
 
 }
@@ -34,10 +34,10 @@ struct ModifyErrorHook: Hook {
         self.error = error
     }
 
-    func run(with hookObject: HookObject) -> Promise<HookObject> {
+    func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError> {
         var object = hookObject
         object.error = error
-        return Promise(value: object)
+        return SignalProducer(value: object)
     }
 
 }
@@ -50,10 +50,10 @@ struct StubHook: Hook {
         self.data = data
     }
 
-    func run(with hookObject: HookObject) -> Promise<HookObject> {
+    func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError> {
         var object = hookObject
         object.result = Response(pagination: nil, data: data)
-        return Promise(value: object)
+        return SignalProducer(value: object)
     }
 
 }
@@ -67,10 +67,10 @@ struct PopuplateDataAfterHook: Hook {
         self.data = data
     }
 
-    func run(with hookObject: HookObject) -> Promise<HookObject> {
+    func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError> {
         var object = hookObject
         object.result = Response(pagination: nil, data: .jsonObject(data))
-        return Promise(value: object)
+        return SignalProducer(value: object)
     }
 
 }

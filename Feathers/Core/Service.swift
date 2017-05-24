@@ -3,15 +3,17 @@
 //  Feathers
 //
 //  Created by Brendan Conron on 4/15/17.
-//  Copyright © 2017 Swoopy Studios. All rights reserved.
+//  Copyright © 2017 FeathersJS. All rights reserved.
 //
 
 import Foundation
-import PromiseKit
+import ReactiveSwift
+import Result
 
-/// Represents a Feather's service. Used for making requests and in the case
-/// of real-time providers, emitting real-time events.
-final public class Service {
+/// Represents a subclassable Feather's service. `Service` is not to be 
+/// used by itself; it's an abstract base class for all other service to inherit from.
+/// To use a service, see `ProviderService` or create your own!
+open class Service: ServiceType {
 
     /// Service methods.
     ///
@@ -115,30 +117,7 @@ final public class Service {
     /// Service error hooks.
     private var errorHooks = Hooks()
 
-
-    /// Register hooks with the service.
-    /// Hooks get added with each successive use, not overridden.
-    ///
-    /// - Parameters:
-    ///   - before: Before hooks.
-    ///   - after: After hooks.
-    ///   - error: Error hooks.
-    public func hooks(before: Hooks? = nil, after: Hooks? = nil, error: Hooks? = nil) {
-        if let before = before {
-            beforeHooks = beforeHooks.add(hooks: before)
-        }
-        if let after = after {
-            afterHooks = afterHooks.add(hooks: after)
-        }
-        if let error = error {
-            errorHooks = errorHooks.add(hooks: error)
-        }
-    }
-
     // MARK: Real-time
-
-    /// Callback for real-time events.
-    public typealias RealTimeEventCallback = ([String: Any]) -> ()
 
     /// A real time event that `RealTimeProvider`s can emit.
     ///
@@ -155,177 +134,74 @@ final public class Service {
 
     }
 
-    /// The service path.
-    public let path: String
+    /// Weak reference to the main feathers app.
+    private(set) public weak var app: Feathers?
 
-    private weak var app: Feathers?
-    
-    /// Service initializer.
-    ///
-    /// - Parameter path: Service path.
-    public init(path: String) {
+    // MARK: - Initialization
+
+    public init() {}
+
+    // MARK: - ServiceType
+
+    /// The service path.
+    private(set) public var path: String = ""
+
+
+    open func setup(app: Feathers, path: String) {
+        self.app = app
         self.path = path
     }
 
-    public func setup(app: Feathers) {
-        self.app = app
+    open func request(_ method: Service.Method) -> SignalProducer<Response, FeathersError> {
+        fatalError("Must be overriden by a subclass")
     }
 
-    /// Request data from the server.
-    ///
-    ///   The service will:
-    ///   - run `all` before hooks then service method specifc before hooks
-    ///   - make the request
-    ///   - process the response and run `all` after hooks then service method specific after hooks
-    ///
-    ///   If at any point in the process a hook sets an error or the response sets the error, 
-    ///   the error hooks will be run and the chain will complete.
-    ///
-    /// - Parameters:
-    ///   - method: Service method to request for.
-    ///
-    /// - Returns a promise that emits a response.
-    open func request(_ method: Service.Method) -> Promise<Response> {
-        guard let application = app else {
-            return Promise(error: FeathersError.unknown)
+    final public func hooks(before: Hooks? = nil, after: Hooks? = nil, error: Hooks? = nil) {
+        if let before = before {
+            beforeHooks = beforeHooks.add(hooks: before)
         }
-        // Reduces an array of `Hook` objects into a single promise.
-        let reduceHooksClosure: (Promise<HookObject>, Hook) -> Promise<HookObject> = { acc, current in
-            return acc.then { value in
-                return current.run(with: value)
-            }
+        if let after = after {
+            afterHooks = afterHooks.add(hooks: after)
         }
-        let beforeHookObject = HookObject(type: .before, app: application, service: self, method: method)
-        // Get all the hooks
-        let beforeHooks = self.beforeHooks.hooks(for: method)
-        let afterHooks = self.afterHooks.hooks(for: method)
-        let errorHooks = self.errorHooks.hooks(for: method)
-        // Chain of hooks to run before the request
-        let beforeChain = beforeHooks.reduce(Promise(value: beforeHookObject), reduceHooksClosure)
-        let chain = beforeChain.then { [weak self] hook -> Promise<Response> in
-            guard let vSelf = self else { return Promise(error: FeathersError.unknown) }
-            // If the result has been set, skip the request and run the after hooks
-            if let _ = hook.result {
-                let afterHookObject = hook.object(with: .after)
-                let afterChain = afterHooks.reduce(Promise(value: afterHookObject), reduceHooksClosure)
-                return afterChain.then {
-                    return $0.result != nil ? Promise(value: $0.result!) : Promise(error: FeathersError.unknown)
-                }
-            } else {
-                let endpoint = vSelf.constructEndpoint(from: hook.method)
-                return application.provider.request(endpoint: endpoint).then { response in
-                    let afterHookObject = hook.object(with: .after).objectByAdding(result: response)
-                    let afterChain = afterHooks.reduce(Promise(value: afterHookObject), reduceHooksClosure)
-                    return afterChain.then { value in
-                        return value.result != nil ? Promise(value: value.result!) : Promise(error: FeathersError.unknown)
-                    }
-                }
-            }
-        }
-        // If the chain errors at any point, run all the error hooks then send the final error
-        return chain.recover { [weak self] error -> Promise<Response> in
-            guard let vSelf = self else { throw error }
-            let hook = HookObject(type: .error, app: application, service: vSelf, method: method).objectByAdding(error: error)
-            let errorChain = errorHooks.reduce(Promise(value: hook), reduceHooksClosure)
-            return errorChain.then { hook -> Promise<Response> in
-                return hook.error != nil ? Promise(error: hook.error!) : Promise(error: error)
-            }
+        if let error = error {
+            errorHooks = errorHooks.add(hooks: error)
         }
     }
 
-    /// Given a service method, construct an endpoint.
+    final public func retrieveHooks(for kind: HookObject.Kind) -> Service.Hooks? {
+        switch kind {
+        case .before: return beforeHooks
+        case .after: return afterHooks
+        case .error: return errorHooks
+        }
+    }
+
+    public func on(event: RealTimeEvent) -> Signal<[String: Any], NoError> {
+        // no-op
+        return .empty
+    }
+
+    public func once(event: RealTimeEvent) -> Signal<[String: Any], NoError> {
+        return .empty
+    }
+
+    public func off(event: RealTimeEvent) {
+        // no-op
+    }
+
+    public var supportsRealtimeEvents: Bool {
+        return false
+    }
+
+}
+
+internal extension Service.Hooks {
+
+    /// Internal extension for grabbing all the hooks for a given method.
     ///
     /// - Parameter method: Service method.
-    /// - Returns: `Endpoint` object.
-    private func constructEndpoint(from method: Service.Method) -> Endpoint {
-        guard let provider = app?.provider else { fatalError("provider must be given to the service before making requests") }
-        var endpoint = Endpoint(baseURL: provider.baseURL, path: path, method: method, accessToken: nil, authenticationConfiguration: app?.authenticationConfiguration ?? AuthenticationConfiguration())
-        if let storage = app?.authenticationStorage,
-            let accessToken = storage.accessToken {
-            endpoint = Endpoint(baseURL: provider.baseURL, path: path, method: method, accessToken: accessToken, authenticationConfiguration: app?.authenticationConfiguration ?? AuthenticationConfiguration())
-        }
-        return endpoint
-    }
-
-    // MARK: - Real-Time
-
-    /// Register to listen for a real-time event.
-    ///
-    /// - Parameters:
-    ///   - event: Event to listen for.
-    ///   - callback: Event callback.
-    ///
-    /// - Note: If the provider doesn't conform to `RealTimeProvider`, nothing will happen.
-    public func on(event: RealTimeEvent, _ callback: @escaping RealTimeEventCallback) {
-        if let realTimeProvider = app?.provider as? RealTimeProvider {
-            realTimeProvider.on(event: "\(path) \(event.rawValue)", callback: { object in
-                callback(object)
-            })
-        }
-    }
-
-    /// Register to listen for an event once and only once.
-    ///
-    /// - Parameters:
-    ///   - event: Event to listen for.
-    ///   - callback: Single-use-callback.
-    public func once(event: RealTimeEvent, _ callback: @escaping RealTimeEventCallback) {
-        if let realTimeProvider = app?.provider as? RealTimeProvider {
-            realTimeProvider.once(event: "\(path) \(event.rawValue)", callback: { object in
-                callback(object)
-            })
-        }
-    }
-
-    /// Unregister for an event. Must be called to end the stream.
-    ///
-    /// - Parameter event: Real-time event to unregister from.
-    public func off(event: RealTimeEvent) {
-        if let realTimeProvider = app?.provider as? RealTimeProvider {
-            realTimeProvider.off(event: "\(path) \(event.rawValue)")
-        }
-    }
-
-}
-
-
-public extension Service.Method {
-
-    public var id: String? {
-        switch self {
-        case .get(let id, _): return id
-        case .update(let id, _, _),
-             .patch(let id, _, _): return id
-        case .remove(let id, _): return id
-        default: return nil
-        }
-    }
-
-    public var parameters: [String: Any]? {
-        switch self {
-        case .find(let parameters): return parameters
-        case .get(_, let parameters): return parameters
-        case .create(_, let parameters): return parameters
-        case .update(_, _, let parameters): return parameters
-        case .patch(_, _, let parameters): return parameters
-        case .remove(_, let parameters): return parameters
-        }
-    }
-
-    public var data: [String: Any]? {
-        switch self {
-        case .create(let data, _): return data
-        case .update(_, let data, _): return data
-        case .patch(_, let data, _): return data
-        default: return nil
-        }
-    }
-
-}
-
-fileprivate extension Service.Hooks {
-
-    fileprivate func hooks(for method: Service.Method) -> [Hook] {
+    /// - Returns: A list of hooks registered for that service method.
+    internal func hooks(for method: Service.Method) -> [Hook] {
         switch method {
         case .find: return all + find
         case .get: return all + get

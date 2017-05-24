@@ -3,16 +3,14 @@
 //  Feathers
 //
 //  Created by Brendan Conron on 4/15/17.
-//  Copyright © 2017 Swoopy Studios. All rights reserved.
+//  Copyright © 2017 FeathersJS. All rights reserved.
 //
 
 import Foundation
-import PromiseKit
+import ReactiveSwift
 
 /// Main application object. Creates services and provides an interface for authentication.
 public final class Feathers {
-
-    public typealias AuthenticationCallback = (String?, FeathersError?) -> ()
 
     /// Transport provider.
     public let provider: Provider
@@ -23,7 +21,7 @@ public final class Feathers {
     /// Authentication configuration.
     private(set) public var authenticationConfiguration = AuthenticationConfiguration()
 
-    private var services: [String: Service] = [:]
+    private var services: [String: ServiceType] = [:]
 
     /// Feather's initializer.
     ///
@@ -37,15 +35,29 @@ public final class Feathers {
     ///
     /// - Parameter path: Service path.
     /// - Returns: Service object.
-    public func service(path: String) -> Service {
+    public func service(path: String) -> ServiceType {
         let servicePath = path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
-        if let service = services[servicePath] {
-            return service
+        guard let service = services[servicePath] else {
+            let providerService = ProviderService(provider: provider)
+            providerService.setup(app: self, path: servicePath)
+            let wrapper = ServiceWrapper(service: providerService)
+            wrapper.setup(app: self, path: servicePath)
+            return wrapper
         }
-        let service = Service(path: servicePath)
-        service.setup(app: self)
+        return ServiceWrapper(service: service)
+    }
+
+    public func use(path: String, service: ServiceType) {
+        let servicePath = path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+        service.setup(app: self, path: servicePath)
         services[servicePath] = service
-        return service
+    }
+
+    public func use(paths: [String], service: ServiceType) {
+        paths.forEach { [weak self] path in
+            let servicePath = path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+            self?.services[servicePath] = service
+        }
     }
 
     /// Configure any authentication options.
@@ -61,28 +73,30 @@ public final class Feathers {
     /// - Parameters:
     ///   - credentials: Credentials to authenticate with.
     /// - Returns: Promise that emits an access token.
-    public func authenticate(_ credentials: [String: Any]) -> Promise<String> {
+    public func authenticate(_ credentials: [String: Any]) -> SignalProducer<String, FeathersError> {
         return provider.authenticate(authenticationConfiguration.path, credentials: credentials)
-            .then { [weak self] response in
+            .flatMap(.latest) { response -> SignalProducer<String, FeathersError> in
                 if case let .jsonObject(object) = response.data,
                 let json = object as? [String: Any],
                 let accessToken = json["accessToken"] as? String {
-                    self?.authenticationStorage.accessToken = accessToken
-                    return Promise(value: accessToken)
+                    return SignalProducer(value: accessToken)
                 }
-                return Promise(error: FeathersError.unknown)
-        }
+                return SignalProducer(error: .unknown)
+            }.on(failed: { [weak self] _ in
+                self?.authenticationStorage.accessToken = nil
+            }, value: { [weak self] value in
+                self?.authenticationStorage.accessToken = value
+            })
     }
     
     /// Log out the application.
     ///
     /// - Returns: Promise that emits a response.
-    public func logout() -> Promise<Response> {
+    public func logout() -> SignalProducer<Response, FeathersError> {
         return provider.logout(path: authenticationConfiguration.path)
-            .then { [weak self] response in
+            .on(value: { [weak self] _ in
                 self?.authenticationStorage.accessToken = nil
-                return Promise(value: response)
-        }
+        })
     }
 
 }

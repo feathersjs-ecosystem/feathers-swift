@@ -3,17 +3,21 @@
 //  Feathers
 //
 //  Created by Brendan Conron on 4/15/17.
-//  Copyright © 2017 Swoopy Studios. All rights reserved.
+//  Copyright © 2017 FeathersJS. All rights reserved.
 //
 
 import Foundation
-import PromiseKit
+import ReactiveSwift
+import Result
 
 /// Abstract interface for a provider.
 public protocol Provider: class {
 
     /// Provider's base url.
     var baseURL: URL { get }
+
+    /// Whether or not the provider supports real-time events.
+    var supportsRealtimeEvents: Bool { get }
 
     /// Used for any extra setup a provider needs. Called by the `Feathers` application.
     ///
@@ -26,7 +30,7 @@ public protocol Provider: class {
     /// - Parameters:
     ///   - endpoint: Endpoint to hit.
     ///   - completion: Completion block.
-    func request(endpoint: Endpoint) -> Promise<Response>
+    func request(endpoint: Endpoint) -> SignalProducer<Response, FeathersError>
 
     /// Authenticate the provider.
     ///
@@ -34,18 +38,13 @@ public protocol Provider: class {
     ///   - path: Authentication path.
     ///   - credentials: Credentials object for authentication.
     ///   - completion: Completion block.
-    func authenticate(_ path: String, credentials: [String: Any]) -> Promise<Response>
+    func authenticate(_ path: String, credentials: [String: Any]) -> SignalProducer<Response, FeathersError>
 
     /// Logout the provider.
     ///
     /// - Parameter path: Logout path.
     /// - Parameter completion: Completion block.
-    func logout(path: String) -> Promise<Response>
-
-}
-
-/// A `Provider` that can supply a stream of real-time events.
-public protocol RealTimeProvider: Provider {
+    func logout(path: String) -> SignalProducer<Response, FeathersError>
 
     /// Register to listen for an event.
     ///
@@ -54,14 +53,14 @@ public protocol RealTimeProvider: Provider {
     ///   - callback: Event callback. Called every time an event sends.
     ///
     /// - warning: Events will continue to emit until `off` is called.
-    func on(event: String, callback: @escaping ([String: Any]) -> ())
+    func on(event: String) -> Signal<[String: Any], NoError>
 
     /// Register for single-use handler for the event.
     ///
     /// - Parameters:
     ///   - event: Event name.
     ///   - callback: Event callback, only called once.
-    func once(event: String, callback: @escaping ([String: Any]) -> ())
+    func once(event: String) -> Signal<[String: Any], NoError>
 
     /// Unregister for an event. Must be called to end the stream.
     ///

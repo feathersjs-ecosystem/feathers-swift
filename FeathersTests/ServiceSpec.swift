@@ -3,13 +3,12 @@
 //  Feathers
 //
 //  Created by Brendan Conron on 5/18/17.
-//  Copyright © 2017 Swoopy Studios. All rights reserved.
+//  Copyright © 2017 FeathersJS. All rights reserved.
 //
 
 import Quick
 import Nimble
 import Feathers
-import PromiseKit
 
 class ServiceSpec: QuickSpec {
 
@@ -18,7 +17,7 @@ class ServiceSpec: QuickSpec {
         describe("Service") {
 
             var app: Feathers!
-            var service: Service!
+            var service: ServiceType!
 
             beforeEach {
                 app = Feathers(provider: StubProvider(data: ["name": "Bob"]))
@@ -26,17 +25,19 @@ class ServiceSpec: QuickSpec {
             }
 
             it("should stub the request") {
+                print(service)
                 var error: Error?
                 var response: Response?
                 var data: [String: String]?
                 service.request(.find(parameters: nil))
-                    .then { value -> Promise<Void> in
-                        response = value
-                        data = value.data.value as? [String: String]
-                        return Promise(value: ())
-                    }.catch {
+                    .on(failed: {
                         error = $0
-                }
+                    }, value: {
+                        response = $0
+                        data = $0.data.value as? [String: String]
+                        print($0)
+                    })
+                    .start()
                 expect(error).toEventually(beNil())
                 expect(response).toEventuallyNot(beNil())
                 expect(data).toEventuallyNot(beNil())
@@ -51,7 +52,7 @@ class ServiceSpec: QuickSpec {
 
                     beforeEach {
                         beforeHooks = Service.Hooks(all: [StubHook(data: .jsonObject(["name": "Henry"]))])
-                        service.hooks(before: beforeHooks)
+                        service.hooks(before: beforeHooks, after: nil, error: nil)
                     }
 
                     it("should run the before hook and skip the request") {
@@ -59,13 +60,13 @@ class ServiceSpec: QuickSpec {
                         var response: Response?
                         var data: [String: String]?
                         service.request(.find(parameters: nil))
-                            .then { value -> Promise<Void> in
-                                response = value
-                                data = value.data.value as? [String: String]
-                                return Promise(value: ())
-                            }.catch {
+                            .on(failed: {
                                 error = $0
-                        }
+                            }, value: {
+                                response = $0
+                                data = $0.data.value as? [String: String]
+                            })
+                            .start()
                         expect(error).toEventually(beNil())
                         expect(response).toEventuallyNot(beNil())
                         expect(data).toEventuallyNot(beNil())
@@ -80,7 +81,7 @@ class ServiceSpec: QuickSpec {
 
                     beforeEach {
                         afterHooks = Service.Hooks(all: [PopuplateDataAfterHook(data: ["name": "Susie"])])
-                        service.hooks(after: afterHooks)
+                        service.hooks(before: nil, after: afterHooks, error: nil)
                     }
 
                     it("should change the response") {
@@ -88,13 +89,13 @@ class ServiceSpec: QuickSpec {
                         var response: Response?
                         var data: [String: String]?
                         service.request(.find(parameters: nil))
-                            .then { value -> Promise<Void> in
-                                response = value
-                                data = value.data.value as? [String: String]
-                                return Promise(value: ())
-                            }.catch {
+                            .on(failed: {
                                 error = $0
-                        }
+                            }, value: {
+                                response = $0
+                                data = $0.data.value as? [String: String]
+                            })
+                            .start()
                         expect(error).toEventually(beNil())
                         expect(response).toEventuallyNot(beNil())
                         expect(data).toEventuallyNot(beNil())
@@ -110,7 +111,7 @@ class ServiceSpec: QuickSpec {
                     beforeEach {
                         // Force the hook to error with ErrorHook
                         beforeHooks = Service.Hooks(all: [ErrorHook(error: .unknown)])
-                        service.hooks(before: beforeHooks)
+                        service.hooks(before: beforeHooks, after: nil, error: nil)
                     }
 
                     context("when a hook rejects with an error") {
@@ -120,13 +121,13 @@ class ServiceSpec: QuickSpec {
                             var response: Response?
                             var data: [String: String]?
                             service.request(.find(parameters: nil))
-                                .then { value -> Promise<Void> in
-                                    response = value
-                                    data = value.data.value as? [String: String]
-                                    return Promise(value: ())
-                                }.catch {
-                                    error = $0 as? FeathersError
-                            }
+                                .on(failed: {
+                                    error = $0
+                                }, value: {
+                                    response = $0
+                                    data = $0.data.value as? [String: String]
+                                })
+                                .start()
                             expect(error).toEventuallyNot(beNil())
                             expect(error).toEventually(equal(FeathersError.unknown))
                             expect(response).toEventually(beNil())
@@ -139,7 +140,7 @@ class ServiceSpec: QuickSpec {
 
                             beforeEach {
                                 errorHooks = Service.Hooks(all: [ErrorHook(error: .unavailable), ErrorHook(error: .unknown)])
-                                service.hooks(error: errorHooks)
+                                service.hooks(before: nil, after: nil, error: errorHooks)
                             }
 
                             it("should be able to modify the final error and skip the rest of the chain") {
@@ -147,13 +148,13 @@ class ServiceSpec: QuickSpec {
                                 var response: Response?
                                 var data: [String: String]?
                                 service.request(.find(parameters: nil))
-                                    .then { value -> Promise<Void> in
-                                        response = value
-                                        data = value.data.value as? [String: String]
-                                        return Promise(value: ())
-                                    }.catch {
-                                        error = $0 as? FeathersError
-                                }
+                                    .on(failed: {
+                                        error = $0
+                                    }, value: {
+                                        response = $0
+                                        data = $0.data.value as? [String: String]
+                                    })
+                                    .start()
                                 expect(error).toEventuallyNot(beNil())
                                 expect(error).toEventually(equal(FeathersError.unavailable))
                                 expect(response).toEventually(beNil())
@@ -168,7 +169,7 @@ class ServiceSpec: QuickSpec {
 
                             beforeEach {
                                 errorHooks = Service.Hooks(all: [ModifyErrorHook(error: .unavailable)])
-                                service.hooks(error: errorHooks)
+                                service.hooks(before: nil, after: nil, error: errorHooks)
                             }
 
                             it("should be able to modify the final error") {
@@ -176,13 +177,13 @@ class ServiceSpec: QuickSpec {
                                 var response: Response?
                                 var data: [String: String]?
                                 service.request(.find(parameters: nil))
-                                    .then { value -> Promise<Void> in
-                                        response = value
-                                        data = value.data.value as? [String: String]
-                                        return Promise(value: ())
-                                    }.catch {
-                                        error = $0 as? FeathersError
-                                }
+                                    .on(failed: {
+                                        error = $0
+                                    }, value: {
+                                        response = $0
+                                        data = $0.data.value as? [String: String]
+                                    })
+                                    .start()
                                 expect(error).toEventuallyNot(beNil())
                                 expect(error).toEventually(equal(FeathersError.unavailable))
                                 expect(response).toEventually(beNil())
@@ -192,7 +193,7 @@ class ServiceSpec: QuickSpec {
                             context("with multiple error hooks that modify the error ") {
 
                                 beforeEach {
-                                    service.hooks(error: Service.Hooks(all: [ModifyErrorHook(error: .unknown)]))
+                                    service.hooks(before: nil, after: nil, error: Service.Hooks(all: [ModifyErrorHook(error: .unknown)]))
                                 }
 
                                 it("should pass back the final error") {
@@ -200,13 +201,13 @@ class ServiceSpec: QuickSpec {
                                     var response: Response?
                                     var data: [String: String]?
                                     service.request(.find(parameters: nil))
-                                        .then { value -> Promise<Void> in
-                                            response = value
-                                            data = value.data.value as? [String: String]
-                                            return Promise(value: ())
-                                        }.catch {
-                                            error = $0 as? FeathersError
-                                    }
+                                        .on(failed: {
+                                            error = $0
+                                        }, value: {
+                                            response = $0
+                                            data = $0.data.value as? [String: String]
+                                        })
+                                        .start()
                                     expect(error).toEventuallyNot(beNil())
                                     expect(error).toEventually(equal(FeathersError.unknown))
                                     expect(response).toEventually(beNil())

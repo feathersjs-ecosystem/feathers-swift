@@ -7,50 +7,113 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10595EE0DA7644DFD2A96D64 /* Pods_Feathers_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42B8A357113C8DF04CA54B3 /* Pods_Feathers_watchOS.framework */; };
-		120733AEA82C2B1932BA5637 /* Pods_Feathers_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E677AAA637E85583248087 /* Pods_Feathers_iOSTests.framework */; };
-		33805D03FB507FBFF5901BDD /* Pods_Feathers_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90EB08ABB7C24CFED3A1B493 /* Pods_Feathers_macOS.framework */; };
-		4102AAFD3D6B75C65D50E7FC /* Pods_Feathers_tvOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54F1D512BB5226CE3154EE1 /* Pods_Feathers_tvOSTests.framework */; };
-		81CF7600EC0BDB09EC92EE44 /* Pods_Feathers_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53767B71C789A5486F032B4 /* Pods_Feathers_iOS.framework */; };
-		BDE8A6E68F45A2DEBB9BA658 /* Pods_Feathers_macOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14980B3F92E1BDF24218634 /* Pods_Feathers_macOSTests.framework */; };
-		E73C522711569D179CC62302 /* Pods_Feathers_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1097E70407C5C1C5F50445EC /* Pods_Feathers_tvOS.framework */; };
+		EA0F0BB21ED0A6C9000517A4 /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */; };
+		EA0F0C7C1ED0B25F000517A4 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C731ED0B25E000517A4 /* Feathers.framework */; };
+		EA0F0C8D1ED0B2D0000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8A1ED0B2D0000517A4 /* KeychainSwift.framework */; };
+		EA0F0C8E1ED0B2D0000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8B1ED0B2D0000517A4 /* ReactiveSwift.framework */; };
+		EA0F0C8F1ED0B2D0000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8C1ED0B2D0000517A4 /* Result.framework */; };
+		EA0F0C901ED0B2DD000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8A1ED0B2D0000517A4 /* KeychainSwift.framework */; };
+		EA0F0C911ED0B2DD000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8B1ED0B2D0000517A4 /* ReactiveSwift.framework */; };
+		EA0F0C921ED0B2DD000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8C1ED0B2D0000517A4 /* Result.framework */; };
+		EA0F0C951ED0B2E1000517A4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C931ED0B2E1000517A4 /* Nimble.framework */; };
+		EA0F0C961ED0B2E1000517A4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C941ED0B2E1000517A4 /* Quick.framework */; };
+		EA0F0C9C1ED0B2EA000517A4 /* KeychainSwift.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0C971ED0B2EA000517A4 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0C9D1ED0B2EA000517A4 /* Nimble.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0C981ED0B2EA000517A4 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0C9E1ED0B2EA000517A4 /* Quick.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0C991ED0B2EA000517A4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0C9F1ED0B2EA000517A4 /* ReactiveSwift.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0C9A1ED0B2EA000517A4 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CA01ED0B2EA000517A4 /* Result.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = EA0F0C9B1ED0B2EA000517A4 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CA41ED0B318000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CA11ED0B318000517A4 /* KeychainSwift.framework */; };
+		EA0F0CA51ED0B318000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CA21ED0B318000517A4 /* ReactiveSwift.framework */; };
+		EA0F0CA61ED0B318000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CA31ED0B318000517A4 /* Result.framework */; };
+		EA0F0CAC1ED0B38B000517A4 /* KeychainSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CA91ED0B38B000517A4 /* KeychainSwift.framework.dSYM */; };
+		EA0F0CAD1ED0B38B000517A4 /* ReactiveSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CAA1ED0B38B000517A4 /* ReactiveSwift.framework.dSYM */; };
+		EA0F0CAE1ED0B38B000517A4 /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CAB1ED0B38B000517A4 /* Result.framework.dSYM */; };
+		EA0F0CAF1ED0B3B3000517A4 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
+		EA0F0CB01ED0B3B3000517A4 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
+		EA0F0CB11ED0B3B3000517A4 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
+		EA0F0CB21ED0B3B3000517A4 /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */; };
+		EA0F0CB31ED0B3E2000517A4 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
+		EA0F0CB41ED0B3E2000517A4 /* LoggerHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */; };
+		EA0F0CB51ED0B3E2000517A4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
+		EA0F0CB61ED0B3E2000517A4 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
+		EA0F0CB71ED0B3E2000517A4 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
+		EA0F0CB81ED0B3E2000517A4 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
+		EA0F0CB91ED0B3E2000517A4 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
+		EA0F0CBA1ED0B3E2000517A4 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
+		EA0F0CBB1ED0B3E2000517A4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
+		EA0F0CBC1ED0B3E2000517A4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
+		EA0F0CBD1ED0B400000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CA11ED0B318000517A4 /* KeychainSwift.framework */; };
+		EA0F0CBE1ED0B400000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CA21ED0B318000517A4 /* ReactiveSwift.framework */; };
+		EA0F0CBF1ED0B400000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CA31ED0B318000517A4 /* Result.framework */; };
+		EA0F0CC21ED0B400000517A4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CC01ED0B400000517A4 /* Nimble.framework */; };
+		EA0F0CC31ED0B400000517A4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CC11ED0B400000517A4 /* Quick.framework */; };
+		EA0F0CCA1ED0B413000517A4 /* KeychainSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CC51ED0B413000517A4 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CCB1ED0B413000517A4 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CC61ED0B413000517A4 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CCC1ED0B413000517A4 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CC71ED0B413000517A4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CCD1ED0B413000517A4 /* ReactiveSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CC81ED0B413000517A4 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CCE1ED0B413000517A4 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CC91ED0B413000517A4 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0CDD1ED0B448000517A4 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CD41ED0B448000517A4 /* Feathers.framework */; };
+		EA0F0CEB1ED0B46B000517A4 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
+		EA0F0CEC1ED0B46B000517A4 /* LoggerHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */; };
+		EA0F0CED1ED0B46B000517A4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
+		EA0F0CEE1ED0B46B000517A4 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
+		EA0F0CEF1ED0B46B000517A4 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
+		EA0F0CF01ED0B46B000517A4 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
+		EA0F0CF11ED0B46B000517A4 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
+		EA0F0CF21ED0B46B000517A4 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
+		EA0F0CF31ED0B46B000517A4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
+		EA0F0CF41ED0B46B000517A4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
+		EA0F0CF51ED0B46F000517A4 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
+		EA0F0CF61ED0B46F000517A4 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
+		EA0F0CF71ED0B46F000517A4 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
+		EA0F0CF81ED0B46F000517A4 /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */; };
+		EA0F0CFC1ED0B48C000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CF91ED0B48C000517A4 /* KeychainSwift.framework */; };
+		EA0F0CFD1ED0B48C000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CFA1ED0B48C000517A4 /* ReactiveSwift.framework */; };
+		EA0F0CFE1ED0B48C000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CFB1ED0B48C000517A4 /* Result.framework */; };
+		EA0F0D001ED0B4C7000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CF91ED0B48C000517A4 /* KeychainSwift.framework */; };
+		EA0F0D011ED0B4C7000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CFA1ED0B48C000517A4 /* ReactiveSwift.framework */; };
+		EA0F0D021ED0B4C7000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CFB1ED0B48C000517A4 /* Result.framework */; };
+		EA0F0D051ED0B4C7000517A4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0D031ED0B4C7000517A4 /* Nimble.framework */; };
+		EA0F0D061ED0B4C7000517A4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0D041ED0B4C7000517A4 /* Quick.framework */; };
+		EA0F0D0D1ED0B4D7000517A4 /* KeychainSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0D081ED0B4D7000517A4 /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0D0E1ED0B4D7000517A4 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0D091ED0B4D7000517A4 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0D0F1ED0B4D7000517A4 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0D0A1ED0B4D7000517A4 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0D101ED0B4D7000517A4 /* ReactiveSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0D0B1ED0B4D7000517A4 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0D111ED0B4D7000517A4 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0D0C1ED0B4D7000517A4 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA0F0D221ED0B535000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0D1F1ED0B535000517A4 /* KeychainSwift.framework */; };
+		EA0F0D231ED0B535000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0D201ED0B535000517A4 /* ReactiveSwift.framework */; };
+		EA0F0D241ED0B535000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0D211ED0B535000517A4 /* Result.framework */; };
+		EA0F0D251ED0B539000517A4 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
+		EA0F0D261ED0B539000517A4 /* LoggerHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */; };
+		EA0F0D271ED0B539000517A4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
+		EA0F0D281ED0B539000517A4 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
+		EA0F0D291ED0B539000517A4 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
+		EA0F0D2A1ED0B539000517A4 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
+		EA0F0D2B1ED0B539000517A4 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
+		EA0F0D2C1ED0B539000517A4 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
+		EA0F0D2D1ED0B539000517A4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
+		EA0F0D2E1ED0B539000517A4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
+		EA0F0D311ED290EF000517A4 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D301ED290EF000517A4 /* ServiceType.swift */; };
+		EA0F0D321ED290EF000517A4 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D301ED290EF000517A4 /* ServiceType.swift */; };
+		EA0F0D331ED290EF000517A4 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D301ED290EF000517A4 /* ServiceType.swift */; };
+		EA0F0D341ED290EF000517A4 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D301ED290EF000517A4 /* ServiceType.swift */; };
+		EA0F0D3B1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3A1ED2AA49000517A4 /* ServiceWrapper.swift */; };
+		EA0F0D3C1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3A1ED2AA49000517A4 /* ServiceWrapper.swift */; };
+		EA0F0D3D1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3A1ED2AA49000517A4 /* ServiceWrapper.swift */; };
+		EA0F0D3E1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3A1ED2AA49000517A4 /* ServiceWrapper.swift */; };
+		EA0F0D401ED2AB99000517A4 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */; };
+		EA0F0D411ED2AB99000517A4 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */; };
+		EA0F0D421ED2AB99000517A4 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */; };
+		EA0F0D431ED2AB99000517A4 /* ProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */; };
+		EA0F0D461ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */; };
+		EA0F0D471ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */; };
+		EA0F0D481ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */; };
+		EA0F0D491ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */; };
 		EA12E0631ECE950100A0DCF7 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */; };
 		EA12E0691ECE950C00A0DCF7 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
 		EA12E06A1ECE952400A0DCF7 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
 		EA12E06B1ECE952400A0DCF7 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
-		EA12E0711ECEA4C000A0DCF7 /* RxSwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12E0701ECEA4C000A0DCF7 /* RxSwiftSpec.swift */; };
-		EA12E0721ECEA4C000A0DCF7 /* RxSwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12E0701ECEA4C000A0DCF7 /* RxSwiftSpec.swift */; };
-		EA12E0731ECEA4C000A0DCF7 /* RxSwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12E0701ECEA4C000A0DCF7 /* RxSwiftSpec.swift */; };
-		EA12E0791ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12E0781ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift */; };
-		EA12E07A1ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12E0781ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift */; };
-		EA12E07B1ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA12E0781ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift */; };
-		EA20621C1ECEC29D005FF6AE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
-		EA20621D1ECEC29D005FF6AE /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
-		EA20621E1ECEC29D005FF6AE /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
-		EA20621F1ECEC29D005FF6AE /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
-		EA2062201ECEC29D005FF6AE /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
-		EA2062211ECEC29D005FF6AE /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
-		EA2062221ECEC29D005FF6AE /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
-		EA2062231ECEC29D005FF6AE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
-		EA2062241ECEC2A4005FF6AE /* Feathers+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */; };
-		EA2062251ECEC2A4005FF6AE /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
-		EA2062261ECEC2A4005FF6AE /* Observable+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */; };
-		EA2062271ECEC2A4005FF6AE /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */; };
-		EA2062281ECEC2A4005FF6AE /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
-		EA2062291ECEC2A4005FF6AE /* SignalProducer+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FA1ECE60A3000997B4 /* SignalProducer+Promise.swift */; };
-		EA20622A1ECEC5A8005FF6AE /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
-		EA20622C1ECEC5AC005FF6AE /* LoggerHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */; };
-		EA52954D1ECE912C0014F156 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
-		EA52954E1ECE912C0014F156 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
-		EA63C9FB1ECE60A3000997B4 /* SignalProducer+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FA1ECE60A3000997B4 /* SignalProducer+Promise.swift */; };
-		EA63C9FD1ECE625B000997B4 /* Observable+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */; };
-		EA63C9FE1ECE625B000997B4 /* Observable+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */; };
-		EA63C9FF1ECE625B000997B4 /* Observable+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */; };
-		EA63CA011ECE65A0000997B4 /* SignalProducer+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FA1ECE60A3000997B4 /* SignalProducer+Promise.swift */; };
-		EA63CA021ECE65A1000997B4 /* SignalProducer+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63C9FA1ECE60A3000997B4 /* SignalProducer+Promise.swift */; };
 		EA954C781EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */; };
-		EA954C791EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */; };
-		EA954C7A1EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */; };
 		EAC0BCE91EC90FF30049FB13 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
 		EAC0BCEA1EC90FF30049FB13 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
 		EAC0BCEB1EC90FF30049FB13 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
@@ -60,45 +123,23 @@
 		EAC0BCF01EC90FF30049FB13 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
 		EAC0BCF31EC90FF30049FB13 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
 		EAC0BCF41EC90FF30049FB13 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
-		EAC0BCF51EC90FF30049FB13 /* Feathers+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */; };
-		EAC0BCF61EC90FF30049FB13 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
-		EAC0BCF71EC90FF30049FB13 /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */; };
-		EAC0BCF81EC90FF30049FB13 /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
-		EAC0BD151EC952A40049FB13 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BD0C1EC952A40049FB13 /* Feathers.framework */; };
-		EAC0BD231EC953A90049FB13 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
-		EAC0BD241EC953A90049FB13 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
-		EAC0BD251EC953A90049FB13 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
-		EAC0BD261EC953A90049FB13 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
-		EAC0BD271EC953A90049FB13 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
-		EAC0BD291EC953A90049FB13 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
-		EAC0BD2A1EC953A90049FB13 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
-		EAC0BD2D1EC953A90049FB13 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
-		EAC0BD2E1EC953A90049FB13 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
-		EAC0BD2F1EC953A90049FB13 /* Feathers+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */; };
-		EAC0BD301EC953A90049FB13 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
-		EAC0BD311EC953A90049FB13 /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */; };
-		EAC0BD321EC953A90049FB13 /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
-		EAC0BD511EC964430049FB13 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
-		EAC0BD521EC964430049FB13 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
-		EAC0BD6B1EC9686E0049FB13 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BD621EC9686E0049FB13 /* Feathers.framework */; };
-		EAC0BD821EC969780049FB13 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
-		EAC0BD831EC969780049FB13 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
-		EAC0BD841EC969780049FB13 /* AuthenticationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */; };
-		EAC0BD851EC969780049FB13 /* Feathers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0C1EBFA6A400522603 /* Feathers.swift */; };
-		EAC0BD861EC969780049FB13 /* FeathersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0D1EBFA6A400522603 /* FeathersError.swift */; };
-		EAC0BD881EC969780049FB13 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
-		EAC0BD891EC969780049FB13 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
-		EAC0BD8C1EC969780049FB13 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
-		EAC0BD8D1EC969780049FB13 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
-		EAC0BD8E1EC969780049FB13 /* Feathers+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */; };
-		EAC0BD8F1EC969780049FB13 /* Service+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */; };
-		EAC0BD901EC969780049FB13 /* Feathers+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */; };
-		EAC0BD911EC969780049FB13 /* Service+ReactiveSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */; };
-		EAC0BD921EC9697E0049FB13 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
-		EAC0BD931EC9697E0049FB13 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EA0F0C7D1ED0B25F000517A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA452A5E1EA2B14300427CEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA0F0C721ED0B25E000517A4;
+			remoteInfo = "Feathers-macOS";
+		};
+		EA0F0CDE1ED0B448000517A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA452A5E1EA2B14300427CEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA0F0CD31ED0B448000517A4;
+			remoteInfo = "Feathers-tvOS";
+		};
 		EA12E0641ECE950100A0DCF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA452A5E1EA2B14300427CEF /* Project object */;
@@ -106,54 +147,120 @@
 			remoteGlobalIDString = EAC0BCD11EC90FDB0049FB13;
 			remoteInfo = "Feathers-iOS";
 		};
-		EAC0BD161EC952A40049FB13 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA452A5E1EA2B14300427CEF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAC0BD0B1EC952A40049FB13;
-			remoteInfo = "Feathers-macOS";
-		};
-		EAC0BD6C1EC9686E0049FB13 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA452A5E1EA2B14300427CEF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAC0BD611EC9686E0049FB13;
-			remoteInfo = "Feathers-tvOS";
-		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EA0F0BC01ED0ABA4000517A4 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA0F0C9C1ED0B2EA000517A4 /* KeychainSwift.framework in Copy Files */,
+				EA0F0C9D1ED0B2EA000517A4 /* Nimble.framework in Copy Files */,
+				EA0F0C9E1ED0B2EA000517A4 /* Quick.framework in Copy Files */,
+				EA0F0C9F1ED0B2EA000517A4 /* ReactiveSwift.framework in Copy Files */,
+				EA0F0CA01ED0B2EA000517A4 /* Result.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CA81ED0B380000517A4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				EA0F0CAC1ED0B38B000517A4 /* KeychainSwift.framework.dSYM in CopyFiles */,
+				EA0F0CAD1ED0B38B000517A4 /* ReactiveSwift.framework.dSYM in CopyFiles */,
+				EA0F0CAE1ED0B38B000517A4 /* Result.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CC41ED0B403000517A4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA0F0CCA1ED0B413000517A4 /* KeychainSwift.framework in CopyFiles */,
+				EA0F0CCB1ED0B413000517A4 /* Nimble.framework in CopyFiles */,
+				EA0F0CCC1ED0B413000517A4 /* Quick.framework in CopyFiles */,
+				EA0F0CCD1ED0B413000517A4 /* ReactiveSwift.framework in CopyFiles */,
+				EA0F0CCE1ED0B413000517A4 /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0D071ED0B4CC000517A4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA0F0D0D1ED0B4D7000517A4 /* KeychainSwift.framework in CopyFiles */,
+				EA0F0D0E1ED0B4D7000517A4 /* Nimble.framework in CopyFiles */,
+				EA0F0D0F1ED0B4D7000517A4 /* Quick.framework in CopyFiles */,
+				EA0F0D101ED0B4D7000517A4 /* ReactiveSwift.framework in CopyFiles */,
+				EA0F0D111ED0B4D7000517A4 /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		034983594155788148BB54C0 /* Pods-Feathers-macOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-macOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-macOSTests/Pods-Feathers-macOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		067567F9CA5525D3F96C4FAB /* Pods-Feathers-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-watchOS/Pods-Feathers-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		0BAE674D5D6524F136874584 /* Pods-Feathers-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-macOS/Pods-Feathers-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		1097E70407C5C1C5F50445EC /* Pods_Feathers_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feathers_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		17865868262FEF4912A1FF6B /* Pods-Feathers-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-tvOSTests/Pods-Feathers-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		63D7195C6AE5112203F9838C /* Pods-Feathers-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-iOS/Pods-Feathers-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		78CE9037BF994D5270C381FA /* Pods-Feathers-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-iOS/Pods-Feathers-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		80360198F5F8A0B2676AA35C /* Pods-Feathers-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-iOSTests/Pods-Feathers-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		90EB08ABB7C24CFED3A1B493 /* Pods_Feathers_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feathers_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		94E677AAA637E85583248087 /* Pods_Feathers_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feathers_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A42B8A357113C8DF04CA54B3 /* Pods_Feathers_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feathers_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC762F677E63AE73BDD51BF5 /* Pods-Feathers-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-macOS/Pods-Feathers-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		BDA5F9EC8BADA0D74161F6A3 /* Pods-Feathers-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-watchOS/Pods-Feathers-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		CDE0E2964A08EF34C867A668 /* Pods-Feathers-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-tvOS/Pods-Feathers-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		D14980B3F92E1BDF24218634 /* Pods_Feathers_macOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feathers_macOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1907BA98DA87172BF1BC2D1 /* Pods-Feathers-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-iOSTests/Pods-Feathers-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		D57F1EDADC1B9FFD694C55B5 /* Pods-Feathers-macOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-macOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-macOSTests/Pods-Feathers-macOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DA52CC1FCAA59D18EE332870 /* Pods-Feathers-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-tvOSTests/Pods-Feathers-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		E53767B71C789A5486F032B4 /* Pods_Feathers_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feathers_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeathersSpec.swift; path = FeathersTests/FeathersSpec.swift; sourceTree = SOURCE_ROOT; };
+		EA0F0C731ED0B25E000517A4 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0F0C7B1ED0B25F000517A4 /* Feathers-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0F0C8A1ED0B2D0000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
+		EA0F0C8B1ED0B2D0000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EA0F0C8C1ED0B2D0000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		EA0F0C931ED0B2E1000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		EA0F0C941ED0B2E1000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		EA0F0C971ED0B2EA000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
+		EA0F0C981ED0B2EA000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		EA0F0C991ED0B2EA000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		EA0F0C9A1ED0B2EA000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EA0F0C9B1ED0B2EA000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		EA0F0CA11ED0B318000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/Mac/KeychainSwift.framework; sourceTree = "<group>"; };
+		EA0F0CA21ED0B318000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/Mac/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EA0F0CA31ED0B318000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+		EA0F0CA91ED0B38B000517A4 /* KeychainSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = KeychainSwift.framework.dSYM; path = Carthage/Build/Mac/KeychainSwift.framework.dSYM; sourceTree = "<group>"; };
+		EA0F0CAA1ED0B38B000517A4 /* ReactiveSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveSwift.framework.dSYM; path = Carthage/Build/Mac/ReactiveSwift.framework.dSYM; sourceTree = "<group>"; };
+		EA0F0CAB1ED0B38B000517A4 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/Mac/Result.framework.dSYM; sourceTree = "<group>"; };
+		EA0F0CC01ED0B400000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		EA0F0CC11ED0B400000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		EA0F0CC51ED0B413000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/Mac/KeychainSwift.framework; sourceTree = "<group>"; };
+		EA0F0CC61ED0B413000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		EA0F0CC71ED0B413000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		EA0F0CC81ED0B413000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/Mac/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EA0F0CC91ED0B413000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+		EA0F0CD41ED0B448000517A4 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0F0CDC1ED0B448000517A4 /* Feathers-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0F0CF91ED0B48C000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/tvOS/KeychainSwift.framework; sourceTree = "<group>"; };
+		EA0F0CFA1ED0B48C000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/tvOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EA0F0CFB1ED0B48C000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/tvOS/Result.framework; sourceTree = "<group>"; };
+		EA0F0D031ED0B4C7000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
+		EA0F0D041ED0B4C7000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
+		EA0F0D081ED0B4D7000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/tvOS/KeychainSwift.framework; sourceTree = "<group>"; };
+		EA0F0D091ED0B4D7000517A4 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
+		EA0F0D0A1ED0B4D7000517A4 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
+		EA0F0D0B1ED0B4D7000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/tvOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EA0F0D0C1ED0B4D7000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/tvOS/Result.framework; sourceTree = "<group>"; };
+		EA0F0D171ED0B50D000517A4 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0F0D1F1ED0B535000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/watchOS/KeychainSwift.framework; sourceTree = "<group>"; };
+		EA0F0D201ED0B535000517A4 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/watchOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		EA0F0D211ED0B535000517A4 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/watchOS/Result.framework; sourceTree = "<group>"; };
+		EA0F0D301ED290EF000517A4 /* ServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceType.swift; path = Core/ServiceType.swift; sourceTree = "<group>"; };
+		EA0F0D3A1ED2AA49000517A4 /* ServiceWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceWrapper.swift; path = Core/ServiceWrapper.swift; sourceTree = "<group>"; };
+		EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProviderService.swift; path = Core/ProviderService.swift; sourceTree = "<group>"; };
+		EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SignalProducer+Convenience.swift"; path = "Core/SignalProducer+Convenience.swift"; sourceTree = "<group>"; };
 		EA12E05E1ECE950000A0DCF7 /* Feathers-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA12E0701ECEA4C000A0DCF7 /* RxSwiftSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxSwiftSpec.swift; path = FeathersTests/RxSwiftSpec.swift; sourceTree = SOURCE_ROOT; };
-		EA12E0781ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactiveSwiftSpec.swift; path = FeathersTests/ReactiveSwiftSpec.swift; sourceTree = SOURCE_ROOT; };
-		EA2062141ECEC0F4005FF6AE /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3017131EC7867E00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = Core/Hooks.swift; sourceTree = "<group>"; };
 		EA301AB41EC8BEBD00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = FeathersTests/Hooks.swift; sourceTree = SOURCE_ROOT; };
 		EA301AB91EC8CD0400114F19 /* StubProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StubProvider.swift; path = FeathersTests/StubProvider.swift; sourceTree = SOURCE_ROOT; };
 		EA452A6A1EA2B14300427CEF /* Feathers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feathers.h; sourceTree = "<group>"; };
 		EA452A6B1EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA52954B1ECE912C0014F156 /* ServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceSpec.swift; path = FeathersTests/ServiceSpec.swift; sourceTree = SOURCE_ROOT; };
-		EA63C9FA1ECE60A3000997B4 /* SignalProducer+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SignalProducer+Promise.swift"; path = "ReactiveSwift/SignalProducer+Promise.swift"; sourceTree = "<group>"; };
-		EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Observable+Promise.swift"; path = "RxSwift/Observable+Promise.swift"; sourceTree = "<group>"; };
 		EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggerHooks.swift; path = Core/LoggerHooks.swift; sourceTree = "<group>"; };
 		EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationConfiguration.swift; path = Core/AuthenticationConfiguration.swift; sourceTree = "<group>"; };
 		EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationStorage.swift; path = Core/AuthenticationStorage.swift; sourceTree = "<group>"; };
@@ -162,36 +269,78 @@
 		EABBAE0F1EBFA6A400522603 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Provider.swift; path = Core/Provider.swift; sourceTree = "<group>"; };
 		EABBAE101EBFA6A400522603 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Core/Response.swift; sourceTree = "<group>"; };
 		EABBAE121EBFA6A400522603 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = Core/Service.swift; sourceTree = "<group>"; };
-		EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Feathers+ReactiveSwift.swift"; path = "ReactiveSwift/Feathers+ReactiveSwift.swift"; sourceTree = "<group>"; };
-		EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Service+ReactiveSwift.swift"; path = "ReactiveSwift/Service+ReactiveSwift.swift"; sourceTree = "<group>"; };
-		EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Feathers+RxSwift.swift"; path = "RxSwift/Feathers+RxSwift.swift"; sourceTree = "<group>"; };
-		EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Service+RxSwift.swift"; path = "RxSwift/Service+RxSwift.swift"; sourceTree = "<group>"; };
 		EAC0BC821EC90A600049FB13 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FeathersTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAC0BD0C1EC952A40049FB13 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAC0BD141EC952A40049FB13 /* Feathers-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAC0BD621EC9686E0049FB13 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAC0BD6A1EC9686E0049FB13 /* Feathers-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE05D691EBFDB0000DA55BF /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Core/Endpoint.swift; sourceTree = "<group>"; };
-		F54F1D512BB5226CE3154EE1 /* Pods_Feathers_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Feathers_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F79FD2748FD31C1953601122 /* Pods-Feathers-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feathers-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feathers-tvOS/Pods-Feathers-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA0F0C6F1ED0B25E000517A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CA41ED0B318000517A4 /* KeychainSwift.framework in Frameworks */,
+				EA0F0CA51ED0B318000517A4 /* ReactiveSwift.framework in Frameworks */,
+				EA0F0CA61ED0B318000517A4 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0C781ED0B25F000517A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0C7C1ED0B25F000517A4 /* Feathers.framework in Frameworks */,
+				EA0F0CC21ED0B400000517A4 /* Nimble.framework in Frameworks */,
+				EA0F0CC31ED0B400000517A4 /* Quick.framework in Frameworks */,
+				EA0F0CBD1ED0B400000517A4 /* KeychainSwift.framework in Frameworks */,
+				EA0F0CBE1ED0B400000517A4 /* ReactiveSwift.framework in Frameworks */,
+				EA0F0CBF1ED0B400000517A4 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CD01ED0B448000517A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CFC1ED0B48C000517A4 /* KeychainSwift.framework in Frameworks */,
+				EA0F0CFD1ED0B48C000517A4 /* ReactiveSwift.framework in Frameworks */,
+				EA0F0CFE1ED0B48C000517A4 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CD91ED0B448000517A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CDD1ED0B448000517A4 /* Feathers.framework in Frameworks */,
+				EA0F0D051ED0B4C7000517A4 /* Nimble.framework in Frameworks */,
+				EA0F0D061ED0B4C7000517A4 /* Quick.framework in Frameworks */,
+				EA0F0D001ED0B4C7000517A4 /* KeychainSwift.framework in Frameworks */,
+				EA0F0D011ED0B4C7000517A4 /* ReactiveSwift.framework in Frameworks */,
+				EA0F0D021ED0B4C7000517A4 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0D131ED0B50D000517A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0D221ED0B535000517A4 /* KeychainSwift.framework in Frameworks */,
+				EA0F0D231ED0B535000517A4 /* ReactiveSwift.framework in Frameworks */,
+				EA0F0D241ED0B535000517A4 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA12E05B1ECE950000A0DCF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EA12E0631ECE950100A0DCF7 /* Feathers.framework in Frameworks */,
-				120733AEA82C2B1932BA5637 /* Pods_Feathers_iOSTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA2062101ECEC0F4005FF6AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				10595EE0DA7644DFD2A96D64 /* Pods_Feathers_watchOS.framework in Frameworks */,
+				EA0F0C901ED0B2DD000517A4 /* KeychainSwift.framework in Frameworks */,
+				EA0F0C911ED0B2DD000517A4 /* ReactiveSwift.framework in Frameworks */,
+				EA0F0C921ED0B2DD000517A4 /* Result.framework in Frameworks */,
+				EA0F0C951ED0B2E1000517A4 /* Nimble.framework in Frameworks */,
+				EA0F0C961ED0B2E1000517A4 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,80 +348,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81CF7600EC0BDB09EC92EE44 /* Pods_Feathers_iOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAC0BD081EC952A40049FB13 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				33805D03FB507FBFF5901BDD /* Pods_Feathers_macOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAC0BD111EC952A40049FB13 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAC0BD151EC952A40049FB13 /* Feathers.framework in Frameworks */,
-				BDE8A6E68F45A2DEBB9BA658 /* Pods_Feathers_macOSTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAC0BD5E1EC9686E0049FB13 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E73C522711569D179CC62302 /* Pods_Feathers_tvOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAC0BD671EC9686E0049FB13 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAC0BD6B1EC9686E0049FB13 /* Feathers.framework in Frameworks */,
-				4102AAFD3D6B75C65D50E7FC /* Pods_Feathers_tvOSTests.framework in Frameworks */,
+				EA0F0C8D1ED0B2D0000517A4 /* KeychainSwift.framework in Frameworks */,
+				EA0F0C8E1ED0B2D0000517A4 /* ReactiveSwift.framework in Frameworks */,
+				EA0F0C8F1ED0B2D0000517A4 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ADDB450F2B405972BF99D674 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				63D7195C6AE5112203F9838C /* Pods-Feathers-iOS.debug.xcconfig */,
-				78CE9037BF994D5270C381FA /* Pods-Feathers-iOS.release.xcconfig */,
-				80360198F5F8A0B2676AA35C /* Pods-Feathers-iOSTests.debug.xcconfig */,
-				D1907BA98DA87172BF1BC2D1 /* Pods-Feathers-iOSTests.release.xcconfig */,
-				0BAE674D5D6524F136874584 /* Pods-Feathers-macOS.debug.xcconfig */,
-				BC762F677E63AE73BDD51BF5 /* Pods-Feathers-macOS.release.xcconfig */,
-				D57F1EDADC1B9FFD694C55B5 /* Pods-Feathers-macOSTests.debug.xcconfig */,
-				034983594155788148BB54C0 /* Pods-Feathers-macOSTests.release.xcconfig */,
-				F79FD2748FD31C1953601122 /* Pods-Feathers-tvOS.debug.xcconfig */,
-				CDE0E2964A08EF34C867A668 /* Pods-Feathers-tvOS.release.xcconfig */,
-				17865868262FEF4912A1FF6B /* Pods-Feathers-tvOSTests.debug.xcconfig */,
-				DA52CC1FCAA59D18EE332870 /* Pods-Feathers-tvOSTests.release.xcconfig */,
-				067567F9CA5525D3F96C4FAB /* Pods-Feathers-watchOS.debug.xcconfig */,
-				BDA5F9EC8BADA0D74161F6A3 /* Pods-Feathers-watchOS.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		E6F86BE4240DD808800C3F09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E53767B71C789A5486F032B4 /* Pods_Feathers_iOS.framework */,
-				94E677AAA637E85583248087 /* Pods_Feathers_iOSTests.framework */,
-				90EB08ABB7C24CFED3A1B493 /* Pods_Feathers_macOS.framework */,
-				D14980B3F92E1BDF24218634 /* Pods_Feathers_macOSTests.framework */,
-				1097E70407C5C1C5F50445EC /* Pods_Feathers_tvOS.framework */,
-				F54F1D512BB5226CE3154EE1 /* Pods_Feathers_tvOSTests.framework */,
-				A42B8A357113C8DF04CA54B3 /* Pods_Feathers_watchOS.framework */,
+				EA0F0D1F1ED0B535000517A4 /* KeychainSwift.framework */,
+				EA0F0D201ED0B535000517A4 /* ReactiveSwift.framework */,
+				EA0F0D211ED0B535000517A4 /* Result.framework */,
+				EA0F0D081ED0B4D7000517A4 /* KeychainSwift.framework */,
+				EA0F0D091ED0B4D7000517A4 /* Nimble.framework */,
+				EA0F0D0A1ED0B4D7000517A4 /* Quick.framework */,
+				EA0F0D0B1ED0B4D7000517A4 /* ReactiveSwift.framework */,
+				EA0F0D0C1ED0B4D7000517A4 /* Result.framework */,
+				EA0F0D031ED0B4C7000517A4 /* Nimble.framework */,
+				EA0F0D041ED0B4C7000517A4 /* Quick.framework */,
+				EA0F0CF91ED0B48C000517A4 /* KeychainSwift.framework */,
+				EA0F0CFA1ED0B48C000517A4 /* ReactiveSwift.framework */,
+				EA0F0CFB1ED0B48C000517A4 /* Result.framework */,
+				EA0F0CC51ED0B413000517A4 /* KeychainSwift.framework */,
+				EA0F0CC61ED0B413000517A4 /* Nimble.framework */,
+				EA0F0CC71ED0B413000517A4 /* Quick.framework */,
+				EA0F0CC81ED0B413000517A4 /* ReactiveSwift.framework */,
+				EA0F0CC91ED0B413000517A4 /* Result.framework */,
+				EA0F0CC01ED0B400000517A4 /* Nimble.framework */,
+				EA0F0CC11ED0B400000517A4 /* Quick.framework */,
+				EA0F0CA91ED0B38B000517A4 /* KeychainSwift.framework.dSYM */,
+				EA0F0CAA1ED0B38B000517A4 /* ReactiveSwift.framework.dSYM */,
+				EA0F0CAB1ED0B38B000517A4 /* Result.framework.dSYM */,
+				EA0F0C971ED0B2EA000517A4 /* KeychainSwift.framework */,
+				EA0F0C981ED0B2EA000517A4 /* Nimble.framework */,
+				EA0F0C991ED0B2EA000517A4 /* Quick.framework */,
+				EA0F0C9A1ED0B2EA000517A4 /* ReactiveSwift.framework */,
+				EA0F0C9B1ED0B2EA000517A4 /* Result.framework */,
+				EA0F0CA11ED0B318000517A4 /* KeychainSwift.framework */,
+				EA0F0CA21ED0B318000517A4 /* ReactiveSwift.framework */,
+				EA0F0CA31ED0B318000517A4 /* Result.framework */,
+				EA0F0C931ED0B2E1000517A4 /* Nimble.framework */,
+				EA0F0C941ED0B2E1000517A4 /* Quick.framework */,
+				EA0F0C8A1ED0B2D0000517A4 /* KeychainSwift.framework */,
+				EA0F0C8B1ED0B2D0000517A4 /* ReactiveSwift.framework */,
+				EA0F0C8C1ED0B2D0000517A4 /* Result.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA0F0D441ED3F85A000517A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		EA301AB31EC8BEAF00114F19 /* Fakes */ = {
@@ -291,23 +424,12 @@
 			name = Stubs;
 			sourceTree = "<group>";
 		};
-		EA44E1151EA417A7000879EB /* ReactiveSwift */ = {
-			isa = PBXGroup;
-			children = (
-				EABBAE3C1EBFA6B200522603 /* Feathers+ReactiveSwift.swift */,
-				EABBAE3D1EBFA6B200522603 /* Service+ReactiveSwift.swift */,
-				EA63C9FA1ECE60A3000997B4 /* SignalProducer+Promise.swift */,
-			);
-			name = ReactiveSwift;
-			sourceTree = "<group>";
-		};
 		EA452A5D1EA2B14300427CEF = {
 			isa = PBXGroup;
 			children = (
 				EA452A691EA2B14300427CEF /* Feathers */,
 				EABBADB01EBE77C900522603 /* FeathersTests */,
 				EA452A681EA2B14300427CEF /* Products */,
-				ADDB450F2B405972BF99D674 /* Pods */,
 				E6F86BE4240DD808800C3F09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -316,12 +438,12 @@
 			isa = PBXGroup;
 			children = (
 				EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */,
-				EAC0BD0C1EC952A40049FB13 /* Feathers.framework */,
-				EAC0BD141EC952A40049FB13 /* Feathers-macOSTests.xctest */,
-				EAC0BD621EC9686E0049FB13 /* Feathers.framework */,
-				EAC0BD6A1EC9686E0049FB13 /* Feathers-tvOSTests.xctest */,
 				EA12E05E1ECE950000A0DCF7 /* Feathers-iOSTests.xctest */,
-				EA2062141ECEC0F4005FF6AE /* Feathers.framework */,
+				EA0F0C731ED0B25E000517A4 /* Feathers.framework */,
+				EA0F0C7B1ED0B25F000517A4 /* Feathers-macOSTests.xctest */,
+				EA0F0CD41ED0B448000517A4 /* Feathers.framework */,
+				EA0F0CDC1ED0B448000517A4 /* Feathers-tvOSTests.xctest */,
+				EA0F0D171ED0B50D000517A4 /* Feathers.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -330,21 +452,10 @@
 			isa = PBXGroup;
 			children = (
 				EABBAE091EBFA69C00522603 /* Core */,
-				EABBAE021EBFA2B000522603 /* RxSwift */,
-				EA44E1151EA417A7000879EB /* ReactiveSwift */,
 				EA452A6A1EA2B14300427CEF /* Feathers.h */,
 				EA452A6B1EA2B14300427CEF /* Info.plist */,
 			);
 			path = Feathers;
-			sourceTree = "<group>";
-		};
-		EA954C6E1EC9A4990094FF43 /* Hooks */ = {
-			isa = PBXGroup;
-			children = (
-				EA3017131EC7867E00114F19 /* Hooks.swift */,
-				EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */,
-			);
-			name = Hooks;
 			sourceTree = "<group>";
 		};
 		EABBADB01EBE77C900522603 /* FeathersTests */ = {
@@ -354,35 +465,29 @@
 				EA301AB31EC8BEAF00114F19 /* Fakes */,
 				EAC0BC821EC90A600049FB13 /* Info.plist */,
 				EA52954B1ECE912C0014F156 /* ServiceSpec.swift */,
-				EA12E0701ECEA4C000A0DCF7 /* RxSwiftSpec.swift */,
-				EA12E0781ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift */,
+				EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */,
 			);
 			name = FeathersTests;
 			path = "FeathersTests-iOS";
 			sourceTree = "<group>";
 		};
-		EABBAE021EBFA2B000522603 /* RxSwift */ = {
-			isa = PBXGroup;
-			children = (
-				EABBAE461EBFA6B800522603 /* Feathers+RxSwift.swift */,
-				EABBAE471EBFA6B800522603 /* Service+RxSwift.swift */,
-				EA63C9FC1ECE625B000997B4 /* Observable+Promise.swift */,
-			);
-			name = RxSwift;
-			sourceTree = "<group>";
-		};
 		EABBAE091EBFA69C00522603 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				EA954C6E1EC9A4990094FF43 /* Hooks */,
+				EA0F0D441ED3F85A000517A4 /* Extensions */,
+				EA3017131EC7867E00114F19 /* Hooks.swift */,
+				EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */,
 				EABBAE121EBFA6A400522603 /* Service.swift */,
 				EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */,
 				EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */,
 				EABBAE0C1EBFA6A400522603 /* Feathers.swift */,
+				EA0F0D3F1ED2AB99000517A4 /* ProviderService.swift */,
 				EABBAE0D1EBFA6A400522603 /* FeathersError.swift */,
 				EABBAE0F1EBFA6A400522603 /* Provider.swift */,
 				EABBAE101EBFA6A400522603 /* Response.swift */,
 				EAE05D691EBFDB0000DA55BF /* Endpoint.swift */,
+				EA0F0D301ED290EF000517A4 /* ServiceType.swift */,
+				EA0F0D3A1ED2AA49000517A4 /* ServiceWrapper.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -390,7 +495,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		EA2062111ECEC0F4005FF6AE /* Headers */ = {
+		EA0F0C701ED0B25E000517A4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CD11ED0B448000517A4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0D141ED0B50D000517A4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -404,33 +523,113 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EAC0BD091EC952A40049FB13 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAC0BD5F1EC9686E0049FB13 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		EA0F0C721ED0B25E000517A4 /* Feathers-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0F0C841ED0B25F000517A4 /* Build configuration list for PBXNativeTarget "Feathers-macOS" */;
+			buildPhases = (
+				EA0F0C6E1ED0B25E000517A4 /* Sources */,
+				EA0F0C6F1ED0B25E000517A4 /* Frameworks */,
+				EA0F0C701ED0B25E000517A4 /* Headers */,
+				EA0F0C711ED0B25E000517A4 /* Resources */,
+				EA0F0CA71ED0B31F000517A4 /* Carthage */,
+				EA0F0CA81ED0B380000517A4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Feathers-macOS";
+			productName = "Feathers-macOS";
+			productReference = EA0F0C731ED0B25E000517A4 /* Feathers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EA0F0C7A1ED0B25F000517A4 /* Feathers-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0F0C871ED0B25F000517A4 /* Build configuration list for PBXNativeTarget "Feathers-macOSTests" */;
+			buildPhases = (
+				EA0F0C771ED0B25F000517A4 /* Sources */,
+				EA0F0C781ED0B25F000517A4 /* Frameworks */,
+				EA0F0C791ED0B25F000517A4 /* Resources */,
+				EA0F0CC41ED0B403000517A4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA0F0C7E1ED0B25F000517A4 /* PBXTargetDependency */,
+			);
+			name = "Feathers-macOSTests";
+			productName = "Feathers-macOSTests";
+			productReference = EA0F0C7B1ED0B25F000517A4 /* Feathers-macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA0F0CD31ED0B448000517A4 /* Feathers-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0F0CE51ED0B448000517A4 /* Build configuration list for PBXNativeTarget "Feathers-tvOS" */;
+			buildPhases = (
+				EA0F0CCF1ED0B448000517A4 /* Sources */,
+				EA0F0CD01ED0B448000517A4 /* Frameworks */,
+				EA0F0CD11ED0B448000517A4 /* Headers */,
+				EA0F0CD21ED0B448000517A4 /* Resources */,
+				EA0F0CFF1ED0B499000517A4 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Feathers-tvOS";
+			productName = "Feathers-tvOS";
+			productReference = EA0F0CD41ED0B448000517A4 /* Feathers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EA0F0CDB1ED0B448000517A4 /* Feathers-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0F0CE81ED0B448000517A4 /* Build configuration list for PBXNativeTarget "Feathers-tvOSTests" */;
+			buildPhases = (
+				EA0F0CD81ED0B448000517A4 /* Sources */,
+				EA0F0CD91ED0B448000517A4 /* Frameworks */,
+				EA0F0CDA1ED0B448000517A4 /* Resources */,
+				EA0F0D071ED0B4CC000517A4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA0F0CDF1ED0B448000517A4 /* PBXTargetDependency */,
+			);
+			name = "Feathers-tvOSTests";
+			productName = "Feathers-tvOSTests";
+			productReference = EA0F0CDC1ED0B448000517A4 /* Feathers-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA0F0D161ED0B50D000517A4 /* Feathers-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0F0D1C1ED0B50D000517A4 /* Build configuration list for PBXNativeTarget "Feathers-watchOS" */;
+			buildPhases = (
+				EA0F0D121ED0B50D000517A4 /* Sources */,
+				EA0F0D131ED0B50D000517A4 /* Frameworks */,
+				EA0F0D141ED0B50D000517A4 /* Headers */,
+				EA0F0D151ED0B50D000517A4 /* Resources */,
+				EA0F0D2F1ED0B545000517A4 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Feathers-watchOS";
+			productName = "Feathers-watchOS";
+			productReference = EA0F0D171ED0B50D000517A4 /* Feathers.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		EA12E05D1ECE950000A0DCF7 /* Feathers-iOSTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA12E0661ECE950100A0DCF7 /* Build configuration list for PBXNativeTarget "Feathers-iOSTests" */;
 			buildPhases = (
-				69B74501579F00D4AA9025CE /* [CP] Check Pods Manifest.lock */,
 				EA12E05A1ECE950000A0DCF7 /* Sources */,
 				EA12E05B1ECE950000A0DCF7 /* Frameworks */,
 				EA12E05C1ECE950000A0DCF7 /* Resources */,
-				90ED2F62BC5F5F49A961CC50 /* [CP] Embed Pods Frameworks */,
-				6C2A483FBEC7A08B8D2E36F3 /* [CP] Copy Pods Resources */,
+				EA0F0BC01ED0ABA4000517A4 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -442,36 +641,15 @@
 			productReference = EA12E05E1ECE950000A0DCF7 /* Feathers-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EA2062131ECEC0F4005FF6AE /* Feathers-watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EA2062191ECEC0F4005FF6AE /* Build configuration list for PBXNativeTarget "Feathers-watchOS" */;
-			buildPhases = (
-				35A2840DDD0A5631C72BEEBA /* [CP] Check Pods Manifest.lock */,
-				EA20620F1ECEC0F4005FF6AE /* Sources */,
-				EA2062101ECEC0F4005FF6AE /* Frameworks */,
-				EA2062111ECEC0F4005FF6AE /* Headers */,
-				EA2062121ECEC0F4005FF6AE /* Resources */,
-				14A4902BBA80D791A52EA55D /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Feathers-watchOS";
-			productName = "Feathers-watchOS";
-			productReference = EA2062141ECEC0F4005FF6AE /* Feathers.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		EAC0BCD11EC90FDB0049FB13 /* Feathers-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAC0BCE31EC90FDB0049FB13 /* Build configuration list for PBXNativeTarget "Feathers-iOS" */;
 			buildPhases = (
-				0865CF795A8ED6F1831851CB /* [CP] Check Pods Manifest.lock */,
 				EAC0BCCD1EC90FDB0049FB13 /* Sources */,
 				EAC0BCCE1EC90FDB0049FB13 /* Frameworks */,
 				EAC0BCCF1EC90FDB0049FB13 /* Headers */,
 				EAC0BCD01EC90FDB0049FB13 /* Resources */,
-				3E746EFBD57C4BAE07ABD227 /* [CP] Copy Pods Resources */,
+				EA0F0BBB1ED0AB03000517A4 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -481,88 +659,6 @@
 			productName = "Feathers-iOS";
 			productReference = EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		EAC0BD0B1EC952A40049FB13 /* Feathers-macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EAC0BD1D1EC952A40049FB13 /* Build configuration list for PBXNativeTarget "Feathers-macOS" */;
-			buildPhases = (
-				426BCE3FEED0D58233793AD9 /* [CP] Check Pods Manifest.lock */,
-				EAC0BD071EC952A40049FB13 /* Sources */,
-				EAC0BD081EC952A40049FB13 /* Frameworks */,
-				EAC0BD091EC952A40049FB13 /* Headers */,
-				EAC0BD0A1EC952A40049FB13 /* Resources */,
-				EF28B81D55F9323FF64F1672 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Feathers-macOS";
-			productName = "Feathers-macOS";
-			productReference = EAC0BD0C1EC952A40049FB13 /* Feathers.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		EAC0BD131EC952A40049FB13 /* Feathers-macOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EAC0BD201EC952A40049FB13 /* Build configuration list for PBXNativeTarget "Feathers-macOSTests" */;
-			buildPhases = (
-				BE761860EB3ABB8B3E317B05 /* [CP] Check Pods Manifest.lock */,
-				EAC0BD101EC952A40049FB13 /* Sources */,
-				EAC0BD111EC952A40049FB13 /* Frameworks */,
-				EAC0BD121EC952A40049FB13 /* Resources */,
-				E44ADC16A785A44380C7EEEE /* [CP] Embed Pods Frameworks */,
-				78A910FB7034CE6396024A7A /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EAC0BD171EC952A40049FB13 /* PBXTargetDependency */,
-			);
-			name = "Feathers-macOSTests";
-			productName = "Feathers-macOSTests";
-			productReference = EAC0BD141EC952A40049FB13 /* Feathers-macOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		EAC0BD611EC9686E0049FB13 /* Feathers-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EAC0BD731EC9686E0049FB13 /* Build configuration list for PBXNativeTarget "Feathers-tvOS" */;
-			buildPhases = (
-				4E1B08ECF63421DD01FDA83F /* [CP] Check Pods Manifest.lock */,
-				EAC0BD5D1EC9686E0049FB13 /* Sources */,
-				EAC0BD5E1EC9686E0049FB13 /* Frameworks */,
-				EAC0BD5F1EC9686E0049FB13 /* Headers */,
-				EAC0BD601EC9686E0049FB13 /* Resources */,
-				2040914301BA1C021926393A /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Feathers-tvOS";
-			productName = "Feathers-tvOS";
-			productReference = EAC0BD621EC9686E0049FB13 /* Feathers.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		EAC0BD691EC9686E0049FB13 /* Feathers-tvOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EAC0BD761EC9686E0049FB13 /* Build configuration list for PBXNativeTarget "Feathers-tvOSTests" */;
-			buildPhases = (
-				A3029C48656ABDCAF1E96B74 /* [CP] Check Pods Manifest.lock */,
-				EAC0BD661EC9686E0049FB13 /* Sources */,
-				EAC0BD671EC9686E0049FB13 /* Frameworks */,
-				EAC0BD681EC9686E0049FB13 /* Resources */,
-				0E2EFA75B5720AB8CFB8B12F /* [CP] Embed Pods Frameworks */,
-				2CBEBC45C76DDCD2361FA4DF /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EAC0BD6D1EC9686E0049FB13 /* PBXTargetDependency */,
-			);
-			name = "Feathers-tvOSTests";
-			productName = "Feathers-tvOSTests";
-			productReference = EAC0BD6A1EC9686E0049FB13 /* Feathers-tvOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -574,31 +670,31 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Swoopy Studios";
 				TargetAttributes = {
+					EA0F0C721ED0B25E000517A4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					EA0F0C7A1ED0B25F000517A4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					EA0F0CD31ED0B448000517A4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					EA0F0CDB1ED0B448000517A4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					EA0F0D161ED0B50D000517A4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
 					EA12E05D1ECE950000A0DCF7 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
-					EA2062131ECEC0F4005FF6AE = {
-						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
-					};
 					EAC0BCD11EC90FDB0049FB13 = {
-						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
-					};
-					EAC0BD0B1EC952A40049FB13 = {
-						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
-					};
-					EAC0BD131EC952A40049FB13 = {
-						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
-					};
-					EAC0BD611EC9686E0049FB13 = {
-						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
-					};
-					EAC0BD691EC9686E0049FB13 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -619,24 +715,52 @@
 			targets = (
 				EAC0BCD11EC90FDB0049FB13 /* Feathers-iOS */,
 				EA12E05D1ECE950000A0DCF7 /* Feathers-iOSTests */,
-				EAC0BD0B1EC952A40049FB13 /* Feathers-macOS */,
-				EAC0BD131EC952A40049FB13 /* Feathers-macOSTests */,
-				EAC0BD611EC9686E0049FB13 /* Feathers-tvOS */,
-				EAC0BD691EC9686E0049FB13 /* Feathers-tvOSTests */,
-				EA2062131ECEC0F4005FF6AE /* Feathers-watchOS */,
+				EA0F0C721ED0B25E000517A4 /* Feathers-macOS */,
+				EA0F0C7A1ED0B25F000517A4 /* Feathers-macOSTests */,
+				EA0F0CD31ED0B448000517A4 /* Feathers-tvOS */,
+				EA0F0CDB1ED0B448000517A4 /* Feathers-tvOSTests */,
+				EA0F0D161ED0B50D000517A4 /* Feathers-watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EA12E05C1ECE950000A0DCF7 /* Resources */ = {
+		EA0F0C711ED0B25E000517A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA2062121ECEC0F4005FF6AE /* Resources */ = {
+		EA0F0C791ED0B25F000517A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CD21ED0B448000517A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CDA1ED0B448000517A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0D151ED0B50D000517A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA12E05C1ECE950000A0DCF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -650,327 +774,173 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EAC0BD0A1EC952A40049FB13 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAC0BD121EC952A40049FB13 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAC0BD601EC9686E0049FB13 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAC0BD681EC9686E0049FB13 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0865CF795A8ED6F1831851CB /* [CP] Check Pods Manifest.lock */ = {
+		EA0F0BBB1ED0AB03000517A4 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = Carthage;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
-		0E2EFA75B5720AB8CFB8B12F /* [CP] Embed Pods Frameworks */ = {
+		EA0F0CA71ED0B31F000517A4 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Result.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/KeychainSwift.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/ReactiveSwift.framework",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = Carthage;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Feathers-tvOSTests/Pods-Feathers-tvOSTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
-		14A4902BBA80D791A52EA55D /* [CP] Copy Pods Resources */ = {
+		EA0F0CFF1ED0B499000517A4 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/KeychainSwift.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/ReactiveSwift.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = Carthage;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Feathers-watchOS/Pods-Feathers-watchOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
-		2040914301BA1C021926393A /* [CP] Copy Pods Resources */ = {
+		EA0F0D2F1ED0B545000517A4 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/watchOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/watchOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/watchOS/KeychainSwift.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = Carthage;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Feathers-tvOS/Pods-Feathers-tvOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2CBEBC45C76DDCD2361FA4DF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Feathers-tvOSTests/Pods-Feathers-tvOSTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		35A2840DDD0A5631C72BEEBA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		3E746EFBD57C4BAE07ABD227 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Feathers-iOS/Pods-Feathers-iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		426BCE3FEED0D58233793AD9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		4E1B08ECF63421DD01FDA83F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		69B74501579F00D4AA9025CE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6C2A483FBEC7A08B8D2E36F3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Feathers-iOSTests/Pods-Feathers-iOSTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		78A910FB7034CE6396024A7A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Feathers-macOSTests/Pods-Feathers-macOSTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		90ED2F62BC5F5F49A961CC50 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Feathers-iOSTests/Pods-Feathers-iOSTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A3029C48656ABDCAF1E96B74 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BE761860EB3ABB8B3E317B05 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E44ADC16A785A44380C7EEEE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Feathers-macOSTests/Pods-Feathers-macOSTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF28B81D55F9323FF64F1672 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Feathers-macOS/Pods-Feathers-macOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA0F0C6E1ED0B25E000517A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CB61ED0B3E2000517A4 /* AuthenticationConfiguration.swift in Sources */,
+				EA0F0CB91ED0B3E2000517A4 /* FeathersError.swift in Sources */,
+				EA0F0D411ED2AB99000517A4 /* ProviderService.swift in Sources */,
+				EA0F0CB81ED0B3E2000517A4 /* Feathers.swift in Sources */,
+				EA0F0CB71ED0B3E2000517A4 /* AuthenticationStorage.swift in Sources */,
+				EA0F0CBC1ED0B3E2000517A4 /* Endpoint.swift in Sources */,
+				EA0F0CBB1ED0B3E2000517A4 /* Response.swift in Sources */,
+				EA0F0CBA1ED0B3E2000517A4 /* Provider.swift in Sources */,
+				EA0F0CB41ED0B3E2000517A4 /* LoggerHooks.swift in Sources */,
+				EA0F0CB31ED0B3E2000517A4 /* Hooks.swift in Sources */,
+				EA0F0D471ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */,
+				EA0F0D3C1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */,
+				EA0F0D321ED290EF000517A4 /* ServiceType.swift in Sources */,
+				EA0F0CB51ED0B3E2000517A4 /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0C771ED0B25F000517A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CB01ED0B3B3000517A4 /* Hooks.swift in Sources */,
+				EA0F0CB11ED0B3B3000517A4 /* ServiceSpec.swift in Sources */,
+				EA0F0CB21ED0B3B3000517A4 /* FeathersSpec.swift in Sources */,
+				EA0F0CAF1ED0B3B3000517A4 /* StubProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CCF1ED0B448000517A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CEE1ED0B46B000517A4 /* AuthenticationConfiguration.swift in Sources */,
+				EA0F0CF11ED0B46B000517A4 /* FeathersError.swift in Sources */,
+				EA0F0D421ED2AB99000517A4 /* ProviderService.swift in Sources */,
+				EA0F0CF01ED0B46B000517A4 /* Feathers.swift in Sources */,
+				EA0F0CEF1ED0B46B000517A4 /* AuthenticationStorage.swift in Sources */,
+				EA0F0CF41ED0B46B000517A4 /* Endpoint.swift in Sources */,
+				EA0F0CF31ED0B46B000517A4 /* Response.swift in Sources */,
+				EA0F0CF21ED0B46B000517A4 /* Provider.swift in Sources */,
+				EA0F0CEC1ED0B46B000517A4 /* LoggerHooks.swift in Sources */,
+				EA0F0CEB1ED0B46B000517A4 /* Hooks.swift in Sources */,
+				EA0F0D481ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */,
+				EA0F0D3D1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */,
+				EA0F0D331ED290EF000517A4 /* ServiceType.swift in Sources */,
+				EA0F0CED1ED0B46B000517A4 /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0CD81ED0B448000517A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0CF61ED0B46F000517A4 /* Hooks.swift in Sources */,
+				EA0F0CF71ED0B46F000517A4 /* ServiceSpec.swift in Sources */,
+				EA0F0CF81ED0B46F000517A4 /* FeathersSpec.swift in Sources */,
+				EA0F0CF51ED0B46F000517A4 /* StubProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0F0D121ED0B50D000517A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0F0D281ED0B539000517A4 /* AuthenticationConfiguration.swift in Sources */,
+				EA0F0D2B1ED0B539000517A4 /* FeathersError.swift in Sources */,
+				EA0F0D431ED2AB99000517A4 /* ProviderService.swift in Sources */,
+				EA0F0D2A1ED0B539000517A4 /* Feathers.swift in Sources */,
+				EA0F0D291ED0B539000517A4 /* AuthenticationStorage.swift in Sources */,
+				EA0F0D2E1ED0B539000517A4 /* Endpoint.swift in Sources */,
+				EA0F0D2D1ED0B539000517A4 /* Response.swift in Sources */,
+				EA0F0D2C1ED0B539000517A4 /* Provider.swift in Sources */,
+				EA0F0D261ED0B539000517A4 /* LoggerHooks.swift in Sources */,
+				EA0F0D251ED0B539000517A4 /* Hooks.swift in Sources */,
+				EA0F0D491ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */,
+				EA0F0D3E1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */,
+				EA0F0D341ED290EF000517A4 /* ServiceType.swift in Sources */,
+				EA0F0D271ED0B539000517A4 /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA12E05A1ECE950000A0DCF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EA12E06A1ECE952400A0DCF7 /* StubProvider.swift in Sources */,
-				EA12E0791ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift in Sources */,
-				EA12E0711ECEA4C000A0DCF7 /* RxSwiftSpec.swift in Sources */,
 				EA12E0691ECE950C00A0DCF7 /* ServiceSpec.swift in Sources */,
+				EA0F0BB21ED0A6C9000517A4 /* FeathersSpec.swift in Sources */,
 				EA12E06B1ECE952400A0DCF7 /* Hooks.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA20620F1ECEC0F4005FF6AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA20621E1ECEC29D005FF6AE /* AuthenticationStorage.swift in Sources */,
-				EA20621D1ECEC29D005FF6AE /* AuthenticationConfiguration.swift in Sources */,
-				EA2062241ECEC2A4005FF6AE /* Feathers+RxSwift.swift in Sources */,
-				EA2062231ECEC29D005FF6AE /* Endpoint.swift in Sources */,
-				EA2062281ECEC2A4005FF6AE /* Service+ReactiveSwift.swift in Sources */,
-				EA2062271ECEC2A4005FF6AE /* Feathers+ReactiveSwift.swift in Sources */,
-				EA20621C1ECEC29D005FF6AE /* Service.swift in Sources */,
-				EA2062251ECEC2A4005FF6AE /* Service+RxSwift.swift in Sources */,
-				EA2062201ECEC29D005FF6AE /* FeathersError.swift in Sources */,
-				EA20622C1ECEC5AC005FF6AE /* LoggerHooks.swift in Sources */,
-				EA20622A1ECEC5A8005FF6AE /* Hooks.swift in Sources */,
-				EA2062291ECEC2A4005FF6AE /* SignalProducer+Promise.swift in Sources */,
-				EA2062211ECEC29D005FF6AE /* Provider.swift in Sources */,
-				EA20621F1ECEC29D005FF6AE /* Feathers.swift in Sources */,
-				EA2062261ECEC2A4005FF6AE /* Observable+Promise.swift in Sources */,
-				EA2062221ECEC29D005FF6AE /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,119 +949,280 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA954C781EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */,
-				EAC0BCF51EC90FF30049FB13 /* Feathers+RxSwift.swift in Sources */,
 				EAC0BCF01EC90FF30049FB13 /* Response.swift in Sources */,
-				EAC0BCF81EC90FF30049FB13 /* Service+ReactiveSwift.swift in Sources */,
-				EA63C9FB1ECE60A3000997B4 /* SignalProducer+Promise.swift in Sources */,
+				EA0F0D401ED2AB99000517A4 /* ProviderService.swift in Sources */,
 				EAC0BCEB1EC90FF30049FB13 /* AuthenticationStorage.swift in Sources */,
 				EAC0BCEF1EC90FF30049FB13 /* Provider.swift in Sources */,
 				EAC0BCEA1EC90FF30049FB13 /* AuthenticationConfiguration.swift in Sources */,
 				EAC0BCE91EC90FF30049FB13 /* Service.swift in Sources */,
-				EA63C9FD1ECE625B000997B4 /* Observable+Promise.swift in Sources */,
-				EAC0BCF71EC90FF30049FB13 /* Feathers+ReactiveSwift.swift in Sources */,
 				EAC0BCF41EC90FF30049FB13 /* Hooks.swift in Sources */,
 				EAC0BCED1EC90FF30049FB13 /* FeathersError.swift in Sources */,
 				EAC0BCEC1EC90FF30049FB13 /* Feathers.swift in Sources */,
+				EA0F0D461ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */,
+				EA0F0D3B1ED2AA49000517A4 /* ServiceWrapper.swift in Sources */,
+				EA0F0D311ED290EF000517A4 /* ServiceType.swift in Sources */,
 				EAC0BCF31EC90FF30049FB13 /* Endpoint.swift in Sources */,
-				EAC0BCF61EC90FF30049FB13 /* Service+RxSwift.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAC0BD071EC952A40049FB13 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA954C791EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */,
-				EAC0BD2F1EC953A90049FB13 /* Feathers+RxSwift.swift in Sources */,
-				EA63C9FE1ECE625B000997B4 /* Observable+Promise.swift in Sources */,
-				EAC0BD2A1EC953A90049FB13 /* Response.swift in Sources */,
-				EAC0BD321EC953A90049FB13 /* Service+ReactiveSwift.swift in Sources */,
-				EA63CA011ECE65A0000997B4 /* SignalProducer+Promise.swift in Sources */,
-				EAC0BD251EC953A90049FB13 /* AuthenticationStorage.swift in Sources */,
-				EAC0BD291EC953A90049FB13 /* Provider.swift in Sources */,
-				EAC0BD241EC953A90049FB13 /* AuthenticationConfiguration.swift in Sources */,
-				EAC0BD231EC953A90049FB13 /* Service.swift in Sources */,
-				EAC0BD311EC953A90049FB13 /* Feathers+ReactiveSwift.swift in Sources */,
-				EAC0BD2E1EC953A90049FB13 /* Hooks.swift in Sources */,
-				EAC0BD271EC953A90049FB13 /* FeathersError.swift in Sources */,
-				EAC0BD261EC953A90049FB13 /* Feathers.swift in Sources */,
-				EAC0BD2D1EC953A90049FB13 /* Endpoint.swift in Sources */,
-				EAC0BD301EC953A90049FB13 /* Service+RxSwift.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAC0BD101EC952A40049FB13 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAC0BD521EC964430049FB13 /* Hooks.swift in Sources */,
-				EA12E07A1ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift in Sources */,
-				EA12E0721ECEA4C000A0DCF7 /* RxSwiftSpec.swift in Sources */,
-				EA52954D1ECE912C0014F156 /* ServiceSpec.swift in Sources */,
-				EAC0BD511EC964430049FB13 /* StubProvider.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAC0BD5D1EC9686E0049FB13 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA954C7A1EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */,
-				EAC0BD8E1EC969780049FB13 /* Feathers+RxSwift.swift in Sources */,
-				EA63C9FF1ECE625B000997B4 /* Observable+Promise.swift in Sources */,
-				EAC0BD891EC969780049FB13 /* Response.swift in Sources */,
-				EAC0BD911EC969780049FB13 /* Service+ReactiveSwift.swift in Sources */,
-				EA63CA021ECE65A1000997B4 /* SignalProducer+Promise.swift in Sources */,
-				EAC0BD841EC969780049FB13 /* AuthenticationStorage.swift in Sources */,
-				EAC0BD881EC969780049FB13 /* Provider.swift in Sources */,
-				EAC0BD831EC969780049FB13 /* AuthenticationConfiguration.swift in Sources */,
-				EAC0BD821EC969780049FB13 /* Service.swift in Sources */,
-				EAC0BD901EC969780049FB13 /* Feathers+ReactiveSwift.swift in Sources */,
-				EAC0BD8D1EC969780049FB13 /* Hooks.swift in Sources */,
-				EAC0BD861EC969780049FB13 /* FeathersError.swift in Sources */,
-				EAC0BD851EC969780049FB13 /* Feathers.swift in Sources */,
-				EAC0BD8C1EC969780049FB13 /* Endpoint.swift in Sources */,
-				EAC0BD8F1EC969780049FB13 /* Service+RxSwift.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAC0BD661EC9686E0049FB13 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAC0BD931EC9697E0049FB13 /* Hooks.swift in Sources */,
-				EA12E07B1ECEA5A800A0DCF7 /* ReactiveSwiftSpec.swift in Sources */,
-				EA12E0731ECEA4C000A0DCF7 /* RxSwiftSpec.swift in Sources */,
-				EA52954E1ECE912C0014F156 /* ServiceSpec.swift in Sources */,
-				EAC0BD921EC9697E0049FB13 /* StubProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EA0F0C7E1ED0B25F000517A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA0F0C721ED0B25E000517A4 /* Feathers-macOS */;
+			targetProxy = EA0F0C7D1ED0B25F000517A4 /* PBXContainerItemProxy */;
+		};
+		EA0F0CDF1ED0B448000517A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA0F0CD31ED0B448000517A4 /* Feathers-tvOS */;
+			targetProxy = EA0F0CDE1ED0B448000517A4 /* PBXContainerItemProxy */;
+		};
 		EA12E0651ECE950100A0DCF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EAC0BCD11EC90FDB0049FB13 /* Feathers-iOS */;
 			targetProxy = EA12E0641ECE950100A0DCF7 /* PBXContainerItemProxy */;
 		};
-		EAC0BD171EC952A40049FB13 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EAC0BD0B1EC952A40049FB13 /* Feathers-macOS */;
-			targetProxy = EAC0BD161EC952A40049FB13 /* PBXContainerItemProxy */;
-		};
-		EAC0BD6D1EC9686E0049FB13 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EAC0BD611EC9686E0049FB13 /* Feathers-tvOS */;
-			targetProxy = EAC0BD6C1EC9686E0049FB13 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		EA0F0C851ED0B25F000517A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Feathers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-macOS";
+				PRODUCT_NAME = Feathers;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EA0F0C861ED0B25F000517A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Feathers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-macOS";
+				PRODUCT_NAME = Feathers;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EA0F0C881ED0B25F000517A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = FeathersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EA0F0C891ED0B25F000517A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = FeathersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EA0F0CE61ED0B448000517A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = Feathers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-tvOS";
+				PRODUCT_NAME = Feathers;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		EA0F0CE71ED0B448000517A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = Feathers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-tvOS";
+				PRODUCT_NAME = Feathers;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		EA0F0CE91ED0B448000517A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = FeathersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		EA0F0CEA1ED0B448000517A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = FeathersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
+		EA0F0D1D1ED0B50D000517A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = Feathers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-watchOS";
+				PRODUCT_NAME = Feathers;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		EA0F0D1E1ED0B50D000517A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = Feathers/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-watchOS";
+				PRODUCT_NAME = Feathers;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 		EA12E0671ECE950100A0DCF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80360198F5F8A0B2676AA35C /* Pods-Feathers-iOSTests.debug.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FeathersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.FeathersTests-iOS";
@@ -1102,59 +1233,16 @@
 		};
 		EA12E0681ECE950100A0DCF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1907BA98DA87172BF1BC2D1 /* Pods-Feathers-iOSTests.release.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FeathersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.FeathersTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		EA20621A1ECEC0F4005FF6AE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 067567F9CA5525D3F96C4FAB /* Pods-Feathers-watchOS.debug.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Feathers/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-watchOS";
-				PRODUCT_NAME = Feathers;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
-			};
-			name = Debug;
-		};
-		EA20621B1ECEC0F4005FF6AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDA5F9EC8BADA0D74161F6A3 /* Pods-Feathers-watchOS.release.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Feathers/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.feathersjs.Feathers-watchOS";
-				PRODUCT_NAME = Feathers;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
 			name = Release;
 		};
@@ -1265,7 +1353,6 @@
 		};
 		EAC0BCE41EC90FDB0049FB13 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63D7195C6AE5112203F9838C /* Pods-Feathers-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_IDENTITY = "";
@@ -1273,7 +1360,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Feathers/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1288,7 +1378,6 @@
 		};
 		EAC0BCE51EC90FDB0049FB13 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78CE9037BF994D5270C381FA /* Pods-Feathers-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_IDENTITY = "";
@@ -1296,7 +1385,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Feathers/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1309,191 +1401,59 @@
 			};
 			name = Release;
 		};
-		EAC0BD1E1EC952A40049FB13 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BAE674D5D6524F136874584 /* Pods-Feathers-macOS.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Feathers/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-macOS";
-				PRODUCT_NAME = Feathers;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		EAC0BD1F1EC952A40049FB13 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC762F677E63AE73BDD51BF5 /* Pods-Feathers-macOS.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Feathers/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-macOS";
-				PRODUCT_NAME = Feathers;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		EAC0BD211EC952A40049FB13 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D57F1EDADC1B9FFD694C55B5 /* Pods-Feathers-macOSTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = FeathersTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-macOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		EAC0BD221EC952A40049FB13 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 034983594155788148BB54C0 /* Pods-Feathers-macOSTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = FeathersTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-macOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		EAC0BD741EC9686E0049FB13 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F79FD2748FD31C1953601122 /* Pods-Feathers-tvOS.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Feathers/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-tvOS";
-				PRODUCT_NAME = Feathers;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Debug;
-		};
-		EAC0BD751EC9686E0049FB13 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDE0E2964A08EF34C867A668 /* Pods-Feathers-tvOS.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_IDENTITY = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Feathers/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-tvOS";
-				PRODUCT_NAME = Feathers;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Release;
-		};
-		EAC0BD771EC9686E0049FB13 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17865868262FEF4912A1FF6B /* Pods-Feathers-tvOSTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = FeathersTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 3.0;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Debug;
-		};
-		EAC0BD781EC9686E0049FB13 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA52CC1FCAA59D18EE332870 /* Pods-Feathers-tvOSTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = FeathersTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 3.0;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA0F0C841ED0B25F000517A4 /* Build configuration list for PBXNativeTarget "Feathers-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0F0C851ED0B25F000517A4 /* Debug */,
+				EA0F0C861ED0B25F000517A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA0F0C871ED0B25F000517A4 /* Build configuration list for PBXNativeTarget "Feathers-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0F0C881ED0B25F000517A4 /* Debug */,
+				EA0F0C891ED0B25F000517A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA0F0CE51ED0B448000517A4 /* Build configuration list for PBXNativeTarget "Feathers-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0F0CE61ED0B448000517A4 /* Debug */,
+				EA0F0CE71ED0B448000517A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA0F0CE81ED0B448000517A4 /* Build configuration list for PBXNativeTarget "Feathers-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0F0CE91ED0B448000517A4 /* Debug */,
+				EA0F0CEA1ED0B448000517A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA0F0D1C1ED0B50D000517A4 /* Build configuration list for PBXNativeTarget "Feathers-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0F0D1D1ED0B50D000517A4 /* Debug */,
+				EA0F0D1E1ED0B50D000517A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EA12E0661ECE950100A0DCF7 /* Build configuration list for PBXNativeTarget "Feathers-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA12E0671ECE950100A0DCF7 /* Debug */,
 				EA12E0681ECE950100A0DCF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EA2062191ECEC0F4005FF6AE /* Build configuration list for PBXNativeTarget "Feathers-watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EA20621A1ECEC0F4005FF6AE /* Debug */,
-				EA20621B1ECEC0F4005FF6AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1512,42 +1472,6 @@
 			buildConfigurations = (
 				EAC0BCE41EC90FDB0049FB13 /* Debug */,
 				EAC0BCE51EC90FDB0049FB13 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EAC0BD1D1EC952A40049FB13 /* Build configuration list for PBXNativeTarget "Feathers-macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EAC0BD1E1EC952A40049FB13 /* Debug */,
-				EAC0BD1F1EC952A40049FB13 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EAC0BD201EC952A40049FB13 /* Build configuration list for PBXNativeTarget "Feathers-macOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EAC0BD211EC952A40049FB13 /* Debug */,
-				EAC0BD221EC952A40049FB13 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EAC0BD731EC9686E0049FB13 /* Build configuration list for PBXNativeTarget "Feathers-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EAC0BD741EC9686E0049FB13 /* Debug */,
-				EAC0BD751EC9686E0049FB13 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EAC0BD761EC9686E0049FB13 /* Build configuration list for PBXNativeTarget "Feathers-tvOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EAC0BD771EC9686E0049FB13 /* Debug */,
-				EAC0BD781EC9686E0049FB13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

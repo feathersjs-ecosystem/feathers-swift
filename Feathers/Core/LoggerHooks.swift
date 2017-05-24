@@ -3,18 +3,18 @@
 //  Feathers
 //
 //  Created by Brendan Conron on 5/15/17.
-//  Copyright © 2017 Swoopy Studios. All rights reserved.
+//  Copyright © 2017 FeathersJS. All rights reserved.
 //
 
 import Foundation
-import PromiseKit
+import ReactiveSwift
 
 /// Simple request logger
 public struct RequestLoggerHook: Hook {
 
-    public func run(with hookObject: HookObject) -> Promise<HookObject> {
+    public func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError> {
         print("request to \(hookObject.service.path) for method \(hookObject.method)")
-        return Promise(value: hookObject)
+        return SignalProducer(value: hookObject)
     }
 
 }
