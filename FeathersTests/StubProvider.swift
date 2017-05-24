@@ -15,8 +15,12 @@ class StubProvider: Provider {
 
     private let stubbedData: [String: Any]
 
+    var supportsRealtimeEvents: Bool {
+        return false
+    }
+
     var baseURL: URL {
-        return URL(string: "http://myserver.com")!
+        return URL(string: "https://myserver.com")!
     }
 
     init(data: [String: Any]) {
