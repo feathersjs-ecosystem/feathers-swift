@@ -23,24 +23,24 @@ public struct Pagination {
 
 /// Encapsulation around the kinds of response data we can receive.
 ///
-/// - jsonArray: Data is a JSON array (non-paginated).
-/// - jsonObject: Data is a JSON object (paginated or single entity request i.e. `get`, `update`, `patch`, or `remove`.
+/// - list: Data is in list format (non-paginated).
+/// - object: Data is a JSON object (paginated or single entity request i.e. `get`, `update`, `patch`, or `remove`.
 public enum ResponseData: CustomDebugStringConvertible, CustomStringConvertible, Equatable {
-    case jsonArray([Any])
-    case jsonObject(Any)
+    case list([Any])
+    case object(Any)
 
     public var value: Any {
         switch self {
-        case .jsonObject(let data): return data
-        case .jsonArray(let data): return data
+        case .object(let data): return data
+        case .list(let data): return data
         }
     }
 
     public var description: String {
         switch self {
-        case .jsonArray(let data):
+        case .list(let data):
             return data.reduce("") { $0 + "\n\($1)\n" }
-        case .jsonObject(let object):
+        case .object(let object):
             return "\(object)"
         }
     }
@@ -52,9 +52,9 @@ public enum ResponseData: CustomDebugStringConvertible, CustomStringConvertible,
 
 // Only to be used for testing, does not actually compare equality of the json data
 public func ==(lhs: ResponseData, rhs: ResponseData) -> Bool {
-    if case  .jsonObject = lhs, case .jsonObject = rhs {
+    if case  .object = lhs, case .object = rhs {
         return true
-    } else if case .jsonArray = lhs, case .jsonArray = rhs {
+    } else if case .list = lhs, case .list = rhs {
         return true
     }
     return false

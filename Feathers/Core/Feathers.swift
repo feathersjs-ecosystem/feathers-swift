@@ -76,7 +76,7 @@ public final class Feathers {
     public func authenticate(_ credentials: [String: Any]) -> SignalProducer<String, FeathersError> {
         return provider.authenticate(authenticationConfiguration.path, credentials: credentials)
             .flatMap(.latest) { response -> SignalProducer<String, FeathersError> in
-                if case let .jsonObject(object) = response.data,
+                if case let .object(object) = response.data,
                 let json = object as? [String: Any],
                 let accessToken = json["accessToken"] as? String {
                     return SignalProducer(value: accessToken)
