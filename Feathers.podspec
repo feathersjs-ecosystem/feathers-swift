@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.subspec "Core" do |ss|
     ss.source_files = "Feathers/Core/*.{swift}"
     ss.framework = "Foundation"
-    ss.dependency 'KeychainSwift', '8.0.2'
+    ss.dependency 'KeychainSwift'
     ss.dependency 'Result'
     ss.dependency "ReactiveSwift"
   end
