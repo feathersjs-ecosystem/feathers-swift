@@ -30,7 +30,7 @@ public protocol ServiceType {
     ///
     /// - Parameter method: Service method.
     /// - Returns: `SignalProducer` that emits a response or errors.
-    func request(_ method: Service.Method) -> SignalProducer<Response, FeathersError>
+    func request(_ method: Service.Method) -> SignalProducer<Response, AnyFeathersError>
 
     /// Register hooks with the service.
     /// Hooks get added with each successive use, not overridden.

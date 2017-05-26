@@ -8,7 +8,23 @@
 
 import Foundation
 
-public enum FeathersError: Error, Equatable {
+public protocol FeathersError: Swift.Error {}
+
+/// Type erase any errors
+public struct AnyFeathersError: Error {
+    /// The underlying error.
+    public let error: FeathersError
+
+    public init(_ error: FeathersError) {
+        if let anyError = error as? AnyFeathersError {
+            self = anyError
+        } else {
+            self.error = error
+        }
+    }
+}
+
+public enum FeathersNetworkError: FeathersError, Equatable {
 
     case badRequest
     case notAuthenticated
@@ -56,7 +72,7 @@ public enum FeathersError: Error, Equatable {
     
 }
 
-public func ==(lhs: FeathersError, rhs: FeathersError) -> Bool {
+public func ==(lhs: FeathersNetworkError, rhs: FeathersNetworkError) -> Bool {
     switch (lhs, rhs) {
     case (.badRequest, .badRequest): return true
     case (.notAuthenticated, .notAuthenticated): return true

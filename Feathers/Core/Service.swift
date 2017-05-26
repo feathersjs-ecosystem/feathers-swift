@@ -28,12 +28,12 @@ open class Service: ServiceType {
     /// indicating multiple entities with query parameters.
     public enum Method {
 
-        case find(parameters: [String: Any]?)
-        case get(id: String, parameters: [String: Any]?)
-        case create(data: [String: Any], parameters: [String: Any]?)
-        case update(id: String?, data: [String: Any], parameters: [String: Any]?)
-        case patch(id: String?, data: [String: Any], parameters: [String: Any]?)
-        case remove(id: String?, parameters: [String: Any]?)
+        case find(query: Query?)
+        case get(id: String, query: Query?)
+        case create(data: [String: Any], query: Query?)
+        case update(id: String?, data: [String: Any], query: Query?)
+        case patch(id: String?, data: [String: Any], query: Query?)
+        case remove(id: String?, query: Query?)
 
     }
 
@@ -152,7 +152,7 @@ open class Service: ServiceType {
         self.path = path
     }
 
-    open func request(_ method: Service.Method) -> SignalProducer<Response, FeathersError> {
+    open func request(_ method: Service.Method) -> SignalProducer<Response, AnyFeathersError> {
         fatalError("Must be overriden by a subclass")
     }
 

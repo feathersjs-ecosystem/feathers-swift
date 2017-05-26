@@ -96,5 +96,5 @@ public protocol Hook {
     /// - Parameters:
     ///   - hookObject: Hook object.
     /// - Returns: `SignalProducer` that emits the modified hook object or errors.
-    func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError>
+    func run(with hookObject: HookObject) -> SignalProducer<HookObject, AnyFeathersError>
 }
