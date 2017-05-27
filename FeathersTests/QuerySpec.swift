@@ -144,7 +144,7 @@ class QuerySpec: QuickSpec {
                     ])).to(beTrue())
             }
 
-            xit("should serialize an or query") {
+            it("should serialize an or query") {
                 let query = Query().or(subqueries: [
                     "name":.ne("bob"),
                     "age": .`in`([18, 42])
@@ -154,15 +154,15 @@ class QuerySpec: QuickSpec {
                 expect(NSDictionary(dictionary: serialized).isEqual(to: [
                     "$or": [
                         [
+                            "name": [
+                                "$ne": "bob"
+                            ]
+                        ],
+                        [
                             "age": [
                                 "$in": [18, 42]
                             ]
                         ],
-                        [
-                            "name": [
-                                "$ne": "bob"
-                            ]
-                        ]
                     ]
                     ])).to(beTrue())
             }
