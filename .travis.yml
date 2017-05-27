@@ -10,7 +10,6 @@ install:
   - rvm get stable || true
   - brew update || true
   - brew install carthage || true
-  - brew install swiftlint || true
   - brew outdated carthage || brew upgrade carthage
 before_script:
   - chmod +x ./script/build
