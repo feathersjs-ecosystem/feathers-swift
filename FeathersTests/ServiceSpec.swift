@@ -29,7 +29,7 @@ class ServiceSpec: QuickSpec {
                 var error: Error?
                 var response: Response?
                 var data: [String: String]?
-                service.request(.find(parameters: nil))
+                service.request(.find(query: nil))
                     .on(failed: {
                         error = $0
                     }, value: {
@@ -59,7 +59,7 @@ class ServiceSpec: QuickSpec {
                         var error: Error?
                         var response: Response?
                         var data: [String: String]?
-                        service.request(.find(parameters: nil))
+                        service.request(.find(query: nil))
                             .on(failed: {
                                 error = $0
                             }, value: {
@@ -88,7 +88,7 @@ class ServiceSpec: QuickSpec {
                         var error: Error?
                         var response: Response?
                         var data: [String: String]?
-                        service.request(.find(parameters: nil))
+                        service.request(.find(query: nil))
                             .on(failed: {
                                 error = $0
                             }, value: {
@@ -120,7 +120,7 @@ class ServiceSpec: QuickSpec {
                             var error: FeathersNetworkError?
                             var response: Response?
                             var data: [String: String]?
-                            service.request(.find(parameters: nil))
+                            service.request(.find(query: nil))
                                 .on(failed: {
                                     error = $0.error as? FeathersNetworkError
                                 }, value: {
@@ -147,7 +147,7 @@ class ServiceSpec: QuickSpec {
                                 var error: FeathersNetworkError?
                                 var response: Response?
                                 var data: [String: String]?
-                                service.request(.find(parameters: nil))
+                                service.request(.find(query: nil))
                                     .on(failed: {
                                         error = $0.error as? FeathersNetworkError
                                     }, value: {
@@ -176,7 +176,7 @@ class ServiceSpec: QuickSpec {
                                 var error: FeathersNetworkError?
                                 var response: Response?
                                 var data: [String: String]?
-                                service.request(.find(parameters: nil))
+                                service.request(.find(query: nil))
                                     .on(failed: {
                                         error = $0.error as? FeathersNetworkError
                                     }, value: {
@@ -200,7 +200,7 @@ class ServiceSpec: QuickSpec {
                                     var error: FeathersNetworkError?
                                     var response: Response?
                                     var data: [String: String]?
-                                    service.request(.find(parameters: nil))
+                                    service.request(.find(query: nil))
                                         .on(failed: {
                                             error = $0.error as? FeathersNetworkError
                                         }, value: {
