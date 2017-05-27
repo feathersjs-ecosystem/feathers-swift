@@ -127,10 +127,10 @@ open class Service: ServiceType {
     /// - removed: Entity has been removed.
     public enum RealTimeEvent: String {
         
-        case created = "created"
-        case updated = "updated"
-        case patched = "patched"
-        case removed = "removed"
+        case created
+        case updated
+        case patched
+        case removed
 
     }
 
@@ -145,7 +145,6 @@ open class Service: ServiceType {
 
     /// The service path.
     private(set) public var path: String = ""
-
 
     open func setup(app: Feathers, path: String) {
         self.app = app

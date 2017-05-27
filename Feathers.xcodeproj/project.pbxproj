@@ -547,6 +547,7 @@
 				EA0F0C711ED0B25E000517A4 /* Resources */,
 				EA0F0CA71ED0B31F000517A4 /* Carthage */,
 				EA0F0CA81ED0B380000517A4 /* CopyFiles */,
+				EA63155E1ED9258B00398390 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -585,6 +586,7 @@
 				EA0F0CD11ED0B448000517A4 /* Headers */,
 				EA0F0CD21ED0B448000517A4 /* Resources */,
 				EA0F0CFF1ED0B499000517A4 /* Carthage */,
+				EA63155F1ED9259C00398390 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -623,6 +625,7 @@
 				EA0F0D141ED0B50D000517A4 /* Headers */,
 				EA0F0D151ED0B50D000517A4 /* Resources */,
 				EA0F0D2F1ED0B545000517A4 /* Carthage */,
+				EA6315601ED925AB00398390 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -661,6 +664,7 @@
 				EAC0BCCF1EC90FDB0049FB13 /* Headers */,
 				EAC0BCD01EC90FDB0049FB13 /* Resources */,
 				EA0F0BBB1ED0AB03000517A4 /* Carthage */,
+				EA63155D1ED9257600398390 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -855,6 +859,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		EA63155D1ED9257600398390 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		EA63155E1ED9258B00398390 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		EA63155F1ED9259C00398390 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		EA6315601ED925AB00398390 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

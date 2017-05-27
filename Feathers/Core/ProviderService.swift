@@ -52,7 +52,11 @@ public class ProviderService: Service {
         var endpoint = Endpoint(baseURL: provider.baseURL, path: path, method: method, accessToken: nil, authenticationConfiguration: app?.authenticationConfiguration ?? AuthenticationConfiguration())
         if let storage = app?.authenticationStorage,
             let accessToken = storage.accessToken {
-            endpoint = Endpoint(baseURL: provider.baseURL, path: path, method: method, accessToken: accessToken, authenticationConfiguration: app?.authenticationConfiguration ?? AuthenticationConfiguration())
+            endpoint = Endpoint(baseURL: provider.baseURL,
+                                path: path,
+                                method: method,
+                                accessToken: accessToken,
+                                authenticationConfiguration: app?.authenticationConfiguration ?? AuthenticationConfiguration())
         }
         return endpoint
     }

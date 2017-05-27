@@ -20,7 +20,6 @@ public final class Endpoint {
     /// Service method.
     public let method: Service.Method
 
-
     /// Possible authentication token that can be attached to requests.
     public let accessToken: String?
 

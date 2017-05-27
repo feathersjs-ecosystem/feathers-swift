@@ -51,7 +51,7 @@ public enum ResponseData: CustomDebugStringConvertible, CustomStringConvertible,
 }
 
 // Only to be used for testing, does not actually compare equality of the json data
-public func ==(lhs: ResponseData, rhs: ResponseData) -> Bool {
+public func == (lhs: ResponseData, rhs: ResponseData) -> Bool {
     if case  .object = lhs, case .object = rhs {
         return true
     } else if case .list = lhs, case .list = rhs {

@@ -72,7 +72,7 @@ public enum FeathersNetworkError: FeathersError, Equatable {
     
 }
 
-public func ==(lhs: FeathersNetworkError, rhs: FeathersNetworkError) -> Bool {
+public func == (lhs: FeathersNetworkError, rhs: FeathersNetworkError) -> Bool {
     switch (lhs, rhs) {
     case (.badRequest, .badRequest): return true
     case (.notAuthenticated, .notAuthenticated): return true

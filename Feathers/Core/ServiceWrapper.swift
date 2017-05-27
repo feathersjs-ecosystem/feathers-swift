@@ -43,7 +43,6 @@ final public class ServiceWrapper: ServiceType {
         return service.supportsRealtimeEvents
     }
 
-
     /// Execute a request against the wrapped service and runs all hooks registered.
     ///
     ///  The execution flow of this method is as follows:

@@ -135,7 +135,7 @@ public struct Query {
 
     public func select(properties: [String]) -> Query {
         var selectedFields = selected
-        selectedFields = selectedFields + properties
+        selectedFields += properties
         return Query(limit: limit, skip: skip, sorts: sorts, propertyQueries: propertyQueries, selected: selectedFields, orQuery: orQuery)
     }
 
@@ -231,4 +231,3 @@ public struct Query {
     }
 
 }
-
