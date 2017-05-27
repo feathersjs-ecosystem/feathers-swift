@@ -230,6 +230,5 @@ public struct Query {
         return dictionary
     }
 
-
 }
 
