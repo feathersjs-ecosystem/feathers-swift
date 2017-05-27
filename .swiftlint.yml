@@ -32,7 +32,7 @@ file_length:
   warning: 500
   error: 1200
 type_name:
-  min_length: 4 # only warning
+  min_length: 2 # only warning
   max_length: # warning and error
     warning: 40
     error: 50
