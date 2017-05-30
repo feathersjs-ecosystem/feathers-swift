@@ -53,7 +53,7 @@ public final class Feathers {
             return wrapper
         }
         let wrapper = ServiceWrapper(service: service)
-        wrapper.setup(app: app, path: servicePath)
+        wrapper.setup(app: self, path: servicePath)
         return wrapper
     }
 
