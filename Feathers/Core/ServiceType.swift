@@ -32,20 +32,26 @@ public protocol ServiceType {
     /// - Returns: `SignalProducer` that emits a response or errors.
     func request(_ method: Service.Method) -> SignalProducer<Response, AnyFeathersError>
 
-    /// Register hooks with the service.
-    /// Hooks get added with each successive use, not overridden.
+    /// Register before hooks with the service.
     ///
-    /// - Parameters:
-    ///   - before: Before hooks.
-    ///   - after: After hooks.
-    ///   - error: Error hooks.
-    func hooks(before: Service.Hooks?, after: Service.Hooks?, error: Service.Hooks?)
+    /// - Parameter hooks: Before hooks to register.
+    func before(_ hooks: Service.Hooks)
+
+    /// Register after hooks with the service.
+    ///
+    /// - Parameter hooks: After hooks to register.
+    func after(_ hooks: Service.Hooks)
+
+    /// Register error hooks with the service.
+    ///
+    /// - Parameter hooks: Error hooks to register.
+    func error(_ hooks: Service.Hooks)
 
     /// Fetch a service's hooks.
     ///
     /// - Parameter kind: The kind of hook.
     /// - Returns: Hooks registered for `kind`, if any exist.
-    func retrieveHooks(for kind: HookObject.Kind) -> Service.Hooks?
+    func hooks(for kind: HookObject.Kind) -> Service.Hooks?
 
     /// Register for a real-time event to listen for changing data.
     /// Signal will continue to emit until disposed.

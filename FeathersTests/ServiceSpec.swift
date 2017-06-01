@@ -52,7 +52,7 @@ class ServiceSpec: QuickSpec {
 
                     beforeEach {
                         beforeHooks = Service.Hooks(all: [StubHook(data: .object(["name": "Henry"]))])
-                        service.hooks(before: beforeHooks, after: nil, error: nil)
+                        service.before(beforeHooks)
                     }
 
                     it("should run the before hook and skip the request") {
@@ -81,7 +81,7 @@ class ServiceSpec: QuickSpec {
 
                     beforeEach {
                         afterHooks = Service.Hooks(all: [PopuplateDataAfterHook(data: ["name": "Susie"])])
-                        service.hooks(before: nil, after: afterHooks, error: nil)
+                        service.after(afterHooks)
                     }
 
                     it("should change the response") {
@@ -111,7 +111,7 @@ class ServiceSpec: QuickSpec {
                     beforeEach {
                         // Force the hook to error with ErrorHook
                         beforeHooks = Service.Hooks(all: [ErrorHook(error:FeathersNetworkError.unknown)])
-                        service.hooks(before: beforeHooks, after: nil, error: nil)
+                        service.before(beforeHooks)
                     }
 
                     context("when a hook rejects with an error") {
@@ -140,7 +140,7 @@ class ServiceSpec: QuickSpec {
 
                             beforeEach {
                                 errorHooks = Service.Hooks(all: [ErrorHook(error: FeathersNetworkError.unavailable), ErrorHook(error: FeathersNetworkError.unknown)])
-                                service.hooks(before: nil, after: nil, error: errorHooks)
+                                service.error(errorHooks)
                             }
 
                             it("should be able to modify the final error and skip the rest of the chain") {
@@ -169,7 +169,7 @@ class ServiceSpec: QuickSpec {
 
                             beforeEach {
                                 errorHooks = Service.Hooks(all: [ModifyErrorHook(error: FeathersNetworkError.unavailable)])
-                                service.hooks(before: nil, after: nil, error: errorHooks)
+                                service.error(errorHooks)
                             }
 
                             it("should be able to modify the final error") {
@@ -193,7 +193,7 @@ class ServiceSpec: QuickSpec {
                             context("with multiple error hooks that modify the error ") {
 
                                 beforeEach {
-                                    service.hooks(before: nil, after: nil, error: Service.Hooks(all: [ModifyErrorHook(error: FeathersNetworkError.unknown)]))
+                                    service.error(Service.Hooks(all: [ModifyErrorHook(error: FeathersNetworkError.unknown)]))
                                 }
 
                                 it("should pass back the final error") {

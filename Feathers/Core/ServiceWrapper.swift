@@ -68,9 +68,9 @@ final public class ServiceWrapper: ServiceType {
         }
         let beforeHookObject = HookObject(type: .before, app: application, service: service, method: method)
         // Get all the hooks
-        let beforeHooks = service.retrieveHooks(for: .before)?.hooks(for: method) ?? []
-        let afterHooks = service.retrieveHooks(for: .after)?.hooks(for: method) ?? []
-        let errorHooks = service.retrieveHooks(for: .error)?.hooks(for: method) ?? []
+        let beforeHooks = service.hooks(for: .before)?.hooks(for: method) ?? []
+        let afterHooks = service.hooks(for: .after)?.hooks(for: method) ?? []
+        let errorHooks = service.hooks(for: .error)?.hooks(for: method) ?? []
         // Build up the before chains
         let beforeChain = beforeHooks.reduce(SignalProducer(value: beforeHookObject), reduceHooksClosure)
 
@@ -114,12 +114,20 @@ final public class ServiceWrapper: ServiceType {
         }
     }
 
-    final public func hooks(before: Service.Hooks? = nil, after: Service.Hooks? = nil, error: Service.Hooks? = nil) {
-        service.hooks(before: before, after: after, error: error)
+    final public func before(_ hooks: Service.Hooks) {
+        service.before(hooks)
     }
 
-    final public func retrieveHooks(for kind: HookObject.Kind) -> Service.Hooks? {
-        return service.retrieveHooks(for: kind)
+    final public func after(_ hooks: Service.Hooks) {
+        service.after(hooks)
+    }
+
+    final public func error(_ hooks: Service.Hooks) {
+        service.error(hooks)
+    }
+
+    final public func hooks(for kind: HookObject.Kind) -> Service.Hooks? {
+        return service.hooks(for: kind)
     }
 
     final public func on(event: Service.RealTimeEvent) -> Signal<[String: Any], NoError> {

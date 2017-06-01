@@ -63,6 +63,17 @@ open class Service: ServiceType {
         /// Hooks for `.remove` requests.
         public let remove: [Hook]
 
+        /// True if the object contains any hooks, false otherwise.
+        public var isEmpty: Bool {
+            return all.isEmpty
+            && find.isEmpty
+            && get.isEmpty
+            && create.isEmpty
+            && update.isEmpty
+            && patch.isEmpty
+            && remove.isEmpty
+        }
+
         /// Service hooks initializer.
         ///
         /// - Parameters:
@@ -155,23 +166,23 @@ open class Service: ServiceType {
         fatalError("Must be overriden by a subclass")
     }
 
-    final public func hooks(before: Hooks? = nil, after: Hooks? = nil, error: Hooks? = nil) {
-        if let before = before {
-            beforeHooks = beforeHooks.add(hooks: before)
-        }
-        if let after = after {
-            afterHooks = afterHooks.add(hooks: after)
-        }
-        if let error = error {
-            errorHooks = errorHooks.add(hooks: error)
-        }
+    final public func before(_ hooks: Hooks) {
+        beforeHooks = beforeHooks.add(hooks: hooks)
     }
 
-    final public func retrieveHooks(for kind: HookObject.Kind) -> Service.Hooks? {
+    final public func after(_ hooks: Hooks) {
+        afterHooks = afterHooks.add(hooks: hooks)
+    }
+
+    final public func error(_ hooks: Hooks) {
+        errorHooks = errorHooks.add(hooks: hooks)
+    }
+
+    final public func hooks(for kind: HookObject.Kind) -> Service.Hooks? {
         switch kind {
-        case .before: return beforeHooks
-        case .after: return afterHooks
-        case .error: return errorHooks
+        case .before: return beforeHooks.isEmpty ? nil : beforeHooks
+        case .after: return afterHooks.isEmpty ? nil : afterHooks
+        case .error: return errorHooks.isEmpty ? nil : errorHooks
         }
     }
 
