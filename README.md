@@ -309,7 +309,7 @@ let afterHooks = Service.Hooks(find: [SaveInRealmHook()])
 let errorHooks = Service.Hooks(all: [LogErrorHook(destination: "log.txt")])
 ```
 
-Registering the hooks then is easy:
+Registering the hooks is just as easy:
 
 ```swift
 let service = app.service("users")
@@ -324,7 +324,7 @@ If at any point you need to inspect your hooks, you can do that too using `.hook
 
 ```swift
 
-let beforeHooks = service.hooks(type: .before)
+let beforeHooks = service.hooks(for: .before)
 
 ```
 
