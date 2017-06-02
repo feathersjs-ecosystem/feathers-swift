@@ -53,13 +53,13 @@ Finally, make a request:
 
 ```swift
 service.request(.find(parameters: ["name": "Waldo"]))
-.then { response in
+.on(value: { response in
   print(response)
-}
-.catch { error in
-  print("Error finding Waldo!")
-}
+})
+.start()
 ```
+
+FeathersSwift's API is built entirely using [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift), an awesome functional-reactive library. Because promises aren't standard in Swift, we had to find an alternative that offers similar usage patterns. By doing this, we can avoid the pyramid of doom and endlessly nesting callbacks, instead offering a simplified reactive API.
 
 ### Service
 
@@ -68,17 +68,17 @@ There are six types of requests you can make that correspond with Feathers servi
 ```swift
 public enum Method {
 
-    case find(parameters: [String: Any]?)
-    case get(id: String, parameters: [String: Any]?)
-    case create(data: [String: Any], parameters: [String: Any]?)
-    case update(id: String?, data: [String: Any], parameters: [String: Any]?)
-    case patch(id: String?, data: [String: Any], parameters: [String: Any]?)
-    case remove(id: String?, parameters: [String: Any]?)
+    case find(query: Query?)
+    case get(id: String, query: Query?)
+    case create(data: [String: Any], query: Query?)
+    case update(id: String?, data: [String: Any], query: Query?)
+    case patch(id: String?, data: [String: Any], query: Query?)
+    case remove(id: String?, query: Query?)
 
 }
 ```
 
-With `.update`, `.patch`, and `.remove`, you may pass in nil for the id when you want to delete a list of entities. The list of entities is determined by the query parameters you pass in.
+With `.update`, `.patch`, and `.remove`, you may pass in nil for the id when you want to delete a list of entities. The list of entities is determined by the query you pass in.
 
 By default, FeathersSwift will return an instance of `ProviderService` which wraps the application's transport provider in a service. However, you can also register your own services:
 
@@ -109,6 +109,26 @@ class FileService: Service {
 
 While a tiny example, custom services can be infinitely more complex and used anywhere in the hook process. Just call `hookObject.app.service("my-custom-service").request(.create(data: [:], parameters: nil))`.
 
+### Querying
+
+You may have noticed instead of passing a dictionary of parameters through a request, FeathersSwift uses a `Query` object. The `Query` class has a simple and composable API for represent complex queries without messing around with dictionaries. It supports all the normal queries FeathersJS users have come to know and love such as `ne` or `or`, just in a simplified, type-safe manner.
+
+To create a query:
+
+```swift
+let query = Query()
+  .ne("age", 50)
+  .limit(25)
+  .skip(5)
+
+let service = feathers.service("users")
+
+service.request(.find(query)).start()
+
+```
+
+Gone are the days of wondering if you formatted your dictionary correctly, `Query` knows how to serialize itself and takes care of that for you.
+
 ### Authentication
 
 To authenticate your application with your Feathers back end:
@@ -118,6 +138,7 @@ feathersRestApp.authenticate([
   "strategy": "facebook-token",
   "access_token": "ACCESS_TOKEN"
 ])
+.start()
 ```
 
 Authentication returns a JWT payload which is cached by the application and used to make subsequent requests. Currently there is not a re-authentication mechanism but look for that in coming versions.
@@ -125,11 +146,7 @@ Authentication returns a JWT payload which is cached by the application and used
 To log out, simply call:
 
 ```swift
-feathersRestApp.logout().then { response in
-
-}.catch { _ in
-
-}
+feathersRestApp.logout().start()
 ```
 
 ### Real-Time Events
@@ -141,10 +158,10 @@ There are four different real-time events:
 ```swift
 public enum RealTimeEvent: String {
 
-   case created = "created"
-   case updated = "updated"
-   case patched = "patched"
-   case removed = "removed"
+   case created
+   case updated
+   case patched
+   case removed
 
 }
 ```
@@ -155,9 +172,10 @@ You can use these events to things like dynamically update the UI, save entities
 let feathersSocket = Feathers(provider: SocketProvider(baseURL: URL(string: "https://myserver.com")!, configuration: []))
 
 let userService = feathersSocket.service(path: "users")
-userService.on(.created) { entity in
+userService.on(.created)
+.on(value: { entity in
   print(entity) // Prints the object that was just created
-}
+})
 ```
 
 When you're finished, be sure to call `.off` to unregister from the event. Otherwise your completion block will be retained by the provider.
@@ -165,6 +183,8 @@ When you're finished, be sure to call `.off` to unregister from the event. Other
 ```swift
 userService.off(.created)
 ```
+
+There's also a nifty `.once` function that does exactly what you expect; you listen for one event and one event only.
 
 ### Hooks
 
@@ -254,7 +274,7 @@ public struct HookObject {
     public var method: Service.Method
 
     /// Error that can be set which will stop the hook processing chain and run a special chain of error hooks.
-    public var error: Error?
+    public var error: FeathersError?
 
     /// Result of a successful method call, only in after hooks.
     public var result: Response?
@@ -293,36 +313,20 @@ Registering the hooks then is easy:
 
 ```swift
 let service = app.service("users")
-service.hooks(
-  before: beforeHooks,
-  after: afterHooks,
-  error: errorHooks
-)
+service.before(beforeHooks)
+service.after(afterHooks)
+service.error(errorHooks)
 ```
 
 **Important**: The hooks registered for `all` are run first, then the hooks for the particular service method.
 
-### Reactive Extensions
+If at any point you need to inspect your hooks, you can do that too using `.hooks`:
 
-FeathersSwift also providers reactive extensions for ReactiveSwift and RxSwift.
+```swift
 
-To install via Cocoapods:
+let beforeHooks = service.hooks(type: .before)
 
 ```
-pod 'Feathers/ReactiveSwift'
-pod 'Feathers/RxSwift'
-```
-
-With Carthage, just drag in the frameworks.
-
-There are reactive extensions for the following classes and methods:
-
-- `Service`
-  - `request`
-  - `on`
-- `Feathers`
-  - `authenticate`
-  - `logout`
 
 ### Contributing
 
