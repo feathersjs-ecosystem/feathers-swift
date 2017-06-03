@@ -1,6 +1,6 @@
 # FeathersSwift
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Feathers.svg)](#cocoapods) [![GitHub release](https://img.shields.io/github/release/startupthekid/feathers-ios.svg)](https://github.com/startupthekid/feathers-ios/releases) ![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg) ![build](https://travis-ci.org/startupthekid/feathers-swift.svg?branch=master)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Feathers.svg)](#cocoapods) [![GitHub release](https://img.shields.io/github/release/feathersjs/feathers-swift.svg)](https://github.com/feathersjs/feathers-swift/releases) ![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg) ![build](https://travis-ci.org/feathersjs/feathers-swift.svg?branch=master)
 
 ![feathers](https://media.giphy.com/media/Fn8LZVVgTqXba/giphy.gif)
 
@@ -29,11 +29,11 @@ pod `Feathers`
 Add the following line to your Cartfile:
 
 ```
-github "startupthekid/feathers-swift"
+github "feathersjs/feathers-swift"
 ```
 ## Getting Started
 
-FeathersSwift is spread out across multiple repositories to ensure that you're only pulling in exactly what you need and no more. There are two Feathers providers, [feathers-swift-rest](https://github.com/startupthekid/feathers-swift-rest) and [feathers-swift-socketio](https://github.com.startupthekid/feathers-swift-socketio). Install either provider using the instructions on their respective READMEs.
+FeathersSwift is spread out across multiple repositories to ensure that you're only pulling in exactly what you need and no more. There are two Feathers providers, [feathers-swift-rest](https://github.com/feathersjs/feathers-swift-rest) and [feathers-swift-socketio](https://github.com/feathersjs/feathers-swift-socketio). Install either provider using the instructions on their respective READMEs.
 
 Once you've install a provider, either rest of socketio, an instance of a `Feathers` application with it:
 
@@ -151,7 +151,7 @@ feathersRestApp.logout().start()
 
 ### Real-Time Events
 
-When using the socket provider, you can not only use it to call Feathers service methods, you can also listen for real-time events. Simply use [feathers-swift-socketio](https://github.com.startupthekid/feathers-swift-socketio) create a feathers application with an instance of `SocketProvider` and register for events using `.on` on your services.
+When using the socket provider, you can not only use it to call Feathers service methods, you can also listen for real-time events. Simply use [feathers-swift-socketio](https://github.com/feathersjs/feathers-swift-socketio) create a feathers application with an instance of `SocketProvider` and register for events using `.on` on your services.
 
 There are four different real-time events:
 
