@@ -173,9 +173,9 @@ let feathersSocket = Feathers(provider: SocketProvider(baseURL: URL(string: "htt
 
 let userService = feathersSocket.service(path: "users")
 userService.on(.created)
-.on(value: { entity in
+.observeValues { entity in
   print(entity) // Prints the object that was just created
-})
+}
 ```
 
 When you're finished, be sure to call `.off` to unregister from the event. Otherwise your completion block will be retained by the provider.
