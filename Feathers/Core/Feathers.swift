@@ -76,19 +76,19 @@ public final class Feathers {
     /// - Parameters:
     ///   - credentials: Credentials to authenticate with.
     /// - Returns: Promise that emits an access token.
-    public func authenticate(_ credentials: [String: Any]) -> SignalProducer<String, AnyFeathersError> {
+    public func authenticate(_ credentials: [String: Any]) -> SignalProducer<[String: Any], AnyFeathersError> {
         return provider.authenticate(authenticationConfiguration.path, credentials: credentials)
-            .flatMap(.latest) { response -> SignalProducer<String, AnyFeathersError> in
+            .flatMap(.latest) { response -> SignalProducer<[String: Any], AnyFeathersError> in
                 if case let .object(object) = response.data,
-                let json = object as? [String: Any],
-                let accessToken = json["accessToken"] as? String {
-                    return SignalProducer(value: accessToken)
+                    let json = object as? [String: Any] {
+                    return SignalProducer(value: json)
                 }
                 return SignalProducer(error: AnyFeathersError(FeathersNetworkError.unknown))
             }.on(failed: { [weak self] _ in
                 self?.authenticationStorage.accessToken = nil
             }, value: { [weak self] value in
-                self?.authenticationStorage.accessToken = value
+                guard let token = value["accessToken"] as? String else { return }
+                self?.authenticationStorage.accessToken = token
             })
     }
     
