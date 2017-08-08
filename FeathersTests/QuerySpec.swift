@@ -150,19 +150,19 @@ class QuerySpec: QuickSpec {
                     "age": .`in`([18, 42])
                     ])
                 let serialized = query.serialize()
+                print(serialized)
                 expect(NSDictionary(dictionary: serialized).isEqual(to: [
                     "$or": [
-                        [
-                            "age": [
-                                "$in": [18, 42]
-                            ]
-                        ],
                         [
                             "name": [
                                 "$ne": "bob"
                             ]
+                        ],
+                        [
+                            "age": [
+                                "$in": [18, 42]
+                            ]
                         ]
-                        
                     ]
                     ])).to(beTrue())
             }
