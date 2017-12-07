@@ -9,7 +9,7 @@
 FeathersSwift is a Cocoa networking library for interacting with a [FeathersJS](https://feathersjs.com/) backend.
 Why should you use it?
 
-* Swift 3 :thumbsup:
+* Swift 4 :thumbsup:
 * Network abstraction layer
 * Integrates seemlessly with any FeathersJS services
 * Supports iOS, macOS, tvOS, and watchOS

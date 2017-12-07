@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode8.3
+osx_image: xcode9.2
 
 cache:
   - directories:
@@ -31,7 +31,7 @@ matrix:
       env:
         - XCODE_SDK=iphonesimulator
         - XCODE_ACTION="build-for-testing test-without-building"
-        - XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 6s"
+        - XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 7s"
     - script:
       - carthage bootstrap --no-use-binaries --platform tvOS
       - script/build
@@ -47,7 +47,7 @@ matrix:
       env:
         - XCODE_SDK=watchsimulator
         - XCODE_ACTION=build
-        - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm,OS=3.2"
+        - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm,OS=4.2"
     - script:
       - carthage checkout --no-use-binaries
       - carthage build --no-skip-current --platform mac
