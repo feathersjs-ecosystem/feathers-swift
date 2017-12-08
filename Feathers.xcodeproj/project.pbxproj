@@ -477,8 +477,7 @@
 				EA8CE0F01ED7E0FC00EA04F4 /* QuerySpec.swift */,
 				EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */,
 			);
-			name = FeathersTests;
-			path = "FeathersTests-iOS";
+			path = FeathersTests;
 			sourceTree = "<group>";
 		};
 		EABBAE091EBFA69C00522603 /* Core */ = {
