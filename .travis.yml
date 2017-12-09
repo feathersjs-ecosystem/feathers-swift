@@ -31,7 +31,7 @@ matrix:
       env:
         - XCODE_SDK=iphonesimulator
         - XCODE_ACTION="build-for-testing test-without-building"
-        - XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 7s"
+        - XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 7 Plus,OS=11.2"
     - script:
       - carthage bootstrap --no-use-binaries --platform tvOS
       - script/build
@@ -39,7 +39,7 @@ matrix:
       env:
         - XCODE_SDK=appletvsimulator
         - XCODE_ACTION="build-for-testing test-without-building"
-        - XCODE_DESTINATION="platform=tvOS Simulator,name=Apple TV 1080p"
+        - XCODE_DESTINATION="platform=tvOS Simulator,name=Apple TV 1080p,OS=11.2"
     - script:
       - carthage bootstrap --no-use-binaries --platform watchOS
       - script/build
