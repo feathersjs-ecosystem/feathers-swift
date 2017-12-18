@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
   s.name         = "Feathers"
   # Version goes here and will be used to access the git tag later on, once we have a first release.
-  s.version      = "5.2.1"
+  s.version      = "5.3.0"
   s.summary      = "Swift framework for interacting with Featherjs apis"
   s.description  = <<-DESC
                    Swift library for connecting to a FeathersJS backend.
 
                    ReactiveSwift and RxSwift extensions are available.
                    DESC
-  s.homepage     = "https://github.com/feathersjs/feathers-swift"
+  s.homepage     = "https://github.com/feathersjs-ecosystem/feathers-swift"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = "startupthekid"
 
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = "10.10"
   s.tvos.deployment_target = "9.0"
   s.watchos.deployment_target = "2.0"
-  s.source       = { :git => "https://github.com/feathersjs/feathers-swift.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/feathersjs-ecosystem/feathers-swift.git", :tag => "#{s.version}" }
 
   s.default_subspec = "Core"
 
