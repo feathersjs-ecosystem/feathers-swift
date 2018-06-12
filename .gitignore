@@ -38,3 +38,5 @@ Carthage
 /Pods
 
 Podfile.lock
+
+vendor
