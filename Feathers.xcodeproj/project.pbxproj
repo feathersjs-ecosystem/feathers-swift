@@ -517,8 +517,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA0F0C841ED0B25F000517A4 /* Build configuration list for PBXNativeTarget "Feathers-macOS" */;
 			buildPhases = (
-				EA0F0C6E1ED0B25E000517A4 /* Sources */,
 				EA0F0C6F1ED0B25E000517A4 /* Frameworks */,
+				EA0F0C6E1ED0B25E000517A4 /* Sources */,
 				EA0F0C701ED0B25E000517A4 /* Headers */,
 				EA0F0C711ED0B25E000517A4 /* Resources */,
 				EA0F0CA71ED0B31F000517A4 /* Carthage */,
@@ -556,8 +556,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA0F0CE51ED0B448000517A4 /* Build configuration list for PBXNativeTarget "Feathers-tvOS" */;
 			buildPhases = (
-				EA0F0CCF1ED0B448000517A4 /* Sources */,
 				EA0F0CD01ED0B448000517A4 /* Frameworks */,
+				EA0F0CCF1ED0B448000517A4 /* Sources */,
 				EA0F0CD11ED0B448000517A4 /* Headers */,
 				EA0F0CD21ED0B448000517A4 /* Resources */,
 				EA0F0CFF1ED0B499000517A4 /* Carthage */,
@@ -594,8 +594,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA0F0D1C1ED0B50D000517A4 /* Build configuration list for PBXNativeTarget "Feathers-watchOS" */;
 			buildPhases = (
-				EA0F0D121ED0B50D000517A4 /* Sources */,
 				EA0F0D131ED0B50D000517A4 /* Frameworks */,
+				EA0F0D121ED0B50D000517A4 /* Sources */,
 				EA0F0D141ED0B50D000517A4 /* Headers */,
 				EA0F0D151ED0B50D000517A4 /* Resources */,
 				EA0F0D2F1ED0B545000517A4 /* Carthage */,
@@ -632,8 +632,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAC0BCE31EC90FDB0049FB13 /* Build configuration list for PBXNativeTarget "Feathers-iOS" */;
 			buildPhases = (
-				EAC0BCCD1EC90FDB0049FB13 /* Sources */,
 				EAC0BCCE1EC90FDB0049FB13 /* Frameworks */,
+				EAC0BCCD1EC90FDB0049FB13 /* Sources */,
 				EAC0BCCF1EC90FDB0049FB13 /* Headers */,
 				EAC0BCD01EC90FDB0049FB13 /* Resources */,
 				EA0F0BBB1ED0AB03000517A4 /* Carthage */,
