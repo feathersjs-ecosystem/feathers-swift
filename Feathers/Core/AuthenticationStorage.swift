@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import KeychainSwift
+import KeychainAccess
 
 /// Authentication storage protocol.
 public protocol AuthenticationStorage: class {
@@ -20,14 +20,20 @@ public protocol AuthenticationStorage: class {
 /// An encrypted authentication store. Uses the keychain to store a token.
 public final class EncryptedAuthenticationStore: AuthenticationStorage {
 
-    private let keychain = KeychainSwift()
+    private let keychain = Keychain(service: "com.feathers")
     private let storageKey: String
 
+    /// Access token. Cleared by setting to `nil`.
     public var accessToken: String? {
-        get { return keychain.get(storageKey) }
-        set {
-            guard let value = newValue else { return }
-            keychain.set(value, forKey: storageKey)
+        get {
+            return keychain[storageKey]
+        } set {
+            if let value = newValue {
+                keychain[storageKey] = value
+            } else {
+                // clear the keychain
+                keychain[storageKey] = nil
+            }
         }
     }
 

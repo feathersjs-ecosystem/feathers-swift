@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WORKSPACE=FeathersSwift.xcworkspace
+PROJECT=Feathers.xcodeproj
 BUILD_DIRECTORY="build"
 CONFIGURATION=Release
 
@@ -26,7 +26,7 @@ fi
 
 set -o pipefail
 xcodebuild $XCODE_ACTION \
-    -workspace $WORKSPACE \
+    -project $PROJECT \
     -scheme "$XCODE_SCHEME" \
     -sdk "$XCODE_SDK" \
     -destination "$XCODE_DESTINATION" \
