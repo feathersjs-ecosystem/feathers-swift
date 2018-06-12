@@ -1,3 +1,2 @@
-github "ReactiveCocoa/ReactiveSwift"
-github "marketplacer/keychain-swift"
-github "antitypical/Result"
+github "ReactiveCocoa/ReactiveSwift" == 3.1.0
+github "marketplacer/keychain-swift" == 11.0.0
