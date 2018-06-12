@@ -17,13 +17,12 @@ let package = Package(
     targets: [
         .target(name: "Feathers", dependencies: [
           "KeychainSwift",
-          "ReactiveSwift",
-          "Security"
+          "ReactiveSwift"
         ], path: "Feathers"),
         .testTarget(name: "FeathersTests", dependencies: [
           "Feathers",
           "Quick",
-          "Nimble"], path: "FeathersTests")
+          "Nimble"], path: "Tests/FeathersTests")
     ],
     swiftLanguageVersions: [4]
 )
