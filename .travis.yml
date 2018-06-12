@@ -17,7 +17,7 @@ xcode_project: Feathers.xcodeproj
 matrix:
   include:
     - script:
-      - carthage bootstrap --no-use-binaries --platform mac
+      - carthage bootstrap --platform mac
       - script/build
       xcode_scheme: Feathers-macOS
       env:
@@ -25,7 +25,7 @@ matrix:
         - XCODE_ACTION="build test"
         - XCODE_DESTINATION="arch=x86_64"
     - script:
-      - carthage bootstrap --no-use-binaries --platform iOS
+      - carthage bootstrap --platform iOS
       - script/build
       xcode_scheme: Feathers-iOS
       env:
@@ -33,7 +33,7 @@ matrix:
         - XCODE_ACTION="build-for-testing test-without-building"
         - XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 7 Plus"
     - script:
-      - carthage bootstrap --no-use-binaries --platform tvOS
+      - carthage bootstrap --platform tvOS
       - script/build
       xcode_scheme: Feathers-tvOS
       env:
@@ -41,7 +41,7 @@ matrix:
         - XCODE_ACTION="build-for-testing test-without-building"
         - XCODE_DESTINATION="platform=tvOS Simulator,name=Apple TV"
     - script:
-      - carthage bootstrap --no-use-binaries --platform watchOS
+      - carthage bootstrap --platform watchOS
       - script/build
       xcode_scheme: Feathers-watchOS
       env:
@@ -49,22 +49,22 @@ matrix:
         - XCODE_ACTION=build
         - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm,OS=4.2"
     - script:
-      - carthage checkout --no-use-binaries
+      - carthage checkout
       - carthage build --no-skip-current --platform mac
       env:
         - JOB=CARTHAGE-macOS
     - script:
-      - carthage checkout --no-use-binaries
+      - carthage checkout
       - carthage build --no-skip-current --platform iOS
       env:
         - JOB=CARTHAGE-iOS
     - script:
-      - carthage checkout --no-use-binaries
+      - carthage checkout
       - carthage build --no-skip-current --platform tvOS
       env:
         - JOB=CARTHAGE-tvOS
     - script:
-      - carthage checkout --no-use-binaries
+      - carthage checkout
       - carthage build --no-skip-current --platform watchOS
       env:
         - JOB=CARTHAGE-watchOS
