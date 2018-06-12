@@ -38,7 +38,7 @@ jobs:
           script/build
     - script:
         - pod repo update --silent
-        - pod lib lint FeathersSwift.podspec
+        - pod lib lint Feathers.podspec
       env:
         - JOB=PODSPEC
     - osx_image: xcode9.3
