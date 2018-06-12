@@ -1,75 +1,64 @@
+# language: objective-c
+# osx_image: xcode9.3
+
 language: objective-c
-osx_image: xcode9.2
+osx_image: xcode9.3
+before_install: true
+install: true
 
 cache:
-  - directories:
-    - Carthage
+  directories:
+    - $HOME/Library/Caches/org.carthage.CarthageKit/dependencies
+    - Carthage/Build
 
-before_install: true
-install:
-  - rvm get stable || true
-  - brew update || true
-  - brew install carthage || true
-  - brew outdated carthage || brew upgrade carthage
-before_script:
-  - chmod +x ./script/build
-xcode_project: Feathers.xcodeproj
-matrix:
+#
+jobs:
   include:
+    - osx_image: xcode9.3
+      script:
+        - XCODE_SCHEME=FeathersSwift-macOS
+          XCODE_SDK=macosx
+          XCODE_ACTION="build test"
+          XCODE_DESTINATION="arch=x86_64"
+          script/build
+        - XCODE_SCHEME=FeathersSwift-iOS
+          XCODE_SDK=iphonesimulator
+          XCODE_ACTION="build-for-testing test-without-building"
+          XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 6s"
+          script/build
+        - XCODE_SCHEME=FeathersSwift-tvOS
+          XCODE_SDK=appletvsimulator
+          XCODE_ACTION="build-for-testing test-without-building"
+          XCODE_DESTINATION="platform=tvOS Simulator,name=Apple TV"
+          script/build
+        - XCODE_SCHEME=FeathersSwift-watchOS
+          XCODE_SDK=watchsimulator
+          XCODE_ACTION=build
+          XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch Series 3 - 38mm"
+          script/build
     - script:
-      - carthage bootstrap --platform mac
-      - script/build
-      xcode_scheme: Feathers-macOS
-      env:
-        - XCODE_SDK=macosx
-        - XCODE_ACTION="build test"
-        - XCODE_DESTINATION="arch=x86_64"
-    - script:
-      - carthage bootstrap --platform iOS
-      - script/build
-      xcode_scheme: Feathers-iOS
-      env:
-        - XCODE_SDK=iphonesimulator
-        - XCODE_ACTION="build-for-testing test-without-building"
-        - XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 7 Plus"
-    - script:
-      - carthage bootstrap --platform tvOS
-      - script/build
-      xcode_scheme: Feathers-tvOS
-      env:
-        - XCODE_SDK=appletvsimulator
-        - XCODE_ACTION="build-for-testing test-without-building"
-        - XCODE_DESTINATION="platform=tvOS Simulator,name=Apple TV"
-    - script:
-      - carthage bootstrap --platform watchOS
-      - script/build
-      xcode_scheme: Feathers-watchOS
-      env:
-        - XCODE_SDK=watchsimulator
-        - XCODE_ACTION=build
-        - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm,OS=4.2"
-    - script:
-      - carthage checkout
-      - carthage build --no-skip-current --platform mac
-      env:
-        - JOB=CARTHAGE-macOS
-    - script:
-      - carthage checkout
-      - carthage build --no-skip-current --platform iOS
-      env:
-        - JOB=CARTHAGE-iOS
-    - script:
-      - carthage checkout
-      - carthage build --no-skip-current --platform tvOS
-      env:
-        - JOB=CARTHAGE-tvOS
-    - script:
-      - carthage checkout
-      - carthage build --no-skip-current --platform watchOS
-      env:
-        - JOB=CARTHAGE-watchOS
-    - script:
-      - pod repo update
-      - travis_wait 30 pod lib lint Feathers.podspec
+        - pod repo update --silent
+        - pod lib lint FeathersSwift.podspec
       env:
         - JOB=PODSPEC
+    - osx_image: xcode9.3
+      script:
+        - swift --version
+        - swift build
+        - swift test
+      git:
+        submodules: false
+    - os: linux
+      language: generic
+      sudo: required
+      dist: trusty
+      before_install:
+        - eval "$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)"
+      script:
+        - swift --version
+        - swift build
+        - swift test
+      git:
+        submodules: false
+    - stage: carthage
+      script: carthage build --cache-builds --no-skip-current
