@@ -17,7 +17,8 @@ let package = Package(
     targets: [
         .target(name: "Feathers", dependencies: [
           "KeychainSwift",
-          "ReactiveSwift"
+          "ReactiveSwift",
+          "Security"
         ], path: "Feathers"),
         .testTarget(name: "FeathersTests", dependencies: [
           "Feathers",
