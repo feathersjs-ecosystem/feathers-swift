@@ -130,6 +130,9 @@
 		EAC0BCF01EC90FF30049FB13 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
 		EAC0BCF31EC90FF30049FB13 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
 		EAC0BCF41EC90FF30049FB13 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
+		EAC43BAA20D02EEC00C91269 /* LinuxMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC43BA920D02EEC00C91269 /* LinuxMain.swift */; };
+		EAC43BAB20D02EEC00C91269 /* LinuxMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC43BA920D02EEC00C91269 /* LinuxMain.swift */; };
+		EAC43BAC20D02EEC00C91269 /* LinuxMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC43BA920D02EEC00C91269 /* LinuxMain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -280,6 +283,7 @@
 		EABBAE121EBFA6A400522603 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = Core/Service.swift; sourceTree = "<group>"; };
 		EAC0BC821EC90A600049FB13 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FeathersTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC43BA920D02EEC00C91269 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		EAE05D691EBFDB0000DA55BF /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Core/Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -470,6 +474,7 @@
 		EABBADB01EBE77C900522603 /* FeathersTests */ = {
 			isa = PBXGroup;
 			children = (
+				EAC43BA920D02EEC00C91269 /* LinuxMain.swift */,
 				EA301ABD1EC8CD0B00114F19 /* Stubs */,
 				EA301AB31EC8BEAF00114F19 /* Fakes */,
 				EAC0BC821EC90A600049FB13 /* Info.plist */,
@@ -894,6 +899,7 @@
 				EA0F0CB01ED0B3B3000517A4 /* Hooks.swift in Sources */,
 				EA0F0CB11ED0B3B3000517A4 /* ServiceSpec.swift in Sources */,
 				EA0F0CB21ED0B3B3000517A4 /* FeathersSpec.swift in Sources */,
+				EAC43BAB20D02EEC00C91269 /* LinuxMain.swift in Sources */,
 				EA0505A51ED9B262006B5CCB /* QuerySpec.swift in Sources */,
 				EA0F0CAF1ED0B3B3000517A4 /* StubProvider.swift in Sources */,
 			);
@@ -928,6 +934,7 @@
 				EA0F0CF61ED0B46F000517A4 /* Hooks.swift in Sources */,
 				EA0F0CF71ED0B46F000517A4 /* ServiceSpec.swift in Sources */,
 				EA0F0CF81ED0B46F000517A4 /* FeathersSpec.swift in Sources */,
+				EAC43BAC20D02EEC00C91269 /* LinuxMain.swift in Sources */,
 				EA0505A61ED9B292006B5CCB /* QuerySpec.swift in Sources */,
 				EA0F0CF51ED0B46F000517A4 /* StubProvider.swift in Sources */,
 			);
@@ -962,6 +969,7 @@
 				EA12E06A1ECE952400A0DCF7 /* StubProvider.swift in Sources */,
 				EA12E0691ECE950C00A0DCF7 /* ServiceSpec.swift in Sources */,
 				EA0F0BB21ED0A6C9000517A4 /* FeathersSpec.swift in Sources */,
+				EAC43BAA20D02EEC00C91269 /* LinuxMain.swift in Sources */,
 				EA8CE0F11ED7E0FC00EA04F4 /* QuerySpec.swift in Sources */,
 				EA12E06B1ECE952400A0DCF7 /* Hooks.swift in Sources */,
 			);
