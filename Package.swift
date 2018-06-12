@@ -22,7 +22,7 @@ let package = Package(
         .testTarget(name: "FeathersTests", dependencies: [
           "Feathers",
           "Quick",
-          "Nimble"], path: "FeathersTests")
+          "Nimble"], path: "Tests")
     ],
     swiftLanguageVersions: [4]
 )

@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA0505A51ED9B262006B5CCB /* QuerySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CE0F01ED7E0FC00EA04F4 /* QuerySpec.swift */; };
-		EA0505A61ED9B292006B5CCB /* QuerySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CE0F01ED7E0FC00EA04F4 /* QuerySpec.swift */; };
-		EA0F0BB21ED0A6C9000517A4 /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */; };
 		EA0F0C7C1ED0B25F000517A4 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C731ED0B25E000517A4 /* Feathers.framework */; };
 		EA0F0C8D1ED0B2D0000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8A1ED0B2D0000517A4 /* KeychainSwift.framework */; };
 		EA0F0C8E1ED0B2D0000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0C8B1ED0B2D0000517A4 /* ReactiveSwift.framework */; };
@@ -30,10 +27,6 @@
 		EA0F0CAC1ED0B38B000517A4 /* KeychainSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CA91ED0B38B000517A4 /* KeychainSwift.framework.dSYM */; };
 		EA0F0CAD1ED0B38B000517A4 /* ReactiveSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CAA1ED0B38B000517A4 /* ReactiveSwift.framework.dSYM */; };
 		EA0F0CAE1ED0B38B000517A4 /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA0F0CAB1ED0B38B000517A4 /* Result.framework.dSYM */; };
-		EA0F0CAF1ED0B3B3000517A4 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
-		EA0F0CB01ED0B3B3000517A4 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
-		EA0F0CB11ED0B3B3000517A4 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
-		EA0F0CB21ED0B3B3000517A4 /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */; };
 		EA0F0CB31ED0B3E2000517A4 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
 		EA0F0CB41ED0B3E2000517A4 /* LoggerHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */; };
 		EA0F0CB51ED0B3E2000517A4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
@@ -65,10 +58,6 @@
 		EA0F0CF21ED0B46B000517A4 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0F1EBFA6A400522603 /* Provider.swift */; };
 		EA0F0CF31ED0B46B000517A4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
 		EA0F0CF41ED0B46B000517A4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
-		EA0F0CF51ED0B46F000517A4 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
-		EA0F0CF61ED0B46F000517A4 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
-		EA0F0CF71ED0B46F000517A4 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
-		EA0F0CF81ED0B46F000517A4 /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */; };
 		EA0F0CFC1ED0B48C000517A4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CF91ED0B48C000517A4 /* KeychainSwift.framework */; };
 		EA0F0CFD1ED0B48C000517A4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CFA1ED0B48C000517A4 /* ReactiveSwift.framework */; };
 		EA0F0CFE1ED0B48C000517A4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0F0CFB1ED0B48C000517A4 /* Result.framework */; };
@@ -112,14 +101,28 @@
 		EA0F0D481ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */; };
 		EA0F0D491ED3F87F000517A4 /* SignalProducer+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */; };
 		EA12E0631ECE950100A0DCF7 /* Feathers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */; };
-		EA12E0691ECE950C00A0DCF7 /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52954B1ECE912C0014F156 /* ServiceSpec.swift */; };
-		EA12E06A1ECE952400A0DCF7 /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB91EC8CD0400114F19 /* StubProvider.swift */; };
-		EA12E06B1ECE952400A0DCF7 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA301AB41EC8BEBD00114F19 /* Hooks.swift */; };
+		EA35F8E620D0345400B69B6A /* QuerySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E020D0345400B69B6A /* QuerySpec.swift */; };
+		EA35F8E720D0345400B69B6A /* QuerySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E020D0345400B69B6A /* QuerySpec.swift */; };
+		EA35F8E820D0345400B69B6A /* QuerySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E020D0345400B69B6A /* QuerySpec.swift */; };
+		EA35F8E920D0345400B69B6A /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E120D0345400B69B6A /* Hooks.swift */; };
+		EA35F8EA20D0345400B69B6A /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E120D0345400B69B6A /* Hooks.swift */; };
+		EA35F8EB20D0345400B69B6A /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E120D0345400B69B6A /* Hooks.swift */; };
+		EA35F8EC20D0345400B69B6A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA35F8E220D0345400B69B6A /* Info.plist */; };
+		EA35F8ED20D0345400B69B6A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA35F8E220D0345400B69B6A /* Info.plist */; };
+		EA35F8EE20D0345400B69B6A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA35F8E220D0345400B69B6A /* Info.plist */; };
+		EA35F8EF20D0345400B69B6A /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E320D0345400B69B6A /* FeathersSpec.swift */; };
+		EA35F8F020D0345400B69B6A /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E320D0345400B69B6A /* FeathersSpec.swift */; };
+		EA35F8F120D0345400B69B6A /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E320D0345400B69B6A /* FeathersSpec.swift */; };
+		EA35F8F220D0345400B69B6A /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E420D0345400B69B6A /* ServiceSpec.swift */; };
+		EA35F8F320D0345400B69B6A /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E420D0345400B69B6A /* ServiceSpec.swift */; };
+		EA35F8F420D0345400B69B6A /* ServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E420D0345400B69B6A /* ServiceSpec.swift */; };
+		EA35F8F520D0345400B69B6A /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E520D0345400B69B6A /* StubProvider.swift */; };
+		EA35F8F620D0345400B69B6A /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E520D0345400B69B6A /* StubProvider.swift */; };
+		EA35F8F720D0345400B69B6A /* StubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E520D0345400B69B6A /* StubProvider.swift */; };
 		EA8CE0EC1ED7DC2800EA04F4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CE0EB1ED7DC2800EA04F4 /* Query.swift */; };
 		EA8CE0ED1ED7DC2800EA04F4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CE0EB1ED7DC2800EA04F4 /* Query.swift */; };
 		EA8CE0EE1ED7DC2800EA04F4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CE0EB1ED7DC2800EA04F4 /* Query.swift */; };
 		EA8CE0EF1ED7DC2800EA04F4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CE0EB1ED7DC2800EA04F4 /* Query.swift */; };
-		EA8CE0F11ED7E0FC00EA04F4 /* QuerySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8CE0F01ED7E0FC00EA04F4 /* QuerySpec.swift */; };
 		EA954C781EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */; };
 		EAC0BCE91EC90FF30049FB13 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE121EBFA6A400522603 /* Service.swift */; };
 		EAC0BCEA1EC90FF30049FB13 /* AuthenticationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */; };
@@ -218,7 +221,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeathersSpec.swift; path = FeathersTests/FeathersSpec.swift; sourceTree = SOURCE_ROOT; };
 		EA0F0C731ED0B25E000517A4 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0F0C7B1ED0B25F000517A4 /* Feathers-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0F0C8A1ED0B2D0000517A4 /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
@@ -266,13 +268,15 @@
 		EA0F0D451ED3F87F000517A4 /* SignalProducer+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SignalProducer+Convenience.swift"; path = "Core/SignalProducer+Convenience.swift"; sourceTree = "<group>"; };
 		EA12E05E1ECE950000A0DCF7 /* Feathers-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feathers-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3017131EC7867E00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = Core/Hooks.swift; sourceTree = "<group>"; };
-		EA301AB41EC8BEBD00114F19 /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hooks.swift; path = FeathersTests/Hooks.swift; sourceTree = SOURCE_ROOT; };
-		EA301AB91EC8CD0400114F19 /* StubProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StubProvider.swift; path = FeathersTests/StubProvider.swift; sourceTree = SOURCE_ROOT; };
+		EA35F8E020D0345400B69B6A /* QuerySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuerySpec.swift; sourceTree = "<group>"; };
+		EA35F8E120D0345400B69B6A /* Hooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hooks.swift; sourceTree = "<group>"; };
+		EA35F8E220D0345400B69B6A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA35F8E320D0345400B69B6A /* FeathersSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeathersSpec.swift; sourceTree = "<group>"; };
+		EA35F8E420D0345400B69B6A /* ServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceSpec.swift; sourceTree = "<group>"; };
+		EA35F8E520D0345400B69B6A /* StubProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubProvider.swift; sourceTree = "<group>"; };
 		EA452A6A1EA2B14300427CEF /* Feathers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feathers.h; sourceTree = "<group>"; };
 		EA452A6B1EA2B14300427CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA52954B1ECE912C0014F156 /* ServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceSpec.swift; path = FeathersTests/ServiceSpec.swift; sourceTree = SOURCE_ROOT; };
 		EA8CE0EB1ED7DC2800EA04F4 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Query.swift; path = Core/Query.swift; sourceTree = "<group>"; };
-		EA8CE0F01ED7E0FC00EA04F4 /* QuerySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuerySpec.swift; path = FeathersTests/QuerySpec.swift; sourceTree = SOURCE_ROOT; };
 		EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggerHooks.swift; path = Core/LoggerHooks.swift; sourceTree = "<group>"; };
 		EABBAE0A1EBFA6A400522603 /* AuthenticationConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationConfiguration.swift; path = Core/AuthenticationConfiguration.swift; sourceTree = "<group>"; };
 		EABBAE0B1EBFA6A400522603 /* AuthenticationStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationStorage.swift; path = Core/AuthenticationStorage.swift; sourceTree = "<group>"; };
@@ -281,7 +285,6 @@
 		EABBAE0F1EBFA6A400522603 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Provider.swift; path = Core/Provider.swift; sourceTree = "<group>"; };
 		EABBAE101EBFA6A400522603 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Core/Response.swift; sourceTree = "<group>"; };
 		EABBAE121EBFA6A400522603 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = Core/Service.swift; sourceTree = "<group>"; };
-		EAC0BC821EC90A600049FB13 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FeathersTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC43BA920D02EEC00C91269 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		EAE05D691EBFDB0000DA55BF /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Core/Endpoint.swift; sourceTree = "<group>"; };
@@ -421,27 +424,24 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		EA301AB31EC8BEAF00114F19 /* Fakes */ = {
+		EA35F8DF20D0345400B69B6A /* FeathersTests */ = {
 			isa = PBXGroup;
 			children = (
-				EA301AB41EC8BEBD00114F19 /* Hooks.swift */,
+				EA35F8E020D0345400B69B6A /* QuerySpec.swift */,
+				EA35F8E120D0345400B69B6A /* Hooks.swift */,
+				EA35F8E220D0345400B69B6A /* Info.plist */,
+				EA35F8E320D0345400B69B6A /* FeathersSpec.swift */,
+				EA35F8E420D0345400B69B6A /* ServiceSpec.swift */,
+				EA35F8E520D0345400B69B6A /* StubProvider.swift */,
 			);
-			name = Fakes;
-			sourceTree = "<group>";
-		};
-		EA301ABD1EC8CD0B00114F19 /* Stubs */ = {
-			isa = PBXGroup;
-			children = (
-				EA301AB91EC8CD0400114F19 /* StubProvider.swift */,
-			);
-			name = Stubs;
+			path = FeathersTests;
 			sourceTree = "<group>";
 		};
 		EA452A5D1EA2B14300427CEF = {
 			isa = PBXGroup;
 			children = (
 				EA452A691EA2B14300427CEF /* Feathers */,
-				EABBADB01EBE77C900522603 /* FeathersTests */,
+				EABBADB01EBE77C900522603 /* Tests */,
 				EA452A681EA2B14300427CEF /* Products */,
 				E6F86BE4240DD808800C3F09 /* Frameworks */,
 			);
@@ -471,18 +471,13 @@
 			path = Feathers;
 			sourceTree = "<group>";
 		};
-		EABBADB01EBE77C900522603 /* FeathersTests */ = {
+		EABBADB01EBE77C900522603 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				EA35F8DF20D0345400B69B6A /* FeathersTests */,
 				EAC43BA920D02EEC00C91269 /* LinuxMain.swift */,
-				EA301ABD1EC8CD0B00114F19 /* Stubs */,
-				EA301AB31EC8BEAF00114F19 /* Fakes */,
-				EAC0BC821EC90A600049FB13 /* Info.plist */,
-				EA52954B1ECE912C0014F156 /* ServiceSpec.swift */,
-				EA8CE0F01ED7E0FC00EA04F4 /* QuerySpec.swift */,
-				EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */,
 			);
-			path = FeathersTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		EABBAE091EBFA69C00522603 /* Core */ = {
@@ -758,6 +753,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA35F8ED20D0345400B69B6A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -772,6 +768,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA35F8EE20D0345400B69B6A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,6 +783,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA35F8EC20D0345400B69B6A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,12 +894,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA0F0CB01ED0B3B3000517A4 /* Hooks.swift in Sources */,
-				EA0F0CB11ED0B3B3000517A4 /* ServiceSpec.swift in Sources */,
-				EA0F0CB21ED0B3B3000517A4 /* FeathersSpec.swift in Sources */,
+				EA35F8F620D0345400B69B6A /* StubProvider.swift in Sources */,
+				EA35F8EA20D0345400B69B6A /* Hooks.swift in Sources */,
 				EAC43BAB20D02EEC00C91269 /* LinuxMain.swift in Sources */,
-				EA0505A51ED9B262006B5CCB /* QuerySpec.swift in Sources */,
-				EA0F0CAF1ED0B3B3000517A4 /* StubProvider.swift in Sources */,
+				EA35F8F320D0345400B69B6A /* ServiceSpec.swift in Sources */,
+				EA35F8F020D0345400B69B6A /* FeathersSpec.swift in Sources */,
+				EA35F8E720D0345400B69B6A /* QuerySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -931,12 +929,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA0F0CF61ED0B46F000517A4 /* Hooks.swift in Sources */,
-				EA0F0CF71ED0B46F000517A4 /* ServiceSpec.swift in Sources */,
-				EA0F0CF81ED0B46F000517A4 /* FeathersSpec.swift in Sources */,
+				EA35F8F720D0345400B69B6A /* StubProvider.swift in Sources */,
+				EA35F8EB20D0345400B69B6A /* Hooks.swift in Sources */,
 				EAC43BAC20D02EEC00C91269 /* LinuxMain.swift in Sources */,
-				EA0505A61ED9B292006B5CCB /* QuerySpec.swift in Sources */,
-				EA0F0CF51ED0B46F000517A4 /* StubProvider.swift in Sources */,
+				EA35F8F420D0345400B69B6A /* ServiceSpec.swift in Sources */,
+				EA35F8F120D0345400B69B6A /* FeathersSpec.swift in Sources */,
+				EA35F8E820D0345400B69B6A /* QuerySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -966,12 +964,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA12E06A1ECE952400A0DCF7 /* StubProvider.swift in Sources */,
-				EA12E0691ECE950C00A0DCF7 /* ServiceSpec.swift in Sources */,
-				EA0F0BB21ED0A6C9000517A4 /* FeathersSpec.swift in Sources */,
+				EA35F8F520D0345400B69B6A /* StubProvider.swift in Sources */,
+				EA35F8E920D0345400B69B6A /* Hooks.swift in Sources */,
 				EAC43BAA20D02EEC00C91269 /* LinuxMain.swift in Sources */,
-				EA8CE0F11ED7E0FC00EA04F4 /* QuerySpec.swift in Sources */,
-				EA12E06B1ECE952400A0DCF7 /* Hooks.swift in Sources */,
+				EA35F8F220D0345400B69B6A /* ServiceSpec.swift in Sources */,
+				EA35F8EF20D0345400B69B6A /* FeathersSpec.swift in Sources */,
+				EA35F8E620D0345400B69B6A /* QuerySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
