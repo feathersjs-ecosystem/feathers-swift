@@ -23,9 +23,8 @@ Pod::Spec.new do |s|
   s.subspec "Core" do |ss|
     ss.source_files = "Feathers/Core/*.{swift}"
     ss.framework = "Foundation"
-    ss.dependency 'KeychainSwift'
-    ss.dependency 'Result'
-    ss.dependency "ReactiveSwift"
+    ss.dependency 'KeychainAccess', '3.1.1'
+    ss.dependency 'ReactiveSwift', '3.1.0'
   end
 
   s.pod_target_xcconfig = {"OTHER_SWIFT_FLAGS[config=Release]" => "-suppress-warnings" }
