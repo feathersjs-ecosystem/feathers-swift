@@ -1,0 +1,48 @@
+{
+  "name": "feathers-swift",
+  "description": "Test Server",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "John Jung",
+    "email": "john@june.ai"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/"
+  },
+  "engines": {
+    "node": "^6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "test": "npm run eslint && npm run mocha",
+    "eslint": "eslint src/. test/. --config .eslintrc.json",
+    "start": "node src/",
+    "mocha": "mocha test/ --recursive --exit"
+  },
+  "dependencies": {
+    "@feathersjs/configuration": "^1.0.2",
+    "@feathersjs/errors": "^3.3.0",
+    "@feathersjs/express": "^1.2.3",
+    "@feathersjs/feathers": "^3.1.6",
+    "@feathersjs/socketio": "^3.2.2",
+    "compression": "^1.7.2",
+    "cors": "^2.8.4",
+    "helmet": "^3.12.1",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
+  }
+}

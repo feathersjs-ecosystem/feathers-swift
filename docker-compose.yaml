@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  node:
+    working_dir: /usr/src/app
+    image: "node:8.11.1-alpine"
+    command: npm start --prod
+    volumes:
+      - ./test/server:/usr/src/app
+    ports:
+      - "3131:3131"
