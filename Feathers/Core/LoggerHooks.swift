@@ -12,6 +12,8 @@ import ReactiveSwift
 /// Simple request logger
 public struct RequestLoggerHook: Hook {
 
+    public init() {}
+
     public func run(with hookObject: HookObject) -> SignalProducer<HookObject, AnyFeathersError> {
         print("request to \(hookObject.service.path) for method \(hookObject.method)")
         return SignalProducer(value: hookObject)

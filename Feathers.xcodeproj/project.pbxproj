@@ -96,9 +96,6 @@
 		EA35F8E920D0345400B69B6A /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E120D0345400B69B6A /* Hooks.swift */; };
 		EA35F8EA20D0345400B69B6A /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E120D0345400B69B6A /* Hooks.swift */; };
 		EA35F8EB20D0345400B69B6A /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E120D0345400B69B6A /* Hooks.swift */; };
-		EA35F8EC20D0345400B69B6A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA35F8E220D0345400B69B6A /* Info.plist */; };
-		EA35F8ED20D0345400B69B6A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA35F8E220D0345400B69B6A /* Info.plist */; };
-		EA35F8EE20D0345400B69B6A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA35F8E220D0345400B69B6A /* Info.plist */; };
 		EA35F8EF20D0345400B69B6A /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E320D0345400B69B6A /* FeathersSpec.swift */; };
 		EA35F8F020D0345400B69B6A /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E320D0345400B69B6A /* FeathersSpec.swift */; };
 		EA35F8F120D0345400B69B6A /* FeathersSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35F8E320D0345400B69B6A /* FeathersSpec.swift */; };
@@ -654,7 +651,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Swoopy Studios";
 				TargetAttributes = {
 					EA0F0C721ED0B25E000517A4 = {
@@ -730,7 +727,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA35F8ED20D0345400B69B6A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,7 +741,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA35F8EE20D0345400B69B6A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,7 +755,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA35F8EC20D0345400B69B6A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1284,6 +1278,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1291,6 +1286,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1346,6 +1342,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1353,6 +1350,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

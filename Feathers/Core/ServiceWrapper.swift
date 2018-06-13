@@ -14,7 +14,7 @@ import enum Result.NoError
 /// This class exists so that users can write their own services and
 /// not have to worry about running before, after, and error hooks themselves.
 /// By wrapping the given service, the service wrapper can manage all
-/// request execution. Also serves as a proxy to the underlying service.
+/// request execution. The wrapper acts as a proxy to the underlying service.
 final public class ServiceWrapper: ServiceType {
 
     /// Weak reference to main feathers app.
