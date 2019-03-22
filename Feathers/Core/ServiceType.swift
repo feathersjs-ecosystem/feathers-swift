@@ -58,18 +58,18 @@ public protocol ServiceType {
     ///
     /// - Parameter event: Real-time event to listen for.
     /// - Returns: `Signal` that emits any data. Never errors.
-    func on(event: Service.RealTimeEvent) -> Signal<[String: Any], NoError>
+    func on(event: String) -> Signal<[String: Any], NoError>
 
     /// Register for a real-time event but only one time. Signal will emit once
     /// then dispose.
     ///
     /// - Parameter event: Real-time event to listen for.
     /// - Returns: Signal that emits a value once, if ever.
-    func once(event: Service.RealTimeEvent) -> Signal<[String: Any], NoError>
+    func once(event: String) -> Signal<[String: Any], NoError>
 
     /// Unregister for a real-time event.
     ///
     /// - Parameter event: Event to unregister for.
-    func off(event: Service.RealTimeEvent)
+    func off(event: String)
     
 }
