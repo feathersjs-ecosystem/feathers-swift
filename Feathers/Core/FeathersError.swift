@@ -8,7 +8,10 @@
 
 import Foundation
 
-public protocol FeathersError: Swift.Error {}
+public protocol FeathersError: Swift.Error {
+    
+    var description: String { get }
+}
 
 /// Type erase any errors
 public struct AnyFeathersError: Error {
