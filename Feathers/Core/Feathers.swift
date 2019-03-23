@@ -11,18 +11,18 @@ import ReactiveSwift
 
 /// Main application object. Creates services and provides an interface for authentication.
 public final class Feathers {
-
+    
     /// Transport provider.
     public let provider: Provider
-
+    
     /// Authentication store.
     private(set) public var authenticationStorage: AuthenticationStorage = EncryptedAuthenticationStore()
-
+    
     /// Authentication configuration.
     private(set) public var authenticationConfiguration = AuthenticationConfiguration()
-
+    
     private var services: [String: ServiceType] = [:]
-
+    
     /// Feather's initializer.
     ///
     /// - Parameter provider: Transport provider.
@@ -30,7 +30,7 @@ public final class Feathers {
         self.provider = provider
         provider.setup(app: self)
     }
-
+    
     /// Create a service for the given path.
     ///
     /// This method uses some fancy indirection and wraps every service in a `ServiceWrapper` instance
@@ -41,7 +41,7 @@ public final class Feathers {
     public func service(path: String) -> ServiceType {
         let servicePath = path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
         guard let service = services[servicePath] else {
-            // If no service has been registered or requested for at this path, 
+            // If no service has been registered or requested for at this path,
             // create one around the transport provider.
             let providerService = ProviderService(provider: provider)
             providerService.setup(app: self, path: servicePath)
@@ -56,13 +56,13 @@ public final class Feathers {
         wrapper.setup(app: self, path: servicePath)
         return wrapper
     }
-
+    
     public func use(path: String, service: ServiceType) {
         let servicePath = path.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
         service.setup(app: self, path: servicePath)
         services[servicePath] = service
     }
-
+    
     /// Configure any authentication options.
     ///
     /// - Parameter configuration: Authentication configuration object.
@@ -70,25 +70,25 @@ public final class Feathers {
         authenticationConfiguration = configuration
         authenticationStorage = EncryptedAuthenticationStore(storageKey: configuration.storageKey)
     }
-
+    
     /// Authenticate the application.
     ///
     /// - Parameters:
     ///   - credentials: Credentials to authenticate with.
     /// - Returns: Promise that emits an access token.
-    public func authenticate(_ credentials: [String: Any]) -> SignalProducer<String, AnyFeathersError> {
+    public func authenticate(_ credentials: [String: Any]) -> SignalProducer<[String: Any], AnyFeathersError> {
         return provider.authenticate(authenticationConfiguration.path, credentials: credentials)
             .flatMap(.latest) { response -> SignalProducer<[String: Any], AnyFeathersError> in
                 if case let .object(object) = response.data,
-                let json = object as? [String: Any],
-                let accessToken = json["accessToken"] as? String {
-                    return SignalProducer(value: accessToken)
+                    let json = object as? [String: Any] {
+                    return SignalProducer(value: json)
                 }
                 return SignalProducer(error: AnyFeathersError(FeathersNetworkError.unknown))
             }.on(failed: { [weak self] _ in
                 self?.authenticationStorage.accessToken = nil
-            }, value: { [weak self] value in
-                self?.authenticationStorage.accessToken = value
+                }, value: { [weak self] value in
+                    guard let token = value["accessToken"] as? String else { return }
+                    self?.authenticationStorage.accessToken = token
             })
     }
     
@@ -99,7 +99,7 @@ public final class Feathers {
         return provider.logout(path: authenticationConfiguration.path)
             .on(value: { [weak self] _ in
                 self?.authenticationStorage.accessToken = nil
-        })
+            })
     }
-
+    
 }
