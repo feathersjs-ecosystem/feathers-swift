@@ -130,6 +130,10 @@
 		EAC0BCF01EC90FF30049FB13 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBAE101EBFA6A400522603 /* Response.swift */; };
 		EAC0BCF31EC90FF30049FB13 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE05D691EBFDB0000DA55BF /* Endpoint.swift */; };
 		EAC0BCF41EC90FF30049FB13 /* Hooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3017131EC7867E00114F19 /* Hooks.swift */; };
+		F2460FCC22492B5900E1FB2C /* QuerySerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2460FCB22492B5900E1FB2C /* QuerySerializer.swift */; };
+		F2460FCD22492B5C00E1FB2C /* QuerySerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2460FCB22492B5900E1FB2C /* QuerySerializer.swift */; };
+		F2460FCE22492B5C00E1FB2C /* QuerySerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2460FCB22492B5900E1FB2C /* QuerySerializer.swift */; };
+		F2460FCF22492B5D00E1FB2C /* QuerySerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2460FCB22492B5900E1FB2C /* QuerySerializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,6 +285,7 @@
 		EAC0BC821EC90A600049FB13 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FeathersTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		EAC0BCD21EC90FDB0049FB13 /* Feathers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feathers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE05D691EBFDB0000DA55BF /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Core/Endpoint.swift; sourceTree = "<group>"; };
+		F2460FCB22492B5900E1FB2C /* QuerySerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuerySerializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -484,6 +489,7 @@
 		EABBAE091EBFA69C00522603 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F2460FCA22492B1F00E1FB2C /* Auxiliary */,
 				EA0F0D441ED3F85A000517A4 /* Extensions */,
 				EA3017131EC7867E00114F19 /* Hooks.swift */,
 				EA954C771EC9BEEC0094FF43 /* LoggerHooks.swift */,
@@ -501,6 +507,14 @@
 				EA8CE0EB1ED7DC2800EA04F4 /* Query.swift */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		F2460FCA22492B1F00E1FB2C /* Auxiliary */ = {
+			isa = PBXGroup;
+			children = (
+				F2460FCB22492B5900E1FB2C /* QuerySerializer.swift */,
+			);
+			name = Auxiliary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -863,6 +877,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2460FCD22492B5C00E1FB2C /* QuerySerializer.swift in Sources */,
 				EA0F0CB61ED0B3E2000517A4 /* AuthenticationConfiguration.swift in Sources */,
 				EA0F0CB91ED0B3E2000517A4 /* FeathersError.swift in Sources */,
 				EA0F0D411ED2AB99000517A4 /* ProviderService.swift in Sources */,
@@ -897,6 +912,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2460FCE22492B5C00E1FB2C /* QuerySerializer.swift in Sources */,
 				EA0F0CEE1ED0B46B000517A4 /* AuthenticationConfiguration.swift in Sources */,
 				EA0F0CF11ED0B46B000517A4 /* FeathersError.swift in Sources */,
 				EA0F0D421ED2AB99000517A4 /* ProviderService.swift in Sources */,
@@ -931,6 +947,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2460FCF22492B5D00E1FB2C /* QuerySerializer.swift in Sources */,
 				EA0F0D281ED0B539000517A4 /* AuthenticationConfiguration.swift in Sources */,
 				EA0F0D2B1ED0B539000517A4 /* FeathersError.swift in Sources */,
 				EA0F0D431ED2AB99000517A4 /* ProviderService.swift in Sources */,
@@ -965,6 +982,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2460FCC22492B5900E1FB2C /* QuerySerializer.swift in Sources */,
 				EA954C781EC9BEEC0094FF43 /* LoggerHooks.swift in Sources */,
 				EAC0BCF01EC90FF30049FB13 /* Response.swift in Sources */,
 				EA0F0D401ED2AB99000517A4 /* ProviderService.swift in Sources */,
