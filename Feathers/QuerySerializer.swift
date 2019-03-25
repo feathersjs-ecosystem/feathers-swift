@@ -10,7 +10,7 @@ import Foundation
 
 public class QuerySerializer {
     
-    public class func serialize() -> [String: Any] {
+    public class func serialize(limit: Int, skip: Int, sort: [Query.Sort], propertyQueries: [String: [Query.PropertySubquery]], selected: [String], orQuery: [String: Query.PropertySubquery]) -> [String: Any] {
         return [:]
     }
     
