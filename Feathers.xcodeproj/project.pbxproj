@@ -674,7 +674,6 @@
 				EAC0BCCE1EC90FDB0049FB13 /* Frameworks */,
 				EAC0BCCF1EC90FDB0049FB13 /* Headers */,
 				EAC0BCD01EC90FDB0049FB13 /* Resources */,
-				EA0F0BBB1ED0AB03000517A4 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -802,23 +801,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		EA0F0BBB1ED0AB03000517A4 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
 		EA0F0CA71ED0B31F000517A4 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
