@@ -730,6 +730,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1416,7 +1417,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-iOS";
 				PRODUCT_NAME = Feathers;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1443,7 +1444,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swoopystudios.Feathers-iOS";
 				PRODUCT_NAME = Feathers;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
