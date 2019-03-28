@@ -727,10 +727,9 @@
 			};
 			buildConfigurationList = EA452A611EA2B14300427CEF /* Build configuration list for PBXProject "Feathers" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
