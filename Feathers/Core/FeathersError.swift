@@ -29,7 +29,7 @@ public struct AnyFeathersError: Error {
 
 public extension FeathersError {
     
-    public var description: String {
+    var description: String {
         if let networkError = self as? FeathersNetworkError {
             return networkError.errorMessage
         } else if let serviceError = self as? JuneFeathersError {
