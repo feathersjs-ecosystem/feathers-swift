@@ -545,7 +545,6 @@
 				EA0F0C6F1ED0B25E000517A4 /* Frameworks */,
 				EA0F0C701ED0B25E000517A4 /* Headers */,
 				EA0F0C711ED0B25E000517A4 /* Resources */,
-				EA0F0CA71ED0B31F000517A4 /* Carthage */,
 				EA0F0CA81ED0B380000517A4 /* CopyFiles */,
 			);
 			buildRules = (
@@ -584,7 +583,6 @@
 				EA0F0CD01ED0B448000517A4 /* Frameworks */,
 				EA0F0CD11ED0B448000517A4 /* Headers */,
 				EA0F0CD21ED0B448000517A4 /* Resources */,
-				EA0F0CFF1ED0B499000517A4 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -622,7 +620,6 @@
 				EA0F0D131ED0B50D000517A4 /* Frameworks */,
 				EA0F0D141ED0B50D000517A4 /* Headers */,
 				EA0F0D151ED0B50D000517A4 /* Resources */,
-				EA0F0D2F1ED0B545000517A4 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -785,60 +782,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		EA0F0CA71ED0B31F000517A4 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Result.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/KeychainSwift.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/ReactiveSwift.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		EA0F0CFF1ED0B499000517A4 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/tvOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/KeychainSwift.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/ReactiveSwift.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		EA0F0D2F1ED0B545000517A4 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/watchOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/watchOS/ReactiveSwift.framework",
-				"$(SRCROOT)/Carthage/Build/watchOS/KeychainSwift.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA0F0C6E1ED0B25E000517A4 /* Sources */ = {
