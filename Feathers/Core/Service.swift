@@ -128,23 +128,6 @@ open class Service: ServiceType {
     /// Service error hooks.
     private var errorHooks = Hooks()
 
-    // MARK: Real-time
-
-    /// A real time event that `RealTimeProvider`s can emit.
-    ///
-    /// - created: Entity has been created.
-    /// - updated: Entity has been updated.
-    /// - patched: Entity has been patched.
-    /// - removed: Entity has been removed.
-//    public enum RealTimeEvent: String {
-//        
-//        case created
-//        case updated
-//        case patched
-//        case removed
-//
-//    }
-
     /// Weak reference to the main feathers app.
     private(set) public weak var app: Feathers?
 
