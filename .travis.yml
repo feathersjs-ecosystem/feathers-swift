@@ -68,8 +68,8 @@ matrix:
       - carthage build --no-skip-current --platform watchOS
       env:
         - JOB=CARTHAGE-watchOS
-    - script:
-      - pod repo update
-      - travis_wait 30 pod lib lint Feathers.podspec
-      env:
-        - JOB=PODSPEC
+    # - script:
+    #   - pod repo update
+    #   - travis_wait 30 pod lib lint Feathers.podspec
+    #   env:
+    #     - JOB=PODSPEC
