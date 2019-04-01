@@ -128,23 +128,6 @@ open class Service: ServiceType {
     /// Service error hooks.
     private var errorHooks = Hooks()
 
-    // MARK: Real-time
-
-    /// A real time event that `RealTimeProvider`s can emit.
-    ///
-    /// - created: Entity has been created.
-    /// - updated: Entity has been updated.
-    /// - patched: Entity has been patched.
-    /// - removed: Entity has been removed.
-    public enum RealTimeEvent: String {
-        
-        case created
-        case updated
-        case patched
-        case removed
-
-    }
-
     /// Weak reference to the main feathers app.
     private(set) public weak var app: Feathers?
 
@@ -186,16 +169,16 @@ open class Service: ServiceType {
         }
     }
 
-    public func on(event: RealTimeEvent) -> Signal<[String: Any], NoError> {
+    public func on(event: String) -> Signal<[String: Any], NoError> {
         // no-op
         return .empty
     }
 
-    public func once(event: RealTimeEvent) -> Signal<[String: Any], NoError> {
+    public func once(event: String) -> Signal<[String: Any], NoError> {
         return .empty
     }
 
-    public func off(event: RealTimeEvent) {
+    public func off(event: String) {
         // no-op
     }
 
@@ -211,7 +194,7 @@ internal extension Service.Hooks {
     ///
     /// - Parameter method: Service method.
     /// - Returns: A list of hooks registered for that service method.
-    internal func hooks(for method: Service.Method) -> [Hook] {
+    func hooks(for method: Service.Method) -> [Hook] {
         switch method {
         case .find: return all + find
         case .get: return all + get

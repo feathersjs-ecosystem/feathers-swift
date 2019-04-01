@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode8.3
+osx_image: xcode10.2
 
 cache:
   - directories:
@@ -39,7 +39,7 @@ matrix:
       env:
         - XCODE_SDK=appletvsimulator
         - XCODE_ACTION="build-for-testing test-without-building"
-        - XCODE_DESTINATION="platform=tvOS Simulator,name=Apple TV 1080p"
+        - XCODE_DESTINATION="platform=tvOS Simulator,name=Apple TV"
     - script:
       - carthage bootstrap --no-use-binaries --platform watchOS
       - script/build
@@ -49,27 +49,27 @@ matrix:
         - XCODE_ACTION=build
         - XCODE_DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm,OS=3.2"
     - script:
-      - carthage checkout --no-use-binaries
+      - carthage checkout
       - carthage build --no-skip-current --platform mac
       env:
         - JOB=CARTHAGE-macOS
     - script:
-      - carthage checkout --no-use-binaries
+      - carthage checkout
       - carthage build --no-skip-current --platform iOS
       env:
         - JOB=CARTHAGE-iOS
     - script:
-      - carthage checkout --no-use-binaries
+      - carthage checkout
       - carthage build --no-skip-current --platform tvOS
       env:
         - JOB=CARTHAGE-tvOS
     - script:
-      - carthage checkout --no-use-binaries
+      - carthage checkout
       - carthage build --no-skip-current --platform watchOS
       env:
         - JOB=CARTHAGE-watchOS
-    - script:
-      - pod repo update
-      - travis_wait 30 pod lib lint Feathers.podspec
-      env:
-        - JOB=PODSPEC
+    # - script:
+    #   - pod repo update
+    #   - travis_wait 30 pod lib lint Feathers.podspec
+    #   env:
+    #     - JOB=PODSPEC

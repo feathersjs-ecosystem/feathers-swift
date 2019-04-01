@@ -194,11 +194,11 @@ public struct Query {
                 dictionary[property] = propertyQueries
             }
         }
-
+        
         if !selected.isEmpty {
             dictionary["$select"] = selected
         }
-
+        
         var orQueries: [[String: Any]] = []
         for (property, subquery) in orQuery {
             var propertyQuery: [String: Any] = [:]
@@ -222,12 +222,11 @@ public struct Query {
             }
             orQueries.append(propertyQuery)
         }
-
+        
         if !orQueries.isEmpty {
             dictionary["$or"] = orQueries
         }
-
+        
         return dictionary
     }
-
 }

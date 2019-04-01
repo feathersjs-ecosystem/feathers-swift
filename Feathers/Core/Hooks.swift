@@ -57,7 +57,7 @@ public extension HookObject {
     ///
     /// - Parameter result: Result to add.
     /// - Returns: Modified hook object.
-    public func objectByAdding(result: Response) -> HookObject {
+    func objectByAdding(result: Response) -> HookObject {
         var object = self
         object.result = result
         return object
@@ -67,7 +67,7 @@ public extension HookObject {
     ///
     /// - Parameter error: Error to attach.
     /// - Returns: Modified hook object.
-    public func objectByAdding(error: FeathersError) -> HookObject {
+    func objectByAdding(error: FeathersError) -> HookObject {
         var object = self
         object.error = error
         return object
