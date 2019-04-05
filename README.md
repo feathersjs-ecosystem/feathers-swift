@@ -1,6 +1,6 @@
 # FeathersSwift
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Feathers.svg)](#cocoapods) [![GitHub release](https://img.shields.io/github/release/feathersjs/feathers-swift.svg)](https://github.com/feathersjs/feathers-swift/releases) ![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg) ![build](https://travis-ci.org/feathersjs/feathers-swift.svg?branch=master)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Feathers.svg)](#cocoapods) [![GitHub release](https://img.shields.io/github/release/feathersjs-ecosystem/feathers-swift.svg)](https://github.com/feathersjs-ecosystem/feathers-swift/releases) ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0.x-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg) ![build](https://travis-ci.org/feathersjs-ecosystem/feathers-swift.svg?branch=master)
 
 ![feathers](https://media.giphy.com/media/Fn8LZVVgTqXba/giphy.gif)
 
@@ -9,7 +9,7 @@
 FeathersSwift is a Cocoa networking library for interacting with a [FeathersJS](https://feathersjs.com/) backend.
 Why should you use it?
 
-* Swift 3 :thumbsup:
+* Swift 4 :thumbsup:
 * Network abstraction layer
 * Integrates seemlessly with any FeathersJS services
 * Supports iOS, macOS, tvOS, and watchOS
@@ -33,7 +33,7 @@ github "feathersjs/feathers-swift"
 ```
 ## Getting Started
 
-FeathersSwift is spread out across multiple repositories to ensure that you're only pulling in exactly what you need and no more. There are two Feathers providers, [feathers-swift-rest](https://github.com/feathersjs/feathers-swift-rest) and [feathers-swift-socketio](https://github.com/feathersjs/feathers-swift-socketio). Install either provider using the instructions on their respective READMEs.
+FeathersSwift is spread out across multiple repositories to ensure that you're only pulling in exactly what you need and no more. There are two Feathers providers, [feathers-swift-rest](https://github.com/feathersjs-ecosystem/feathers-swift-rest) and [feathers-swift-socketio](https://github.com/feathersjs-ecosystem/feathers-swift-socketio). Install either provider using the instructions on their respective READMEs.
 
 Once you've install a provider, either rest of socketio, an instance of a `Feathers` application with it:
 
