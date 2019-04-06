@@ -477,8 +477,7 @@
 				EA8CE0F01ED7E0FC00EA04F4 /* QuerySpec.swift */,
 				EA0F0BB11ED0A6C9000517A4 /* FeathersSpec.swift */,
 			);
-			name = FeathersTests;
-			path = "FeathersTests-iOS";
+			path = FeathersTests;
 			sourceTree = "<group>";
 		};
 		EABBAE091EBFA69C00522603 /* Core */ = {
@@ -679,30 +678,37 @@
 				TargetAttributes = {
 					EA0F0C721ED0B25E000517A4 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					EA0F0C7A1ED0B25F000517A4 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					EA0F0CD31ED0B448000517A4 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					EA0F0CDB1ED0B448000517A4 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					EA0F0D161ED0B50D000517A4 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					EA12E05D1ECE950000A0DCF7 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					EAC0BCD11EC90FDB0049FB13 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
