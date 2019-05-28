@@ -90,7 +90,7 @@ final public class ServiceWrapper: ServiceType {
                 return SignalProducer(error: AnyFeathersError(error))
             } else {
                 // Otherwise, execute the service request.
-                return vSelf.service.request(method)
+                return vSelf.service.request(hook.method)
                     // When the service request has completed and emitted a response,
                     // run all the after hooks.
                     .flatMap(.latest) { response -> SignalProducer<Response, AnyFeathersError> in
