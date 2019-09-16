@@ -31,15 +31,15 @@ class StubProvider: Provider {
         // no-op
     }
 
-    func request(endpoint: Endpoint) -> SignalProducer<Response, AnyFeathersError> {
+    func request(endpoint: Endpoint) -> SignalProducer<Response, FeathersError> {
         return SignalProducer(value: Response(pagination: nil, data: .object(stubbedData)))
     }
 
-    func authenticate(_ path: String, credentials: [String : Any]) -> SignalProducer<Response, AnyFeathersError> {
+    func authenticate(_ path: String, credentials: [String : Any]) -> SignalProducer<Response, FeathersError> {
         return SignalProducer(value: Response(pagination: nil, data: .object(["accessToken":"some_token"])))
     }
 
-    func logout(path: String) -> SignalProducer<Response, AnyFeathersError> {
+    func logout(path: String) -> SignalProducer<Response, FeathersError> {
         return SignalProducer(value: Response(pagination: nil, data: .object([:])))
     }
 

@@ -110,26 +110,26 @@ class ServiceSpec: QuickSpec {
 
                     beforeEach {
                         // Force the hook to error with ErrorHook
-                        beforeHooks = Service.Hooks(all: [ErrorHook(error:FeathersNetworkError.unknown)])
+                        beforeHooks = Service.Hooks(all: [ErrorHook(error:FeathersFeathersError.unknown)])
                         service.before(beforeHooks)
                     }
 
                     context("when a hook rejects with an error") {
 
                         it("should pass through the original error") {
-                            var error: FeathersNetworkError?
+                            var error: FeathersFeathersError?
                             var response: Response?
                             var data: [String: String]?
                             service.request(.find(query: nil))
                                 .on(failed: {
-                                    error = $0.error as? FeathersNetworkError
+                                    error = $0.error as? FeathersFeathersError
                                 }, value: {
                                     response = $0
                                     data = $0.data.value as? [String: String]
                                 })
                                 .start()
                             expect(error).toEventuallyNot(beNil())
-                            expect(error).toEventually(equal(FeathersNetworkError.unknown))
+                            expect(error).toEventually(equal(FeathersFeathersError.unknown))
                             expect(response).toEventually(beNil())
                             expect(data).toEventually(beNil())
                         }
@@ -139,24 +139,24 @@ class ServiceSpec: QuickSpec {
                             var errorHooks: Service.Hooks!
 
                             beforeEach {
-                                errorHooks = Service.Hooks(all: [ErrorHook(error: FeathersNetworkError.unavailable), ErrorHook(error: FeathersNetworkError.unknown)])
+                                errorHooks = Service.Hooks(all: [ErrorHook(error: FeathersFeathersError.unavailable), ErrorHook(error: FeathersFeathersError.unknown)])
                                 service.error(errorHooks)
                             }
 
                             it("should be able to modify the final error and skip the rest of the chain") {
-                                var error: FeathersNetworkError?
+                                var error: FeathersFeathersError?
                                 var response: Response?
                                 var data: [String: String]?
                                 service.request(.find(query: nil))
                                     .on(failed: {
-                                        error = $0.error as? FeathersNetworkError
+                                        error = $0.error as? FeathersFeathersError
                                     }, value: {
                                         response = $0
                                         data = $0.data.value as? [String: String]
                                     })
                                     .start()
                                 expect(error).toEventuallyNot(beNil())
-                                expect(error).toEventually(equal(FeathersNetworkError.unavailable))
+                                expect(error).toEventually(equal(FeathersFeathersError.unavailable))
                                 expect(response).toEventually(beNil())
                                 expect(data).toEventually(beNil())
                             }
@@ -168,24 +168,24 @@ class ServiceSpec: QuickSpec {
                             var errorHooks: Service.Hooks!
 
                             beforeEach {
-                                errorHooks = Service.Hooks(all: [ModifyErrorHook(error: FeathersNetworkError.unavailable)])
+                                errorHooks = Service.Hooks(all: [ModifyErrorHook(error: FeathersFeathersError.unavailable)])
                                 service.error(errorHooks)
                             }
 
                             it("should be able to modify the final error") {
-                                var error: FeathersNetworkError?
+                                var error: FeathersFeathersError?
                                 var response: Response?
                                 var data: [String: String]?
                                 service.request(.find(query: nil))
                                     .on(failed: {
-                                        error = $0.error as? FeathersNetworkError
+                                        error = $0.error as? FeathersFeathersError
                                     }, value: {
                                         response = $0
                                         data = $0.data.value as? [String: String]
                                     })
                                     .start()
                                 expect(error).toEventuallyNot(beNil())
-                                expect(error).toEventually(equal(FeathersNetworkError.unavailable))
+                                expect(error).toEventually(equal(FeathersFeathersError.unavailable))
                                 expect(response).toEventually(beNil())
                                 expect(data).toEventually(beNil())
                             }
@@ -193,23 +193,23 @@ class ServiceSpec: QuickSpec {
                             context("with multiple error hooks that modify the error ") {
 
                                 beforeEach {
-                                    service.error(Service.Hooks(all: [ModifyErrorHook(error: FeathersNetworkError.unknown)]))
+                                    service.error(Service.Hooks(all: [ModifyErrorHook(error: FeathersFeathersError.unknown)]))
                                 }
 
                                 it("should pass back the final error") {
-                                    var error: FeathersNetworkError?
+                                    var error: FeathersFeathersError?
                                     var response: Response?
                                     var data: [String: String]?
                                     service.request(.find(query: nil))
                                         .on(failed: {
-                                            error = $0.error as? FeathersNetworkError
+                                            error = $0.error as? FeathersFeathersError
                                         }, value: {
                                             response = $0
                                             data = $0.data.value as? [String: String]
                                         })
                                         .start()
                                     expect(error).toEventuallyNot(beNil())
-                                    expect(error).toEventually(equal(FeathersNetworkError.unknown))
+                                    expect(error).toEventually(equal(FeathersFeathersError.unknown))
                                     expect(response).toEventually(beNil())
                                     expect(data).toEventually(beNil())
                                 }

@@ -20,8 +20,8 @@ struct ErrorHook: Hook {
         self.error = error
     }
 
-    func run(with hookObject: HookObject) -> SignalProducer<HookObject, AnyFeathersError> {
-        return SignalProducer(error: AnyFeathersError(error))
+    func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError> {
+        return SignalProducer(error: FeathersError(error))
     }
 
 }
@@ -34,7 +34,7 @@ struct ModifyErrorHook: Hook {
         self.error = error
     }
 
-    func run(with hookObject: HookObject) -> SignalProducer<HookObject, AnyFeathersError> {
+    func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError> {
         var object = hookObject
         object.error = error
         return SignalProducer(value: object)
@@ -50,7 +50,7 @@ struct StubHook: Hook {
         self.data = data
     }
 
-    func run(with hookObject: HookObject) -> SignalProducer<HookObject, AnyFeathersError> {
+    func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError> {
         var object = hookObject
         object.result = Response(pagination: nil, data: data)
         return SignalProducer(value: object)
@@ -67,7 +67,7 @@ struct PopuplateDataAfterHook: Hook {
         self.data = data
     }
 
-    func run(with hookObject: HookObject) -> SignalProducer<HookObject, AnyFeathersError> {
+    func run(with hookObject: HookObject) -> SignalProducer<HookObject, FeathersError> {
         var object = hookObject
         object.result = Response(pagination: nil, data: .object(data))
         return SignalProducer(value: object)

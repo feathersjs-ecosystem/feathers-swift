@@ -145,7 +145,7 @@ open class Service: ServiceType {
         self.path = path
     }
 
-    open func request(_ method: Service.Method) -> SignalProducer<Response, AnyFeathersError> {
+    open func request(_ method: Service.Method) -> SignalProducer<Response, FeathersError> {
         fatalError("Must be overriden by a subclass")
     }
 

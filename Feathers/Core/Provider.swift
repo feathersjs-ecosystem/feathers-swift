@@ -30,7 +30,7 @@ public protocol Provider: class {
     /// - Parameters:
     ///   - endpoint: Endpoint to hit.
     ///   - completion: Completion block.
-    func request(endpoint: Endpoint) -> SignalProducer<Response, AnyFeathersError>
+    func request(endpoint: Endpoint) -> SignalProducer<Response, FeathersError>
 
     /// Authenticate the provider.
     ///
@@ -38,13 +38,13 @@ public protocol Provider: class {
     ///   - path: Authentication path.
     ///   - credentials: Credentials object for authentication.
     ///   - completion: Completion block.
-    func authenticate(_ path: String, credentials: [String: Any]) -> SignalProducer<Response, AnyFeathersError>
+    func authenticate(_ path: String, credentials: [String: Any]) -> SignalProducer<Response, FeathersError>
 
     /// Logout the provider.
     ///
     /// - Parameter path: Logout path.
     /// - Parameter completion: Completion block.
-    func logout(path: String) -> SignalProducer<Response, AnyFeathersError>
+    func logout(path: String) -> SignalProducer<Response, FeathersError>
 
     /// Register to listen for an event.
     ///

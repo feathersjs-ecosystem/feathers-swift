@@ -20,7 +20,7 @@ public class ProviderService: Service {
         super.init()
     }
 
-    public override func request(_ method: Service.Method) -> SignalProducer<Response, AnyFeathersError> {
+    public override func request(_ method: Service.Method) -> SignalProducer<Response, FeathersError> {
         let endpoint = constructEndpoint(from: method)
         return provider.request(endpoint: endpoint)
     }
