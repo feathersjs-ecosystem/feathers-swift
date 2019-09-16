@@ -90,7 +90,7 @@ final public class ServiceWrapper: ServiceType {
                 return SignalProducer(error: AnyFeathersError(error))
             } else {
                 // Otherwise, execute the service request.
-                return vSelf.service.request(method)
+                return vSelf.service.request(hook.method)
                     // When the service request has completed and emitted a response,
                     // run all the after hooks.
                     .flatMap(.latest) { response -> SignalProducer<Response, AnyFeathersError> in
@@ -130,15 +130,15 @@ final public class ServiceWrapper: ServiceType {
         return service.hooks(for: kind)
     }
 
-    final public func on(event: Service.RealTimeEvent) -> Signal<[String: Any], NoError> {
+    final public func on(event: String) -> Signal<[String: Any], NoError> {
         return service.on(event: event)
     }
 
-    final public func once(event: Service.RealTimeEvent) -> Signal<[String: Any], NoError> {
+    final public func once(event: String) -> Signal<[String: Any], NoError> {
         return service.once(event: event)
     }
 
-    final public func off(event: Service.RealTimeEvent) {
+    final public func off(event: String) {
         service.off(event: event)
     }
 

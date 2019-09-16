@@ -25,16 +25,16 @@ public class ProviderService: Service {
         return provider.request(endpoint: endpoint)
     }
     
-    override public func on(event: RealTimeEvent) -> Signal<[String: Any], NoError> {
-        return app?.provider.on(event: "\(path) \(event.rawValue)") ?? .never
+    override public func on(event: String) -> Signal<[String: Any], NoError> {
+        return app?.provider.on(event: "\(path) \(event)") ?? .never
     }
 
-    override public func once(event: RealTimeEvent) -> Signal<[String: Any], NoError> {
-        return app?.provider.once(event: "\(path) \(event.rawValue)") ?? .never
+    override public func once(event: String) -> Signal<[String: Any], NoError> {
+        return app?.provider.once(event: "\(path) \(event)") ?? .never
     }
 
-    override public func off(event: RealTimeEvent) {
-        app?.provider.off(event: event.rawValue)
+    override public func off(event: String) {
+        app?.provider.off(event: event)
     }
 
     override public var supportsRealtimeEvents: Bool {
